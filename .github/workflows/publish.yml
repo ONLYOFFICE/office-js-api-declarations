@@ -1,0 +1,66 @@
+name: publish
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+  - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup NodeJS
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: "package.json"
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v3
+
+    - name: Install Dependencies
+      run: pnpm install --frozen-lockfile
+
+    - name: Build Declarations
+      id: build
+      env:
+        MAKEFILE_BUILD_FORCE: ${{github.event_name == 'workflow_dispatch'}}
+      run: |
+        s=$(pnpm build)
+        echo "stdout<<EOF" >> "$GITHUB_OUTPUT"
+        echo "$s" >> "$GITHUB_OUTPUT"
+        echo "EOF" >> "$GITHUB_OUTPUT"
+
+    - name: Setup Git
+      if: ${{!contains(steps.build.outputs.stdout, 'no updates')}}
+      run: |
+        u=$(curl --silent --header "Accept: application/json" "https://api.github.com/users/${{github.actor}}")
+        id=$(echo "$u" | jq --raw-output ".id")
+        git config --global user.name "${{github.actor}}"
+        git config --global user.email "$id+${{github.actor}}@users.noreply.github.com"
+
+    - name: Publish Declarations
+      if: ${{!contains(steps.build.outputs.stdout, 'no updates')}}
+      run: |
+        temp=$(mktemp -d)
+        git clone \
+          --quiet \
+          --no-checkout \
+          --single-branch \
+          --branch dist \
+          "https://${{secrets.PUBLISH_TOKEN}}@github.com/${{github.repository}}.git" \
+          "$temp"
+        cd ./dist
+        mv "$temp/.git" .
+        git add .
+        if git diff-index --quiet HEAD --; then
+          echo "No changes to commit"
+        else
+          git commit --quiet --message "$(date --utc)"
+          git push
+        fi

@@ -1,21 +1,23 @@
 #!/usr/bin/env node
-// @ts-check
 
 /**
  * @typedef {import("node:stream").TransformCallback} TransformCallback
  * @typedef {import("node:fs").WriteStream} WriteStream
+ * @typedef {import("estree").Program} Program
  */
 
 import {spawn} from "node:child_process"
 import {Console as NodeConsole} from "node:console"
 import {mkdir, mkdtemp, writeFile, rm, rmdir} from "node:fs/promises"
-import {createReadStream, createWriteStream, existsSync} from "node:fs"
+import {createWriteStream, existsSync} from "node:fs"
 import {tmpdir} from "node:os"
 import {dirname, join} from "node:path"
-import {argv, env} from "node:process"
+import {argv, env, stderr, stdout} from "node:process"
 import {finished} from "node:stream/promises"
-import {Readable, Transform} from "node:stream"
+import {Readable, Transform, Writable} from "node:stream"
 import {fileURLToPath} from "node:url"
+import * as comment from "comment-parser"
+import {fromJs} from "esast-util-from-js"
 import sade from "sade"
 import Chain from "stream-chain"
 import StreamArray from "stream-json/streamers/StreamArray.js"
@@ -27,73 +29,121 @@ import pack from "./package.json" with {type: "json"}
 /**
  * @typedef {Object} Config
  * @property {ConfigMeta} meta
- * @property {ConfigSource[]} sources
+ * @property {ConfigEditor[]} editors
+ * @property {ConfigDeclaration[]} declarations
  */
 
 /**
  * @typedef {Object} ConfigMeta
  * @property {string} owner
- * @property {string} name
+ * @property {string} repo
  * @property {string} branch
- * @property {string} file
+ * @property {string} path
  */
 
 /**
- * @typedef {Object} ConfigSource
- * @property {string} owner
+ * @typedef {Object} ConfigEditor
+ * @property {string} id
  * @property {string} name
+ */
+
+/**
+ * @typedef {Object} ConfigDeclaration
+ * @property {string} name
+ * @property {string} variant
+ * @property {DeclarationSource[]} sources
+ */
+
+/**
+ * @typedef {Object} DeclarationSource
+ * @property {string} owner
+ * @property {string} repo
  * @property {string} branch
- * @property {string[]} files
+ * @property {SourcePath[]} paths
+ */
+
+/**
+ * @typedef {Object} SourcePath
+ * @property {string} path
+ * @property {string} editor
  */
 
 /** @type {Config} */
 const config = {
   meta: {
     owner: "onlyoffice",
-    name: "document-builder-declarations",
+    repo: "document-builder-declarations",
     branch: "dist",
-    file: "meta.json"
+    path: "meta.json"
   },
-  sources: [
+  editors: [
+    {id: "CSE", name: "spreadsheet"},
+    {id: "CFE", name: "form"},
+    {id: "CPE", name: "presentation"},
+    {id: "CDE", name: "document"},
+    {id: "_",   name: "common"}
+  ],
+  declarations: [
     {
-      owner: "onlyoffice",
-      name: "sdkjs",
-      branch: "master",
-      files: [
-        "word/apiBuilder.js",
-        "cell/apiBuilder.js",
-        "slide/apiBuilder.js",
-        "word/api_plugins.js",
-        "cell/api_plugins.js",
-        "slide/api_plugins.js",
-        "common/apiBase_plugins.js",
-        "common/plugins/plugin_base_api.js"
+      name: "document-builder",
+      variant: "master",
+      sources: [
+        {
+          owner: "onlyoffice",
+          repo: "sdkjs",
+          branch: "master",
+          paths: [
+            {path: "cell/apiBuilder.js",  editor: "CSE"},
+            {path: "slide/apiBuilder.js", editor: "CPE"},
+            {path: "word/apiBuilder.js",  editor: "CDE"},
+          ]
+        },
+        {
+          owner: "onlyoffice",
+          repo: "sdkjs-forms",
+          branch: "master",
+          paths: [
+            {path: "apiBuilder.js", editor: "CFE"}
+          ]
+        }
       ]
     },
     {
-      owner: "onlyoffice",
-      name: "sdkjs-forms",
-      branch: "master",
-      files: [
-        "apiBuilder.js",
-        "apiPlugins.js"
+      name: "document-builder-plugin",
+      variant: "master",
+      sources: [
+        {
+          owner: "onlyoffice",
+          repo: "sdkjs",
+          branch: "master",
+          paths: [
+            {path: "cell/api_plugins.js",               editor: "CSE"},
+            {path: "slide/api_plugins.js",              editor: "CPE"},
+            {path: "word/api_plugins.js",               editor: "CDE"},
+            {path: "common/apiBase_plugins.js",         editor: "_"},
+            {path: "common/plugins/plugin_base_api.js", editor: "_"}
+          ]
+        },
+        {
+          owner: "onlyoffice",
+          repo: "sdkjs-forms",
+          branch: "master",
+          paths: [
+            {path: "apiPlugins.js", editor: "CFE"}
+          ]
+        }
       ]
     }
   ]
 }
 
-/**
- * @typedef {Partial<Record<string, MetaBranch>>} Meta
- */
-
-/**
- * @typedef {Partial<Record<string, string>>} MetaBranch
- */
-
-/**
- * @typedef {Object} BuildOptions
- * @property {string} force
- */
+for (let i = 0; i < 2; i += 1) {
+  const d = structuredClone(config.declarations[i])
+  d.variant = "develop"
+  d.sources[0].branch = "develop"
+  d.sources[1].branch = "develop"
+  config.declarations.push(d)
+}
 
 const console = createConsole()
 main()
@@ -105,11 +155,11 @@ function main() {
   sade("./makefile.js")
     .command("build")
     .option("--force", "Force build", false)
-    .action(async (opt) => {
+    .action(async (opts) => {
       if (isForceBuild()) {
-        opt.force = true
+        opts.force = true
       }
-      await build(opt)
+      await build(opts)
     })
     .parse(argv)
 }
@@ -122,125 +172,209 @@ function isForceBuild() {
 }
 
 /**
- * @param {BuildOptions} opt
+ * @typedef {Object} BuildOptions
+ * @property {string} force
+ */
+
+/**
+ * @param {BuildOptions} opts
  * @returns {Promise<void>}
  */
-async function build(opt) {
-  const latest = await fetchLatestMeta(config)
+async function build(opts) {
+  const lm = await fetchLatestMeta(config)
 
-  if (!opt.force) {
-    const current = await fetchCurrentMeta(config)
-    if (deepEqual(current, latest)) {
+  if (!opts.force) {
+    const cm = await fetchCurrentMeta(config)
+    if (isMetaEqual(cm, lm)) {
       console.info("No updates")
       return
     }
   }
 
-  const dist = distDir()
-  if (!existsSync(dist)) {
-    await mkdir(dist)
+  const rd = rootDir()
+
+  const dd = distDir(rd)
+  if (!existsSync(dd)) {
+    await mkdir(dd)
   }
 
-  const temp = await createTempDir()
-  await Promise.all(config.sources.map(async (source) => {
-    const dir = join(temp, source.name)
-    await mkdir(dir)
+  const td = await createTempDir()
 
-    let from = dir
-    await Promise.all(source.files.map(async (f) => {
-      const to = join(from, f)
-      const d = dirname(to)
-      await mkdir(d, {recursive: true})
-      const u = sourceFile(latest, source, f)
-      await downloadFile(u, to)
-    }))
+  for (const cd of config.declarations) {
+    const tnd = join(td, cd.name)
+    await mkdir(tnd)
 
-    let to = join(temp, `${source.name}.pre.json`)
-    let w = createWriteStream(to)
-    await jsdoc(w, from)
-    w.close()
-    await rm(from, {recursive: true})
+    const tvd = join(tnd, cd.variant)
+    await mkdir(tvd)
 
-    from = to
-    to = join(temp, `${source.name}.post.json`)
-    await new Promise((res, rej) => {
-      const c = new Chain([
-        createReadStream(from),
-        new Parser(),
-        new StreamArray(),
-        new Process(latest, source, dir),
-        new Disassembler(),
-        new Stringer({makeArray: true}),
-        createWriteStream(to)
-      ])
-      c.on("close", res)
-      c.on("error", rej)
-    })
-    await rm(from)
+    const cache = new Cache()
 
-    const d = join(dist, source.branch)
-    if (!existsSync(d)) {
-      await mkdir(d)
+    cache.reg("all")
+    const ac = cache.get("all")
+    if (!ac) {
+      throw new Error("No cache")
     }
 
-    from = to
-    to = join(d, `${source.name}.json`)
-    w = createWriteStream(to)
-    await jq(w, from)
-    w.close()
-    await rm(from)
-  }))
-  await rmdir(temp)
+    for (const e of config.editors) {
+      cache.reg(e.id)
+    }
 
-  await writeMeta(config, dist, latest)
+    await Promise.all(cd.sources.map(async (ds) => {
+      const rd = join(tvd, ds.repo)
+      await mkdir(rd)
+
+      const bd = join(rd, ds.branch)
+      await mkdir(bd)
+
+      await Promise.all(ds.paths.map(async (sp) => {
+        const f = join(bd, sp.path)
+        const d = dirname(f)
+        await mkdir(d, {recursive: true})
+        const u = sourceDownloadURL(lm, ds, sp.path)
+        const w = new StringWritable()
+        await downloadFile(u, w)
+        const p = fromJs(w.buf)
+        omitIIFE(w, p)
+        await writeFile(f, w.buf)
+      }))
+
+      const w = new StringWritable()
+      await jsdoc(w, bd)
+      await rm(rd, {recursive: true})
+
+      await new Promise((res, rej) => {
+        const c = new Chain([
+          new StringReadable(w.buf),
+          new Parser(),
+          new StreamArray(),
+          new Preprocess(lm, cache, ac, ds, bd)
+        ])
+        c.on("close", res)
+        c.on("data", () => {})
+        c.on("error", rej)
+      })
+    }))
+
+    for (const e of config.editors) {
+      const ec = cache.get(e.id)
+      if (!ec) {
+        throw new Error("No cache")
+      }
+
+      const s = new State(ac, ec)
+      for (const d of ec.declarations) {
+        s.shake(d)
+      }
+      for (const id of s) {
+        s.collect(id)
+      }
+    }
+
+    const dnd = join(dd, cd.name)
+    if (!existsSync(dnd)) {
+      await mkdir(dnd)
+    }
+
+    const dvd = join(dnd, cd.variant)
+    if (!existsSync(dvd)) {
+      await mkdir(dvd)
+    }
+
+    await Promise.all(config.editors.map(async (e) => {
+      const ec = cache.get(e.id)
+      if (!ec) {
+        throw new Error("No cache")
+      }
+
+      if (ec.declarations.length === 0) {
+        return
+      }
+
+      let to = join(tvd, `${e.name}.json`)
+      await new Promise((res, rej) => {
+        const c = new Chain([
+          Readable.from(ec.declarations),
+          new Postprocess(),
+          new Disassembler(),
+          new Stringer({makeArray: true}),
+          createWriteStream(to)
+        ])
+        c.on("close", res)
+        c.on("error", rej)
+      })
+
+      let from = to
+      to = join(dvd, `${e.name}.json`)
+      const w = createWriteStream(to)
+      await jq(w, from)
+      w.close()
+      await rm(from)
+    }))
+
+    await rmdir(tvd)
+    await rmdir(tnd)
+  }
+
+  await rmdir(td)
+  await writeMeta(config, dd, lm)
 }
+
+/**
+ * @param {StringWritable} w
+ * @param {Program} p
+ * @returns {void}
+ */
+function omitIIFE(w, p) {
+  for (const v of p.body) {
+    // This works, but it would be more considerate to trim gently without
+    // removing the entire header of the file.
+    if (
+      v.type === "ExpressionStatement" &&
+      v.expression.type === "CallExpression" &&
+      v.expression.callee.type === "FunctionExpression"
+    ) {
+      // @ts-ignore
+      const p = v.expression.callee.body.position
+      let o = p.start.offset
+
+      let c = " ".repeat(p.start.column)
+      o -= p.start.column
+
+      let l = ""
+      for (let i = 0; i < p.start.line; i += 1) {
+        l += "\n"
+        o -= 1
+      }
+      l = l.slice(1)
+      l = `${" ".repeat(o)}${l}${c}`
+
+      w.buf = w.buf.slice(p.start.offset + 1, p.end.offset - 1)
+      w.buf = `${l}${w.buf}`
+
+      break
+    }
+  }
+}
+
+/**
+ * @typedef {Partial<Record<string, MetaBranch>>} Meta
+ */
+
+/**
+ * @typedef {Partial<Record<string, string>>} MetaBranch
+ */
 
 /**
  * @param {Config} c
  * @returns {Promise<Meta>}
  */
 async function fetchCurrentMeta(c) {
-  const u = `https://raw.githubusercontent.com/${c.meta.owner}/${c.meta.name}/${c.meta.branch}/${c.meta.file}`
+  const u = `https://raw.githubusercontent.com/${c.meta.owner}/${c.meta.repo}/${c.meta.branch}/${c.meta.path}`
   const r = await fetch(u)
   if (r.status !== 200) {
     return {}
   }
   return r.json()
-}
-
-/**
- * @param {any} a
- * @param {any} b
- * @returns {boolean}
- */
-function deepEqual(a, b) {
-  if (typeof a !== typeof b) {
-    return false
-  }
-
-  if (typeof a === "object") {
-    const m = Object.keys(a)
-    const n = Object.keys(b)
-    if (m.length !== n.length) {
-      return false
-    }
-
-    for (const k of m) {
-      const x = a[k]
-      const y = b[k]
-      if (!deepEqual(x, y)) {
-        return false
-      }
-    }
-
-    return true
-  }
-
-  if (a !== b) {
-    return false
-  }
-
-  return true
 }
 
 /**
@@ -250,15 +384,80 @@ function deepEqual(a, b) {
 async function fetchLatestMeta(c) {
   /** @type {Meta} */
   const m = {}
-  await Promise.all(c.sources.map(async (s) => {
-    let b = m[s.branch]
-    if (b === undefined) {
-      b = {}
-      m[s.branch] = b
-    }
-    b[s.name] = await fetchSHA(s)
+  await Promise.all(c.declarations.map(async (d) => {
+    await Promise.all(d.sources.map(async (s) => {
+      const n = `${s.owner}/${s.repo}`
+      let r = m[n]
+      if (r === undefined) {
+        r = {}
+        m[n] = r
+      }
+      r[s.branch] = await fetchSourceSHA(s)
+    }))
   }))
   return m
+}
+
+/**
+ * @param {DeclarationSource} s
+ * @returns {Promise<string>}
+ */
+async function fetchSourceSHA(s) {
+  const u = `https://api.github.com/repos/${s.owner}/${s.repo}/branches/${s.branch}`
+  const r = await fetch(u)
+  if (r.status !== 200) {
+    throw new Error(`Failed to fetch commit SHA for ${s.repo}`)
+  }
+  const j = await r.json()
+  return j.commit.sha
+}
+
+/**
+ * @param {Meta} a
+ * @param {Meta} b
+ * @returns {boolean}
+ */
+function isMetaEqual(a, b) {
+  return inner(a, b)
+
+  /**
+   * The function below is a simple deep equal function. It performs well when
+   * dealing with meta objects. However, it is good to clarify that it is not a
+   * universal util.
+   *
+   * @param {any} a
+   * @param {any} b
+   * @returns {boolean}
+   */
+  function inner(a, b) {
+    if (typeof a !== typeof b) {
+      return false
+    }
+
+    if (typeof a === "object") {
+      const m = Object.keys(a)
+      const n = Object.keys(b)
+      if (m.length !== n.length) {
+        return false
+      }
+
+      for (const k of m) {
+        const x = a[k]
+        const y = b[k]
+        if (!inner(x, y)) {
+          return false
+        }
+      }
+
+      return true
+    }
+
+    if (a !== b) {
+      return false
+    }
+
+    return true
+  }
 }
 
 /**
@@ -268,77 +467,67 @@ async function fetchLatestMeta(c) {
  * @returns {Promise<void>}
  */
 async function writeMeta(c, d, m) {
-  const f = join(d, c.meta.file)
+  const f = join(d, c.meta.path)
   await writeFile(f, JSON.stringify(m, undefined, 2))
 }
 
 /**
- * @param {ConfigSource} s
- * @returns {Promise<string>}
- */
-async function fetchSHA(s) {
-  const u = `https://api.github.com/repos/${s.owner}/${s.name}/branches/${s.branch}`
-  const r = await fetch(u)
-  if (r.status !== 200) {
-    throw new Error(`Failed to fetch commit SHA for ${s.name}`)
-  }
-  const j = await r.json()
-  return j.commit.sha
-}
-
-/**
  * @param {Meta} m
- * @param {ConfigSource} s
+ * @param {DeclarationSource} s
  * @param {string} f
  * @returns {string}
  */
-function sourceFile(m, s, f) {
-  const b = m[s.branch]
-  if (b === undefined) {
-    throw new Error(`Branch ${s.branch} is missing`)
+function sourceDownloadURL(m, s, f) {
+  const n = `${s.owner}/${s.repo}`
+  const r = m[n]
+  if (r === undefined) {
+    throw new Error(`Branches for ${n} are missing`)
   }
-  const c = b[s.name]
+  const c = r[s.branch]
   if (c === undefined) {
-    throw new Error(`Commit SHA for ${s.name} is missing`)
+    throw new Error(`Commit SHA for ${s.repo} is missing`)
   }
-  return `https://raw.githubusercontent.com/${s.owner}/${s.name}/${c}/${f}`
+  return `https://raw.githubusercontent.com/${s.owner}/${s.repo}/${c}/${f}`
 }
 
 /**
  * @param {string} u
- * @param {string} p
+ * @param {Writable} w
  * @returns {Promise<void>}
  */
-async function downloadFile(u, p) {
+async function downloadFile(u, w) {
   const res = await fetch(u)
   if (res.body === null) {
     throw new Error("No body")
+  }
+  if (res.status !== 200) {
+    throw new Error(`Failed to fetch ${u} (${res.status} ${res.statusText})`)
   }
   // Uses two distinct types of ReadableStream: one from the DOM API and another
   // from NodeJS API. It functions well, so no need to worry.
   // @ts-ignore
   const r = Readable.fromWeb(res.body)
-  const s = createWriteStream(p)
-  const w = r.pipe(s)
+  w = r.pipe(w)
   await finished(w)
 }
 
 /**
  * @param {Meta} m
- * @param {ConfigSource} s
+ * @param {DeclarationSource} s
  * @param {string} f
  * @returns {string}
  */
-function createFileReference(m, s, f) {
-  const b = m[s.branch]
-  if (b === undefined) {
-    throw new Error(`Branch ${s.branch} is missing`)
+function sourceURL(m, s, f) {
+  const n = `${s.owner}/${s.repo}`
+  const r = m[n]
+  if (r === undefined) {
+    throw new Error(`Branches for ${n} are missing`)
   }
-  const c = b[s.name]
+  const c = r[s.branch]
   if (c === undefined) {
-    throw new Error(`Commit SHA for ${s.name} is missing`)
+    throw new Error(`Commit SHA for ${s.repo} is missing`)
   }
-  return `https://api.github.com/repos/${s.owner}/${s.name}/contents/${f}?ref=${c}`
+  return `https://api.github.com/repos/${s.owner}/${s.repo}/contents/${f}?ref=${c}`
 }
 
 /**
@@ -352,46 +541,621 @@ function createTempDir() {
 /**
  * @returns {string}
  */
-function distDir() {
-  return join(rootDir(), "dist")
-}
-
-/**
- * @returns {string}
- */
 function rootDir() {
   const u = new URL(".", import.meta.url)
   return fileURLToPath(u)
 }
 
 /**
- * @param {WriteStream} w
+ * @param {string} d
+ * @returns {string}
+ */
+function distDir(d) {
+  return join(d, "dist")
+}
+
+/**
+ * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L186 JSDoc Reference}
+ *
+ * @typedef {Object} Doclet
+ * @property {string[]} [augments]
+ * @property {string} [comment]
+ * @property {string[]} [fires]
+ * @property {string} [inherits]
+ * @property {DocletKind} [kind]
+ * @property {string} [longname]
+ * @property {string} [memberof]
+ * @property {DocletMeta} [meta]
+ * @property {DocletParam[]} [params]
+ * @property {DocletParam[]} [properties]
+ * @property {DocletParam[]} [returns]
+ * @property {DocletTag[]} [tags]
+ * @property {boolean} [undocumented]
+ */
+
+/**
+ * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L328 JSDoc Reference}
+ *
+ * @typedef {
+     "class" |
+     "constant" |
+     "event" |
+     "external" |
+     "file" |
+     "function" |
+     "interface" |
+     "member" |
+     "mixin" |
+     "module" |
+     "namespace" |
+     "package" |
+     "param" |
+     "typedef"
+ * } DocletKind
+ */
+
+/**
+ * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L25 JSDoc Reference}
+ *
+ * @typedef {Object} DocletMeta
+ * @property {any} [code]
+ * @property {string} [filename]
+ * @property {string} [path]
+ * @property {any} [vars]
+ *
+ * @property {string} [file] // custom
+ */
+
+/**
+ * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L155 JSDoc Reference}
+ *
+ * @typedef {Object} DocletParam
+ * @property {DocletType} [type]
+ */
+
+/**
+ * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L89 JSDoc Reference}
+ *
+ * @typedef {Object} DocletType
+ * @property {Catharsis} [parsedType]
+ */
+
+/**
+ * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L462 JSDoc Reference}
+ *
+ * @typedef {Object} DocletTag
+ * @property {string} [text]
+ * @property {string} [title]
+ */
+
+/**
+ * {@link https://github.com/hegemonic/catharsis/blob/0.9.0/lib/schema.js/ Catharsis Reference}
+ *
+ * @typedef {Object} Catharsis
+ * @property {CatharsisType} [type]
+ * @property {string} [name]
+ * @property {Catharsis} [expression]
+ * @property {Catharsis[]} [applications]
+ * @property {Catharsis[]} [elements]
+ */
+
+/**
+ * {@link https://github.com/hegemonic/catharsis/blob/0.9.0/lib/types.js/ Catharsis Reference}
+ *
+ * @typedef {
+     "AllLiteral" |
+     "FieldType" |
+     "FunctionType" |
+     "NameExpression" |
+     "NullLiteral" |
+     "RecordType" |
+     "TypeApplication" |
+     "TypeUnion" |
+     "UndefinedLiteral" |
+     "UnknownLiteral"
+ * } CatharsisType
+ */
+
+/**
+ * @param {Writable} w
  * @param {string} from
  * @returns {Promise<void>}
  */
-async function jsdoc(w, from) {
+function jsdoc(w, from) {
   return new Promise((res, rej) => {
     const s = spawn("./node_modules/.bin/jsdoc", [
       from, "--debug", "--explain", "--recurse"
     ])
     s.stdout.on("data", (ch) => {
+      /** @type {string} */
       const l = ch.toString()
-      if (
-        l.startsWith("DEBUG:") ||
-        l.startsWith(`Parsing ${from}`) ||
-        l.startsWith("Finished running")
-      ) {
-        return
+      const a = l.split("\n")
+      for (const [i, s] of a.entries()) {
+        if (
+          !s.startsWith("DEBUG") &&
+          !s.startsWith("Parsing") &&
+          !s.startsWith("Finished running")
+        ) {
+          w.write(s)
+          if (i < a.length - 1) {
+            w.write("\n")
+          }
+        }
       }
-      w.write(ch)
     })
     s.on("close", res)
     s.on("error", rej)
   })
 }
 
+class Preprocess extends Transform {
+  /**
+   * @param {Meta} m
+   * @param {Cache} c
+   * @param {CacheRecord} ac
+   * @param {DeclarationSource} ds
+   * @param {string} d
+   */
+  constructor(m, c, ac, ds, d) {
+    super({objectMode: true})
+    this.m = m
+    this.c = c
+    this.ac = ac
+    this.ds = ds
+    this.d = d
+  }
+
+  /**
+   * @param {Object} ch
+   * @param {string} ch.key
+   * @param {Doclet} ch.value
+   * @param {BufferEncoding} _
+   * @param {TransformCallback} cb
+   * @returns {void}
+   */
+  _transform({value: dc}, _, cb) {
+    if (dc.kind === "package" || dc.undocumented) {
+      cb()
+      return
+    }
+
+    if (!dc.meta) {
+      cb(new Error("No meta"))
+      return
+    }
+
+    if (!dc.longname) {
+      cb(new Error("No longname"))
+      return
+    }
+
+    if (dc.meta.code) {
+      delete dc.meta.code
+    }
+
+    if (dc.meta.vars) {
+      delete dc.meta.vars
+    }
+
+    let p = ""
+    if (dc.meta.path) {
+      p = dc.meta.path
+      delete dc.meta.path
+    }
+
+    let n = ""
+    if (dc.meta.filename) {
+      n = dc.meta.filename
+      delete dc.meta.filename
+    }
+
+    let f = join(p, n)
+    f = f.replace(this.d, "")
+    if (f.startsWith("/")) {
+      f = f.slice(1)
+    }
+
+    dc.meta.file = sourceURL(this.m, this.ds, f)
+
+    this.ac.set(dc.longname, dc)
+
+    /** @type {SourcePath | undefined} */
+    let sp
+    for (const p of this.ds.paths) {
+      if (p.path === f) {
+        sp = p
+        break
+      }
+    }
+
+    if (sp) {
+      const ec = this.c.get(sp.editor)
+      if (ec) {
+        ec.set(dc.longname, dc)
+      }
+    }
+
+    if (dc.tags && sp) {
+      for (const t of dc.tags) {
+        if (!t.text || t.title !== "typeofeditors") {
+          continue
+        }
+
+        const v = JSON.parse(t.text)
+        if (!Array.isArray(v)) {
+          continue
+        }
+
+        for (const r of v) {
+          const n = String(r)
+
+          /** @type {ConfigEditor | undefined} */
+          let ce
+          for (const e of config.editors) {
+            if (e.id === n) {
+              ce = e
+              break
+            }
+          }
+
+          if (!ce || ce.id === sp.editor) {
+            continue
+          }
+
+          const ec = this.c.get(ce.id)
+          if (ec) {
+            ec.set(dc.longname, dc)
+          }
+        }
+      }
+    }
+
+    this.push(dc)
+    cb(null)
+  }
+}
+
+class Postprocess extends Transform {
+  constructor() {
+    super({objectMode: true})
+  }
+
+  /**
+   * @param {Doclet} dc
+   * @param {BufferEncoding} _
+   * @param {TransformCallback} cb
+   */
+  _transform(dc, _, cb) {
+    if (dc.params && dc.params.length === 0) {
+      delete dc.params
+    }
+
+    if (dc.tags) {
+      for (const [i, t] of dc.tags.entries()) {
+        if (t.title !== "typeofeditors") {
+          continue
+        }
+
+        if (!dc.comment) {
+          break
+        }
+
+        const a = comment.parse(dc.comment)
+        if (a.length !== 1) {
+          break
+        }
+
+        const [b] = a
+        for (const [i, s] of b.source.entries()) {
+          if (s.tokens.tag === "@typeofeditors") {
+            b.source.splice(i, 1)
+            break
+          }
+        }
+
+        dc.comment = comment.stringify(b)
+        dc.tags.splice(i, 1)
+
+        break
+      }
+
+      if (dc.tags.length === 0) {
+        delete dc.tags
+      }
+    }
+
+    this.push(dc)
+    cb()
+  }
+}
+
+class State extends Set {
+  /**
+   * @param {CacheRecord} ac
+   * @param {CacheRecord} ec
+   */
+  constructor(ac, ec) {
+    super()
+    this.ac = ac
+    this.ec = ec
+  }
+
+  /**
+   * @param {Doclet} dc
+   * @returns {void}
+   */
+  shake(dc) {
+    if (dc.inherits && dc.longname) {
+      this.pick(dc, dc.longname)
+    }
+
+    if (dc.memberof) {
+      this.pick(dc, dc.memberof)
+    }
+
+    if (dc.augments) {
+      for (const n of dc.augments) {
+        this.pick(dc, n)
+      }
+    }
+
+    if (dc.fires) {
+      for (const n of dc.fires) {
+        this.pick(dc, n)
+      }
+    }
+
+    if (dc.params) {
+      for (const p of dc.params) {
+        if (p.type && p.type.parsedType) {
+          this.hit(dc, p.type.parsedType)
+        }
+      }
+    }
+
+    if (dc.properties) {
+      for (const p of dc.properties) {
+        if (p.type && p.type.parsedType) {
+          this.hit(dc, p.type.parsedType)
+        }
+      }
+    }
+
+    if (dc.returns) {
+      for (const p of dc.returns) {
+        if (p.type && p.type.parsedType) {
+          this.hit(dc, p.type.parsedType)
+        }
+      }
+    }
+  }
+
+  /**
+   * @param {Doclet} dc
+   * @param {string} n
+   * @returns {void}
+   */
+  pick(dc, n) {
+    if (!dc.meta) {
+      throw new Error("No meta")
+    }
+    if (!dc.meta.file) {
+      throw new Error("No file")
+    }
+
+    const id = `${dc.meta.file};${n}`
+    if (this.has(id)) {
+      return
+    }
+
+    const a = this.ec.indexes[n]
+    if (!a) {
+      this.add(id)
+      this.loupe(id)
+      return
+    }
+
+    for (const i of a) {
+      const d = this.ec.declarations[i]
+      if (!d.meta) {
+        throw new Error("No meta")
+      }
+      if (!d.meta.file) {
+        throw new Error("No file")
+      }
+      if (d.meta.file === dc.meta.file) {
+        continue
+      }
+      this.add(id)
+      this.loupe(id)
+    }
+  }
+
+  /**
+   * @param {Doclet} dc
+   * @param {Catharsis} ca
+   * @returns {void}
+   */
+  hit(dc, ca) {
+    switch (ca.type) {
+    // case "AllLiteral":
+    //   break
+
+    // case "FieldType":
+    //   break
+
+    // case "FunctionType":
+    //   break
+
+    case "NameExpression":
+      switch (ca.name) {
+      case "array":
+      case "Array":
+      case "boolean":
+      case "Boolean":
+      case "number":
+      case "Number":
+      case "object":
+      case "Object":
+      case "string":
+      case "String":
+        break
+      default:
+        if (
+          ca.name &&
+          !isNumberLiteral(ca.name) &&
+          !isStringLiteral(ca.name)
+        ) {
+          this.pick(dc, ca.name)
+        }
+        break
+      }
+      break
+
+    // case "NullLiteral":
+    //   break
+
+    // case "RecordType":
+    //   break
+
+    case "TypeApplication":
+      if (ca.expression) {
+        this.hit(dc, ca.expression)
+      }
+      if (ca.applications) {
+        for (const a of ca.applications) {
+          this.hit(dc, a)
+        }
+      }
+      break
+
+    case "TypeUnion":
+      if (ca.elements) {
+        for (const e of ca.elements) {
+          this.hit(dc, e)
+        }
+      }
+      break
+
+    // case "UndefinedLiteral":
+    //   break
+
+    // case "UnknownLiteral":
+    //   break
+
+    default:
+      // continue
+    }
+  }
+
+  /**
+   * @param {string} id
+   * @returns {void}
+   */
+  loupe(id) {
+    const [f, n] = id.split(";")
+
+    const a = this.ac.indexes[n]
+    if (!a) {
+      return
+    }
+
+    for (const i of a) {
+      const d = this.ac.declarations[i]
+      if (!d) {
+        throw new Error("No doclet")
+      }
+      if (!d.meta) {
+        throw new Error("No meta")
+      }
+      if (!d.meta.file) {
+        throw new Error("No file")
+      }
+      if (d.meta.file !== f) {
+        continue
+      }
+      this.shake(d)
+    }
+  }
+
+  /**
+   * @param {string} id
+   * @returns {void}
+   */
+  collect(id) {
+    const [f, n] = id.split(";")
+
+    const a = this.ac.indexes[n]
+    if (!a) {
+      return
+    }
+
+    for (const i of a) {
+      const dc = this.ac.declarations[i]
+      if (!dc) {
+        throw new Error("No doclet")
+      }
+      if (!dc.meta) {
+        throw new Error("No meta")
+      }
+      if (!dc.meta.file) {
+        throw new Error("No file")
+      }
+      if (dc.meta.file !== f) {
+        continue
+      }
+      this.ec.set(n, dc)
+    }
+  }
+}
+
+class Cache {
+  /** @type {Partial<Record<string, CacheRecord>>} */
+  internal = {}
+
+  /**
+   * @param {string} k
+   * @returns {void}
+   */
+  reg(k) {
+    this.internal[k] = new CacheRecord()
+  }
+
+  /**
+   * @param {string} k
+   * @returns {CacheRecord | undefined}
+   */
+  get(k) {
+    return this.internal[k]
+  }
+}
+
+class CacheRecord {
+  /** @type {Partial<Record<string, number[]>>} */
+  indexes = {}
+
+  /** @type {Doclet[]} */
+  declarations = []
+
+  /**
+   * @param {string} id
+   * @param {Doclet} d
+   * @returns {void}
+   */
+  set(id, d) {
+    let a = this.indexes[id]
+    if (!a) {
+      a = []
+      this.indexes[id] = a
+    }
+
+    a.push(this.declarations.length)
+    this.declarations.push(d)
+  }
+}
+
 /**
- * @param {WriteStream} w
+ * @param {Writable} w
  * @param {string} from
  * @returns {Promise<void>}
  */
@@ -406,85 +1170,56 @@ async function jq(w, from) {
   })
 }
 
-class Process extends Transform {
-  /**
-   * @param {Meta} meta
-   * @param {ConfigSource} source
-   * @param {string} dir
-   */
-  constructor(meta, source, dir) {
-    super({objectMode: true})
-    this.meta = meta
-    this.source = source
-    this.dir = dir
+
+class StringWritable extends Writable {
+  constructor() {
+    super()
+    this.buf = ""
   }
 
   /**
-   * @param {Object} ch
-   * @param {string} _
+   * @param {any} ch
+   * @param {BufferEncoding} _
    * @param {TransformCallback} cb
-   * @returns {void}
    */
-  _transform(ch, _, cb) {
-    const {value: v} = ch
-
-    if ("undocumented" in v) {
-      cb(null)
-      return
+  _write(ch, _, cb) {
+    this.buf += String(ch)
+    if (cb) {
+      cb()
     }
-
-    if ("meta" in v) {
-      let path = ""
-      if ("path" in v.meta) {
-        path = v.meta.path
-        delete v.meta.path
-      }
-
-      let filename = ""
-      if ("filename" in v.meta) {
-        filename = v.meta.filename
-        delete v.meta.filename
-      }
-
-      const f = join(path, filename)
-      v.meta.file = this._createFileReference(f)
-
-      if ("code" in v.meta) {
-        delete v.meta.code
-      }
-      if ("vars" in v.meta) {
-        delete v.meta.vars
-      }
-    }
-
-    if ("files" in v) {
-      v.files = v.files.map((f) => {
-        return this._createFileReference(f)
-      })
-    }
-
-    if ("properties" in v && v.properties.length === 0) {
-      delete v.properties
-    }
-    if ("params" in v && v.params.length === 0) {
-      delete v.params
-    }
-
-    this.push(v)
-    cb(null)
   }
+}
 
+class StringReadable extends Readable {
   /**
-   * @param {string} f
-   * @returns {string}
+   * @param {string} buf
    */
-  _createFileReference(f) {
-    f = f.replace(this.dir, "")
-    if (f.startsWith("/")) {
-      f = f.slice(1)
-    }
-    return createFileReference(this.meta, this.source, f)
+  constructor(buf) {
+    super()
+    this.buf = buf
   }
+
+  _read() {
+    this.push(this.buf)
+    this.push(null)
+  }
+}
+
+/**
+ * @param {string} s
+ * @returns {boolean}
+ */
+function isNumberLiteral(s) {
+  return !isNaN(parseFloat(s))
+}
+
+/**
+ * @param {string} s
+ * @returns {boolean}
+ */
+function isStringLiteral(s) {
+  return s.startsWith('"') && s.endsWith('"') ||
+    s.startsWith("'") && s.endsWith("'")
 }
 
 /**
@@ -509,5 +1244,6 @@ function createConsole() {
       super.warn("warn:", ...data)
     }
   }
-  return new Console(process.stdout, process.stderr)
+
+  return new Console(stdout, stderr)
 }

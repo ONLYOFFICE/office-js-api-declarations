@@ -6,10 +6,15 @@
     "build": "node ./makefile.js build"
   },
   "devDependencies": {
+    "@types/estree": "^1.0.5",
+    "@types/node": "^20.12.7",
+    "comment-parser": "^1.4.1",
+    "esast-util-from-js": "^2.0.1",
     "jsdoc": "^4.0.2",
     "sade": "^1.8.1",
     "stream-chain": "^2.2.5",
-    "stream-json": "^1.8.0"
+    "stream-json": "^1.8.0",
+    "typescript": "^5.4.5"
   },
   "packageManager": "pnpm@8.15.6",
   "engines": {

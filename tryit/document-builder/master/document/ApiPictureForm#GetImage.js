@@ -1,0 +1,11 @@
+builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
+var oPictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
+var oParagraph = oDocument.GetElement(0);
+oParagraph.AddElement(oPictureForm);
+oPictureForm.SetImage("https://api.onlyoffice.com/content/img/docbuilder/examples/coordinate_aspects.png", 60 * 36000, 35 * 36000);
+var base64img = oPictureForm.GetImage();
+var oDrawing = Api.CreateImage(base64img, 60 * 36000, 35 * 36000);
+oParagraph.AddDrawing(oDrawing);
+builder.SaveFile("docx", "GetImage.docx");
+builder.CloseFile();

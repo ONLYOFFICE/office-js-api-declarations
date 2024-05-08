@@ -1,0 +1,12 @@
+builder.CreateFile("docx");
+Api.detachEvent("asc_onHyperlinkClick");
+var oDocument = Api.GetDocument();
+var oParagraph = oDocument.GetElement(0);
+var oRun = Api.CreateRun();
+oRun.AddText("ONLYOFFICE Document Builder");
+oParagraph.AddElement(oRun);
+oParagraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic", "docbuilder");
+oParagraph.AddLineBreak();
+oParagraph.AddText("The 'asc_onHyperlinkClick' event has been detached from this slide.");
+builder.SaveFile("docx", "detachEvent.docx");
+builder.CloseFile();

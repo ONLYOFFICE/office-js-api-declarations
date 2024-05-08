@@ -8,7 +8,7 @@
 
 import {spawn} from "node:child_process"
 import {Console as NodeConsole} from "node:console"
-import {mkdir, mkdtemp, writeFile, rm, rmdir} from "node:fs/promises"
+import {mkdir, mkdtemp, writeFile, rm, rmdir, readFile} from "node:fs/promises"
 import {createWriteStream, existsSync} from "node:fs"
 import {tmpdir} from "node:os"
 import {dirname, join} from "node:path"
@@ -16,6 +16,7 @@ import {argv, env, stderr, stdout} from "node:process"
 import {finished} from "node:stream/promises"
 import {Readable, Transform, Writable} from "node:stream"
 import {fileURLToPath} from "node:url"
+import {Mutex} from "async-mutex"
 import * as comment from "comment-parser"
 import {fromJs} from "esast-util-from-js"
 import sade from "sade"
@@ -31,6 +32,7 @@ import pack from "./package.json" with {type: "json"}
  * @property {ConfigMeta} meta
  * @property {ConfigEditor[]} editors
  * @property {ConfigDeclaration[]} declarations
+ * @property {ConfigDeclaration[]} tryit
  */
 
 /**
@@ -81,7 +83,8 @@ const config = {
     {id: "CFE", name: "form"},
     {id: "CPE", name: "presentation"},
     {id: "CDE", name: "document"},
-    {id: "_",   name: "common"}
+    {id: "_",   name: "common"},
+    {id: "__",  name: "shared"}
   ],
   declarations: [
     {
@@ -134,15 +137,64 @@ const config = {
         }
       ]
     }
+  ],
+  tryit: [
+    {
+      name: "document-builder",
+      variant: "master",
+      sources: [
+        {
+          owner: "onlyoffice",
+          repo: "api.onlyoffice.com",
+          branch: "master",
+          paths: [
+            {path: "web/App_Data/docbuilder/examples/cell",  editor: "CSE"},
+            {path: "web/App_Data/docbuilder/examples/form",  editor: "CFE"},
+            {path: "web/App_Data/docbuilder/examples/slide", editor: "CPE"},
+            {path: "web/App_Data/docbuilder/examples/word",  editor: "CDE"},
+            {path: "web/App_Data/docbuilder/examples",       editor: "__"}
+          ]
+        }
+      ]
+    },
+    {
+      name: "document-builder-plugin",
+      variant: "master",
+      sources: [
+        {
+          owner: "onlyoffice",
+          repo: "api.onlyoffice.com",
+          branch: "master",
+          paths: [
+            {path: "web/App_Data/plugins/examples/cellPluginMethods",   editor: "CSE"},
+            {path: "web/App_Data/plugins/examples/formPluginMethods",   editor: "CFE"},
+            {path: "web/App_Data/plugins/examples/pluginBase",          editor: "_"},
+            {path: "web/App_Data/plugins/examples/sharedPluginMethods", editor: "__"},
+            {path: "web/App_Data/plugins/examples/slidePluginMethods",  editor: "CPE"},
+            {path: "web/App_Data/plugins/examples/wordPluginMethods",   editor: "CDE"},
+            {path: "web/App_Data/plugins/examples",                     editor: "__"}
+          ]
+        }
+      ]
+    }
   ]
 }
 
 for (let i = 0; i < 2; i += 1) {
-  const d = structuredClone(config.declarations[i])
-  d.variant = "develop"
-  d.sources[0].branch = "develop"
-  d.sources[1].branch = "develop"
+  const v = "develop"
+
+  let d = config.declarations[i]
+  d = structuredClone(d)
+  d.variant = v
+  d.sources[0].branch = v
+  d.sources[1].branch = v
   config.declarations.push(d)
+
+  let e = config.tryit[i]
+  e = structuredClone(e)
+  e.variant = v
+  e.sources[0].branch = v
+  config.tryit.push(e)
 }
 
 const console = createConsole()
@@ -161,6 +213,8 @@ function main() {
       }
       await build(opts)
     })
+    .command("pull")
+    .action(pull)
     .parse(argv)
 }
 
@@ -290,11 +344,14 @@ async function build(opts) {
         return
       }
 
+      const td = tryitDir(rd)
+      const vd = join(td, cd.name, cd.variant)
+
       let to = join(tvd, `${e.name}.json`)
       await new Promise((res, rej) => {
         const c = new Chain([
           Readable.from(ec.declarations),
-          new Postprocess(),
+          new Postprocess(e, vd),
           new Disassembler(),
           new Stringer({makeArray: true}),
           createWriteStream(to)
@@ -317,6 +374,130 @@ async function build(opts) {
 
   await rmdir(td)
   await writeMeta(config, dd, lm)
+}
+
+/**
+ * @returns {Promise<void>}
+ */
+async function pull() {
+  const rd = rootDir()
+
+  const td = tryitDir(rd)
+  if (existsSync(td)) {
+    await rm(td, {recursive: true})
+  }
+
+  await mkdir(td)
+
+  const mutex = new Mutex()
+
+  /** @type {Promise<void>[]} */
+  const a = []
+  for (const e of config.tryit) {
+    const p = fn0(e)
+    a.push(p)
+  }
+
+  try {
+    await Promise.all(a)
+  } catch (e) {
+    throw e
+  } finally {
+    mutex.release()
+  }
+
+  /**
+   * @param {ConfigDeclaration} e
+   * @returns {Promise<void>}
+   */
+  async function fn0(e) {
+    const r = await mutex.acquire()
+
+    const nd = join(td, e.name)
+    if (!existsSync(nd)) {
+      await mkdir(nd)
+    }
+
+    const vd = join(nd, e.variant)
+    if (!existsSync(vd)) {
+      await mkdir(vd)
+    }
+
+    r()
+
+    /** @type {Promise<void>[]} */
+    const a = []
+    for (const s of e.sources) {
+      for (const sp of s.paths) {
+        const p = fn1(vd, s, sp)
+        a.push(p)
+      }
+    }
+
+    await Promise.all(a)
+  }
+
+  /**
+   * @param {string} d
+   * @param {DeclarationSource} s
+   * @param {SourcePath} sp
+   * @returns {Promise<void>}
+   */
+  async function fn1(d, s, sp) {
+    const u = `https://api.github.com/repos/${s.owner}/${s.repo}/contents/${sp.path}?ref=${s.branch}`
+    const r = await fetch(u)
+    const j = await r.json()
+
+    /** @type {Promise<void>[]} */
+    const a = []
+    for (const o of j) {
+      const p = fn2(d, sp, o)
+      a.push(p)
+    }
+
+    await Promise.all(a)
+  }
+
+  /**
+   * @param {string} d
+   * @param {SourcePath} sp
+   * @param {any} o
+   * @returns {Promise<void>}
+   */
+  async function fn2(d, sp, o) {
+    const u = o["download_url"]
+    if (!u) {
+      return
+    }
+
+    let b = ""
+    for (const s of config.editors) {
+      if (s.id === sp.editor) {
+        b = s.name
+        break
+      }
+    }
+    if (b === "") {
+      return
+    }
+
+    const r = await mutex.acquire()
+
+    let f = join(d, b)
+    if (!existsSync(f)) {
+      await mkdir(f)
+    }
+
+    r()
+
+    let n = o.name.replace(/\.docbuilder/, "")
+    n = n.replace(".", "#")
+    n = `${n}.js`
+
+    f = join(f, n)
+    const w = createWriteStream(f)
+    await downloadFile(u, w)
+  }
 }
 
 /**
@@ -555,11 +736,28 @@ function distDir(d) {
 }
 
 /**
+ * @param {string} d
+ * @returns {string}
+ */
+function tryitDir(d) {
+  return join(d, "tryit")
+}
+
+/**
+ * @param {string} d
+ * @returns {string}
+ */
+function sharedDir(d) {
+  return join(d, "shared")
+}
+
+/**
  * {@link https://github.com/jsdoc/jsdoc/blob/4.0.2/lib/jsdoc/schema.js/#L186 JSDoc Reference}
  *
  * @typedef {Object} Doclet
  * @property {string[]} [augments]
  * @property {string} [comment]
+ * @property {string} [description]
  * @property {string[]} [fires]
  * @property {string} [inherits]
  * @property {DocletKind} [kind]
@@ -815,17 +1013,43 @@ class Preprocess extends Transform {
   }
 }
 
-class Postprocess extends Transform {
-  constructor() {
+class AsyncTransform extends Transform {
+  /**
+   * @param {any} ch
+   * @param {BufferEncoding} en
+   * @param {TransformCallback} cb
+   * @returns {void}
+   */
+  _transform(ch, en, cb) {
+    this._atransform(ch, en).then(cb.bind(this, null)).catch(cb)
+  }
+
+  /**
+   * @param {any} ch
+   * @param {BufferEncoding} en
+   * @returns {Promise<void>}
+   */
+  async _atransform(ch, en) {
+    throw new Error("Not implemented")
+  }
+}
+
+class Postprocess extends AsyncTransform {
+  /**
+   * @param {ConfigEditor} ce
+   * @param {string} vd
+   */
+  constructor(ce, vd) {
     super({objectMode: true})
+    this.ce = ce
+    this.vd = vd
   }
 
   /**
    * @param {Doclet} dc
-   * @param {BufferEncoding} _
-   * @param {TransformCallback} cb
+   * @returns {Promise<void>}
    */
-  _transform(dc, _, cb) {
+  async _atransform(dc) {
     if (dc.params && dc.params.length === 0) {
       delete dc.params
     }
@@ -864,9 +1088,77 @@ class Postprocess extends Transform {
       }
     }
 
+    if (dc.longname && dc.comment) {
+      let n = dc.longname
+      if (dc.kind === "event") {
+        n = n.replace("event:", "")
+      }
+
+      let f = join(this.vd, this.ce.name, `${n}.js`)
+      if (!existsSync(f)) {
+        const d = sharedDir(this.vd)
+        f = join(d, `${n}.js`)
+      }
+
+      if (existsSync(f)) {
+        const a = comment.parse(dc.comment)
+        if (a.length === 1) {
+          let t = ""
+
+          const [b] = a
+          for (const s of b.source) {
+            if (s.tokens.description !== b.description) {
+              continue
+            }
+
+            const c = await readFile(f, "utf8")
+            t += tryitHeading()
+            t += "\n\n"
+            t += codeBlock("js", c, ["use-document-builder"])
+
+            const p = `\n${s.tokens.start}${s.tokens.delimiter}`
+
+            let d = s.tokens.description
+            d += p
+            for (const l of t.split("\n")) {
+              d += `${p} ${l}`
+            }
+            d += p
+
+            s.tokens.description = d
+            break
+          }
+
+          if (t !== "") {
+            dc.comment = comment.stringify(b)
+            dc.description = `${dc.description}\n\n${t}`
+          }
+        }
+      }
+    }
+
     this.push(dc)
-    cb()
   }
+}
+
+/**
+ * @returns {string}
+ */
+function tryitHeading() {
+  return "## Try it"
+}
+
+/**
+ * @param {string} s
+ * @param {string} c
+ * @param {string[]} p
+ */
+function codeBlock(s, c, p = []) {
+  if (p.length !== 0) {
+    s += " "
+    s += p.join(" ")
+  }
+  return `${"```"}${s}\n${c}\n${"```"}`
 }
 
 class State extends Set {

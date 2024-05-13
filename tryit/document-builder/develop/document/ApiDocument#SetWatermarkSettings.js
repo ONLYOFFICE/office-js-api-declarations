@@ -1,0 +1,10 @@
+builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
+var oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("A watermark was inserted into this document.");
+oDocument.InsertWatermark("Watermark", true);
+var oSettings = oDocument.GetWatermarkSettings();
+oSettings.SetText("ONLYOFFICE");
+oDocument.SetWatermarkSettings(oSettings);
+builder.SaveFile("docx", "SetWatermarkSettings.docx");
+builder.CloseFile();

@@ -1,0 +1,11 @@
+builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
+oDocument.InsertWatermark("Watermark", true);
+var oSettings = oDocument.GetWatermarkSettings();
+oSettings.SetText("ONLYOFFICE");
+oDocument.SetWatermarkSettings(oSettings);
+var sType = oSettings.GetClassType();
+var oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("Class type: " + sType);
+builder.SaveFile("docx", "GetClassType.docx");
+builder.CloseFile();

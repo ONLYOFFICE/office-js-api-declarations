@@ -3,11 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node ./makefile.js build"
+    "build": "pnpm make build",
+    "make": "node ./makefile.js",
+    "pull": "pnpm make pull"
   },
   "devDependencies": {
     "@types/estree": "^1.0.5",
     "@types/node": "^20.12.7",
+    "async-mutex": "^0.5.0",
     "comment-parser": "^1.4.1",
     "esast-util-from-js": "^2.0.1",
     "jsdoc": "^4.0.2",

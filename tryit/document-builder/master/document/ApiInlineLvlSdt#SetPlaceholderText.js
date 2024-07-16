@@ -1,4 +1,4 @@
-builder.CreateFile("docxf");
+builder.CreateFile("pdf");
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
 var oRun = Api.CreateRun();
@@ -7,5 +7,5 @@ oParagraph.AddElement(oRun);
 var aForms = oDocument.GetAllForms();
 oParagraph.RemoveElement(0);
 var sText = aForms[0].SetPlaceholderText("Name");
-builder.SaveFile("docxf", "SetPlaceholderText.docxf");
+builder.SaveFile("pdf", "SetPlaceholderText.pdf");
 builder.CloseFile();

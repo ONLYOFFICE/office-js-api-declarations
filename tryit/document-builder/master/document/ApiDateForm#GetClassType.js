@@ -1,0 +1,11 @@
+builder.CreateFile("pdf");
+var oDocument = Api.GetDocument();
+var oDateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Date", "format": "mm.dd.yyyy", "lang": "en-US"});
+var oParagraph = oDocument.GetElement(0);
+oParagraph.AddElement(oDateForm);
+var sClassType = oDateForm.GetClassType();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("Class type: " + sClassType);
+oDocument.Push(oParagraph);
+builder.SaveFile("pdf", "GetClassType.pdf");
+builder.CloseFile();

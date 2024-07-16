@@ -14,7 +14,7 @@ for (var n = 0; n < stringsArr.length; n++) {
 }
 
 var oFunction = Api.GetWorksheetFunction();
-var avg = oFunction.COUNTBLANK(oWorksheet.GetRange("A1:C3"));
-oWorksheet.GetRange("D3").SetValue(avg);
+var ans = oFunction.COUNTBLANK(oWorksheet.GetRange("A1:C3"));
+oWorksheet.GetRange("D3").SetValue(ans);
 builder.SaveFile("xlsx", "COUNTBLANK.xlsx");
 builder.CloseFile();

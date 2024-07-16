@@ -1,0 +1,6 @@
+builder.CreateFile("xlsx");
+var oWorksheet = Api.GetActiveSheet();
+var oFunction = Api.GetWorksheetFunction();
+oWorksheet.GetRange("A1").SetValue(oFunction.OCT2DEC(7777777634));
+builder.SaveFile("xlsx", "OCT2DEC.xlsx");
+builder.CloseFile();

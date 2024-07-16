@@ -25,7 +25,7 @@ for (var e = 0; e < argumentsArrE.length; e++) {
 
 // Analyze the range of data 
 var oFunction = Api.GetWorksheetFunction();
-var avg = oFunction.DEVSQ(oWorksheet.GetRange("A1:E2"));
-oWorksheet.GetRange("E3").SetValue(avg);
+var ans = oFunction.DEVSQ(oWorksheet.GetRange("A1:E2"));
+oWorksheet.GetRange("E3").SetValue(ans);
 builder.SaveFile("xlsx", "DEVSQ.xlsx");
 builder.CloseFile();

@@ -148,11 +148,11 @@ const config = {
           repo: "api.onlyoffice.com",
           branch: "master",
           paths: [
-            {path: "web/App_Data/docbuilder/examples/cell",  editor: "CSE"},
-            {path: "web/App_Data/docbuilder/examples/form",  editor: "CFE"},
-            {path: "web/App_Data/docbuilder/examples/slide", editor: "CPE"},
-            {path: "web/App_Data/docbuilder/examples/word",  editor: "CDE"},
-            {path: "web/App_Data/docbuilder/examples",       editor: "__"}
+            {path: "web/App_Data/officeapi/examples/cell",  editor: "CSE"},
+            {path: "web/App_Data/officeapi/examples/form",  editor: "CFE"},
+            {path: "web/App_Data/officeapi/examples/slide", editor: "CPE"},
+            {path: "web/App_Data/officeapi/examples/word",  editor: "CDE"},
+            {path: "web/App_Data/officeapi/examples",       editor: "__"}
           ]
         }
       ]

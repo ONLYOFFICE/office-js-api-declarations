@@ -1,0 +1,10 @@
+builder.CreateFile("xlsx");
+var oWorksheet = Api.GetActiveSheet();
+var oRange = oWorksheet.GetRange("A1");
+var oDestRange = oWorksheet.GetRange("A2");
+oRange.SetValue(1);
+oDestRange.SetValue(2);
+oRange.Copy();
+oDestRange.PasteSpecial("xlPasteValues", "xlPasteSpecialOperationAdd", false, false);
+builder.SaveFile("xlsx", "PasteSpecial.xlsx");
+builder.CloseFile();

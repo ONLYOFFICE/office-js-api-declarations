@@ -1,0 +1,12 @@
+builder.CreateFile("xlsx");
+var oWorksheet = Api.GetActiveSheet();
+oWorksheet.GetRange("A1").SetValue("1");
+oWorksheet.GetRange("B1").SetValue("2");
+oWorksheet.GetRange("C1").SetValue("3");
+oWorksheet.AddProtectedRange("Protected range 1", "A1:B1");
+oWorksheet.AddProtectedRange("Protected range 2", "C1");
+var aProtectedRanges = oWorksheet.GetAllProtectedRanges();
+aProtectedRanges[0].SetTitle("New protected range 1");
+aProtectedRanges[1].SetTitle("New protected range 2");
+builder.SaveFile("xlsx", "GetAllProtectedRanges.xlsx");
+builder.CloseFile();

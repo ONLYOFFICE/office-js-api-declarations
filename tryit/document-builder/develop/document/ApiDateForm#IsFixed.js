@@ -1,0 +1,12 @@
+builder.CreateFile("pdf");
+var oDocument = Api.GetDocument();
+var oDateForm = Api.CreateDateForm({"key": "Nowadays", "tip": "Enter current date", "required": true, "placeholder": "Date", "format": "mm.dd.yyyy", "lang": "en-US"});
+var oParagraph = oDocument.GetElement(0);
+oParagraph.AddElement(oDateForm);
+oDateForm.ToFixed(10 * 240, 2 * 240);
+var bFixed = oDateForm.IsFixed();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("The first form from this document is fixed: " + bFixed);
+oDocument.Push(oParagraph);
+builder.SaveFile("pdf", "IsFixed.pdf");
+builder.CloseFile();

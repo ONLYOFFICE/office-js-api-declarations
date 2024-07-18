@@ -1114,7 +1114,7 @@ class Postprocess extends AsyncTransform {
             const c = await readFile(f, "utf8")
             t += tryitHeading()
             t += "\n\n"
-            t += codeBlock("js", c, ["use-document-builder"])
+            t += codeBlock("js", c, ["document-builder"])
 
             const p = `\n${s.tokens.start}${s.tokens.delimiter}`
 

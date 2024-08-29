@@ -1,6 +1,0 @@
-builder.CreateFile("xlsx");
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.BASE(5, 2, 5));
-builder.SaveFile("xlsx", "BASE.xlsx");
-builder.CloseFile();

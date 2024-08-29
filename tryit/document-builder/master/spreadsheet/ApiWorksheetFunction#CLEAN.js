@@ -1,6 +1,0 @@
-builder.CreateFile("xlsx");
-var oWorksheet = Api.GetActiveSheet();
-var oFunction = Api.GetWorksheetFunction();
-oWorksheet.GetRange("A1").SetValue(oFunction.CLEAN("\ntext"));
-builder.SaveFile("xlsx", "CLEAN.xlsx");
-builder.CloseFile();

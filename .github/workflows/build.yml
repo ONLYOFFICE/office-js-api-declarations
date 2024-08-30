@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main repository office-js-api
+      - name: Checkout main repository office-js-api-declarations
         uses: actions/checkout@v4
         with:
-          path: office-js-api
+          path: office-js-api-declarations
 
       - name: Checkout build_tools repository
         uses: actions/checkout@v4
@@ -60,7 +60,7 @@ jobs:
       - name: Create Pull Request
         run: |
           BRANCH_NAME="update-api-spec-${{ github.run_number }}"
-          cd office-js-api
+          cd office-js-api-declarations
           git checkout -b $BRANCH_NAME
           git add .
           git commit -m "Add documentation update from GitHub Actions"

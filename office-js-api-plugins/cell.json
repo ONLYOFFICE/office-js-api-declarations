@@ -1,0 +1,381 @@
+[
+    {
+        "comment": "/**\n\t * Base class.\n\t * @global\n\t * @class\n\t * @name Api\n\t */",
+        "meta": {
+            "lineno": 36,
+            "columnno": 1
+        },
+        "kind": "class",
+        "name": "Api",
+        "description": "Base class.",
+        "longname": "Api",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n\t * @typedef {Object} CommentData\n\t * The comment data.\n\t * @property {string} UserName - The comment author.\n\t * @property {string} QuoteText - The quote comment text.\n\t * @property {string} Text - The comment text.\n\t * @property {string} Time - The time when the comment was posted (in milliseconds).\n\t * @property {boolean} Solved - Specifies if the comment is resolved (**true**) or not (**false**).\n\t * @property {CommentData[]} Replies - An array containing the comment replies represented as the *CommentData* object.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/CommentData.js\n\t */",
+        "meta": {
+            "lineno": 45,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "CommentData",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "The comment data.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "UserName",
+                "description": "The comment author."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "QuoteText",
+                "description": "The quote comment text."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Text",
+                "description": "The comment text."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Time",
+                "description": "The time when the comment was posted (in milliseconds)."
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                },
+                "name": "Solved",
+                "description": "Specifies if the comment is resolved (**true**) or not (**false**)."
+            },
+            {
+                "type": {
+                    "names": [
+                        "Array.<CommentData>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "CommentData",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                },
+                "name": "Replies",
+                "description": "An array containing the comment replies represented as the *CommentData* object."
+            }
+        ],
+        "longname": "CommentData",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Cell/Enumeration/CommentData.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Adds a comment to the workbook.\n\t * @memberof Api\n\t * @typeofeditors [\"CSE\"]\n\t * @alias AddComment\n\t * @param {CommentData}  oCommentData - An object which contains the comment data.\n\t * @return {string | null} - The comment ID in the string format or null if the comment cannot be added.\n\t * @since 7.3.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddComment.js\n\t */",
+        "meta": {
+            "lineno": 67,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.3.0",
+        "name": "AddComment",
+        "description": "Adds a comment to the workbook.",
+        "memberof": "Api",
+        "longname": "AddComment",
+        "alias": "AddComment",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "CommentData"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "CommentData"
+                    }
+                },
+                "name": "oCommentData",
+                "description": "An object which contains the comment data."
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string",
+                        "null"
+                    ],
+                    "parsedType": {
+                        "type": "TypeUnion",
+                        "elements": [
+                            {
+                                "type": "NameExpression",
+                                "name": "string"
+                            },
+                            {
+                                "type": "NullLiteral"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Cell/Api/Methods/AddComment.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Changes the specified comment.\n\t * @memberof Api\n\t * @typeofeditors [\"CSE\"]\n\t * @alias ChangeComment\n\t * @param {string} sId - The comment ID.\n\t * @param {CommentData} oCommentData - An object which contains the new comment data.\n\t * @return {boolean}\n\t * @since 7.3.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ChangeComment.js\n\t */",
+        "meta": {
+            "lineno": 93,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.3.0",
+        "name": "ChangeComment",
+        "description": "Changes the specified comment.",
+        "memberof": "Api",
+        "longname": "ChangeComment",
+        "alias": "ChangeComment",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "sId",
+                "description": "The comment ID."
+            },
+            {
+                "type": {
+                    "names": [
+                        "CommentData"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "CommentData"
+                    }
+                },
+                "name": "oCommentData",
+                "description": "An object which contains the new comment data."
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Cell/Api/Methods/ChangeComment.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Removes the specified comments.\n\t * @param {string[]} arrIds - An array which contains the IDs of the specified comments.\n\t * @memberof Api\n\t * @typeofeditors [\"CSE\"]\n\t * @alias RemoveComments\n\t * @since 7.3.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveComments.js\n\t */",
+        "meta": {
+            "lineno": 116,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.3.0",
+        "name": "RemoveComments",
+        "description": "Removes the specified comments.",
+        "memberof": "Api",
+        "longname": "RemoveComments",
+        "alias": "RemoveComments",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<string>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "string",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                },
+                "name": "arrIds",
+                "description": "An array which contains the IDs of the specified comments."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Cell/Api/Methods/RemoveComments.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns all the comments from the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CSE\"]\n\t * @alias GetAllComments\n\t * @returns {comment[]} - An array of comment objects containing the comment data.\n\t * @since 8.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetAllComments.js\n\t */",
+        "meta": {
+            "lineno": 134,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "8.1.0",
+        "name": "GetAllComments",
+        "description": "Returns all the comments from the document.",
+        "memberof": "Api",
+        "longname": "GetAllComments",
+        "alias": "GetAllComments",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<comment>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "comment",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Cell/Api/Methods/GetAllComments.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns a library of local custom functions.\n\t * @memberof Api\n\t * @typeofeditors [\"CSE\"]\n\t * @alias GetCustomFunctions\n\t * @return {string} A library of custom functions in JSON format.\n\t * @since 8.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetCustomFunctions.js\n\t */",
+        "meta": {
+            "lineno": 256,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "8.1.0",
+        "name": "GetCustomFunctions",
+        "description": "Returns a library of local custom functions.",
+        "memberof": "Api",
+        "longname": "GetCustomFunctions",
+        "alias": "GetCustomFunctions",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Cell/Api/Methods/GetCustomFunctions.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Updates a library of local custom functions.\n\t * @memberof Api\n\t * @typeofeditors [\"CSE\"]\n\t * @alias SetCustomFunctions\n\t * @param {string} jsonString - A library of custom functions in JSON format.\n\t * @since 8.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SetCustomFunctions.js\n\t */",
+        "meta": {
+            "lineno": 279,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "8.1.0",
+        "name": "SetCustomFunctions",
+        "description": "Updates a library of local custom functions.",
+        "memberof": "Api",
+        "longname": "SetCustomFunctions",
+        "alias": "SetCustomFunctions",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "jsonString",
+                "description": "A library of custom functions in JSON format."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Cell/Api/Methods/SetCustomFunctions.js"
+        ]
+    }
+]

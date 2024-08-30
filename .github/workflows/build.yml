@@ -51,6 +51,7 @@ jobs:
         run: |
           cd build_tools/scripts/sdkjs_common/jsdoc
           python generate_docs_json.py
+          python generate_docs_plugins_json.py
 
       - name: Set up Git
         run: |

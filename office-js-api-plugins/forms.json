@@ -1,0 +1,327 @@
+[
+    {
+        "comment": "/**\n     * @typedef {Object} ContentControl\n\t * Content control object.\n     * @property {string} Tag - A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code.\n     * @property {string} Id - A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.\n     * @property {ContentControlLock} Lock - A value that defines if it is possible to delete and/or edit the content control or not: 0 - only deleting, 1 - no deleting or editing, 2 - only editing, 3 - full access.\n     * @property {string} InternalId - A unique internal identifier of the content control. It is used for all operations with content controls.\n     * @see office-js-api/Examples/Plugins/Forms/Enumeration/ContentControl.js\n\t */",
+        "meta": {
+            "lineno": 37,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "ContentControl",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "Content control object.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Tag",
+                "description": "A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Id",
+                "description": "A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code."
+            },
+            {
+                "type": {
+                    "names": [
+                        "ContentControlLock"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlLock"
+                    }
+                },
+                "name": "Lock",
+                "description": "A value that defines if it is possible to delete and/or edit the content control or not: 0 - only deleting, 1 - no deleting or editing, 2 - only editing, 3 - full access."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "InternalId",
+                "description": "A unique internal identifier of the content control. It is used for all operations with content controls."
+            }
+        ],
+        "longname": "ContentControl",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Forms/Enumeration/ContentControl.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * @typedef {(0 | 1 | 2 | 3)} ContentControlLock\n     * A value that defines if it is possible to delete and/or edit the content control or not:\n\t * **0** - only deleting\n\t * **1** - disable deleting or editing\n\t * **2** - only editing\n\t * **3** - full access\n     * @see office-js-api/Examples/Plugins/Forms/Enumeration/ContentControlLock.js\n\t */",
+        "meta": {
+            "lineno": 47,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "ContentControlLock",
+        "type": {
+            "names": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "parsedType": {
+                "type": "TypeUnion",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "0"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "1"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "2"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "3"
+                    }
+                ]
+            }
+        },
+        "description": "A value that defines if it is possible to delete and/or edit the content control or not:\n**0** - only deleting\n**1** - disable deleting or editing\n**2** - only editing\n**3** - full access",
+        "longname": "ContentControlLock",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Forms/Enumeration/ContentControlLock.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns information about all the forms that have been added to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetAllForms\n\t * @returns {ContentControl[]} - An array with all the forms from the document.\n\t * @see office-js-api/Examples/Plugins/Forms/Api/Methods/GetAllForms.js\n\t */",
+        "meta": {
+            "lineno": 65,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "GetAllForms",
+        "description": "Returns information about all the forms that have been added to the document.",
+        "memberof": "Api",
+        "longname": "GetAllForms",
+        "alias": "GetAllForms",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<ContentControl>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "ContentControl",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Forms/Api/Methods/GetAllForms.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns information about all the forms that have been added to the document with specified tag.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetFormsByTag\n\t * @param {string} tag - The form tag.\n\t * @returns {ContentControl[]} - An array with all the forms from the document with the specified tag.\n\t * @see office-js-api/Examples/Plugins/Forms/Api/Methods/GetFormsByTag.js\n\t */",
+        "meta": {
+            "lineno": 88,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "GetFormsByTag",
+        "description": "Returns information about all the forms that have been added to the document with specified tag.",
+        "memberof": "Api",
+        "longname": "GetFormsByTag",
+        "alias": "GetFormsByTag",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "tag",
+                "description": "The form tag."
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<ContentControl>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "ContentControl",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Forms/Api/Methods/GetFormsByTag.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Sets a value to the specified form.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias SetFormValue\n\t * @param {string} internalId - A unique internal identifier of the form.\n\t * @param {string | boolean} value - Form value to be set. Its type depends on the form type.\n\t * @see office-js-api/Examples/Plugins/Forms/Api/Methods/SetFormValue.js\n\t */",
+        "meta": {
+            "lineno": 114,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "SetFormValue",
+        "description": "Sets a value to the specified form.",
+        "memberof": "Api",
+        "longname": "SetFormValue",
+        "alias": "SetFormValue",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "internalId",
+                "description": "A unique internal identifier of the form."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string",
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "TypeUnion",
+                        "elements": [
+                            {
+                                "type": "NameExpression",
+                                "name": "string"
+                            },
+                            {
+                                "type": "NameExpression",
+                                "name": "boolean"
+                            }
+                        ]
+                    }
+                },
+                "name": "value",
+                "description": "Form value to be set. Its type depends on the form type."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Forms/Api/Methods/SetFormValue.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns a value of the specified form.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetFormValue\n\t * @param {string} internalId - A unique internal identifier of the form.\n\t * @returns {null | string | boolean} The form value in the string or boolean format depending on the form type. The null value means that the form is filled with a placeholder.\n\t * @see office-js-api/Examples/Plugins/Forms/Api/Methods/GetFormValue.js\n\t */",
+        "meta": {
+            "lineno": 127,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "GetFormValue",
+        "description": "Returns a value of the specified form.",
+        "memberof": "Api",
+        "longname": "GetFormValue",
+        "alias": "GetFormValue",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "internalId",
+                "description": "A unique internal identifier of the form."
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "null",
+                        "string",
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "TypeUnion",
+                        "elements": [
+                            {
+                                "type": "NullLiteral"
+                            },
+                            {
+                                "type": "NameExpression",
+                                "name": "string"
+                            },
+                            {
+                                "type": "NameExpression",
+                                "name": "boolean"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Forms/Api/Methods/GetFormValue.js"
+        ]
+    }
+]

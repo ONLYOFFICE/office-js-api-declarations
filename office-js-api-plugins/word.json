@@ -1,0 +1,3375 @@
+[
+    {
+        "comment": "/**\n     * Base class.\n     * @global\n     * @class\n     * @name Api\n     */",
+        "meta": {
+            "lineno": 37,
+            "columnno": 4
+        },
+        "kind": "class",
+        "name": "Api",
+        "description": "Base class.",
+        "longname": "Api",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n     * @typedef {Object} ContentControl\n\t * Content control object.\n     * @property {string} Tag - A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code.\n     * @property {string} Id - A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.\n     * @property {ContentControlLock} Lock - A value that defines if it is possible to delete and/or edit the content control or not: 0 - only deleting, 1 - no deleting or editing, 2 - only editing, 3 - full access.\n     * @property {string} InternalId - A unique internal identifier of the content control. It is used for all operations with content controls.\n     * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControl.js\n\t */",
+        "meta": {
+            "lineno": 44,
+            "columnno": 4
+        },
+        "kind": "typedef",
+        "name": "ContentControl",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "Content control object.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Tag",
+                "description": "A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Id",
+                "description": "A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code."
+            },
+            {
+                "type": {
+                    "names": [
+                        "ContentControlLock"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlLock"
+                    }
+                },
+                "name": "Lock",
+                "description": "A value that defines if it is possible to delete and/or edit the content control or not: 0 - only deleting, 1 - no deleting or editing, 2 - only editing, 3 - full access."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "InternalId",
+                "description": "A unique internal identifier of the content control. It is used for all operations with content controls."
+            }
+        ],
+        "longname": "ContentControl",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/ContentControl.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * @typedef {(0 | 1 | 2 | 3)} ContentControlLock\n     * A value that defines if it is possible to delete and/or edit the content control or not:\n\t * <b>0</b> - only deleting\n\t * <b>1</b> - disable deleting or editing\n\t * <b>2</b> - only editing\n\t * <b>3</b> - full access\n     * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControlLock.js\n\t */",
+        "meta": {
+            "lineno": 54,
+            "columnno": 4
+        },
+        "kind": "typedef",
+        "name": "ContentControlLock",
+        "type": {
+            "names": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "parsedType": {
+                "type": "TypeUnion",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "0"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "1"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "2"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "3"
+                    }
+                ]
+            }
+        },
+        "description": "A value that defines if it is possible to delete and/or edit the content control or not:\n<b>0</b> - only deleting\n<b>1</b> - disable deleting or editing\n<b>2</b> - only editing\n<b>3</b> - full access",
+        "longname": "ContentControlLock",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/ContentControlLock.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * @typedef {(1 | 2 | 3 | 4)} ContentControlType\n     * A numeric value that specifies the content control type:\n\t * <b>1</b> - block content control\n\t * <b>2</b> - inline content control\n\t * <b>3</b> - row content control\n\t * <b>4</b> - cell content control\n     * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControlType.js\n\t */",
+        "meta": {
+            "lineno": 64,
+            "columnno": 4
+        },
+        "kind": "typedef",
+        "name": "ContentControlType",
+        "type": {
+            "names": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "parsedType": {
+                "type": "TypeUnion",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "1"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "2"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "3"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "4"
+                    }
+                ]
+            }
+        },
+        "description": "A numeric value that specifies the content control type:\n<b>1</b> - block content control\n<b>2</b> - inline content control\n<b>3</b> - row content control\n<b>4</b> - cell content control",
+        "longname": "ContentControlType",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/ContentControlType.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * @typedef {Object} ContentControlPropertiesAndContent\n     * The content control properties and contents.\n     * @property  {ContentControlProperties} [ContentControlProperties = {}] - The content control properties.\n     * @property  {string} Script - A script that will be executed to generate the data within the content control (can be replaced with the *Url* parameter).\n     * @property  {string} Url - A link to the shared file (can be replaced with the *Script* parameter).\n     * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControlPropertiesAndContent.js\n\t */",
+        "meta": {
+            "lineno": 74,
+            "columnno": 4
+        },
+        "kind": "typedef",
+        "name": "ContentControlPropertiesAndContent",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "The content control properties and contents.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "ContentControlProperties"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlProperties"
+                    }
+                },
+                "name": "ContentControlProperties",
+                "description": "The content control properties.",
+                "optional": true,
+                "defaultvalue": "{}"
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Script",
+                "description": "A script that will be executed to generate the data within the content control (can be replaced with the *Url* parameter)."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Url",
+                "description": "A link to the shared file (can be replaced with the *Script* parameter)."
+            }
+        ],
+        "longname": "ContentControlPropertiesAndContent",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/ContentControlPropertiesAndContent.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * @typedef {Object} ContentControlProperties\n\t * The content control properties.\n     * @property {string} Id - A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.\n     * @property {string} Tag - A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in the code.\n     * @property {ContentControlLock} Lock - A value that defines if it is possible to delete and/or edit the content control or not.\n     * @property {string} InternalId - A unique internal identifier of the content control.\n\t * @property {string} Alias - The alias attribute.\n\t * @property {string} PlaceHolderText - The content control placeholder text.\n     * @property {number} Appearance - Defines if the content control is shown as the bounding box (**1**) or not (**2**).\n     * @property {object} Color - The color for the current content control in the RGB format.\n     * @property {number} Color.R - Red color component value.\n     * @property {number} Color.G - Green color component value.\n     * @property {number} Color.B - Blue color component value.\n     * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControlProperties.js\n\t */",
+        "meta": {
+            "lineno": 83,
+            "columnno": 4
+        },
+        "kind": "typedef",
+        "name": "ContentControlProperties",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "The content control properties.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Id",
+                "description": "A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Tag",
+                "description": "A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in the code."
+            },
+            {
+                "type": {
+                    "names": [
+                        "ContentControlLock"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlLock"
+                    }
+                },
+                "name": "Lock",
+                "description": "A value that defines if it is possible to delete and/or edit the content control or not."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "InternalId",
+                "description": "A unique internal identifier of the content control."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Alias",
+                "description": "The alias attribute."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "PlaceHolderText",
+                "description": "The content control placeholder text."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "Appearance",
+                "description": "Defines if the content control is shown as the bounding box (**1**) or not (**2**)."
+            },
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "object"
+                    }
+                },
+                "name": "Color",
+                "description": "The color for the current content control in the RGB format."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "Color.R",
+                "description": "Red color component value."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "Color.G",
+                "description": "Green color component value."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "Color.B",
+                "description": "Blue color component value."
+            }
+        ],
+        "longname": "ContentControlProperties",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/ContentControlProperties.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * @typedef {('none' | 'comments' | 'forms' | 'readOnly')} DocumentEditingRestrictions\n\t * The document editing restrictions:\n\t * <b>none</b> - no editing restrictions,\n\t * <b>comments</b> - allows editing comments,\n\t * <b>forms</b> - allows editing form fields,\n\t * <b>readOnly</b> - does not allow editing.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/DocumentEditingRestrictions.js\n\t */",
+        "meta": {
+            "lineno": 100,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "DocumentEditingRestrictions",
+        "type": {
+            "names": [
+                "'none'",
+                "'comments'",
+                "'forms'",
+                "'readOnly'"
+            ],
+            "parsedType": {
+                "type": "TypeUnion",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "'none'"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "'comments'"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "'forms'"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "'readOnly'"
+                    }
+                ]
+            }
+        },
+        "description": "The document editing restrictions:\n<b>none</b> - no editing restrictions,\n<b>comments</b> - allows editing comments,\n<b>forms</b> - allows editing form fields,\n<b>readOnly</b> - does not allow editing.",
+        "longname": "DocumentEditingRestrictions",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/DocumentEditingRestrictions.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * @typedef {(\"entirely\" | \"beforeCursor\" | \"afterCursor\")} TextPartType\n\t * Specifies if the whole text or only its part will be returned or replaced:\n\t * <b>entirely</b> - replaces/returns the whole text,\n\t * <b>beforeCursor</b> - replaces/returns only the part of the text before the cursor,\n\t * <b>afterCursor</b> - replaces/returns only the part of the text after the cursor.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/TextPartType.js\n\t */",
+        "meta": {
+            "lineno": 110,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "TextPartType",
+        "type": {
+            "names": [
+                "\"entirely\"",
+                "\"beforeCursor\"",
+                "\"afterCursor\""
+            ],
+            "parsedType": {
+                "type": "TypeUnion",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "\"entirely\""
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "\"beforeCursor\""
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "\"afterCursor\""
+                    }
+                ]
+            }
+        },
+        "description": "Specifies if the whole text or only its part will be returned or replaced:\n<b>entirely</b> - replaces/returns the whole text,\n<b>beforeCursor</b> - replaces/returns only the part of the text before the cursor,\n<b>afterCursor</b> - replaces/returns only the part of the text after the cursor.",
+        "longname": "TextPartType",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/TextPartType.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Opens a file with fields.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias OpenFile\n     * @param {Uint8Array} binaryFile - A file in the format of the 8-bit unsigned integer array.\n     * @param {string[]} fields - A list of field values.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/OpenFile.js\n\t */",
+        "meta": {
+            "lineno": 130,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "OpenFile",
+        "description": "Opens a file with fields.",
+        "memberof": "Api",
+        "longname": "OpenFile",
+        "alias": "OpenFile",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Uint8Array"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "Uint8Array"
+                    }
+                },
+                "name": "binaryFile",
+                "description": "A file in the format of the 8-bit unsigned integer array."
+            },
+            {
+                "type": {
+                    "names": [
+                        "Array.<string>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "string",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                },
+                "name": "fields",
+                "description": "A list of field values."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/OpenFile.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Returns all fields as a text.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias GetFields\n     * @returns {string[]} - A list of field values.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetFields.js\n\t */",
+        "meta": {
+            "lineno": 150,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "GetFields",
+        "description": "Returns all fields as a text.",
+        "memberof": "Api",
+        "longname": "GetFields",
+        "alias": "GetFields",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<string>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "string",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/GetFields.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Inserts the content control containing data. The data is specified by the JS code for {@link /docbuilder/basic Document Builder}, or by a link to the shared document.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias InsertAndReplaceContentControls\n     * @param {ContentControlPropertiesAndContent[]} arrDocuments - An array of properties and contents of the content control.\n     * @return {ContentControlProperties[]} - An array of created content control properties.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/InsertAndReplaceContentControls.js\n\t */",
+        "meta": {
+            "lineno": 163,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "InsertAndReplaceContentControls",
+        "description": "Inserts the content control containing data. The data is specified by the JS code for {@link /docbuilder/basic Document Builder}, or by a link to the shared document.",
+        "memberof": "Api",
+        "longname": "InsertAndReplaceContentControls",
+        "alias": "InsertAndReplaceContentControls",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<ContentControlPropertiesAndContent>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "ContentControlPropertiesAndContent",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                },
+                "name": "arrDocuments",
+                "description": "An array of properties and contents of the content control."
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<ContentControlProperties>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "ContentControlProperties",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/InsertAndReplaceContentControls.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Removes several content controls.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias RemoveContentControls\n     * @param {ContentControl[]} arrDocuments - An array of content control internal IDs. Example: [{\"InternalId\": \"5_556\"}].\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveContentControls.js\n\t */",
+        "meta": {
+            "lineno": 176,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "RemoveContentControls",
+        "description": "Removes several content controls.",
+        "memberof": "Api",
+        "longname": "RemoveContentControls",
+        "alias": "RemoveContentControls",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<ContentControl>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "ContentControl",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                },
+                "name": "arrDocuments",
+                "description": "An array of content control internal IDs. Example: [{\"InternalId\": \"5_556\"}]."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/RemoveContentControls.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Returns information about all the content controls that have been added to the page.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias GetAllContentControls\n     * @returns {ContentControl[]} - An array of content control objects.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetAllContentControls.js\n\t */",
+        "meta": {
+            "lineno": 189,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "GetAllContentControls",
+        "description": "Returns information about all the content controls that have been added to the page.",
+        "memberof": "Api",
+        "longname": "GetAllContentControls",
+        "alias": "GetAllContentControls",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<ContentControl>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "ContentControl",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/GetAllContentControls.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * @typedef {Object} ContentControlParentPr\n     * The content control parent properties.\n     * @property  {object} Parent - The content control parent. For example, oParagraph.\n     * @property  {number} Pos - The content control position within the parent object.\n     * @property  {number} Count - A number of elements in the parent object.\n     * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControlParentPr.js\n\t */",
+        "meta": {
+            "lineno": 202,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "ContentControlParentPr",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "The content control parent properties.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "object"
+                    }
+                },
+                "name": "Parent",
+                "description": "The content control parent. For example, oParagraph."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "Pos",
+                "description": "The content control position within the parent object."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "Count",
+                "description": "A number of elements in the parent object."
+            }
+        ],
+        "longname": "ContentControlParentPr",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/ContentControlParentPr.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Removes the currently selected content control retaining all its contents. The content control where the mouse cursor is currently positioned will be removed.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias RemoveContentControl\n     * @param {string} InternalId - A unique internal identifier of the content control.\n     * @returns {ContentControlParentPr} - An object which contains the following values: Parent - content control parent, Pos - content control position within the parent object, Count - a number of elements in the parent object.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveContentControl.js\n\t */",
+        "meta": {
+            "lineno": 220,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "RemoveContentControl",
+        "description": "Removes the currently selected content control retaining all its contents. The content control where the mouse cursor is currently positioned will be removed.",
+        "memberof": "Api",
+        "longname": "RemoveContentControl",
+        "alias": "RemoveContentControl",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "InternalId",
+                "description": "A unique internal identifier of the content control."
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "ContentControlParentPr"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlParentPr"
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/RemoveContentControl.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Returns an identifier of the selected content control (i.e. the content control where the mouse cursor is currently positioned).\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias GetCurrentContentControl\n     * @returns {string} - The content control internal ID.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetCurrentContentControl.js\n\t */",
+        "meta": {
+            "lineno": 232,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "GetCurrentContentControl",
+        "description": "Returns an identifier of the selected content control (i.e. the content control where the mouse cursor is currently positioned).",
+        "memberof": "Api",
+        "longname": "GetCurrentContentControl",
+        "alias": "GetCurrentContentControl",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/GetCurrentContentControl.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Returns the current content control properties.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias GetCurrentContentControlPr\n\t * @param {string} contentFormat - The content format (\"none\", \"text\", \"html\", \"ole\" or \"desktop\").\n     * @returns {ContentControlProperties} - The content control properties.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetCurrentContentControlPr.js\n\t */",
+        "meta": {
+            "lineno": 245,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "GetCurrentContentControlPr",
+        "description": "Returns the current content control properties.",
+        "memberof": "Api",
+        "longname": "GetCurrentContentControlPr",
+        "alias": "GetCurrentContentControlPr",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "contentFormat",
+                "description": "The content format (\"none\", \"text\", \"html\", \"ole\" or \"desktop\")."
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "ContentControlProperties"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlProperties"
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/GetCurrentContentControlPr.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Selects the specified content control.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias SelectContentControl\n     * @param {string} id - A unique internal identifier of the content control.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SelectContentControl.js\n\t */",
+        "meta": {
+            "lineno": 312,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "SelectContentControl",
+        "description": "Selects the specified content control.",
+        "memberof": "Api",
+        "longname": "SelectContentControl",
+        "alias": "SelectContentControl",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "id",
+                "description": "A unique internal identifier of the content control."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/SelectContentControl.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Moves a cursor to the specified content control.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias MoveCursorToContentControl\n     * @param {string} id - A unique internal identifier of the content control.\n     * @param {boolean} [isBegin = false] - Defines if the cursor position changes in the content control. By default, a cursor will be placed to the content control begin (**false**).\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/MoveCursorToContentControl.js\n\t */",
+        "meta": {
+            "lineno": 329,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "MoveCursorToContentControl",
+        "description": "Moves a cursor to the specified content control.",
+        "memberof": "Api",
+        "longname": "MoveCursorToContentControl",
+        "alias": "MoveCursorToContentControl",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "id",
+                "description": "A unique internal identifier of the content control."
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                },
+                "name": "isBegin",
+                "description": "Defines if the cursor position changes in the content control. By default, a cursor will be placed to the content control begin (**false**).",
+                "optional": true,
+                "defaultvalue": false
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/MoveCursorToContentControl.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Removes the selected content from the document.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias RemoveSelectedContent\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveSelectedContent.js\n\t */",
+        "meta": {
+            "lineno": 344,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "RemoveSelectedContent",
+        "description": "Removes the selected content from the document.",
+        "memberof": "Api",
+        "longname": "RemoveSelectedContent",
+        "alias": "RemoveSelectedContent",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/RemoveSelectedContent.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * @typedef {Object} comment\n\t * Comment object.\n\t * @property {string} Id - The comment ID.\n\t * @property {CommentData} Data - An object which contains the comment data.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/comment.js\n\t */",
+        "meta": {
+            "lineno": 358,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "comment",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "Comment object.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Id",
+                "description": "The comment ID."
+            },
+            {
+                "type": {
+                    "names": [
+                        "CommentData"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "CommentData"
+                    }
+                },
+                "name": "Data",
+                "description": "An object which contains the comment data."
+            }
+        ],
+        "longname": "comment",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/comment.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * @typedef {Object} CommentData\n\t * The comment data.\n\t * @property {string} UserName - The comment author.\n\t * @property {string} QuoteText - The quote comment text.\n\t * @property {string} Text - The comment text.\n\t * @property {string} Time - The time when the comment was posted (in milliseconds).\n\t * @property {boolean} Solved - Specifies if the comment is resolved (**true**) or not (**false**).\n\t * @property {CommentData[]} Replies - An array containing the comment replies represented as the *CommentData* object.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/CommentData.js\n\t */",
+        "meta": {
+            "lineno": 366,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "CommentData",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "The comment data.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "UserName",
+                "description": "The comment author."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "QuoteText",
+                "description": "The quote comment text."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Text",
+                "description": "The comment text."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Time",
+                "description": "The time when the comment was posted (in milliseconds)."
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                },
+                "name": "Solved",
+                "description": "Specifies if the comment is resolved (**true**) or not (**false**)."
+            },
+            {
+                "type": {
+                    "names": [
+                        "Array.<CommentData>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "CommentData",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                },
+                "name": "Replies",
+                "description": "An array containing the comment replies represented as the *CommentData* object."
+            }
+        ],
+        "longname": "CommentData",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/CommentData.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Adds a comment to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddComment\n\t * @param {CommentData}  oCommentData - An object which contains the comment data.\n\t * @return {string | null} - The comment ID in the string format or null if the comment cannot be added.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddComment.js\n\t */",
+        "meta": {
+            "lineno": 387,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "AddComment",
+        "description": "Adds a comment to the document.",
+        "memberof": "Api",
+        "longname": "AddComment",
+        "alias": "AddComment",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "CommentData"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "CommentData"
+                    }
+                },
+                "name": "oCommentData",
+                "description": "An object which contains the comment data."
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string",
+                        "null"
+                    ],
+                    "parsedType": {
+                        "type": "TypeUnion",
+                        "elements": [
+                            {
+                                "type": "NameExpression",
+                                "name": "string"
+                            },
+                            {
+                                "type": "NullLiteral"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/AddComment.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Moves a cursor to the beginning of the current editing area (document body, footer/header, footnote, or autoshape).\n\t * This method is similar to pressing the <b>Ctrl + Home</b> keyboard shortcut.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias MoveCursorToStart\n     * @param {boolean} isMoveToMainContent - This flag ignores the current position and always moves a cursor to the beginning of the document body.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/MoveCursorToStart.js\n\t */",
+        "meta": {
+            "lineno": 407,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "MoveCursorToStart",
+        "description": "Moves a cursor to the beginning of the current editing area (document body, footer/header, footnote, or autoshape).\nThis method is similar to pressing the <b>Ctrl + Home</b> keyboard shortcut.",
+        "memberof": "Api",
+        "longname": "MoveCursorToStart",
+        "alias": "MoveCursorToStart",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                },
+                "name": "isMoveToMainContent",
+                "description": "This flag ignores the current position and always moves a cursor to the beginning of the document body."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/MoveCursorToStart.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Moves a cursor to the end of the current editing area (document body, footer/header, footnote, or autoshape).\n\t * This method is similar to pressing the <b>Ctrl + End</b> keyboard shortcut.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias MoveCursorToEnd\n     * @param {boolean} isMoveToMainContent - This flag ignores the current position and always moves a cursor to the end of the document body.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/MoveCursorToEnd.js\n\t */",
+        "meta": {
+            "lineno": 427,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "MoveCursorToEnd",
+        "description": "Moves a cursor to the end of the current editing area (document body, footer/header, footnote, or autoshape).\nThis method is similar to pressing the <b>Ctrl + End</b> keyboard shortcut.",
+        "memberof": "Api",
+        "longname": "MoveCursorToEnd",
+        "alias": "MoveCursorToEnd",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                },
+                "name": "isMoveToMainContent",
+                "description": "This flag ignores the current position and always moves a cursor to the end of the document body."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/MoveCursorToEnd.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Finds and replaces the text.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias SearchAndReplace\n     * @param {Object} oProperties - An object which contains the search and replacement strings.\n     * @param {string} oProperties.searchString - The search string.\n     * @param {string} oProperties.replaceString - The replacement string.\n     * @param {boolean} [oProperties.matchCase=true] - Case sensitive or not.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SearchAndReplace.js\n\t */",
+        "meta": {
+            "lineno": 449,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "SearchAndReplace",
+        "description": "Finds and replaces the text.",
+        "memberof": "Api",
+        "longname": "SearchAndReplace",
+        "alias": "SearchAndReplace",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Object"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "Object"
+                    }
+                },
+                "name": "oProperties",
+                "description": "An object which contains the search and replacement strings."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "oProperties.searchString",
+                "description": "The search string."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "oProperties.replaceString",
+                "description": "The replacement string."
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                },
+                "name": "oProperties.matchCase",
+                "description": "Case sensitive or not.",
+                "optional": true,
+                "defaultvalue": true
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/SearchAndReplace.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Finds and selects the next occurrence of the text starting at the current position.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias SearchNext\n\t * @param {Object} oProperties - An object which contains the search string.\n\t * @param {string} oProperties.searchString - The search string.\n\t * @param {boolean} [oProperties.matchCase=true] - Case sensitive or not.\n\t * @param {boolean} [isForward=true] - Search direction.\n\t * @returns {boolean} returns false if text was not found\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SearchNext.js\n\t */",
+        "meta": {
+            "lineno": 475,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "SearchNext",
+        "description": "Finds and selects the next occurrence of the text starting at the current position.",
+        "memberof": "Api",
+        "longname": "SearchNext",
+        "alias": "SearchNext",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Object"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "Object"
+                    }
+                },
+                "name": "oProperties",
+                "description": "An object which contains the search string."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "oProperties.searchString",
+                "description": "The search string."
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                },
+                "name": "oProperties.matchCase",
+                "description": "Case sensitive or not.",
+                "optional": true,
+                "defaultvalue": true
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                },
+                "name": "isForward",
+                "description": "Search direction.",
+                "optional": true,
+                "defaultvalue": true
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/SearchNext.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * Returns file content in the HTML format.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias GetFileHTML\n     * @return {string} - The HTML file content in the string format.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetFileHTML.js\n\t */",
+        "meta": {
+            "lineno": 501,
+            "columnno": 4
+        },
+        "kind": "function",
+        "name": "GetFileHTML",
+        "description": "Returns file content in the HTML format.",
+        "memberof": "Api",
+        "longname": "GetFileHTML",
+        "alias": "GetFileHTML",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/GetFileHTML.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns all the comments from the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetAllComments\n\t * @returns {comment[]} - An array of comment objects containing the comment data.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetAllComments.js\n\t */",
+        "meta": {
+            "lineno": 513,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "GetAllComments",
+        "description": "Returns all the comments from the document.",
+        "memberof": "Api",
+        "longname": "GetAllComments",
+        "alias": "GetAllComments",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<comment>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "comment",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/GetAllComments.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Removes the specified comments.\n\t * @param {string[]} arrIds - An array which contains the IDs of the specified comments.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias RemoveComments\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveComments.js\n\t */",
+        "meta": {
+            "lineno": 538,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "RemoveComments",
+        "description": "Removes the specified comments.",
+        "memberof": "Api",
+        "longname": "RemoveComments",
+        "alias": "RemoveComments",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<string>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "string",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                },
+                "name": "arrIds",
+                "description": "An array which contains the IDs of the specified comments."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/RemoveComments.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Changes the specified comment.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias ChangeComment\n\t * @param {string} sId - The comment ID.\n\t * @param {CommentData} oCommentData - An object which contains the new comment data.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ChangeComment.js\n\t */",
+        "meta": {
+            "lineno": 551,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "ChangeComment",
+        "description": "Changes the specified comment.",
+        "memberof": "Api",
+        "longname": "ChangeComment",
+        "alias": "ChangeComment",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "sId",
+                "description": "The comment ID."
+            },
+            {
+                "type": {
+                    "names": [
+                        "CommentData"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "CommentData"
+                    }
+                },
+                "name": "oCommentData",
+                "description": "An object which contains the new comment data."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/ChangeComment.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Moves a cursor to the specified comment.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias MoveToComment\n\t * @param {string} sId - The comment ID.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/MoveToComment.js\n\t */",
+        "meta": {
+            "lineno": 582,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "MoveToComment",
+        "description": "Moves a cursor to the specified comment.",
+        "memberof": "Api",
+        "longname": "MoveToComment",
+        "alias": "MoveToComment",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "sId",
+                "description": "The comment ID."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/MoveToComment.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Sets the display mode for track changes.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias SetDisplayModeInReview\n\t * @param {string} [sMode=\"edit\"] - The display mode:\n\t * <b>edit</b> - all changes are displayed,\n\t * <b>simple</b> - all changes are displayed but the balloons are turned off,\n\t * <b>final</b> - all accepted changes are displayed,\n\t * <b>original</b> - all rejected changes are displayed.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SetDisplayModeInReview.js\n\t */",
+        "meta": {
+            "lineno": 599,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "SetDisplayModeInReview",
+        "description": "Sets the display mode for track changes.",
+        "memberof": "Api",
+        "longname": "SetDisplayModeInReview",
+        "alias": "SetDisplayModeInReview",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "sMode",
+                "description": "The display mode:\n<b>edit</b> - all changes are displayed,\n<b>simple</b> - all changes are displayed but the balloons are turned off,\n<b>final</b> - all accepted changes are displayed,\n<b>original</b> - all rejected changes are displayed.",
+                "optional": true,
+                "defaultvalue": "\"edit\""
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/SetDisplayModeInReview.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Adds an empty content control to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddContentControl\n\t * @param {ContentControlType} type - A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block), <b>2</b> (inline), <b>3</b> (row), or <b>4</b> (cell).\n\t * @param {ContentControlProperties}  [commonPr = {}] - The common content control properties.\n\t * @returns {ContentControl} - A JSON object containing the data about the created content control.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddContentControl.js\n\t */",
+        "meta": {
+            "lineno": 624,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "AddContentControl",
+        "description": "Adds an empty content control to the document.",
+        "memberof": "Api",
+        "longname": "AddContentControl",
+        "alias": "AddContentControl",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "ContentControlType"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlType"
+                    }
+                },
+                "name": "type",
+                "description": "A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block), <b>2</b> (inline), <b>3</b> (row), or <b>4</b> (cell)."
+            },
+            {
+                "type": {
+                    "names": [
+                        "ContentControlProperties"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlProperties"
+                    }
+                },
+                "name": "commonPr",
+                "description": "The common content control properties.",
+                "optional": true,
+                "defaultvalue": "{}"
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "ContentControl"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControl"
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/AddContentControl.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * @typedef {Object} ContentControlCheckBoxProperties\n\t * The content control checkbox properties.\n\t * @property {boolean} Checked - Defines if the content control checkbox is checked or not.\n\t * @property {number} CheckedSymbol - A symbol in the HTML code format that is used when the checkbox is checked.\n\t * @property {number} UncheckedSymbol - A symbol in the HTML code format that is used when the checkbox is not checked.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControlCheckBoxProperties.js\n\t */",
+        "meta": {
+            "lineno": 634,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "ContentControlCheckBoxProperties",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "The content control checkbox properties.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                },
+                "name": "Checked",
+                "description": "Defines if the content control checkbox is checked or not."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "CheckedSymbol",
+                "description": "A symbol in the HTML code format that is used when the checkbox is checked."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "UncheckedSymbol",
+                "description": "A symbol in the HTML code format that is used when the checkbox is not checked."
+            }
+        ],
+        "longname": "ContentControlCheckBoxProperties",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/ContentControlCheckBoxProperties.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Adds an empty content control checkbox to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddContentControlCheckBox\n\t * @param {ContentControlCheckBoxProperties}  [checkBoxPr = {}] - The content control checkbox properties.\n\t * @param {ContentControlProperties}  [commonPr = {}] - The common content control properties.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddContentControlCheckBox.js\n\t */",
+        "meta": {
+            "lineno": 652,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "AddContentControlCheckBox",
+        "description": "Adds an empty content control checkbox to the document.",
+        "memberof": "Api",
+        "longname": "AddContentControlCheckBox",
+        "alias": "AddContentControlCheckBox",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "ContentControlCheckBoxProperties"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlCheckBoxProperties"
+                    }
+                },
+                "name": "checkBoxPr",
+                "description": "The content control checkbox properties.",
+                "optional": true,
+                "defaultvalue": "{}"
+            },
+            {
+                "type": {
+                    "names": [
+                        "ContentControlProperties"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlProperties"
+                    }
+                },
+                "name": "commonPr",
+                "description": "The common content control properties.",
+                "optional": true,
+                "defaultvalue": "{}"
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/AddContentControlCheckBox.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Adds an empty content control picture to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddContentControlPicture\n\t * @param {ContentControlProperties}  [commonPr = {}] - The common content control properties.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddContentControlPicture.js\n\t */",
+        "meta": {
+            "lineno": 679,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "AddContentControlPicture",
+        "description": "Adds an empty content control picture to the document.",
+        "memberof": "Api",
+        "longname": "AddContentControlPicture",
+        "alias": "AddContentControlPicture",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "ContentControlProperties"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlProperties"
+                    }
+                },
+                "name": "commonPr",
+                "description": "The common content control properties.",
+                "optional": true,
+                "defaultvalue": "{}"
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/AddContentControlPicture.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Adds an empty content control list to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddContentControlList\n\t * @param {ContentControlType} type - A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (combo box), <b>0</b> (dropdown list).\n\t * @param {Array<String, String>}  [List = [{Display, Value}]] - A list of the content control elements that consists of two items: <b>Display</b> - an item that will be displayed to the user in the content control list, <b>Value</b> - a value of each item from the content control list.\n\t * @param {ContentControlProperties}  [commonPr = {}] - The common content control properties.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddContentControlList.js\n\t */",
+        "meta": {
+            "lineno": 695,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "AddContentControlList",
+        "description": "Adds an empty content control list to the document.",
+        "memberof": "Api",
+        "longname": "AddContentControlList",
+        "alias": "AddContentControlList",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "ContentControlType"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlType"
+                    }
+                },
+                "name": "type",
+                "description": "A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (combo box), <b>0</b> (dropdown list)."
+            },
+            {
+                "type": {
+                    "names": [
+                        "Array.<String, String>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "type": "NameExpression",
+                                "name": "String"
+                            },
+                            {
+                                "type": "NameExpression",
+                                "name": "String"
+                            }
+                        ]
+                    }
+                },
+                "name": "List",
+                "description": "A list of the content control elements that consists of two items: <b>Display</b> - an item that will be displayed to the user in the content control list, <b>Value</b> - a value of each item from the content control list.",
+                "optional": true,
+                "defaultvalue": "[{Display, Value}]"
+            },
+            {
+                "type": {
+                    "names": [
+                        "ContentControlProperties"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlProperties"
+                    }
+                },
+                "name": "commonPr",
+                "description": "The common content control properties.",
+                "optional": true,
+                "defaultvalue": "{}"
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/AddContentControlList.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * @typedef {Object} ContentControlDatePickerProperties\n\t * The content control datepicker properties.\n\t * @property {string} DateFormat - A format in which the date will be displayed.\n\t * For example: *\"MM/DD/YYYY\", \"dddd\\,\\ mmmm\\ dd\\,\\ yyyy\", \"DD\\ MMMM\\ YYYY\", \"MMMM\\ DD\\,\\ YYYY\", \"DD-MMM-YY\", \"MMMM\\ YY\", \"MMM-YY\", \"MM/DD/YYYY\\ hh:mm\\ AM/PM\", \"MM/DD/YYYY\\ hh:mm:ss\\ AM/PM\", \"hh:mm\", \"hh:mm:ss\", \"hh:mm\\ AM/PM\", \"hh:mm:ss:\\ AM/PM\"*.\n\t * @property {object} Date - The current date and time.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControlDatePickerProperties.js\n\t */",
+        "meta": {
+            "lineno": 711,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "ContentControlDatePickerProperties",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "The content control datepicker properties.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "DateFormat",
+                "description": "A format in which the date will be displayed.\nFor example: *\"MM/DD/YYYY\", \"dddd\\,\\ mmmm\\ dd\\,\\ yyyy\", \"DD\\ MMMM\\ YYYY\", \"MMMM\\ DD\\,\\ YYYY\", \"DD-MMM-YY\", \"MMMM\\ YY\", \"MMM-YY\", \"MM/DD/YYYY\\ hh:mm\\ AM/PM\", \"MM/DD/YYYY\\ hh:mm:ss\\ AM/PM\", \"hh:mm\", \"hh:mm:ss\", \"hh:mm\\ AM/PM\", \"hh:mm:ss:\\ AM/PM\"*."
+            },
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "object"
+                    }
+                },
+                "name": "Date",
+                "description": "The current date and time."
+            }
+        ],
+        "longname": "ContentControlDatePickerProperties",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/ContentControlDatePickerProperties.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Adds an empty content control datepicker to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddContentControlDatePicker\n\t * @param {ContentControlDatePickerProperties}  [datePickerPr = {}] - The content control datepicker properties.\n\t * @param {ContentControlProperties}  [commonPr = {}] - The common content control properties.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddContentControlDatePicker.js\n\t */",
+        "meta": {
+            "lineno": 729,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "AddContentControlDatePicker",
+        "description": "Adds an empty content control datepicker to the document.",
+        "memberof": "Api",
+        "longname": "AddContentControlDatePicker",
+        "alias": "AddContentControlDatePicker",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "ContentControlDatePickerProperties"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlDatePickerProperties"
+                    }
+                },
+                "name": "datePickerPr",
+                "description": "The content control datepicker properties.",
+                "optional": true,
+                "defaultvalue": "{}"
+            },
+            {
+                "type": {
+                    "names": [
+                        "ContentControlProperties"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlProperties"
+                    }
+                },
+                "name": "commonPr",
+                "description": "The common content control properties.",
+                "optional": true,
+                "defaultvalue": "{}"
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/AddContentControlDatePicker.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * @typedef {Object} OLEObjectData\n\t * The OLE object data.\n\t * @property {string} Data - OLE object data (internal format).\n\t * @property {string} ImageData - An image in the base64 format stored in the OLE object and used by the plugin.\n\t * @property {string} ApplicationId - An identifier of the plugin which can edit the current OLE object and must be of the *asc.{UUID}* type.\n\t * @property {string} InternalId - The OLE object identifier which is used to work with OLE object added to the document.\n\t * @property {string} ParaDrawingId - An identifier of the drawing object containing the current OLE object.\n\t * @property {number} Width - The OLE object width measured in millimeters.\n\t * @property {number} Height - The OLE object height measured in millimeters.\n\t * @property {?number} WidthPix - The OLE object image width in pixels.\n\t * @property {?number} HeightPix - The OLE object image height in pixels.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/OLEObjectData.js\n\t */",
+        "meta": {
+            "lineno": 747,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "OLEObjectData",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "The OLE object data.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Data",
+                "description": "OLE object data (internal format)."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "ImageData",
+                "description": "An image in the base64 format stored in the OLE object and used by the plugin."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "ApplicationId",
+                "description": "An identifier of the plugin which can edit the current OLE object and must be of the *asc.{UUID}* type."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "InternalId",
+                "description": "The OLE object identifier which is used to work with OLE object added to the document."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "ParaDrawingId",
+                "description": "An identifier of the drawing object containing the current OLE object."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "Width",
+                "description": "The OLE object width measured in millimeters."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "Height",
+                "description": "The OLE object height measured in millimeters."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number",
+                        "nullable": true
+                    }
+                },
+                "name": "WidthPix",
+                "description": "The OLE object image width in pixels."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number",
+                        "nullable": true
+                    }
+                },
+                "name": "HeightPix",
+                "description": "The OLE object image height in pixels."
+            }
+        ],
+        "longname": "OLEObjectData",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/OLEObjectData.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * @typedef {Object} AddinFieldData\n\t * The addin field data.\n\t * @property {string} FieldId - Field identifier.\n\t * @property {string} Value - Field value.\n\t * @property {string} Content - Field text content.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/AddinFieldData.js\n\t */",
+        "meta": {
+            "lineno": 762,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "AddinFieldData",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "The addin field data.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "FieldId",
+                "description": "Field identifier."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Value",
+                "description": "Field value."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Content",
+                "description": "Field text content."
+            }
+        ],
+        "longname": "AddinFieldData",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Enumeration/AddinFieldData.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns all OLE object data for objects which can be opened by the specified plugin.\n\t * If *sPluginId* is not defined, this method returns all OLE objects contained in the currrent document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetAllOleObjects\n\t * @param {?string} sPluginId - Plugin identifier. It must be of the *asc.{UUID}* type.\n\t * @returns {OLEObjectData[]} - An array of the OLEObjectData objects containing the data about the OLE object parameters.\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetAllOleObjects.js\n\t */",
+        "meta": {
+            "lineno": 782,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.1.0",
+        "name": "GetAllOleObjects",
+        "description": "Returns all OLE object data for objects which can be opened by the specified plugin.\nIf *sPluginId* is not defined, this method returns all OLE objects contained in the currrent document.",
+        "memberof": "Api",
+        "longname": "GetAllOleObjects",
+        "alias": "GetAllOleObjects",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string",
+                        "nullable": true
+                    }
+                },
+                "name": "sPluginId",
+                "description": "Plugin identifier. It must be of the *asc.{UUID}* type."
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<OLEObjectData>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "OLEObjectData",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/GetAllOleObjects.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Removes the OLE object from the document by its internal ID.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias RemoveOleObject\n\t * @param {string} sInternalId - The OLE object identifier which is used to work with OLE object added to the document.\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveOleObject.js\n\t */",
+        "meta": {
+            "lineno": 805,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.1.0",
+        "name": "RemoveOleObject",
+        "description": "Removes the OLE object from the document by its internal ID.",
+        "memberof": "Api",
+        "longname": "RemoveOleObject",
+        "alias": "RemoveOleObject",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "sInternalId",
+                "description": "The OLE object identifier which is used to work with OLE object added to the document."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/RemoveOleObject.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Removes several OLE objects from the document by their internal IDs.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias RemoveOleObjects\n\t * @param {OLEObjectData[]} arrObjects An array of the identifiers which are used to work with OLE objects added to the document. Example: [{\"InternalId\": \"5_556\"}].\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveOleObjects.js\n\t */",
+        "meta": {
+            "lineno": 824,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.1.0",
+        "name": "RemoveOleObjects",
+        "description": "Removes several OLE objects from the document by their internal IDs.",
+        "memberof": "Api",
+        "longname": "RemoveOleObjects",
+        "alias": "RemoveOleObjects",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<OLEObjectData>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "OLEObjectData",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                },
+                "name": "arrObjects",
+                "description": "An array of the identifiers which are used to work with OLE objects added to the document. Example: [{\"InternalId\": \"5_556\"}]."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/RemoveOleObjects.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Selects the specified OLE object.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias SelectOleObject\n\t * @param {string} id - The OLE object identifier which is used to work with OLE object added to the document.\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SelectOleObject.js\n\t */",
+        "meta": {
+            "lineno": 849,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.1.0",
+        "name": "SelectOleObject",
+        "description": "Selects the specified OLE object.",
+        "memberof": "Api",
+        "longname": "SelectOleObject",
+        "alias": "SelectOleObject",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "id",
+                "description": "The OLE object identifier which is used to work with OLE object added to the document."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/SelectOleObject.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Inserts the OLE object at the current document position.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias InsertOleObject\n\t * @param {OLEObjectData} NewObject - The OLEObjectData object.\n\t * @param {?boolean} bSelect - Defines if the OLE object will be selected after inserting into the document (**true**) or not (**false**).\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/InsertOleObject.js\n\t */",
+        "meta": {
+            "lineno": 873,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.1.0",
+        "name": "InsertOleObject",
+        "description": "Inserts the OLE object at the current document position.",
+        "memberof": "Api",
+        "longname": "InsertOleObject",
+        "alias": "InsertOleObject",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "OLEObjectData"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "OLEObjectData"
+                    }
+                },
+                "name": "NewObject",
+                "description": "The OLEObjectData object."
+            },
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean",
+                        "nullable": true
+                    }
+                },
+                "name": "bSelect",
+                "description": "Defines if the OLE object will be selected after inserting into the document (**true**) or not (**false**)."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/InsertOleObject.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Changes the OLE object with the *InternalId* specified in OLE object data.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias ChangeOleObject\n\t * @param {OLEObjectData} ObjectData - The OLEObjectData object.\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ChangeOleObject.js\n\t */",
+        "meta": {
+            "lineno": 898,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.1.0",
+        "name": "ChangeOleObject",
+        "description": "Changes the OLE object with the *InternalId* specified in OLE object data.",
+        "memberof": "Api",
+        "longname": "ChangeOleObject",
+        "alias": "ChangeOleObject",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "OLEObjectData"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "OLEObjectData"
+                    }
+                },
+                "name": "ObjectData",
+                "description": "The OLEObjectData object."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/ChangeOleObject.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Changes multiple OLE objects with the *InternalIds* specified in OLE object data.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias ChangeOleObjects\n\t * @param {OLEObjectData[]} arrObjectData - An array of OLE object data.\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ChangeOleObjects.js\n\t */",
+        "meta": {
+            "lineno": 911,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.1.0",
+        "name": "ChangeOleObjects",
+        "description": "Changes multiple OLE objects with the *InternalIds* specified in OLE object data.",
+        "memberof": "Api",
+        "longname": "ChangeOleObjects",
+        "alias": "ChangeOleObjects",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<OLEObjectData>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "OLEObjectData",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                },
+                "name": "arrObjectData",
+                "description": "An array of OLE object data."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/ChangeOleObjects.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Accepts review changes.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AcceptReviewChanges\n\t * @param {boolean} [isAll=false] Specifies if all changes will be accepted (**true**) or only changes from the current selection (**false**).\n\t * @since 7.2.1\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AcceptReviewChanges.js\n\t */",
+        "meta": {
+            "lineno": 1007,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.2.1",
+        "name": "AcceptReviewChanges",
+        "description": "Accepts review changes.",
+        "memberof": "Api",
+        "longname": "AcceptReviewChanges",
+        "alias": "AcceptReviewChanges",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                },
+                "name": "isAll",
+                "description": "Specifies if all changes will be accepted (**true**) or only changes from the current selection (**false**).",
+                "optional": true,
+                "defaultvalue": false
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/AcceptReviewChanges.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Rejects review changes.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias RejectReviewChanges\n\t * @param {boolean} [isAll=false] Specifies if all changes will be rejected (**true**) or only changes from the current selection (**false**).\n\t * @since 7.2.1\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RejectReviewChanges.js\n\t */",
+        "meta": {
+            "lineno": 1023,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.2.1",
+        "name": "RejectReviewChanges",
+        "description": "Rejects review changes.",
+        "memberof": "Api",
+        "longname": "RejectReviewChanges",
+        "alias": "RejectReviewChanges",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                },
+                "name": "isAll",
+                "description": "Specifies if all changes will be rejected (**true**) or only changes from the current selection (**false**).",
+                "optional": true,
+                "defaultvalue": false
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/RejectReviewChanges.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Navigates through the review changes.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias MoveToNextReviewChange\n\t * @param {boolean} [isForward=true] Specifies whether to navigate to the next (**true**) or previous (**false**) review change.\n\t * @since 7.2.1\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/MoveToNextReviewChange.js\n\t */",
+        "meta": {
+            "lineno": 1039,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.2.1",
+        "name": "MoveToNextReviewChange",
+        "description": "Navigates through the review changes.",
+        "memberof": "Api",
+        "longname": "MoveToNextReviewChange",
+        "alias": "MoveToNextReviewChange",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                },
+                "name": "isForward",
+                "description": "Specifies whether to navigate to the next (**true**) or previous (**false**) review change.",
+                "optional": true,
+                "defaultvalue": true
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/MoveToNextReviewChange.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns all addin fields from the current document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetAllAddinFields\n\t * @returns {AddinFieldData[]} - An array of the AddinFieldData objects containing the data about the addin fields.\n\t * @since 7.3.3\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetAllAddinFields.js\n\t */",
+        "meta": {
+            "lineno": 1055,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.3.3",
+        "name": "GetAllAddinFields",
+        "description": "Returns all addin fields from the current document.",
+        "memberof": "Api",
+        "longname": "GetAllAddinFields",
+        "alias": "GetAllAddinFields",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<AddinFieldData>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "AddinFieldData",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/GetAllAddinFields.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Updates the addin fields with the specified data.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias UpdateAddinFields\n\t * @param {AddinFieldData[]} arrData - An array of addin field data.\n\t * @since 7.3.3\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/UpdateAddinFields.js\n\t */",
+        "meta": {
+            "lineno": 1081,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.3.3",
+        "name": "UpdateAddinFields",
+        "description": "Updates the addin fields with the specified data.",
+        "memberof": "Api",
+        "longname": "UpdateAddinFields",
+        "alias": "UpdateAddinFields",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<AddinFieldData>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "AddinFieldData",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                },
+                "name": "arrData",
+                "description": "An array of addin field data."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/UpdateAddinFields.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Creates a new addin field with the data specified in the request.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddAddinField\n\t * @param {AddinFieldData} data - Addin field data.\n\t * @since 7.3.3\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddAddinField.js\n\t */",
+        "meta": {
+            "lineno": 1104,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.3.3",
+        "name": "AddAddinField",
+        "description": "Creates a new addin field with the data specified in the request.",
+        "memberof": "Api",
+        "longname": "AddAddinField",
+        "alias": "AddAddinField",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "AddinFieldData"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "AddinFieldData"
+                    }
+                },
+                "name": "data",
+                "description": "Addin field data."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/AddAddinField.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Removes a field wrapper, leaving only the field content.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias RemoveFieldWrapper\n\t * @param {string} [fieldId=undefined] - Field ID. If it is not specified, then the wrapper of the current field is removed.\n\t * @since 7.3.3\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveFieldWrapper.js\n\t */",
+        "meta": {
+            "lineno": 1121,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.3.3",
+        "name": "RemoveFieldWrapper",
+        "description": "Removes a field wrapper, leaving only the field content.",
+        "memberof": "Api",
+        "longname": "RemoveFieldWrapper",
+        "alias": "RemoveFieldWrapper",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "fieldId",
+                "description": "Field ID. If it is not specified, then the wrapper of the current field is removed.",
+                "optional": true
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/RemoveFieldWrapper.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Sets the document editing restrictions.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias SetEditingRestrictions\n\t * @param {DocumentEditingRestrictions} restrictions - The document editing restrictions.\n\t * @since 7.3.3\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SetEditingRestrictions.js\n\t */",
+        "meta": {
+            "lineno": 1138,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.3.3",
+        "name": "SetEditingRestrictions",
+        "description": "Sets the document editing restrictions.",
+        "memberof": "Api",
+        "longname": "SetEditingRestrictions",
+        "alias": "SetEditingRestrictions",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "DocumentEditingRestrictions"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "DocumentEditingRestrictions"
+                    }
+                },
+                "name": "restrictions",
+                "description": "The document editing restrictions."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/SetEditingRestrictions.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns the current word.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetCurrentWord\n\t * @param {TextPartType} [type=\"entirely\"] - Specifies if the whole word or only its part will be returned.\n\t * @returns {string} - A word or its part.\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetCurrentWord.js\n\t */",
+        "meta": {
+            "lineno": 1168,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.4.0",
+        "name": "GetCurrentWord",
+        "description": "Returns the current word.",
+        "memberof": "Api",
+        "longname": "GetCurrentWord",
+        "alias": "GetCurrentWord",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "TextPartType"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "TextPartType"
+                    }
+                },
+                "name": "type",
+                "description": "Specifies if the whole word or only its part will be returned.",
+                "optional": true,
+                "defaultvalue": "\"entirely\""
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/GetCurrentWord.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Replaces the current word with the specified string.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias ReplaceCurrentWord\n\t * @param {string} replaceString - Replacement string.\n\t * @param {TextPartType} [type=\"entirely\"] - Specifies if the whole word or only its part will be replaced.\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ReplaceCurrentWord.js\n\t */",
+        "meta": {
+            "lineno": 1186,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.4.0",
+        "name": "ReplaceCurrentWord",
+        "description": "Replaces the current word with the specified string.",
+        "memberof": "Api",
+        "longname": "ReplaceCurrentWord",
+        "alias": "ReplaceCurrentWord",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "replaceString",
+                "description": "Replacement string."
+            },
+            {
+                "type": {
+                    "names": [
+                        "TextPartType"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "TextPartType"
+                    }
+                },
+                "name": "type",
+                "description": "Specifies if the whole word or only its part will be replaced.",
+                "optional": true,
+                "defaultvalue": "\"entirely\""
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/ReplaceCurrentWord.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns the current sentence.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetCurrentSentence\n\t * @param {TextPartType} [type=\"entirely\"] - Specifies if the whole sentence or only its part will be returned.\n\t * @returns {string} - A sentence or its part.\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetCurrentSentence.js\n\t */",
+        "meta": {
+            "lineno": 1206,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.4.0",
+        "name": "GetCurrentSentence",
+        "description": "Returns the current sentence.",
+        "memberof": "Api",
+        "longname": "GetCurrentSentence",
+        "alias": "GetCurrentSentence",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "TextPartType"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "TextPartType"
+                    }
+                },
+                "name": "type",
+                "description": "Specifies if the whole sentence or only its part will be returned.",
+                "optional": true,
+                "defaultvalue": "\"entirely\""
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/GetCurrentSentence.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Replaces the current sentence with the specified string.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias ReplaceCurrentSentence\n\t * @param {string} replaceString - Replacement string.\n\t * @param {TextPartType} [type=\"entirely\"] - Specifies if the whole sentence or only its part will be replaced.\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ReplaceCurrentSentence.js\n\t */",
+        "meta": {
+            "lineno": 1224,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "7.4.0",
+        "name": "ReplaceCurrentSentence",
+        "description": "Replaces the current sentence with the specified string.",
+        "memberof": "Api",
+        "longname": "ReplaceCurrentSentence",
+        "alias": "ReplaceCurrentSentence",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "replaceString",
+                "description": "Replacement string."
+            },
+            {
+                "type": {
+                    "names": [
+                        "TextPartType"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "TextPartType"
+                    }
+                },
+                "name": "type",
+                "description": "Specifies if the whole sentence or only its part will be replaced.",
+                "optional": true,
+                "defaultvalue": "\"entirely\""
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/ReplaceCurrentSentence.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Undo the user's last action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias Undo\n\t * @since 8.2.0\n\t */",
+        "meta": {
+            "lineno": 1242,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "8.2.0",
+        "name": "Undo",
+        "description": "Undo the user's last action.",
+        "memberof": "Api",
+        "longname": "Undo",
+        "alias": "Undo"
+    },
+    {
+        "comment": "/**\n\t * Revert the user's last undone action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias Redo\n\t * @since 8.2.0\n\t */",
+        "meta": {
+            "lineno": 1253,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "8.2.0",
+        "name": "Redo",
+        "description": "Revert the user's last undone action.",
+        "memberof": "Api",
+        "longname": "Redo",
+        "alias": "Redo"
+    },
+    {
+        "comment": "/**\n\t * Check if it possible to undo the user's last action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias CanUndo\n\t * @since 8.2.0\n\t */",
+        "meta": {
+            "lineno": 1264,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "8.2.0",
+        "name": "CanUndo",
+        "description": "Check if it possible to undo the user's last action.",
+        "memberof": "Api",
+        "longname": "CanUndo",
+        "alias": "CanUndo"
+    },
+    {
+        "comment": "/**\n\t * Check if it possible to revert the user's last undone action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias CanRedo\n\t * @since 8.2.0\n\t */",
+        "meta": {
+            "lineno": 1275,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "8.2.0",
+        "name": "CanRedo",
+        "description": "Check if it possible to revert the user's last undone action.",
+        "memberof": "Api",
+        "longname": "CanRedo",
+        "alias": "CanRedo"
+    },
+    {
+        "comment": "/**\n     * @typedef {Object} ContentControl\n\t * Content control object.\n     * @property {string} Tag - A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code.\n     * @property {string} Id - A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.\n     * @property {ContentControlLock} Lock - A value that defines if it is possible to delete and/or edit the content control or not: 0 - only deleting, 1 - no deleting or editing, 2 - only editing, 3 - full access.\n     * @property {string} InternalId - A unique internal identifier of the content control. It is used for all operations with content controls.\n     * @see office-js-api/Examples/Plugins/Forms/Enumeration/ContentControl.js\n\t */",
+        "meta": {
+            "lineno": 37,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "ContentControl",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "description": "Content control object.",
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Tag",
+                "description": "A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "Id",
+                "description": "A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code."
+            },
+            {
+                "type": {
+                    "names": [
+                        "ContentControlLock"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ContentControlLock"
+                    }
+                },
+                "name": "Lock",
+                "description": "A value that defines if it is possible to delete and/or edit the content control or not: 0 - only deleting, 1 - no deleting or editing, 2 - only editing, 3 - full access."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "InternalId",
+                "description": "A unique internal identifier of the content control. It is used for all operations with content controls."
+            }
+        ],
+        "longname": "ContentControl",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Forms/Enumeration/ContentControl.js"
+        ]
+    },
+    {
+        "comment": "/**\n     * @typedef {(0 | 1 | 2 | 3)} ContentControlLock\n     * A value that defines if it is possible to delete and/or edit the content control or not:\n\t * **0** - only deleting\n\t * **1** - disable deleting or editing\n\t * **2** - only editing\n\t * **3** - full access\n     * @see office-js-api/Examples/Plugins/Forms/Enumeration/ContentControlLock.js\n\t */",
+        "meta": {
+            "lineno": 47,
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "ContentControlLock",
+        "type": {
+            "names": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "parsedType": {
+                "type": "TypeUnion",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "0"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "1"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "2"
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "3"
+                    }
+                ]
+            }
+        },
+        "description": "A value that defines if it is possible to delete and/or edit the content control or not:\n**0** - only deleting\n**1** - disable deleting or editing\n**2** - only editing\n**3** - full access",
+        "longname": "ContentControlLock",
+        "scope": "global",
+        "see": [
+            "office-js-api/Examples/Plugins/Forms/Enumeration/ContentControlLock.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns information about all the forms that have been added to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetAllForms\n\t * @returns {ContentControl[]} - An array with all the forms from the document.\n\t * @see office-js-api/Examples/Plugins/Forms/Api/Methods/GetAllForms.js\n\t */",
+        "meta": {
+            "lineno": 65,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "GetAllForms",
+        "description": "Returns information about all the forms that have been added to the document.",
+        "memberof": "Api",
+        "longname": "GetAllForms",
+        "alias": "GetAllForms",
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<ContentControl>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "ContentControl",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Forms/Api/Methods/GetAllForms.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns information about all the forms that have been added to the document with specified tag.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetFormsByTag\n\t * @param {string} tag - The form tag.\n\t * @returns {ContentControl[]} - An array with all the forms from the document with the specified tag.\n\t * @see office-js-api/Examples/Plugins/Forms/Api/Methods/GetFormsByTag.js\n\t */",
+        "meta": {
+            "lineno": 88,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "GetFormsByTag",
+        "description": "Returns information about all the forms that have been added to the document with specified tag.",
+        "memberof": "Api",
+        "longname": "GetFormsByTag",
+        "alias": "GetFormsByTag",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "tag",
+                "description": "The form tag."
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "Array.<ContentControl>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeApplication",
+                        "expression": {
+                            "type": "NameExpression",
+                            "name": "Array"
+                        },
+                        "applications": [
+                            {
+                                "name": "ContentControl",
+                                "type": "NameExpression"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Forms/Api/Methods/GetFormsByTag.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Sets a value to the specified form.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias SetFormValue\n\t * @param {string} internalId - A unique internal identifier of the form.\n\t * @param {string | boolean} value - Form value to be set. Its type depends on the form type.\n\t * @see office-js-api/Examples/Plugins/Forms/Api/Methods/SetFormValue.js\n\t */",
+        "meta": {
+            "lineno": 114,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "SetFormValue",
+        "description": "Sets a value to the specified form.",
+        "memberof": "Api",
+        "longname": "SetFormValue",
+        "alias": "SetFormValue",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "internalId",
+                "description": "A unique internal identifier of the form."
+            },
+            {
+                "type": {
+                    "names": [
+                        "string",
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "TypeUnion",
+                        "elements": [
+                            {
+                                "type": "NameExpression",
+                                "name": "string"
+                            },
+                            {
+                                "type": "NameExpression",
+                                "name": "boolean"
+                            }
+                        ]
+                    }
+                },
+                "name": "value",
+                "description": "Form value to be set. Its type depends on the form type."
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Forms/Api/Methods/SetFormValue.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns a value of the specified form.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetFormValue\n\t * @param {string} internalId - A unique internal identifier of the form.\n\t * @returns {null | string | boolean} The form value in the string or boolean format depending on the form type. The null value means that the form is filled with a placeholder.\n\t * @see office-js-api/Examples/Plugins/Forms/Api/Methods/GetFormValue.js\n\t */",
+        "meta": {
+            "lineno": 127,
+            "columnno": 1
+        },
+        "kind": "function",
+        "name": "GetFormValue",
+        "description": "Returns a value of the specified form.",
+        "memberof": "Api",
+        "longname": "GetFormValue",
+        "alias": "GetFormValue",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "internalId",
+                "description": "A unique internal identifier of the form."
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "null",
+                        "string",
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "TypeUnion",
+                        "elements": [
+                            {
+                                "type": "NullLiteral"
+                            },
+                            {
+                                "type": "NameExpression",
+                                "name": "string"
+                            },
+                            {
+                                "type": "NameExpression",
+                                "name": "boolean"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Forms/Api/Methods/GetFormValue.js"
+        ]
+    }
+]

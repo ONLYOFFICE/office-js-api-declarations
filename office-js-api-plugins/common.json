@@ -1289,9 +1289,26 @@
         ]
     },
     {
+        "comment": "/**\n\t * Event: onSubmitForm\n\t * @event Plugin#onSubmitForm\n\t * @memberof Plugin\n\t * @typeofeditors [\"CDE\"]\n\t * @alias onSubmitForm\n\t * @description The function called when the user clicks \"Complete & Submit\" button.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Plugin/Methods/onSubmitForm.js\n\t */",
+        "meta": {
+            "lineno": 467,
+            "columnno": 1
+        },
+        "kind": "event",
+        "name": "onSubmitForm",
+        "description": "The function called when the user clicks \"Complete & Submit\" button.",
+        "memberof": "Plugin",
+        "longname": "Plugin#event:onSubmitForm",
+        "scope": "instance",
+        "alias": "onSubmitForm",
+        "see": [
+            "office-js-api/Examples/Plugins/Common/Plugin/Methods/onSubmitForm.js"
+        ]
+    },
+    {
         "comment": "/**\n\t * executeMethod\n\t * @memberof Plugin\n\t * @alias executeMethod\n\t * @description Defines the method used to execute certain editor methods using the plugin.\n\t * \n\t * The callback is the result that the method returns. It is an optional parameter. In case it is missing, the {@link Plugin#onMethodReturn window.Asc.plugin.onMethodReturn} function will be used to return the result of the method execution.\n\t * @param {string} name - The name of the specific method that must be executed.\n\t * @param {Array} params - The arguments that the method in use has (if it has any).\n     * @param {Function} callback - The result that the method returns.\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/Plugins/{Editor}/Plugin/Methods/executeMethod.js\n\t */",
         "meta": {
-            "lineno": 574,
+            "lineno": 583,
             "columnno": 1
         },
         "kind": "function",
@@ -1361,7 +1378,7 @@
     {
         "comment": "/**\n\t * resizeWindow (only for visual modal plugins)\n\t * @memberof Plugin\n\t * @alias resizeWindow\n\t * @description Defines the method used to change the window size updating the minimum/maximum sizes.\n\t * <note>This method is used for visual modal plugins only.</note>\n\t * @param {number} width - The window width.\n     * @param {number} height - The window height.\n     * @param {number} minW - The window minimum width.\n     * @param {number} minH - The window minimum height.\n     * @param {number} maxW - The window maximum width.\n\t * @param {number} maxH - The window maximum height.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Plugin/Methods/resizeWindow.js\n\t */",
         "meta": {
-            "lineno": 626,
+            "lineno": 635,
             "columnno": 1
         },
         "kind": "function",
@@ -1457,7 +1474,7 @@
     {
         "comment": "/**\n\t * callCommand\n\t * @memberof Plugin\n\t * @alias callCommand\n\t * @description Defines the method used to send the data back to the editor.\n\t * It allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).\n\t * \n\t * The *callback* is the result that the command returns. It is an optional parameter. In case it is missing, the {@link Plugin#onCommandCallback window.Asc.plugin.onCommandCallback} function will be used to return the result of the command execution.\n     * <note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the *Api.GetDocument().InsertContent(...)*).\n\t * This limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.</note>\n     * \n\t * This method is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use {@link /plugin/scope Asc.scope} object.\n\t * @param {Function} func - Defines the command written in JavaScript which purpose is to form structured data which can be inserted to the resulting document file\n\t * (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors.\n\t * The command must be compatible with {@link /docbuilder/basic ONLYOFFICE Document Builder} syntax.\n\t * @param {boolean} isClose - Defines whether the plugin window must be closed after the code is executed or left open waiting for another command or action.\n\t * The *true* value is used to close the plugin window after executing the function in the *func* parameter.\n\t * The *false* value is used to execute the command and leave the window open waiting for the next command.\n     * @param {boolean} isCalc - Defines whether the document will be recalculated or not.\n\t * The *true* value is used to recalculate the document after executing the function in the *func* parameter.\n\t * The *false* value will not recalculate the document (use it only when your edits surely will not require document recalculation).\n\t * @param {Function} callback - The result that the method returns. Only the js standart types are available (any objects will be replaced with *undefined*).\n\t * @see office-js-api/Examples/Plugins/{Editor}/Plugin/Methods/callCommand.js\n\t */",
         "meta": {
-            "lineno": 677,
+            "lineno": 686,
             "columnno": 1
         },
         "kind": "function",
@@ -1527,7 +1544,7 @@
     {
         "comment": "/**\n\t * callModule\n\t * @memberof Plugin\n\t * @alias callModule\n\t * @description Defines the method used to execute a remotely located script following a link.\n\t * @param {string} url - The resource code URL.\n\t * @param {Function} callback - The result that the method returns.\n\t * @param {boolean} isClose - Defines whether the plugin window must be closed after the code is executed or left open waiting for another action.\n\t * The *true* value is used to close the plugin window after executing a remotely located script.\n\t * The *false* value is used to execute the code and leave the window open waiting for the next action.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Plugin/Methods/callModule.js\n\t */",
         "meta": {
-            "lineno": 704,
+            "lineno": 713,
             "columnno": 1
         },
         "kind": "function",
@@ -1584,7 +1601,7 @@
     {
         "comment": "/**\n\t * loadModule\n\t * @memberof Plugin\n\t * @alias loadModule\n\t * @description Defines the method used to load a remotely located text resource.\n     * @param {string} url - The resource code URL.\n\t * @param {Function} callback - The result that the method returns.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Plugin/Methods/loadModule.js\n\t */",
         "meta": {
-            "lineno": 734,
+            "lineno": 743,
             "columnno": 1
         },
         "kind": "function",
@@ -1628,7 +1645,7 @@
     {
         "comment": "/**\n\t * @function attachEvent\n\t * @memberof Plugin\n\t * @alias attachEvent\n\t * @description Defines the method to add an event listener, a function that will be called whenever the specified event is delivered to the target.\n\t * The list of all the available events can be found {@link /plugin/events here}.\n     * @param {string} id - The event name.\n\t * @param {Function} action - The event listener.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Plugin/Methods/attachEvent.js\n\t */",
         "meta": {
-            "lineno": 751,
+            "lineno": 760,
             "columnno": 1
         },
         "kind": "function",
@@ -1673,7 +1690,7 @@
     {
         "comment": "/**\n\t * @function attachContextMenuClickEvent\n\t * @memberof Plugin\n\t * @alias attachContextMenuClickEvent\n\t * @description Defines the method to add an event listener, a function that will be called whenever the specified event is clicked in the context menu.\n     * @param {string} id - The event name.\n\t * @param {Function} action - The event listener.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Plugin/Methods/attachContextMenuClickEvent.js\n\t */",
         "meta": {
-            "lineno": 762,
+            "lineno": 771,
             "columnno": 1
         },
         "kind": "function",
@@ -1718,7 +1735,7 @@
     {
         "comment": "/**\n\t * @typedef {Object} InputHelperItem\n\t * @description Defines the input helper item.\n\t * @property {string} id - The item index.\n\t * @property {string} text - The item text.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/InputHelperItem.js\n\t */",
         "meta": {
-            "lineno": 776,
+            "lineno": 785,
             "columnno": 1
         },
         "kind": "typedef",
@@ -1770,7 +1787,7 @@
     {
         "comment": "/**\n\t * Class representing an input helper - a window that appears and disappears when you type text. Its location is tied to the cursor.\n\t * @global\n\t * @class\n\t * @name InputHelper\n\t * @hideconstructor\n\t */",
         "meta": {
-            "lineno": 784,
+            "lineno": 793,
             "columnno": 1
         },
         "kind": "class",
@@ -1782,7 +1799,7 @@
     {
         "comment": "/**\n\t * @function createWindow\n\t * @memberof InputHelper\n\t * @alias createWindow\n\t * @description Creates an input helper window.\n\t * @see office-js-api/Examples/Plugins/{Editor}/InputHelper/Methods/createWindow.js\n\t */",
         "meta": {
-            "lineno": 792,
+            "lineno": 801,
             "columnno": 1
         },
         "kind": "function",
@@ -1799,7 +1816,7 @@
     {
         "comment": "/**\n\t * @function getItems\n\t * @memberof InputHelper\n\t * @alias getItems\n\t * @description Returns an array of the {@link global#InputHelperItem InputHelperItem} objects that contain all the items from the input helper.\n\t * @return {InputHelperItem[]}\n\t * @see office-js-api/Examples/Plugins/{Editor}/InputHelper/Methods/getItems.js\n\t */",
         "meta": {
-            "lineno": 800,
+            "lineno": 809,
             "columnno": 1
         },
         "kind": "function",
@@ -1838,7 +1855,7 @@
     {
         "comment": "/**\n\t * @function setItems\n\t * @memberof InputHelper\n\t * @alias setItems\n\t * @description Sets the items to the input helper.\n\t * @param {InputHelperItem[]} items - Defines an array of the {@link global#InputHelperItem InputHelperItem} objects which contain all the items for the input helper.\n\t * @see office-js-api/Examples/Plugins/{Editor}/InputHelper/Methods/setItems.js\n\t */",
         "meta": {
-            "lineno": 809,
+            "lineno": 818,
             "columnno": 1
         },
         "kind": "function",
@@ -1879,7 +1896,7 @@
     {
         "comment": "/**\n\t * @function show\n\t * @memberof InputHelper\n\t * @alias show\n\t * @description Shows an input helper.\n\t * @param {number} width - The input helper window width measured in millimeters.\n\t * @param {number} height - The input helper window height measured in millimeters.\n\t * @param {boolean} isCaptureKeyboard - Defines if the keyboard is caught (**true**) or not (**false**).\n\t * @see office-js-api/Examples/Plugins/{Editor}/InputHelper/Methods/show.js\n\t */",
         "meta": {
-            "lineno": 818,
+            "lineno": 827,
             "columnno": 1
         },
         "kind": "function",
@@ -1937,7 +1954,7 @@
     {
         "comment": "/**\n\t * @function unShow\n\t * @memberof InputHelper\n\t * @alias unShow\n\t * @description Hides an input helper.\n\t * @see office-js-api/Examples/Plugins/{Editor}/InputHelper/Methods/unShow.js\n\t */",
         "meta": {
-            "lineno": 829,
+            "lineno": 838,
             "columnno": 1
         },
         "kind": "function",
@@ -1954,7 +1971,7 @@
     {
         "comment": "/**\n\t * @function getScrollSizes\n\t * @memberof InputHelper\n\t * @alias getScrollSizes\n\t * @description Returns the sizes of the input helper scrolled window. Returns an object with width and height parameters.\n\t * @return {number}\n\t * @see office-js-api/Examples/Plugins/{Editor}/InputHelper/Methods/getScrollSizes.js\n\t */",
         "meta": {
-            "lineno": 837,
+            "lineno": 846,
             "columnno": 1
         },
         "kind": "function",
@@ -1984,7 +2001,7 @@
     {
         "comment": "/**\n\t * createInputHelper\n\t * @memberof Plugin\n\t * @alias createInputHelper\n\t * @description Defines the method used to create an {@link inputhelper input helper} - a window that appears and disappears when you type text. Its location is tied to the cursor.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Plugin/Methods/createInputHelper.js\n\t */",
         "meta": {
-            "lineno": 853,
+            "lineno": 862,
             "columnno": 1
         },
         "kind": "function",
@@ -2000,7 +2017,7 @@
     {
         "comment": "/**\n\t * getInputHelper\n\t * @memberof Plugin\n\t * @alias getInputHelper\n\t * @description Defines the method used to get the {@link inputhelper InputHelper object}.\n\t * @return {InputHelper} Input helper object\n\t * @see office-js-api/Examples/Plugins/{Editor}/Plugin/Methods/getInputHelper.js\n\t */",
         "meta": {
-            "lineno": 867,
+            "lineno": 876,
             "columnno": 1
         },
         "kind": "function",
@@ -2029,7 +2046,7 @@
     {
         "comment": "/**\n\t * sendToPlugin\n\t * @memberof Plugin\n\t * @alias sendToPlugin\n\t * @description Sends a message from the modal window to the plugin.\n\t * @param {string} name - The event name.\n\t * @param {object} data - The event data.\n\t * @return {boolean} Returns true if the operation is successful.\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Plugin/Methods/sendToPlugin.js\n\t */",
         "meta": {
-            "lineno": 885,
+            "lineno": 894,
             "columnno": 1
         },
         "kind": "function",

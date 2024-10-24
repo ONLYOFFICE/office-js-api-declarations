@@ -13,6 +13,11 @@ jobs:
         with:
           path: office-js-api-declarations
 
+      - name: Checkout repository with examples office-js-api
+        uses: actions/checkout@v4
+        with:
+          path: office-js-api
+
       - name: Checkout build_tools repository
         uses: actions/checkout@v4
         with:

@@ -44,14 +44,16 @@ jobs:
           ref: release/v8.2.0
           path: sdkjs-forms
       
-      - name: Check release/hotfix branches
-        id: check-branch
+      - name: Check release branches
         run: |
           git -C build_tools fetch --all
           release_branches=$(git -C build_tools branch -r | grep -E '^ *origin/release/v.'); \
-          echo "release=${release_branches}" >> $GITHUB_ENV
+          echo "${release_branches}"
+
+      - name Check hotfix branches
+        run: |
           hotfix_branches=$(git -C build_tools branch -r | grep -E '^ *origin/hotfix/v.'); \
-          echo "hotfix=${hotfix_branches}" >> $GITHUB_OUTPUT
+          echo "${hotfix_branches}"
       
       - name: Echo release
         run: echo ${{ steps.check-branch.env.release }}

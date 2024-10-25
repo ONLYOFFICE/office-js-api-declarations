@@ -53,12 +53,10 @@ jobs:
           echo "hotfix=${hotfix_branches:-}" >> $GITHUB_ENV
       
       - name: Echo release
-        if: env.release != ''
-        run: echo "The release branches '$release'"
+        run: echo $release
       
       - name: Echo hotfix
-        if: env.hotfix != ''
-        run: echo "The hotfix branches '$hotfix'"
+        run: echo $hotfix
 
       - name: Set up Node.js
         uses: actions/setup-node@v4

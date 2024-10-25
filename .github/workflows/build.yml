@@ -47,6 +47,7 @@ jobs:
       - name: Check release/hotfix branches
         run: |
           git -C build_tools fetch --all
+          release_branches=$(git -C build_tools branch -r | grep -E '^ *origin/release/v\.');
       
       - name: Echo release
         if: env.release != ''

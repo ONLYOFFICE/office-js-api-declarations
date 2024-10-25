@@ -47,7 +47,6 @@ jobs:
       - name: Check release/hotfix branches
         run: |
           git -C build_tools fetch --all
-
           release_branch=$(git -C build_tools branch -r | grep -E '^ *origin/release/v\.') && \
           echo "release=${release_branch:-}" >> $GITHUB_ENV
           hotfix_branch=$(git -C build_tools branch -r | grep -E '^ *origin/hotfix/v\.') && \

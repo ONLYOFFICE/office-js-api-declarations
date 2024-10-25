@@ -45,18 +45,19 @@ jobs:
           path: sdkjs-forms
       
       - name: Check release/hotfix branches
+        id: check-branch
         run: |
           git -C build_tools fetch --all
           release_branches=$(git -C build_tools branch -r | grep -E '^ *origin/release/v.'); \
-          echo "release=${release_branches:-}" >> $GITHUB_ENV
+          echo "release=${release_branches}" >> $GITHUB_ENV
           hotfix_branches=$(git -C build_tools branch -r | grep -E '^ *origin/hotfix/v.'); \
-          echo "hotfix=${hotfix_branches:-}" >> $GITHUB_ENV
+          echo "hotfix=${hotfix_branches}" >> $GITHUB_OUTPUT
       
       - name: Echo release
-        run: echo ${{ env.release }}
+        run: echo ${{ steps.check-branch.env.release }}
       
       - name: Echo hotfix
-        run: echo ${{ env.hotfix }}
+        run: echo ${{ steps.check-branch.outputs.hotfix }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4

@@ -48,16 +48,10 @@ jobs:
         run: |
           git -C build_tools fetch --all
 
-          release_branch=$(git -C build_tools branch -r | grep -E '^ *origin/release/v\.')
-          hotfix_branch=$(git -C build_tools branch -r | grep -E '^ *origin/hotfix/v\.')
-
-          if [ -n "$release_branch" ]; then
-            echo "release=$release_branch" >> $GITHUB_ENV
-            echo "hotfix=$hotfix_branch" >> $GITHUB_ENV
-          else
-            echo "release=" >> $GITHUB_ENV
-            echo "hotfix=" >> $GITHUB_ENV
-          fi
+          release_branch=$(git -C build_tools branch -r | grep -E '^ *origin/release/v\.') && \
+          echo "release=${release_branch:-}" >> $GITHUB_ENV
+          hotfix_branch=$(git -C build_tools branch -r | grep -E '^ *origin/hotfix/v\.') && \
+          echo "hotfix=${hotfix_branch:-}" >> $GITHUB_ENV
       
       - name: Echo release
         if: env.release != ''

@@ -48,15 +48,15 @@ jobs:
         run: |
           git -C build_tools fetch --all
           release_branches=$(git -C build_tools branch -r | grep -E '^ *origin/release/v.'); \
-          echo "RELEASE=${release_branches:-}" >> $GITHUB_ENV
+          echo "release=${release_branches:-}" >> $GITHUB_ENV
           hotfix_branches=$(git -C build_tools branch -r | grep -E '^ *origin/hotfix/v.'); \
-          echo "HOTFIX=${hotfix_branches:-}" >> $GITHUB_ENV
+          echo "hotfix=${hotfix_branches:-}" >> $GITHUB_ENV
       
       - name: Echo release
-        run: echo $RELEASE
+        run: echo ${{ env.release }}
       
       - name: Echo hotfix
-        run: echo $HOTFIX
+        run: echo ${{ env.hotfix }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4

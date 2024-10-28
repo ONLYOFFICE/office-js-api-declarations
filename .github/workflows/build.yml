@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  mirror:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python

@@ -74,9 +74,9 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Generate docs for each branch
+      - name: Generate docs
         run: |
-          git -C build_tools switch "$branch" || echo "Failed to switch $branch in build_tools"
+          git -C build_tools switch "$build_branch" || echo "Failed to switch $build_branch in build_tools"
           cd build_tools/scripts/sdkjs_common/jsdoc
           npm install
           python generate_docs_json.py
@@ -86,7 +86,7 @@ jobs:
           if ! git diff --exit-code; then
             git add .
             git commit -m "Add documentation update from GitHub Actions"
-            git push origin $branch
+            git push origin develop
           else
             echo "Nothing to commit"
           fi

@@ -28,7 +28,7 @@
                 "name": "Object"
             }
         },
-        "description": "The comment data.",
+        "description": "The comment data.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nvar oCommentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [oCommentData]);\n```",
         "properties": [
             {
                 "type": {
@@ -122,6 +122,9 @@
         "scope": "global",
         "see": [
             "office-js-api/Examples/Plugins/Slide/Enumeration/CommentData.js"
+        ],
+        "examples": [
+            "var oCommentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [oCommentData]);"
         ]
     },
     {
@@ -133,7 +136,7 @@
         "kind": "function",
         "since": "7.3.0",
         "name": "AddComment",
-        "description": "Adds a comment to the presentation.",
+        "description": "Adds a comment to the presentation.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nwindow.Asc.plugin.executeMethod (\"AddComment\", [\n    {\n        \"UserName\": \"John Smith\",\n        \"QuoteText\": \"text\",\n        \"Text\": \"comment\",\n        \"Time\": \"1662737941471\",\n        \"Solved\": true,\n        \"Replies\": [\n            {\n                \"UserName\": \"Mark Potato\",\n                \"Text\": \"reply 1\",\n                \"Time\": \"1662740895892\",\n                \"Solved\": false\n            }\n        ]\n    }\n], function (comment) {\n    console.log (comment)\n});\n```",
         "memberof": "Api",
         "longname": "AddComment",
         "alias": "AddComment",
@@ -176,6 +179,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Slide/Api/Methods/AddComment.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"AddComment\", [\n    {\n        \"UserName\": \"John Smith\",\n        \"QuoteText\": \"text\",\n        \"Text\": \"comment\",\n        \"Time\": \"1662737941471\",\n        \"Solved\": true,\n        \"Replies\": [\n            {\n                \"UserName\": \"Mark Potato\",\n                \"Text\": \"reply 1\",\n                \"Time\": \"1662740895892\",\n                \"Solved\": false\n            }\n        ]\n    }\n], function (comment) {\n    console.log (comment)\n});"
         ]
     },
     {
@@ -187,7 +193,7 @@
         "kind": "function",
         "since": "7.3.0",
         "name": "ChangeComment",
-        "description": "Changes the specified comment.",
+        "description": "Changes the specified comment.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nwindow.Asc.plugin.executeMethod (\"ChangeComment\", [\"1_631\",\n    {\n        \"UserName\": \"John Smith\",\n        \"QuoteText\": \"text\",\n        \"Text\": \"comment\",\n        \"Time\": \"1662737941471\",\n        \"Solved\": true,\n        \"Replies\": [\n            {\n                \"UserName\": \"Mark Potato\",\n                \"Text\": \"reply 1\",\n                \"Time\": \"1662740895892\",\n                \"Solved\": false\n            }\n        ]\n    }\n]);\n```",
         "memberof": "Api",
         "longname": "ChangeComment",
         "alias": "ChangeComment",
@@ -234,6 +240,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Slide/Api/Methods/ChangeComment.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"ChangeComment\", [\"1_631\",\n    {\n        \"UserName\": \"John Smith\",\n        \"QuoteText\": \"text\",\n        \"Text\": \"comment\",\n        \"Time\": \"1662737941471\",\n        \"Solved\": true,\n        \"Replies\": [\n            {\n                \"UserName\": \"Mark Potato\",\n                \"Text\": \"reply 1\",\n                \"Time\": \"1662740895892\",\n                \"Solved\": false\n            }\n        ]\n    }\n]);"
         ]
     },
     {
@@ -245,7 +254,7 @@
         "kind": "function",
         "since": "7.3.0",
         "name": "RemoveComments",
-        "description": "Removes the specified comments.",
+        "description": "Removes the specified comments.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nwindow.Asc.plugin.executeMethod (\"RemoveComments\", [[\"1_631\", \"1_632\"]]);\n```",
         "memberof": "Api",
         "longname": "RemoveComments",
         "alias": "RemoveComments",
@@ -275,6 +284,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Slide/Api/Methods/RemoveComments.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"RemoveComments\", [[\"1_631\", \"1_632\"]]);"
         ]
     },
     {
@@ -286,7 +298,7 @@
         "kind": "function",
         "since": "8.1.0",
         "name": "GetAllComments",
-        "description": "Returns all the comments from the document.",
+        "description": "Returns all the comments from the document.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nwindow.Asc.plugin.executeMethod (\"GetAllComments\", null, function (comments) {\n    Comments = comments;\n    addComments (comments);\n});\n```",
         "memberof": "Api",
         "longname": "GetAllComments",
         "alias": "GetAllComments",
@@ -314,6 +326,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Slide/Api/Methods/GetAllComments.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"GetAllComments\", null, function (comments) {\n    Comments = comments;\n    addComments (comments);\n});"
         ]
     },
     {
@@ -325,12 +340,15 @@
         "kind": "function",
         "since": "8.0.0",
         "name": "StartSlideShow",
-        "description": "Starts the presentation slide show.",
+        "description": "Starts the presentation slide show.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nwindow.Asc.plugin.executeMethod (\"StartSlideShow\");\n```",
         "memberof": "Api",
         "longname": "StartSlideShow",
         "alias": "StartSlideShow",
         "see": [
             "office-js-api/Examples/Plugins/Slide/Api/Methods/StartSlideShow.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"StartSlideShow\");"
         ]
     },
     {
@@ -342,12 +360,15 @@
         "kind": "function",
         "since": "8.0.0",
         "name": "PauseSlideShow",
-        "description": "Pauses the current slide show.",
+        "description": "Pauses the current slide show.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nwindow.Asc.plugin.executeMethod (\"PauseSlideShow\");\n```",
         "memberof": "Api",
         "longname": "PauseSlideShow",
         "alias": "PauseSlideShow",
         "see": [
             "office-js-api/Examples/Plugins/Slide/Api/Methods/PauseSlideShow.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"PauseSlideShow\");"
         ]
     },
     {
@@ -359,12 +380,15 @@
         "kind": "function",
         "since": "8.0.0",
         "name": "ResumeSlideShow",
-        "description": "Resumes the current slide show.",
+        "description": "Resumes the current slide show.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nwindow.Asc.plugin.executeMethod (\"ResumeSlideShow\");\n```",
         "memberof": "Api",
         "longname": "ResumeSlideShow",
         "alias": "ResumeSlideShow",
         "see": [
             "office-js-api/Examples/Plugins/Slide/Api/Methods/ResumeSlideShow.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"ResumeSlideShow\");"
         ]
     },
     {
@@ -376,12 +400,15 @@
         "kind": "function",
         "since": "8.0.0",
         "name": "EndSlideShow",
-        "description": "Ends the current slide show.",
+        "description": "Ends the current slide show.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nwindow.Asc.plugin.executeMethod (\"EndSlideShow\");\n```",
         "memberof": "Api",
         "longname": "EndSlideShow",
         "alias": "EndSlideShow",
         "see": [
             "office-js-api/Examples/Plugins/Slide/Api/Methods/EndSlideShow.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"EndSlideShow\");"
         ]
     },
     {
@@ -393,12 +420,15 @@
         "kind": "function",
         "since": "8.0.0",
         "name": "GoToNextSlideInSlideShow",
-        "description": "Displays the slide following the current slide in the slide show.",
+        "description": "Displays the slide following the current slide in the slide show.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nwindow.Asc.plugin.executeMethod (\"GoToNextSlideInSlideShow\");\n```",
         "memberof": "Api",
         "longname": "GoToNextSlideInSlideShow",
         "alias": "GoToNextSlideInSlideShow",
         "see": [
             "office-js-api/Examples/Plugins/Slide/Api/Methods/GoToNextSlideInSlideShow.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"GoToNextSlideInSlideShow\");"
         ]
     },
     {
@@ -410,12 +440,15 @@
         "kind": "function",
         "since": "8.0.0",
         "name": "GoToPreviousSlideInSlideShow",
-        "description": "Displays the slide following the current slide in the slide show.",
+        "description": "Displays the slide following the current slide in the slide show.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nwindow.Asc.plugin.executeMethod (\"GoToPreviousSlideInSlideShow\");\n```",
         "memberof": "Api",
         "longname": "GoToPreviousSlideInSlideShow",
         "alias": "GoToPreviousSlideInSlideShow",
         "see": [
             "office-js-api/Examples/Plugins/Slide/Api/Methods/GoToPreviousSlideInSlideShow.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"GoToPreviousSlideInSlideShow\");"
         ]
     },
     {
@@ -427,7 +460,7 @@
         "kind": "function",
         "since": "8.0.0",
         "name": "GoToSlideInSlideShow",
-        "description": "Displays the slide with the specific index.",
+        "description": "Displays the slide with the specific index.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nwindow.Asc.plugin.executeMethod (\"GoToSlideInSlideShow\", [2]);\n```",
         "memberof": "Api",
         "longname": "GoToSlideInSlideShow",
         "alias": "GoToSlideInSlideShow",
@@ -448,6 +481,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Slide/Api/Methods/GoToSlideInSlideShow.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"GoToSlideInSlideShow\", [2]);"
         ]
     }
 ]

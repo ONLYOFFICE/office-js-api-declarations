@@ -28,7 +28,7 @@
                 "name": "Object"
             }
         },
-        "description": "The comment data.",
+        "description": "The comment data.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oCommentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [oCommentData]);\n```",
         "properties": [
             {
                 "type": {
@@ -122,6 +122,9 @@
         "scope": "global",
         "see": [
             "office-js-api/Examples/Plugins/Cell/Enumeration/CommentData.js"
+        ],
+        "examples": [
+            "var oCommentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [oCommentData]);"
         ]
     },
     {
@@ -133,7 +136,7 @@
         "kind": "function",
         "since": "7.3.0",
         "name": "AddComment",
-        "description": "Adds a comment to the workbook.",
+        "description": "Adds a comment to the workbook.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"AddComment\", [\n    {\n        \"UserName\": \"John Smith\",\n        \"QuoteText\": \"text\",\n        \"Text\": \"comment\",\n        \"Time\": \"1662737941471\",\n        \"Solved\": true,\n        \"Replies\": [\n            {\n                \"UserName\": \"Mark Potato\",\n                \"Text\": \"reply 1\",\n                \"Time\": \"1662740895892\",\n                \"Solved\": false\n            }\n        ]\n    }\n], function (comment) {\n    console.log (comment)\n});\n```",
         "memberof": "Api",
         "longname": "AddComment",
         "alias": "AddComment",
@@ -176,6 +179,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Cell/Api/Methods/AddComment.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"AddComment\", [\n    {\n        \"UserName\": \"John Smith\",\n        \"QuoteText\": \"text\",\n        \"Text\": \"comment\",\n        \"Time\": \"1662737941471\",\n        \"Solved\": true,\n        \"Replies\": [\n            {\n                \"UserName\": \"Mark Potato\",\n                \"Text\": \"reply 1\",\n                \"Time\": \"1662740895892\",\n                \"Solved\": false\n            }\n        ]\n    }\n], function (comment) {\n    console.log (comment)\n});"
         ]
     },
     {
@@ -187,7 +193,7 @@
         "kind": "function",
         "since": "7.3.0",
         "name": "ChangeComment",
-        "description": "Changes the specified comment.",
+        "description": "Changes the specified comment.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"ChangeComment\", [\"1_631\",\n    {\n        \"UserName\": \"John Smith\",\n        \"QuoteText\": \"text\",\n        \"Text\": \"comment\",\n        \"Time\": \"1662737941471\",\n        \"Solved\": true,\n        \"Replies\": [\n            {\n                \"UserName\": \"Mark Potato\",\n                \"Text\": \"reply 1\",\n                \"Time\": \"1662740895892\",\n                \"Solved\": false\n            }\n        ]\n    }\n]);\n```",
         "memberof": "Api",
         "longname": "ChangeComment",
         "alias": "ChangeComment",
@@ -234,6 +240,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Cell/Api/Methods/ChangeComment.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"ChangeComment\", [\"1_631\",\n    {\n        \"UserName\": \"John Smith\",\n        \"QuoteText\": \"text\",\n        \"Text\": \"comment\",\n        \"Time\": \"1662737941471\",\n        \"Solved\": true,\n        \"Replies\": [\n            {\n                \"UserName\": \"Mark Potato\",\n                \"Text\": \"reply 1\",\n                \"Time\": \"1662740895892\",\n                \"Solved\": false\n            }\n        ]\n    }\n]);"
         ]
     },
     {
@@ -245,7 +254,7 @@
         "kind": "function",
         "since": "7.3.0",
         "name": "RemoveComments",
-        "description": "Removes the specified comments.",
+        "description": "Removes the specified comments.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"RemoveComments\", [[\"1_631\", \"1_632\"]]);\n```",
         "memberof": "Api",
         "longname": "RemoveComments",
         "alias": "RemoveComments",
@@ -275,6 +284,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Cell/Api/Methods/RemoveComments.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"RemoveComments\", [[\"1_631\", \"1_632\"]]);"
         ]
     },
     {
@@ -286,7 +298,7 @@
         "kind": "function",
         "since": "8.1.0",
         "name": "GetAllComments",
-        "description": "Returns all the comments from the document.",
+        "description": "Returns all the comments from the document.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"GetAllComments\", null, function (comments) {\n    Comments = comments;\n    addComments (comments);\n});\n```",
         "memberof": "Api",
         "longname": "GetAllComments",
         "alias": "GetAllComments",
@@ -314,6 +326,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Cell/Api/Methods/GetAllComments.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"GetAllComments\", null, function (comments) {\n    Comments = comments;\n    addComments (comments);\n});"
         ]
     },
     {
@@ -325,7 +340,7 @@
         "kind": "function",
         "since": "8.1.0",
         "name": "GetCustomFunctions",
-        "description": "Returns a library of local custom functions.",
+        "description": "Returns a library of local custom functions.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"GetCustomFunctions\", null, function (res) {\n    console.log (\"First custom function: \" + res[0])\n});\n```",
         "memberof": "Api",
         "longname": "GetCustomFunctions",
         "alias": "GetCustomFunctions",
@@ -344,6 +359,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Cell/Api/Methods/GetCustomFunctions.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"GetCustomFunctions\", null, function (res) {\n    console.log (\"First custom function: \" + res[0])\n});"
         ]
     },
     {
@@ -355,7 +373,7 @@
         "kind": "function",
         "since": "8.1.0",
         "name": "SetCustomFunctions",
-        "description": "Updates a library of local custom functions.",
+        "description": "Updates a library of local custom functions.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"SetCustomFunctions\", [JSON.stringify (Content)], function () {\n    window.Asc.plugin.executeCommand (\"close\", \"\");\n});\n```",
         "memberof": "Api",
         "longname": "SetCustomFunctions",
         "alias": "SetCustomFunctions",
@@ -376,6 +394,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Cell/Api/Methods/SetCustomFunctions.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"SetCustomFunctions\", [JSON.stringify (Content)], function () {\n    window.Asc.plugin.executeCommand (\"close\", \"\");\n});"
         ]
     }
 ]

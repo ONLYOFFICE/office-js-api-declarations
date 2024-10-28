@@ -2,11 +2,11 @@ name: Build API Specification
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs every day at midnight UTC
+    - cron: '*/2 * * * *'
   workflow_dispatch:
 
 jobs:
-  build-api-spec:
+  mirror:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python
@@ -16,12 +16,12 @@ jobs:
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
-      
-      - name: Checkout main repository office-js-api-declarations
+
+      - name: check out repository
         uses: actions/checkout@v4
         with:
+          ref: develop
           path: office-js-api-declarations
-          ref: master
 
       - name: Checkout build_tools repository
         uses: actions/checkout@v4
@@ -30,6 +30,20 @@ jobs:
           token: ${{ secrets.READ_PAT }}
           ref: master
           path: build_tools
+
+      - name: Fetch build_tools without tags
+        run: |
+          git -C build_tools fetch --no-tags || echo "Failed to fetch in build_tools"
+
+      - name: Check release/hotfix branch for build
+        run: |
+          branches=$(git -C build_tools branch -r | grep -E 'origin/(release/v|hotfix/v)' | awk '{sub("origin/", ""); print}')
+          echo "List of release/hotfix branches: $branches"
+
+          max_version=$(echo "$branches" | awk -F'/' '{print $NF}' | sort -V | tail -n 1)
+          max_branch=$(echo "$branches" | grep "$max_version" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+          echo "Branch for build: $max_branch"
+          echo "build_branch=$max_branch" >> $GITHUB_ENV
 
       - name: Checkout repository with examples office-js-api
         uses: actions/checkout@v4
@@ -44,7 +58,7 @@ jobs:
         with:
           repository: ONLYOFFICE/sdkjs
           token: ${{ secrets.READ_PAT }}
-          ref: master
+          ref: ${{ env.build_branch }}
           path: sdkjs
 
       - name: Checkout sdkjs-forms repository
@@ -52,22 +66,8 @@ jobs:
         with:
           repository: ONLYOFFICE/sdkjs-forms
           token: ${{ secrets.READ_PAT }}
-          ref: master
+          ref: ${{ env.build_branch }}
           path: sdkjs-forms
-
-      - name: Fetch all repos without tags
-        run: |
-          git -C build_tools fetch --no-tags || echo "Failed to fetch in build_tools"
-          git -C office-js-api-declarations fetch --no-tags || echo "Failed to fetch in office-js-api-declarations"
-          git -C office-js-api fetch --no-tags || echo "Failed to fetch in office-js-api"
-          git -C sdkjs fetch --no-tags || echo "Failed to fetch in sdkjs"
-          git -C sdkjs-forms fetch --no-tags || echo "Failed to fetch in sdkjs-forms"
-
-      - name: Set env
-        run: |
-          branches=$(git -C build_tools branch -r | grep -E 'origin/(release/v|hotfix/v)' | sed 's|origin/||; s/^ *//; s/ *$//' | paste -sd "," -)
-          echo "branches=$branches" >> $GITHUB_ENV
-          echo "$branches"
 
       - name: Set up Git
         run: |
@@ -76,34 +76,17 @@ jobs:
 
       - name: Generate docs for each branch
         run: |
-          for branch in $(echo "$branches" | tr ',' '\n'); do
-            echo "-------------------------------------------"
-            echo "Branch: $branch"
-            git -C build_tools switch "$branch" || echo "Failed to switch $branch in build_tools"
-            if [ ! -d "build_tools/scripts/sdkjs_common/jsdoc" ]; then
-              echo "Directory for build does not exist. Skipping $branch branch."
-              continue
-            fi
-            
-            git -C office-js-api-declarations reset --hard HEAD || echo "Failed to reset in office-js-api-declarations"
-            git -C office-js-api-declarations switch "master" || echo "Failed to switch master in office-js-api-declarations"
-            git -C office-js-api-declarations switch "$branch" || git -C office-js-api-declarations switch -c "$branch" || echo "Failed to create $branch in office-js-api-declarations"
+          git -C build_tools switch "$branch" || echo "Failed to switch $branch in build_tools"
+          cd build_tools/scripts/sdkjs_common/jsdoc
+          npm install
+          python generate_docs_json.py
+          python generate_docs_plugins_json.py
+          cd ../../../../office-js-api-declarations
 
-            git -C office-js-api switch "$branch" || echo "Failed to switch $branch in office-js-api"
-            git -C sdkjs switch "$branch" || echo "Failed to switch $branch in sdkjs"
-            git -C sdkjs-forms switch "$branch" || echo "Failed to switch $branch in sdkjs-forms"
-
-            cd build_tools/scripts/sdkjs_common/jsdoc
-            npm install
-            python generate_docs_json.py
-            python generate_docs_plugins_json.py
-            cd ../../../../
-
-            if ! git -C office-js-api-declarations diff --exit-code; then
-              git -C office-js-api-declarations add .
-              git -C office-js-api-declarations commit -m "Add documentation update from GitHub Actions"
-              git -C office-js-api-declarations push origin $branch
-            else
-              echo "Nothing to commit in $branch in office-js-api-declarations"
-            fi
-          done
+          if ! git diff --exit-code; then
+            git add .
+            git commit -m "Add documentation update from GitHub Actions"
+            git push origin $branch
+          else
+            echo "Nothing to commit"
+          fi

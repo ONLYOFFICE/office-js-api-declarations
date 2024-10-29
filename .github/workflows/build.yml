@@ -31,19 +31,12 @@ jobs:
           ref: master
           path: build_tools
 
-      - name: Fetch build_tools without tags
-        run: |
-          git -C build_tools fetch --no-tags || echo "Failed to fetch in build_tools"
-
       - name: Check release/hotfix branch for build
         run: |
-          branches=$(git -C build_tools branch -r | grep -E 'origin/(release/v|hotfix/v)' | awk '{sub("origin/", ""); print}')
-          echo "List of release/hotfix branches: $branches"
-
-          max_version=$(echo "$branches" | awk -F'/' '{print $NF}' | sort -V | tail -n 1)
-          max_branch=$(echo "$branches" | grep "$max_version" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
-          echo "Branch for build: $max_branch"
-          echo "build_branch=$max_branch" >> $GITHUB_ENV
+          cd build_tools/scripts/sdkjs_common/jsdoc
+          branch=$(python get_latest_branch.py)
+          echo "Branch for build: $branch"
+          echo "build_branch=$branch" >> $GITHUB_ENV
 
       - name: Checkout repository with examples office-js-api
         uses: actions/checkout@v4

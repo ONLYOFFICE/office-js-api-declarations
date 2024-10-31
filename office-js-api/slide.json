@@ -38,7 +38,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3090,
+            "lineno": 3102,
             "columnno": 1
         },
         "properties": null,
@@ -53,7 +53,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3101,
+            "lineno": 3113,
             "columnno": 1
         },
         "properties": null,
@@ -70,7 +70,7 @@
             "ApiParaPr"
         ],
         "meta": {
-            "lineno": 3111,
+            "lineno": 3123,
             "columnno": 1
         },
         "properties": null,
@@ -100,7 +100,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3146,
+            "lineno": 3158,
             "columnno": 1
         },
         "properties": null,
@@ -117,7 +117,7 @@
             "ApiTextPr"
         ],
         "meta": {
-            "lineno": 3157,
+            "lineno": 3169,
             "columnno": 1
         },
         "properties": null,
@@ -132,7 +132,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3169,
+            "lineno": 3181,
             "columnno": 1
         },
         "properties": null,
@@ -237,7 +237,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3671,
+            "lineno": 3683,
             "columnno": 1
         },
         "properties": null,
@@ -252,7 +252,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3684,
+            "lineno": 3696,
             "columnno": 1
         },
         "properties": null,
@@ -267,7 +267,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3694,
+            "lineno": 3706,
             "columnno": 1
         },
         "properties": null,
@@ -282,7 +282,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3702,
+            "lineno": 3714,
             "columnno": 1
         },
         "properties": null,
@@ -297,7 +297,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3713,
+            "lineno": 3725,
             "columnno": 1
         },
         "properties": null,
@@ -312,7 +312,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3744,
+            "lineno": 3756,
             "columnno": 1
         },
         "properties": null,
@@ -327,7 +327,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3758,
+            "lineno": 3770,
             "columnno": 1
         },
         "properties": null,
@@ -342,7 +342,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3768,
+            "lineno": 3780,
             "columnno": 1
         },
         "properties": null,
@@ -357,7 +357,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 3778,
+            "lineno": 3790,
             "columnno": 1
         },
         "properties": null,
@@ -396,7 +396,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 3841,
+            "lineno": 3853,
             "columnno": 1
         },
         "properties": null,
@@ -436,7 +436,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 3847,
+            "lineno": 3859,
             "columnno": 1
         },
         "properties": null,
@@ -616,7 +616,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 3885,
+            "lineno": 3897,
             "columnno": 1
         },
         "properties": null,
@@ -746,7 +746,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 3909,
+            "lineno": 3921,
             "columnno": 1
         },
         "properties": null,
@@ -786,7 +786,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 3918,
+            "lineno": 3930,
             "columnno": 1
         },
         "properties": null,
@@ -831,7 +831,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 3928,
+            "lineno": 3940,
             "columnno": 1
         },
         "properties": null,
@@ -921,7 +921,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 3949,
+            "lineno": 3961,
             "columnno": 1
         },
         "properties": null,
@@ -971,7 +971,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 3955,
+            "lineno": 3967,
             "columnno": 1
         },
         "properties": null,
@@ -1026,7 +1026,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 3961,
+            "lineno": 3973,
             "columnno": 1
         },
         "properties": null,
@@ -2066,7 +2066,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 3989,
+            "lineno": 4001,
             "columnno": 1
         },
         "properties": null,
@@ -2236,7 +2236,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 3999,
+            "lineno": 4011,
             "columnno": 1
         },
         "properties": null,
@@ -3821,7 +3821,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4068,
+            "lineno": 4080,
             "columnno": 1
         },
         "properties": null,
@@ -4096,7 +4096,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4086,
+            "lineno": 4098,
             "columnno": 1
         },
         "properties": null,
@@ -4151,7 +4151,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4093,
+            "lineno": 4105,
             "columnno": 1
         },
         "properties": null,
@@ -4176,7 +4176,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4099,
+            "lineno": 4111,
             "columnno": 1
         },
         "properties": null,
@@ -4221,7 +4221,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4105,
+            "lineno": 4117,
             "columnno": 1
         },
         "properties": null,
@@ -4246,7 +4246,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4111,
+            "lineno": 4123,
             "columnno": 1
         },
         "properties": null,
@@ -4356,7 +4356,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4124,
+            "lineno": 4136,
             "columnno": 1
         },
         "properties": null,
@@ -4411,7 +4411,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4136,
+            "lineno": 4148,
             "columnno": 1
         },
         "properties": null,
@@ -4466,7 +4466,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4148,
+            "lineno": 4160,
             "columnno": 1
         },
         "properties": null,
@@ -4521,7 +4521,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4160,
+            "lineno": 4172,
             "columnno": 1
         },
         "properties": null,
@@ -4566,7 +4566,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4170,
+            "lineno": 4182,
             "columnno": 1
         },
         "properties": null,
@@ -4611,7 +4611,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4180,
+            "lineno": 4192,
             "columnno": 1
         },
         "properties": null,
@@ -4871,7 +4871,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4208,
+            "lineno": 4220,
             "columnno": 1
         },
         "properties": null,
@@ -4926,7 +4926,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4214,
+            "lineno": 4226,
             "columnno": 1
         },
         "properties": null,
@@ -4976,7 +4976,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4225,
+            "lineno": 4237,
             "columnno": 1
         },
         "properties": null,
@@ -5026,7 +5026,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4236,
+            "lineno": 4248,
             "columnno": 1
         },
         "properties": null,
@@ -5066,7 +5066,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4242,
+            "lineno": 4254,
             "columnno": 1
         },
         "properties": [
@@ -5182,7 +5182,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4254,
+            "lineno": 4266,
             "columnno": 1
         },
         "properties": [
@@ -5323,7 +5323,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4267,
+            "lineno": 4279,
             "columnno": 1
         },
         "properties": [
@@ -5388,7 +5388,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4276,
+            "lineno": 4288,
             "columnno": 1
         },
         "properties": [
@@ -5444,7 +5444,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4284,
+            "lineno": 4296,
             "columnno": 1
         },
         "properties": null,
@@ -5489,7 +5489,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4293,
+            "lineno": 4305,
             "columnno": 1
         },
         "properties": null,
@@ -5539,7 +5539,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4299,
+            "lineno": 4311,
             "columnno": 1
         },
         "properties": null,
@@ -5664,7 +5664,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4323,
+            "lineno": 4335,
             "columnno": 1
         },
         "properties": null,
@@ -5704,7 +5704,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 4329,
+            "lineno": 4341,
             "columnno": 1
         },
         "properties": null,
@@ -5761,7 +5761,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4417,
+            "lineno": 4429,
             "columnno": 1
         },
         "see": [
@@ -5839,7 +5839,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4573,
+            "lineno": 4585,
             "columnno": 1
         },
         "see": [
@@ -5887,7 +5887,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4586,
+            "lineno": 4598,
             "columnno": 1
         },
         "see": [
@@ -5935,7 +5935,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4599,
+            "lineno": 4611,
             "columnno": 1
         },
         "see": [
@@ -5983,7 +5983,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4612,
+            "lineno": 4624,
             "columnno": 1
         },
         "see": [
@@ -6046,7 +6046,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4626,
+            "lineno": 4638,
             "columnno": 1
         },
         "see": [
@@ -6094,7 +6094,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4640,
+            "lineno": 4652,
             "columnno": 1
         },
         "see": [
@@ -6172,7 +6172,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4654,
+            "lineno": 4666,
             "columnno": 1
         },
         "see": [
@@ -6235,7 +6235,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4668,
+            "lineno": 4680,
             "columnno": 1
         },
         "see": [
@@ -6267,7 +6267,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4680,
+            "lineno": 4692,
             "columnno": 1
         },
         "see": [
@@ -6330,7 +6330,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4694,
+            "lineno": 4706,
             "columnno": 1
         },
         "see": [
@@ -6393,7 +6393,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4708,
+            "lineno": 4720,
             "columnno": 1
         },
         "see": [
@@ -6441,7 +6441,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4721,
+            "lineno": 4733,
             "columnno": 1
         },
         "see": [
@@ -6473,7 +6473,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 5377,
+            "lineno": 5389,
             "columnno": 1
         },
         "see": [
@@ -6505,7 +6505,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 5388,
+            "lineno": 5400,
             "columnno": 1
         },
         "see": [
@@ -6554,7 +6554,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 5400,
+            "lineno": 5412,
             "columnno": 1
         },
         "see": [
@@ -6605,7 +6605,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 5423,
+            "lineno": 5435,
             "columnno": 1
         },
         "see": [
@@ -6653,7 +6653,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 5441,
+            "lineno": 5453,
             "columnno": 1
         },
         "see": [
@@ -6673,7 +6673,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 5463,
+            "lineno": 5475,
             "columnno": 1
         },
         "see": [
@@ -6709,7 +6709,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 5474,
+            "lineno": 5486,
             "columnno": 1
         },
         "see": [
@@ -6724,7 +6724,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 5932,
+            "lineno": 5944,
             "columnno": 1
         },
         "properties": [
@@ -6825,7 +6825,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 5943,
+            "lineno": 5955,
             "columnno": 1
         },
         "properties": null,
@@ -6872,7 +6872,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 6010,
+            "lineno": 6022,
             "columnno": 1
         },
         "properties": null,
@@ -6925,14 +6925,14 @@
         }
     },
     {
-        "comment": "/**\n\t * Record of one review change.\n\t * @typedef {Object} ReviewReportRecord\n\t * @property {ReviewReportRecordType} Type - Review record type.\n\t * @property {string} [Value=undefined] - Review change value that is set for the \"TextAdd\" and \"TextRem\" types only.\n\t * @property {number} Date - The time when this change was made.\n\t * @property {ApiParagraph | ApiTable} ReviewedElement - Element that has been reviewed\n\t * @see office-js-api/Examples/Enumerations/ReviewReportRecord.js\n\t */",
+        "comment": "/**\n\t * Record of one review change.\n\t * @typedef {Object} ReviewReportRecord\n\t * @property {ReviewReportRecordType} Type - Review record type.\n\t * @property {string} [Value=undefined] - Review change value that is set for the \"TextAdd\" and \"TextRem\" types only.\n\t * @property {number} Date - The time when this change was made.\n\t * @property {ApiParagraph | ApiTable} ReviewedElement - Element that has been reviewed.\n\t * @see office-js-api/Examples/Enumerations/ReviewReportRecord.js\n\t */",
         "description": "Record of one review change.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nvar oReviewReportRecord1 = {Type: \"TextRem\", Value: \"Hello, Mark!\", Date: 1679941734161};\nvar oReviewReportRecord2 = {Type: \"TextAdd\", Value: \"Dear Mr. Pottato.\", Date: 1679941736189};\nvar oReviewReportRecord3 = {Type: \"ParaRem\", Date: 1679941755942};\nvar oReviewReportRecord4 = {Type: \"TextPr\", Date: 1679941757832};\nvar oReviewRecord = {\n\t\"John Smith\" : [oReviewReportRecord1, oReviewReportRecord2],\n\t\"Mark Pottato\" : [oReviewReportRecord3, oReviewReportRecord4]\n};\n```",
         "name": "ReviewReportRecord",
         "longname": "ReviewReportRecord",
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 6016,
+            "lineno": 6028,
             "columnno": 1
         },
         "properties": [
@@ -7002,7 +7002,7 @@
                     }
                 },
                 "name": "ReviewedElement",
-                "description": "Element that has been reviewed",
+                "description": "Element that has been reviewed.",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -7028,7 +7028,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 6026,
+            "lineno": 6038,
             "columnno": 1
         },
         "properties": null,
@@ -7075,7 +7075,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 6292,
+            "lineno": 6304,
             "columnno": 1
         },
         "properties": null,
@@ -7135,7 +7135,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 6297,
+            "lineno": 6309,
             "columnno": 1
         },
         "properties": [
@@ -7248,7 +7248,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 7815,
+            "lineno": 7838,
             "columnno": 1
         },
         "see": [
@@ -7296,7 +7296,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 7827,
+            "lineno": 7850,
             "columnno": 1
         },
         "see": [
@@ -7328,7 +7328,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 7860,
+            "lineno": 7883,
             "columnno": 1
         },
         "see": [
@@ -7360,7 +7360,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 7929,
+            "lineno": 7952,
             "columnno": 1
         },
         "see": [
@@ -7392,7 +7392,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 7976,
+            "lineno": 7999,
             "columnno": 1
         },
         "see": [
@@ -7441,7 +7441,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 7989,
+            "lineno": 8012,
             "columnno": 1
         },
         "see": [
@@ -7477,7 +7477,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 8007,
+            "lineno": 8030,
             "columnno": 1
         },
         "see": [
@@ -7497,7 +7497,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 8023,
+            "lineno": 8046,
             "columnno": 1
         },
         "see": [
@@ -7529,7 +7529,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 8038,
+            "lineno": 8061,
             "columnno": 1
         },
         "see": [
@@ -7570,7 +7570,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 8060,
+            "lineno": 8083,
             "columnno": 1
         },
         "see": [
@@ -7602,7 +7602,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 8075,
+            "lineno": 8098,
             "columnno": 1
         },
         "see": [
@@ -7634,7 +7634,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 8090,
+            "lineno": 8113,
             "columnno": 1
         },
         "see": [
@@ -7697,7 +7697,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 8112,
+            "lineno": 8135,
             "columnno": 1
         },
         "see": [
@@ -7729,7 +7729,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 8140,
+            "lineno": 8163,
             "columnno": 1
         },
         "see": [
@@ -7777,7 +7777,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 8516,
+            "lineno": 8539,
             "columnno": 1
         },
         "see": [
@@ -7809,7 +7809,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 9697,
+            "lineno": 9720,
             "columnno": 1
         },
         "see": [
@@ -7841,7 +7841,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 9708,
+            "lineno": 9731,
             "columnno": 1
         },
         "see": [
@@ -7861,7 +7861,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 9718,
+            "lineno": 9741,
             "columnno": 1
         },
         "see": [
@@ -7881,7 +7881,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 9728,
+            "lineno": 9751,
             "columnno": 1
         },
         "see": [
@@ -7901,7 +7901,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 9738,
+            "lineno": 9761,
             "columnno": 1
         },
         "see": [
@@ -7937,7 +7937,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 9758,
+            "lineno": 9781,
             "columnno": 1
         },
         "see": [
@@ -7957,7 +7957,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 9781,
+            "lineno": 9804,
             "columnno": 1
         },
         "see": [
@@ -7977,7 +7977,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 9801,
+            "lineno": 9824,
             "columnno": 1
         },
         "see": [
@@ -8009,7 +8009,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 9938,
+            "lineno": 9961,
             "columnno": 1
         },
         "see": [
@@ -8057,7 +8057,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10035,
+            "lineno": 10058,
             "columnno": 1
         },
         "see": [
@@ -8105,7 +8105,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10051,
+            "lineno": 10074,
             "columnno": 1
         },
         "see": [
@@ -8153,7 +8153,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10066,
+            "lineno": 10089,
             "columnno": 1
         },
         "see": [
@@ -8246,7 +8246,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10084,
+            "lineno": 10107,
             "columnno": 1
         },
         "see": [
@@ -8294,7 +8294,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10099,
+            "lineno": 10122,
             "columnno": 1
         },
         "see": [
@@ -8342,7 +8342,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10114,
+            "lineno": 10137,
             "columnno": 1
         },
         "see": [
@@ -8390,7 +8390,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10129,
+            "lineno": 10152,
             "columnno": 1
         },
         "see": [
@@ -8431,7 +8431,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10143,
+            "lineno": 10166,
             "columnno": 1
         },
         "see": [
@@ -8479,7 +8479,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10163,
+            "lineno": 10186,
             "columnno": 1
         },
         "see": [
@@ -8527,7 +8527,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10178,
+            "lineno": 10201,
             "columnno": 1
         },
         "see": [
@@ -8575,7 +8575,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10193,
+            "lineno": 10216,
             "columnno": 1
         },
         "see": [
@@ -8623,7 +8623,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10210,
+            "lineno": 10233,
             "columnno": 1
         },
         "see": [
@@ -8671,7 +8671,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10227,
+            "lineno": 10250,
             "columnno": 1
         },
         "see": [
@@ -8764,7 +8764,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10245,
+            "lineno": 10268,
             "columnno": 1
         },
         "see": [
@@ -8812,7 +8812,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10261,
+            "lineno": 10284,
             "columnno": 1
         },
         "see": [
@@ -8860,7 +8860,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10276,
+            "lineno": 10299,
             "columnno": 1
         },
         "see": [
@@ -8908,7 +8908,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10291,
+            "lineno": 10314,
             "columnno": 1
         },
         "see": [
@@ -8956,7 +8956,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10306,
+            "lineno": 10329,
             "columnno": 1
         },
         "see": [
@@ -9004,7 +9004,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10322,
+            "lineno": 10345,
             "columnno": 1
         },
         "see": [
@@ -9067,12 +9067,62 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 10340,
+            "lineno": 10363,
             "columnno": 1
         },
         "see": [
             "office-js-api/Examples/Slide/ApiRun/Methods/SetVertAlign.js"
         ]
+    },
+    {
+        "comment": "/**\n\t * The section break type which defines how the contents of the current section are placed relative to the previous section.\n\t * WordprocessingML supports five distinct types of section breaks:\n\t * <b>Next page</b> (\"nextPage\") - starts a new section on the next page (the default value).\n\t * <b>Odd</b> (\"oddPage\") - starts a new section on the next odd-numbered page.\n\t * <b>Even</b> (\"evenPage\") - starts a new section on the next even-numbered page.\n\t * <b>Continuous</b> (\"continuous\") - starts a new section in the next paragraph.\n\t * This means that continuous section breaks might not specify certain page-level section properties,\n\t * since they shall be inherited from the following section.\n\t * However, these breaks can specify other section properties, such as line numbering and footnote/endnote settings.\n\t * <b>Column</b> (\"nextColumn\") - starts a new section in the next column on the page.\n\t * @typedef {(\"nextPage\" | \"oddPage\" | \"evenPage\" | \"continuous\" | \"nextColumn\")} SectionBreakType\n\t* @see office-js-api/Examples/Enumerations/SectionBreakType.js\n\t*/",
+        "description": "The section break type which defines how the contents of the current section are placed relative to the previous section.\nWordprocessingML supports five distinct types of section breaks:\n<b>Next page</b> (\"nextPage\") - starts a new section on the next page (the default value).\n<b>Odd</b> (\"oddPage\") - starts a new section on the next odd-numbered page.\n<b>Even</b> (\"evenPage\") - starts a new section on the next even-numbered page.\n<b>Continuous</b> (\"continuous\") - starts a new section in the next paragraph.\nThis means that continuous section breaks might not specify certain page-level section properties,\nsince they shall be inherited from the following section.\nHowever, these breaks can specify other section properties, such as line numbering and footnote/endnote settings.\n<b>Column</b> (\"nextColumn\") - starts a new section in the next column on the page.",
+        "name": "SectionBreakType",
+        "longname": "SectionBreakType",
+        "kind": "typedef",
+        "scope": "global",
+        "meta": {
+            "lineno": 10532,
+            "columnno": 1
+        },
+        "properties": null,
+        "see": [
+            "office-js-api/Examples/Enumerations/SectionBreakType.js"
+        ],
+        "type": {
+            "names": [
+                "\"nextPage\"",
+                "\"oddPage\"",
+                "\"evenPage\"",
+                "\"continuous\"",
+                "\"nextColumn\""
+            ],
+            "parsedType": {
+                "type": "TypeUnion",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "\"nextPage\""
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "\"oddPage\""
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "\"evenPage\""
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "\"continuous\""
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "\"nextColumn\""
+                    }
+                ]
+            }
+        }
     },
     {
         "comment": "/**\n\t * Adds a paragraph or a table or a blockLvl content control using its position in the cell.\n\t * @memberof ApiTable\n\t * @typeofeditors [\"CDE\", \"CPE\"]\n\t * @param {ApiTableCell} oCell - The cell where the specified element will be added.\n\t * @param {number} nPos - The position in the cell where the specified element will be added.\n\t * @param {DocumentElement} oElement - The document element which will be added at the current position.\n\t * @see office-js-api/Examples/{Editor}/ApiTable/Methods/AddElement.js\n\t */",
@@ -9133,7 +9183,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 11201,
+            "lineno": 11231,
             "columnno": 1
         },
         "see": [
@@ -9165,7 +9215,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 11273,
+            "lineno": 11303,
             "columnno": 1
         },
         "see": [
@@ -9197,7 +9247,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12787,
+            "lineno": 12817,
             "columnno": 1
         },
         "see": [
@@ -9245,7 +9295,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12840,
+            "lineno": 12870,
             "columnno": 1
         },
         "see": [
@@ -9278,7 +9328,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12855,
+            "lineno": 12885,
             "columnno": 1
         },
         "see": [
@@ -9326,7 +9376,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12868,
+            "lineno": 12898,
             "columnno": 1
         },
         "see": [
@@ -9359,7 +9409,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12883,
+            "lineno": 12913,
             "columnno": 1
         },
         "see": [
@@ -9407,7 +9457,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12896,
+            "lineno": 12926,
             "columnno": 1
         },
         "see": [
@@ -9440,7 +9490,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12911,
+            "lineno": 12941,
             "columnno": 1
         },
         "see": [
@@ -9488,7 +9538,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12925,
+            "lineno": 12955,
             "columnno": 1
         },
         "see": [
@@ -9521,7 +9571,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12940,
+            "lineno": 12970,
             "columnno": 1
         },
         "see": [
@@ -9569,7 +9619,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12953,
+            "lineno": 12983,
             "columnno": 1
         },
         "see": [
@@ -9602,7 +9652,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12969,
+            "lineno": 12999,
             "columnno": 1
         },
         "see": [
@@ -9650,7 +9700,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12982,
+            "lineno": 13012,
             "columnno": 1
         },
         "see": [
@@ -9683,7 +9733,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12997,
+            "lineno": 13027,
             "columnno": 1
         },
         "see": [
@@ -9746,7 +9796,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13053,
+            "lineno": 13083,
             "columnno": 1
         },
         "see": [
@@ -9794,7 +9844,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13097,
+            "lineno": 13127,
             "columnno": 1
         },
         "see": [
@@ -9827,7 +9877,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13130,
+            "lineno": 13160,
             "columnno": 1
         },
         "see": [
@@ -9875,7 +9925,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13149,
+            "lineno": 13179,
             "columnno": 1
         },
         "see": [
@@ -9908,7 +9958,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13164,
+            "lineno": 13194,
             "columnno": 1
         },
         "see": [
@@ -9956,7 +10006,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13182,
+            "lineno": 13212,
             "columnno": 1
         },
         "see": [
@@ -9989,7 +10039,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13197,
+            "lineno": 13227,
             "columnno": 1
         },
         "see": [
@@ -10037,7 +10087,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13210,
+            "lineno": 13240,
             "columnno": 1
         },
         "see": [
@@ -10070,7 +10120,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13225,
+            "lineno": 13255,
             "columnno": 1
         },
         "see": [
@@ -10118,7 +10168,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13239,
+            "lineno": 13269,
             "columnno": 1
         },
         "see": [
@@ -10151,7 +10201,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13254,
+            "lineno": 13284,
             "columnno": 1
         },
         "see": [
@@ -10199,7 +10249,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13380,
+            "lineno": 13410,
             "columnno": 1
         },
         "see": [
@@ -10231,7 +10281,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13395,
+            "lineno": 13425,
             "columnno": 1
         },
         "see": [
@@ -10279,7 +10329,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13413,
+            "lineno": 13443,
             "columnno": 1
         },
         "see": [
@@ -10311,7 +10361,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13428,
+            "lineno": 13458,
             "columnno": 1
         },
         "see": [
@@ -10359,7 +10409,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13446,
+            "lineno": 13476,
             "columnno": 1
         },
         "see": [
@@ -10391,7 +10441,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13461,
+            "lineno": 13491,
             "columnno": 1
         },
         "see": [
@@ -10423,7 +10473,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13509,
+            "lineno": 13539,
             "columnno": 1
         },
         "see": [
@@ -10459,7 +10509,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13578,
+            "lineno": 13608,
             "columnno": 1
         },
         "see": [
@@ -10500,7 +10550,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13590,
+            "lineno": 13620,
             "columnno": 1
         },
         "see": [
@@ -10536,7 +10586,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13607,
+            "lineno": 13637,
             "columnno": 1
         },
         "see": [
@@ -10577,7 +10627,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13619,
+            "lineno": 13649,
             "columnno": 1
         },
         "see": [
@@ -10613,7 +10663,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13637,
+            "lineno": 13667,
             "columnno": 1
         },
         "see": [
@@ -10654,7 +10704,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13649,
+            "lineno": 13679,
             "columnno": 1
         },
         "see": [
@@ -10710,7 +10760,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13669,
+            "lineno": 13699,
             "columnno": 1
         },
         "see": [
@@ -10766,7 +10816,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13681,
+            "lineno": 13711,
             "columnno": 1
         },
         "see": [
@@ -10842,7 +10892,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13761,
+            "lineno": 13791,
             "columnno": 1
         },
         "see": [
@@ -10888,7 +10938,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13792,
+            "lineno": 13822,
             "columnno": 1
         },
         "see": [
@@ -10939,7 +10989,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13825,
+            "lineno": 13855,
             "columnno": 1
         },
         "see": [
@@ -10990,7 +11040,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13863,
+            "lineno": 13893,
             "columnno": 1
         },
         "see": [
@@ -11022,7 +11072,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13880,
+            "lineno": 13910,
             "columnno": 1
         },
         "see": [
@@ -11073,7 +11123,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13902,
+            "lineno": 13932,
             "columnno": 1
         },
         "see": [
@@ -11105,7 +11155,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13919,
+            "lineno": 13949,
             "columnno": 1
         },
         "see": [
@@ -11174,7 +11224,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 14092,
+            "lineno": 14122,
             "columnno": 1
         },
         "see": [
@@ -11211,7 +11261,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 14136,
+            "lineno": 14166,
             "columnno": 1
         },
         "see": [
@@ -11219,7 +11269,7 @@
         ]
     },
     {
-        "comment": "/**\n\t * Sets the outline level for the specified properties.\n\t * @memberof ApiParaPr\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {Number?} [nLvl=undefined] - 0 - based outline level. Possible values are: 0-8.\n\t * Note: to set no outline level use this method without parameter.\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiParaPr/Methods/SetOutlineLvl.js\n\t */",
+        "comment": "/**\n\t * Sets the outline level for the specified properties.\n\t * @memberof ApiParaPr\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {Number?} [nLvl=undefined] - The outline level. Possible values: 0-8. The 0 value means the basic outline level.\n\t * To set no outline level, use this method without a parameter.\n\t * @returns {boolean}\n\t * @since 8.2.0\n\t * @see office-js-api/Examples/{Editor}/ApiParaPr/Methods/SetOutlineLvl.js\n\t */",
         "description": "Sets the outline level for the specified properties.",
         "memberof": "ApiParaPr",
         "params": [
@@ -11235,7 +11285,7 @@
                     }
                 },
                 "name": "nLvl",
-                "description": "0 - based outline level. Possible values are: 0-8.\nNote: to set no outline level use this method without parameter.",
+                "description": "The outline level. Possible values: 0-8. The 0 value means the basic outline level.\nTo set no outline level, use this method without a parameter.",
                 "optional": true,
                 "defaultvalue": null
             }
@@ -11260,7 +11310,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 14155,
+            "lineno": 14186,
             "columnno": 1
         },
         "see": [
@@ -11268,8 +11318,8 @@
         ]
     },
     {
-        "comment": "/**\n\t * Gets the outline level of the specified properties.\n\t * @memberof ApiParaPr\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @returns {Number?}\n\t * @see office-js-api/Examples/{Editor}/ApiParaPr/Methods/GetOutlineLvl.js\n\t */",
-        "description": "Gets the outline level of the specified properties.",
+        "comment": "/**\n\t * Returns the outline level of the specified properties.\n\t * @memberof ApiParaPr\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @returns {Number?}\n\t * @since 8.2.0\n\t * @see office-js-api/Examples/{Editor}/ApiParaPr/Methods/GetOutlineLvl.js\n\t */",
+        "description": "Returns the outline level of the specified properties.",
         "memberof": "ApiParaPr",
         "params": null,
         "returns": [
@@ -11293,7 +11343,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 14178,
+            "lineno": 14210,
             "columnno": 1
         },
         "see": [
@@ -11325,7 +11375,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 15260,
+            "lineno": 15292,
             "columnno": 1
         },
         "see": [
@@ -11357,7 +11407,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3562,
+            "lineno": 3568,
             "columnno": 1
         },
         "see": [
@@ -11389,7 +11439,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3573,
+            "lineno": 3579,
             "columnno": 1
         },
         "see": [
@@ -11421,7 +11471,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 15918,
+            "lineno": 15950,
             "columnno": 1
         },
         "see": [
@@ -11453,7 +11503,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3770,
+            "lineno": 3777,
             "columnno": 1
         },
         "see": [
@@ -11501,7 +11551,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3783,
+            "lineno": 3790,
             "columnno": 1
         },
         "see": [
@@ -11533,7 +11583,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3799,
+            "lineno": 3806,
             "columnno": 1
         },
         "see": [
@@ -11581,7 +11631,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3815,
+            "lineno": 3822,
             "columnno": 1
         },
         "see": [
@@ -11613,7 +11663,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3831,
+            "lineno": 3838,
             "columnno": 1
         },
         "see": [
@@ -11645,7 +11695,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16227,
+            "lineno": 16259,
             "columnno": 1
         },
         "see": [
@@ -11677,7 +11727,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16239,
+            "lineno": 16271,
             "columnno": 1
         },
         "see": [
@@ -11744,7 +11794,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16258,
+            "lineno": 16290,
             "columnno": 1
         },
         "see": [
@@ -11811,7 +11861,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16272,
+            "lineno": 16304,
             "columnno": 1
         },
         "see": [
@@ -11878,7 +11928,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16286,
+            "lineno": 16318,
             "columnno": 1
         },
         "see": [
@@ -11914,7 +11964,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16298,
+            "lineno": 16330,
             "columnno": 1
         },
         "see": [
@@ -11950,7 +12000,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16309,
+            "lineno": 16341,
             "columnno": 1
         },
         "see": [
@@ -12011,7 +12061,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16320,
+            "lineno": 16352,
             "columnno": 1
         },
         "see": [
@@ -12047,7 +12097,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16381,
+            "lineno": 16413,
             "columnno": 1
         },
         "see": [
@@ -12128,7 +12178,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16396,
+            "lineno": 16428,
             "columnno": 1
         },
         "see": [
@@ -12239,7 +12289,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16414,
+            "lineno": 16446,
             "columnno": 1
         },
         "see": [
@@ -12275,7 +12325,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16426,
+            "lineno": 16458,
             "columnno": 1
         },
         "see": [
@@ -12311,7 +12361,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16438,
+            "lineno": 16470,
             "columnno": 1
         },
         "see": [
@@ -12347,7 +12397,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16450,
+            "lineno": 16482,
             "columnno": 1
         },
         "see": [
@@ -12383,7 +12433,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16461,
+            "lineno": 16493,
             "columnno": 1
         },
         "see": [
@@ -12419,7 +12469,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16473,
+            "lineno": 16505,
             "columnno": 1
         },
         "see": [
@@ -12455,7 +12505,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16484,
+            "lineno": 16516,
             "columnno": 1
         },
         "see": [
@@ -12492,7 +12542,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16495,
+            "lineno": 16527,
             "columnno": 1
         },
         "see": [
@@ -12529,7 +12579,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16507,
+            "lineno": 16539,
             "columnno": 1
         },
         "see": [
@@ -12566,7 +12616,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16520,
+            "lineno": 16552,
             "columnno": 1
         },
         "see": [
@@ -12603,7 +12653,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16532,
+            "lineno": 16564,
             "columnno": 1
         },
         "see": [
@@ -12651,7 +12701,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16624,
+            "lineno": 16656,
             "columnno": 1
         },
         "see": [
@@ -12723,7 +12773,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16638,
+            "lineno": 16670,
             "columnno": 1
         },
         "see": [
@@ -12780,7 +12830,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16651,
+            "lineno": 16683,
             "columnno": 1
         },
         "see": [
@@ -12843,7 +12893,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16667,
+            "lineno": 16699,
             "columnno": 1
         },
         "see": [
@@ -12906,7 +12956,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16681,
+            "lineno": 16713,
             "columnno": 1
         },
         "see": [
@@ -12946,7 +12996,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16694,
+            "lineno": 16726,
             "columnno": 1
         },
         "see": [
@@ -12994,7 +13044,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16719,
+            "lineno": 16751,
             "columnno": 1
         },
         "see": [
@@ -13042,7 +13092,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16736,
+            "lineno": 16768,
             "columnno": 1
         },
         "see": [
@@ -13120,7 +13170,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16755,
+            "lineno": 16787,
             "columnno": 1
         },
         "see": [
@@ -13198,7 +13248,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16773,
+            "lineno": 16805,
             "columnno": 1
         },
         "see": [
@@ -13291,7 +13341,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16792,
+            "lineno": 16824,
             "columnno": 1
         },
         "see": [
@@ -13384,7 +13434,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16811,
+            "lineno": 16843,
             "columnno": 1
         },
         "see": [
@@ -13477,7 +13527,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16830,
+            "lineno": 16862,
             "columnno": 1
         },
         "see": [
@@ -13570,7 +13620,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16849,
+            "lineno": 16881,
             "columnno": 1
         },
         "see": [
@@ -13618,7 +13668,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16865,
+            "lineno": 16897,
             "columnno": 1
         },
         "see": [
@@ -13666,7 +13716,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16881,
+            "lineno": 16913,
             "columnno": 1
         },
         "see": [
@@ -13714,7 +13764,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16897,
+            "lineno": 16929,
             "columnno": 1
         },
         "see": [
@@ -13762,7 +13812,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16913,
+            "lineno": 16945,
             "columnno": 1
         },
         "see": [
@@ -13835,7 +13885,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16930,
+            "lineno": 16962,
             "columnno": 1
         },
         "see": [
@@ -13908,7 +13958,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16963,
+            "lineno": 16995,
             "columnno": 1
         },
         "see": [
@@ -14011,7 +14061,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16979,
+            "lineno": 17011,
             "columnno": 1
         },
         "see": [
@@ -14052,7 +14102,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16991,
+            "lineno": 17023,
             "columnno": 1
         },
         "see": [
@@ -14060,8 +14110,8 @@
         ]
     },
     {
-        "comment": "/**\n\t * Returns the series with specific index.\n\t * @memberof ApiChart\n\t * @typeofeditors [\"CDE\", \"CPE\", \"CSE\"]\n\t * @param {number} nIdx - Series index.\n\t * @returns {?ApiChartSeries}\n\t * @see office-js-api/Examples/{Editor}/ApiChart/Methods/GetSeries.js\n\t */",
-        "description": "Returns the series with specific index.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nvar oPresentation = Api.GetPresentation();\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nvar oChart = Api.CreateChart(\"comboBarLine\", [\n\t[200, 240, 280],\n\t[250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noChart.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noChart.SetHorAxisTitle(\"Year\", 11);\noChart.SetLegendPos(\"bottom\");\noChart.SetShowDataLabels(false, false, true, false);\nvar aAllSeries = oChart.GetAllSeries();\nvar oSeries, sSeriesType, sTitle = \"\";\noSeries = oChart.GetSeries(0);\nsSeriesType = oSeries.GetChartType();\nsTitle += (\"Series Type = \" + sSeriesType + \"\\n\");\noChart.SetTitle(sTitle, 20);\noChart.SetSize(300 * 36000, 130 * 36000);\noChart.SetPosition(608400, 1267200);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));\noChart.SetSeriesFill(oFill, 0, false);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\noChart.SetSeriesFill(oFill, 1, false);\noSlide.AddObject(oChart);\n```",
+        "comment": "/**\n\t * Returns the series with a specific index.\n\t * @memberof ApiChart\n\t * @typeofeditors [\"CDE\", \"CPE\", \"CSE\"]\n\t * @param {number} nIdx - Series index.\n\t * @returns {?ApiChartSeries}\n\t * @see office-js-api/Examples/{Editor}/ApiChart/Methods/GetSeries.js\n\t */",
+        "description": "Returns the series with a specific index.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nvar oPresentation = Api.GetPresentation();\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nvar oChart = Api.CreateChart(\"comboBarLine\", [\n\t[200, 240, 280],\n\t[250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noChart.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noChart.SetHorAxisTitle(\"Year\", 11);\noChart.SetLegendPos(\"bottom\");\noChart.SetShowDataLabels(false, false, true, false);\nvar aAllSeries = oChart.GetAllSeries();\nvar oSeries, sSeriesType, sTitle = \"\";\noSeries = oChart.GetSeries(0);\nsSeriesType = oSeries.GetChartType();\nsTitle += (\"Series Type = \" + sSeriesType + \"\\n\");\noChart.SetTitle(sTitle, 20);\noChart.SetSize(300 * 36000, 130 * 36000);\noChart.SetPosition(608400, 1267200);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));\noChart.SetSeriesFill(oFill, 0, false);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\noChart.SetSeriesFill(oFill, 1, false);\noSlide.AddObject(oChart);\n```",
         "memberof": "ApiChart",
         "params": [
             {
@@ -14101,7 +14151,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17013,
+            "lineno": 17045,
             "columnno": 1
         },
         "see": [
@@ -14133,7 +14183,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17040,
+            "lineno": 17072,
             "columnno": 1
         },
         "see": [
@@ -14141,8 +14191,8 @@
         ]
     },
     {
-        "comment": "/**\n\t * Tries to change the type of the series. Returns true in case of success.\n\t * @memberof ApiChartSeries\n\t * @typeofeditors [\"CDE\", \"CPE\", \"CSE\"]\n\t * @param {ChartType} sType - Chart type.\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiChartSeries/Methods/ChangeChartType.js\n\t */",
-        "description": "Tries to change the type of the series. Returns true in case of success.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nvar oPresentation = Api.GetPresentation();\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nvar oChart = Api.CreateChart(\"comboBarLine\", [\n\t[200, 240, 280],\n\t[250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noChart.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noChart.SetHorAxisTitle(\"Year\", 11);\noChart.SetLegendPos(\"bottom\");\noChart.SetShowDataLabels(false, false, true, false);\nvar aAllSeries = oChart.GetAllSeries();\nvar oSeries, sSeriesType, sTitle = \"\";\noSeries = oChart.GetSeries(0);\nsSeriesType = oSeries.GetChartType();\nsTitle += \"Old Series Type = \" + sSeriesType + \"\\n\";\noSeries.ChangeChartType(\"area\");\nsSeriesType = oSeries.GetChartType();\nsTitle += \"New Series Type = \" + sSeriesType;\noChart.SetTitle(sTitle, 20);\noChart.SetSize(300 * 36000, 130 * 36000);\noChart.SetPosition(608400, 1267200);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));\noChart.SetSeriesFill(oFill, 0, false);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\noChart.SetSeriesFill(oFill, 1, false);\noSlide.AddObject(oChart);\n```",
+        "comment": "/**\n\t * Tries to change the series type. Returns true if successful.\n\t * @memberof ApiChartSeries\n\t * @typeofeditors [\"CDE\", \"CPE\", \"CSE\"]\n\t * @param {ChartType} sType - Chart type.\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiChartSeries/Methods/ChangeChartType.js\n\t */",
+        "description": "Tries to change the series type. Returns true if successful.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nvar oPresentation = Api.GetPresentation();\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nvar oChart = Api.CreateChart(\"comboBarLine\", [\n\t[200, 240, 280],\n\t[250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noChart.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noChart.SetHorAxisTitle(\"Year\", 11);\noChart.SetLegendPos(\"bottom\");\noChart.SetShowDataLabels(false, false, true, false);\nvar aAllSeries = oChart.GetAllSeries();\nvar oSeries, sSeriesType, sTitle = \"\";\noSeries = oChart.GetSeries(0);\nsSeriesType = oSeries.GetChartType();\nsTitle += \"Old Series Type = \" + sSeriesType + \"\\n\";\noSeries.ChangeChartType(\"area\");\nsSeriesType = oSeries.GetChartType();\nsTitle += \"New Series Type = \" + sSeriesType;\noChart.SetTitle(sTitle, 20);\noChart.SetSize(300 * 36000, 130 * 36000);\noChart.SetPosition(608400, 1267200);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));\noChart.SetSeriesFill(oFill, 0, false);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\noChart.SetSeriesFill(oFill, 1, false);\noSlide.AddObject(oChart);\n```",
         "memberof": "ApiChartSeries",
         "params": [
             {
@@ -14181,7 +14231,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17053,
+            "lineno": 17085,
             "columnno": 1
         },
         "see": [
@@ -14189,8 +14239,8 @@
         ]
     },
     {
-        "comment": "/**\n\t * Returns a chart type of the series.\n\t * @memberof ApiChartSeries\n\t * @typeofeditors [\"CDE\", \"CPE\", \"CSE\"]\n\t * @returns {ChartType}\n\t * @see office-js-api/Examples/{Editor}/ApiChartSeries/Methods/GetChartType.js\n\t */",
-        "description": "Returns a chart type of the series.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nvar oPresentation = Api.GetPresentation();\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nvar oChart = Api.CreateChart(\"comboBarLine\", [\n\t[200, 240, 280],\n\t[250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noChart.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noChart.SetHorAxisTitle(\"Year\", 11);\noChart.SetLegendPos(\"bottom\");\noChart.SetShowDataLabels(false, false, true, false);\nvar aAllSeries = oChart.GetAllSeries();\nvar oSeries, sSeriesType, sTitle = \"\";\noSeries = oChart.GetSeries(0);\nsSeriesType = oSeries.GetChartType();\nsTitle += \"Series Type = \" + sSeriesType + \"\\n\";\noChart.SetTitle(sTitle, 20);\noChart.SetSize(300 * 36000, 130 * 36000);\noChart.SetPosition(608400, 1267200);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));\noChart.SetSeriesFill(oFill, 0, false);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\noChart.SetSeriesFill(oFill, 1, false);\noSlide.AddObject(oChart);\n```",
+        "comment": "/**\n\t * Returns a chart type of the current series.\n\t * @memberof ApiChartSeries\n\t * @typeofeditors [\"CDE\", \"CPE\", \"CSE\"]\n\t * @returns {ChartType}\n\t * @see office-js-api/Examples/{Editor}/ApiChartSeries/Methods/GetChartType.js\n\t */",
+        "description": "Returns a chart type of the current series.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nvar oPresentation = Api.GetPresentation();\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nvar oChart = Api.CreateChart(\"comboBarLine\", [\n\t[200, 240, 280],\n\t[250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noChart.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noChart.SetHorAxisTitle(\"Year\", 11);\noChart.SetLegendPos(\"bottom\");\noChart.SetShowDataLabels(false, false, true, false);\nvar aAllSeries = oChart.GetAllSeries();\nvar oSeries, sSeriesType, sTitle = \"\";\noSeries = oChart.GetSeries(0);\nsSeriesType = oSeries.GetChartType();\nsTitle += \"Series Type = \" + sSeriesType + \"\\n\";\noChart.SetTitle(sTitle, 20);\noChart.SetSize(300 * 36000, 130 * 36000);\noChart.SetPosition(608400, 1267200);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));\noChart.SetSeriesFill(oFill, 0, false);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\noChart.SetSeriesFill(oFill, 1, false);\noSlide.AddObject(oChart);\n```",
         "memberof": "ApiChartSeries",
         "params": null,
         "returns": [
@@ -14213,7 +14263,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17072,
+            "lineno": 17104,
             "columnno": 1
         },
         "see": [
@@ -14245,7 +14295,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17096,
+            "lineno": 17128,
             "columnno": 1
         },
         "see": [
@@ -14277,7 +14327,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17126,
+            "lineno": 17158,
             "columnno": 1
         },
         "see": [
@@ -14309,7 +14359,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17156,
+            "lineno": 17188,
             "columnno": 1
         },
         "see": [
@@ -14341,7 +14391,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17186,
+            "lineno": 17218,
             "columnno": 1
         },
         "see": [
@@ -14373,7 +14423,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17235,
+            "lineno": 17267,
             "columnno": 1
         },
         "see": [
@@ -14405,7 +14455,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17265,
+            "lineno": 17297,
             "columnno": 1
         },
         "see": [
@@ -14437,7 +14487,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17295,
+            "lineno": 17327,
             "columnno": 1
         },
         "see": [
@@ -14469,7 +14519,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17319,
+            "lineno": 17351,
             "columnno": 1
         },
         "see": [
@@ -14535,7 +14585,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20315,
+            "lineno": 20347,
             "columnno": 1
         },
         "see": [
@@ -14567,7 +14617,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20768,
+            "lineno": 20800,
             "columnno": 1
         },
         "see": [
@@ -14599,7 +14649,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20811,
+            "lineno": 20843,
             "columnno": 1
         },
         "see": [
@@ -14631,7 +14681,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20833,
+            "lineno": 20865,
             "columnno": 1
         },
         "see": [
@@ -14663,7 +14713,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20861,
+            "lineno": 20893,
             "columnno": 1
         },
         "see": [
@@ -14711,7 +14761,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20873,
+            "lineno": 20905,
             "columnno": 1
         },
         "see": [
@@ -14743,7 +14793,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20886,
+            "lineno": 20918,
             "columnno": 1
         },
         "see": [
@@ -14791,7 +14841,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20898,
+            "lineno": 20930,
             "columnno": 1
         },
         "see": [
@@ -14839,7 +14889,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20923,
+            "lineno": 20955,
             "columnno": 1
         },
         "see": [
@@ -14871,7 +14921,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20936,
+            "lineno": 20968,
             "columnno": 1
         },
         "see": [
@@ -14919,7 +14969,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20948,
+            "lineno": 20980,
             "columnno": 1
         },
         "see": [
@@ -14951,7 +15001,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20961,
+            "lineno": 20993,
             "columnno": 1
         },
         "see": [
@@ -15009,7 +15059,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20976,
+            "lineno": 21008,
             "columnno": 1
         },
         "see": [
@@ -15041,7 +15091,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20994,
+            "lineno": 21026,
             "columnno": 2
         },
         "see": [
@@ -15099,7 +15149,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 21006,
+            "lineno": 21038,
             "columnno": 1
         },
         "see": [
@@ -15132,7 +15182,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 21024,
+            "lineno": 21056,
             "columnno": 1
         },
         "see": [
@@ -15165,7 +15215,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 21035,
+            "lineno": 21067,
             "columnno": 1
         },
         "see": [
@@ -15259,7 +15309,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 21069,
+            "lineno": 21101,
             "columnno": 1
         },
         "see": [
@@ -15338,7 +15388,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 21097,
+            "lineno": 21129,
             "columnno": 1
         },
         "see": [
@@ -15370,7 +15420,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 21120,
+            "lineno": 21152,
             "columnno": 1
         },
         "see": [
@@ -15686,8 +15736,8 @@
         }
     },
     {
-        "comment": "/**\n     * Any valid drawing element\n     * @typedef {(ApiShape | ApiImage | ApiGroup | ApiOleObject | ApiTable )} Drawing\n\t */",
-        "description": "Any valid drawing element",
+        "comment": "/**\n     * Any valid drawing element.\n     * @typedef {(ApiShape | ApiImage | ApiGroup | ApiOleObject | ApiTable )} Drawing\n\t */",
+        "description": "Any valid drawing element.",
         "name": "Drawing",
         "longname": "Drawing",
         "kind": "typedef",
@@ -19229,8 +19279,8 @@
         ]
     },
     {
-        "comment": "/**\n\t * Gets drawings by placeholder type.\n\t * @memberof ApiMaster\n     * @typeofeditors [\"CPE\"]\n     * @param {PlaceholderType} sType - placeholders type\n\t * @returns {Drawing[]}\n\t * @see office-js-api/Examples/{Editor}/ApiMaster/Methods/GetDrawingsByPlaceholderType.js\n\t */",
-        "description": "Gets drawings by placeholder type.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nlet oPresentation = Api.GetPresentation();\nlet oSlide = oPresentation.GetSlideByIndex(0);\nlet oMaster = oPresentation.GetMaster(0);\nlet aDrawingsWithPh = oMaster.GetDrawingsByPlaceholderType(\"title\");\nfor (let i = 0; i < aDrawingsWithPh.length; i++) {\n    aDrawingsWithPh[i].Delete();\n}\n\n```",
+        "comment": "/**\n\t * Returns an array of drawings by the specified placeholder type.\n\t * @memberof ApiMaster\n     * @typeofeditors [\"CPE\"]\n     * @param {PlaceholderType} sType - The placeholder type.\n\t * @returns {Drawing[]}\n     * @since 8.2.0\n\t * @see office-js-api/Examples/{Editor}/ApiMaster/Methods/GetDrawingsByPlaceholderType.js\n\t */",
+        "description": "Returns an array of drawings by the specified placeholder type.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nlet oPresentation = Api.GetPresentation();\nlet oSlide = oPresentation.GetSlideByIndex(0);\nlet oMaster = oPresentation.GetMaster(0);\nlet aDrawingsWithPh = oMaster.GetDrawingsByPlaceholderType(\"title\");\nfor (let i = 0; i < aDrawingsWithPh.length; i++) {\n    aDrawingsWithPh[i].Delete();\n}\n\n```",
         "memberof": "ApiMaster",
         "params": [
             {
@@ -19244,7 +19294,7 @@
                     }
                 },
                 "name": "sType",
-                "description": "placeholders type",
+                "description": "The placeholder type.",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -19278,7 +19328,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 1815,
+            "lineno": 1816,
             "columnno": 4
         },
         "see": [
@@ -19310,7 +19360,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 1836,
+            "lineno": 1837,
             "columnno": 4
         },
         "see": [
@@ -19358,7 +19408,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 1848,
+            "lineno": 1849,
             "columnno": 4
         },
         "see": [
@@ -19406,7 +19456,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 1866,
+            "lineno": 1867,
             "columnno": 4
         },
         "see": [
@@ -19469,7 +19519,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 1889,
+            "lineno": 1890,
             "columnno": 4
         },
         "see": [
@@ -19517,7 +19567,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 1914,
+            "lineno": 1915,
             "columnno": 4
         },
         "see": [
@@ -19549,7 +19599,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 1931,
+            "lineno": 1932,
             "columnno": 4
         },
         "see": [
@@ -19581,7 +19631,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 1950,
+            "lineno": 1951,
             "columnno": 4
         },
         "see": [
@@ -19622,7 +19672,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 1973,
+            "lineno": 1974,
             "columnno": 4
         },
         "see": [
@@ -19654,7 +19704,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 1987,
+            "lineno": 1988,
             "columnno": 4
         },
         "see": [
@@ -19711,7 +19761,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2010,
+            "lineno": 2011,
             "columnno": 4
         },
         "see": [
@@ -19759,7 +19809,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2033,
+            "lineno": 2034,
             "columnno": 4
         },
         "see": [
@@ -19800,7 +19850,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2055,
+            "lineno": 2056,
             "columnno": 4
         },
         "see": [
@@ -19841,7 +19891,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2070,
+            "lineno": 2071,
             "columnno": 4
         },
         "see": [
@@ -19882,7 +19932,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2084,
+            "lineno": 2085,
             "columnno": 4
         },
         "see": [
@@ -19923,7 +19973,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2098,
+            "lineno": 2099,
             "columnno": 4
         },
         "see": [
@@ -19964,7 +20014,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2112,
+            "lineno": 2113,
             "columnno": 4
         },
         "see": [
@@ -19997,7 +20047,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2124,
+            "lineno": 2125,
             "columnno": 4
         },
         "see": [
@@ -20060,7 +20110,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2139,
+            "lineno": 2140,
             "columnno": 4
         },
         "see": [
@@ -20068,8 +20118,8 @@
         ]
     },
     {
-        "comment": "/**\n\t * Gets drawings by placeholder type.\n\t * @memberof ApiLayout\n     * @typeofeditors [\"CPE\"]\n     * @param {PlaceholderType} sType - placeholders type\n\t * @returns {Drawing[]}\n\t * @see office-js-api/Examples/{Editor}/ApiLayout/Methods/GetDrawingsByPlaceholderType.js\n\t */",
-        "description": "Gets drawings by placeholder type.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nlet oPresentation = Api.GetPresentation();\nlet oSlide = oPresentation.GetSlideByIndex(0);\nlet oMaster = oPresentation.GetMaster(0);\nlet oLayout = oMaster.GetLayout(0);\nlet aDrawingsWithPh = oLayout.GetDrawingsByPlaceholderType(\"ctrTitle\");\nfor (let i = 0; i < aDrawingsWithPh.length; i++) {\n    aDrawingsWithPh[i].Delete();\n}\n\n```",
+        "comment": "/**\n\t * Returns an array of drawings by the specified placeholder type.\n\t * @memberof ApiLayout\n     * @typeofeditors [\"CPE\"]\n     * @param {PlaceholderType} sType - The placeholder type.\n\t * @returns {Drawing[]}\n     * @since 8.2.0\n\t * @see office-js-api/Examples/{Editor}/ApiLayout/Methods/GetDrawingsByPlaceholderType.js\n\t */",
+        "description": "Returns an array of drawings by the specified placeholder type.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nlet oPresentation = Api.GetPresentation();\nlet oSlide = oPresentation.GetSlideByIndex(0);\nlet oMaster = oPresentation.GetMaster(0);\nlet oLayout = oMaster.GetLayout(0);\nlet aDrawingsWithPh = oLayout.GetDrawingsByPlaceholderType(\"ctrTitle\");\nfor (let i = 0; i < aDrawingsWithPh.length; i++) {\n    aDrawingsWithPh[i].Delete();\n}\n\n```",
         "memberof": "ApiLayout",
         "params": [
             {
@@ -20083,7 +20133,7 @@
                     }
                 },
                 "name": "sType",
-                "description": "placeholders type",
+                "description": "The placeholder type.",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -20117,7 +20167,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2155,
+            "lineno": 2157,
             "columnno": 4
         },
         "see": [
@@ -20149,7 +20199,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2176,
+            "lineno": 2178,
             "columnno": 4
         },
         "see": [
@@ -20197,7 +20247,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2188,
+            "lineno": 2190,
             "columnno": 4
         },
         "see": [
@@ -20205,8 +20255,8 @@
         ]
     },
     {
-        "comment": "/**\n     * Gets the placeholder type.\n     * @typeofeditors [\"CPE\"]\n     * @returns {PlaceholderType} - returns placeholder type\n     * @see office-js-api/Examples/{Editor}/ApiPlaceholder/Methods/GetType.js\n\t */",
-        "description": "Gets the placeholder type.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nlet oPresentation = Api.GetPresentation();\nlet oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nlet oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\nlet oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nlet oShape = Api.CreateShape(\"flowChartMagneticTape\", 300 * 36000, 130 * 36000, oFill, oStroke);\noShape.SetPosition(608400, 1267200);\noShape.SetSize(300 * 36000, 130 * 36000);\nlet oPlaceholder = Api.CreatePlaceholder(\"chart\");\noShape.SetPlaceholder(oPlaceholder);\nlet oContent = oShape.GetContent();\nlet oParagraph = oContent.GetElement(0);\noParagraph.AddText('Placeholder type in this shape is: \"' + oPlaceholder.GetType() + '\"');\noSlide.AddObject(oShape);\n```",
+        "comment": "/**\n     * Returns the placeholder type.\n     * @typeofeditors [\"CPE\"]\n     * @returns {PlaceholderType} - Returns the placeholder type.\n     * @since 8.2.0\n     * @see office-js-api/Examples/{Editor}/ApiPlaceholder/Methods/GetType.js\n\t */",
+        "description": "Returns the placeholder type.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nlet oPresentation = Api.GetPresentation();\nlet oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nlet oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\nlet oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nlet oShape = Api.CreateShape(\"flowChartMagneticTape\", 300 * 36000, 130 * 36000, oFill, oStroke);\noShape.SetPosition(608400, 1267200);\noShape.SetSize(300 * 36000, 130 * 36000);\nlet oPlaceholder = Api.CreatePlaceholder(\"chart\");\noShape.SetPlaceholder(oPlaceholder);\nlet oContent = oShape.GetContent();\nlet oParagraph = oContent.GetElement(0);\noParagraph.AddText('Placeholder type in this shape is: \"' + oPlaceholder.GetType() + '\"');\noSlide.AddObject(oShape);\n```",
         "memberof": "ApiPlaceholder",
         "params": null,
         "returns": [
@@ -20229,7 +20279,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2199,
+            "lineno": 2202,
             "columnno": 4
         },
         "see": [
@@ -20237,7 +20287,7 @@
         ]
     },
     {
-        "comment": "/**\n     * Sets the placeholder index.\n     * @typeofeditors [\"CPE\"]\n     * @param {number} nIdx - placeholder index\n     * @returns {boolean} - returns false if placeholder index wasn't set.\n     * @see office-js-api/Examples/{Editor}/ApiPlaceholder/Methods/SetIndex.js\n\t */",
+        "comment": "/**\n     * Sets the placeholder index.\n     * @typeofeditors [\"CPE\"]\n     * @param {number} nIdx - The placeholder index.\n     * @returns {boolean} - Returns false if the placeholder index wasn't set.\n     * @since 8.2.0\n     * @see office-js-api/Examples/{Editor}/ApiPlaceholder/Methods/SetIndex.js\n\t */",
         "description": "Sets the placeholder index.",
         "memberof": "ApiPlaceholder",
         "params": [
@@ -20252,7 +20302,7 @@
                     }
                 },
                 "name": "nIdx",
-                "description": "placeholder index",
+                "description": "The placeholder index.",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -20277,7 +20327,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2220,
+            "lineno": 2224,
             "columnno": 4
         },
         "see": [
@@ -20285,8 +20335,8 @@
         ]
     },
     {
-        "comment": "/**\n     * Gets the placeholder index.\n     * @typeofeditors [\"CPE\"]\n     * @returns {number | undefined} - returns placeholder index\n     * @see office-js-api/Examples/{Editor}/ApiPlaceholder/Methods/GetIndex.js\n\t */",
-        "description": "Gets the placeholder index.",
+        "comment": "/**\n     * Retuns the placeholder index.\n     * @typeofeditors [\"CPE\"]\n     * @returns {number | undefined} - Returns the placeholder index.\n     * @since 8.2.0\n     * @see office-js-api/Examples/{Editor}/ApiPlaceholder/Methods/GetIndex.js\n\t */",
+        "description": "Retuns the placeholder index.",
         "memberof": "ApiPlaceholder",
         "params": null,
         "returns": [
@@ -20318,7 +20368,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2236,
+            "lineno": 2241,
             "columnno": 4
         },
         "see": [
@@ -20350,7 +20400,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2262,
+            "lineno": 2267,
             "columnno": 4
         },
         "see": [
@@ -20391,7 +20441,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2273,
+            "lineno": 2278,
             "columnno": 4
         },
         "see": [
@@ -20439,7 +20489,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2288,
+            "lineno": 2293,
             "columnno": 4
         },
         "see": [
@@ -20472,7 +20522,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2305,
+            "lineno": 2310,
             "columnno": 4
         },
         "see": [
@@ -20520,7 +20570,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2322,
+            "lineno": 2327,
             "columnno": 4
         },
         "see": [
@@ -20553,7 +20603,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2339,
+            "lineno": 2344,
             "columnno": 4
         },
         "see": [
@@ -20601,7 +20651,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2356,
+            "lineno": 2361,
             "columnno": 4
         },
         "see": [
@@ -20634,7 +20684,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2373,
+            "lineno": 2378,
             "columnno": 4
         },
         "see": [
@@ -20666,7 +20716,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2395,
+            "lineno": 2400,
             "columnno": 4
         },
         "see": [
@@ -20714,7 +20764,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2407,
+            "lineno": 2412,
             "columnno": 4
         },
         "see": [
@@ -20787,7 +20837,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2423,
+            "lineno": 2428,
             "columnno": 4
         },
         "see": [
@@ -20819,7 +20869,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2442,
+            "lineno": 2447,
             "columnno": 4
         },
         "see": [
@@ -20851,7 +20901,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2454,
+            "lineno": 2459,
             "columnno": 4
         },
         "see": [
@@ -20883,7 +20933,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2471,
+            "lineno": 2476,
             "columnno": 4
         },
         "see": [
@@ -20931,7 +20981,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2483,
+            "lineno": 2488,
             "columnno": 4
         },
         "see": [
@@ -20976,7 +21026,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2498,
+            "lineno": 2503,
             "columnno": 4
         },
         "see": [
@@ -21021,7 +21071,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2521,
+            "lineno": 2526,
             "columnno": 4
         },
         "see": [
@@ -21066,7 +21116,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2544,
+            "lineno": 2549,
             "columnno": 4
         },
         "see": [
@@ -21098,7 +21148,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2593,
+            "lineno": 2598,
             "columnno": 4
         },
         "see": [
@@ -21130,7 +21180,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2605,
+            "lineno": 2610,
             "columnno": 4
         },
         "see": [
@@ -21162,7 +21212,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2622,
+            "lineno": 2627,
             "columnno": 4
         },
         "see": [
@@ -21210,7 +21260,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2634,
+            "lineno": 2639,
             "columnno": 4
         },
         "see": [
@@ -21321,7 +21371,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2660,
+            "lineno": 2665,
             "columnno": 4
         },
         "see": [
@@ -21353,7 +21403,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2686,
+            "lineno": 2691,
             "columnno": 4
         },
         "see": [
@@ -21385,7 +21435,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2698,
+            "lineno": 2703,
             "columnno": 4
         },
         "see": [
@@ -21417,7 +21467,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2715,
+            "lineno": 2720,
             "columnno": 4
         },
         "see": [
@@ -21437,7 +21487,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2726,
+            "lineno": 2731,
             "columnno": 4
         },
         "see": [
@@ -21485,7 +21535,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2743,
+            "lineno": 2748,
             "columnno": 4
         },
         "see": [
@@ -21548,7 +21598,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2764,
+            "lineno": 2769,
             "columnno": 4
         },
         "see": [
@@ -21596,7 +21646,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2789,
+            "lineno": 2794,
             "columnno": 4
         },
         "see": [
@@ -21628,7 +21678,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2809,
+            "lineno": 2814,
             "columnno": 4
         },
         "see": [
@@ -21676,7 +21726,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2824,
+            "lineno": 2829,
             "columnno": 4
         },
         "see": [
@@ -21708,7 +21758,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2838,
+            "lineno": 2843,
             "columnno": 4
         },
         "see": [
@@ -21740,7 +21790,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2851,
+            "lineno": 2856,
             "columnno": 4
         },
         "see": [
@@ -21788,7 +21838,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2866,
+            "lineno": 2871,
             "columnno": 4
         },
         "see": [
@@ -21820,7 +21870,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2880,
+            "lineno": 2885,
             "columnno": 4
         },
         "see": [
@@ -21861,7 +21911,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2903,
+            "lineno": 2908,
             "columnno": 4
         },
         "see": [
@@ -21918,7 +21968,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2919,
+            "lineno": 2924,
             "columnno": 4
         },
         "see": [
@@ -21966,7 +22016,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2941,
+            "lineno": 2946,
             "columnno": 4
         },
         "see": [
@@ -21998,7 +22048,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2965,
+            "lineno": 2970,
             "columnno": 4
         },
         "see": [
@@ -22030,7 +22080,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2988,
+            "lineno": 2993,
             "columnno": 4
         },
         "see": [
@@ -22062,7 +22112,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3008,
+            "lineno": 3013,
             "columnno": 4
         },
         "see": [
@@ -22094,7 +22144,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3030,
+            "lineno": 3035,
             "columnno": 4
         },
         "see": [
@@ -22142,7 +22192,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3052,
+            "lineno": 3057,
             "columnno": 4
         },
         "see": [
@@ -22183,7 +22233,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3161,
+            "lineno": 3166,
             "columnno": 4
         },
         "see": [
@@ -22215,7 +22265,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3174,
+            "lineno": 3179,
             "columnno": 4
         },
         "see": [
@@ -22256,7 +22306,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3194,
+            "lineno": 3199,
             "columnno": 4
         },
         "see": [
@@ -22297,7 +22347,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3209,
+            "lineno": 3214,
             "columnno": 4
         },
         "see": [
@@ -22338,7 +22388,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3224,
+            "lineno": 3229,
             "columnno": 4
         },
         "see": [
@@ -22379,7 +22429,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3238,
+            "lineno": 3243,
             "columnno": 4
         },
         "see": [
@@ -22420,7 +22470,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3252,
+            "lineno": 3257,
             "columnno": 4
         },
         "see": [
@@ -22513,7 +22563,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3269,
+            "lineno": 3274,
             "columnno": 4
         },
         "see": [
@@ -22521,8 +22571,8 @@
         ]
     },
     {
-        "comment": "/**\n\t * Gets drawings by placeholder type.\n\t * @memberof ApiSlide\n     * @typeofeditors [\"CPE\"]\n     * @param {PlaceholderType} sType - placeholders type\n\t * @returns {Drawing[]}\n\t * @see office-js-api/Examples/{Editor}/ApiSlide/Methods/GetDrawingsByPlaceholderType.js\n\t */",
-        "description": "Gets drawings by placeholder type.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nlet oPresentation = Api.GetPresentation();\nlet oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nlet oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\nlet oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nlet oShape = Api.CreateShape(\"flowChartMagneticTape\", 300 * 36000, 130 * 36000, oFill, oStroke);\noShape.SetPosition(608400, 1267200);\noShape.SetSize(300 * 36000, 130 * 36000);\nlet oPlaceholder = Api.CreatePlaceholder(\"chart\");\noShape.SetPlaceholder(oPlaceholder);\noSlide.AddObject(oShape);\nlet aDrawingsWithPh = oSlide.GetDrawingsByPlaceholderType(\"chart\");\nfor (let i = 0; i < aDrawingsWithPh.length; i++) {\n    aDrawingsWithPh[i].Delete();\n}\n\n```",
+        "comment": "/**\n\t * Returns an array of drawings by the specified placeholder type.\n\t * @memberof ApiSlide\n     * @typeofeditors [\"CPE\"]\n     * @param {PlaceholderType} sType - The placeholder type.\n\t * @returns {Drawing[]}\n     * @since 8.2.0\n\t * @see office-js-api/Examples/{Editor}/ApiSlide/Methods/GetDrawingsByPlaceholderType.js\n\t */",
+        "description": "Returns an array of drawings by the specified placeholder type.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nlet oPresentation = Api.GetPresentation();\nlet oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nlet oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\nlet oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nlet oShape = Api.CreateShape(\"flowChartMagneticTape\", 300 * 36000, 130 * 36000, oFill, oStroke);\noShape.SetPosition(608400, 1267200);\noShape.SetSize(300 * 36000, 130 * 36000);\nlet oPlaceholder = Api.CreatePlaceholder(\"chart\");\noShape.SetPlaceholder(oPlaceholder);\noSlide.AddObject(oShape);\nlet aDrawingsWithPh = oSlide.GetDrawingsByPlaceholderType(\"chart\");\nfor (let i = 0; i < aDrawingsWithPh.length; i++) {\n    aDrawingsWithPh[i].Delete();\n}\n\n```",
         "memberof": "ApiSlide",
         "params": [
             {
@@ -22536,7 +22586,7 @@
                     }
                 },
                 "name": "sType",
-                "description": "placeholders type",
+                "description": "The placeholder type.",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -22570,7 +22620,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3285,
+            "lineno": 3291,
             "columnno": 4
         },
         "see": [
@@ -22602,7 +22652,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3306,
+            "lineno": 3312,
             "columnno": 4
         },
         "see": [
@@ -22653,7 +22703,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3317,
+            "lineno": 3323,
             "columnno": 4
         },
         "see": [
@@ -22704,7 +22754,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3335,
+            "lineno": 3341,
             "columnno": 4
         },
         "see": [
@@ -22755,7 +22805,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3352,
+            "lineno": 3358,
             "columnno": 4
         },
         "see": [
@@ -22796,7 +22846,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3376,
+            "lineno": 3382,
             "columnno": 4
         },
         "see": [
@@ -22837,7 +22887,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3392,
+            "lineno": 3398,
             "columnno": 4
         },
         "see": [
@@ -22878,7 +22928,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3408,
+            "lineno": 3414,
             "columnno": 4
         },
         "see": [
@@ -22910,7 +22960,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3424,
+            "lineno": 3430,
             "columnno": 4
         },
         "see": [
@@ -22942,7 +22992,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3438,
+            "lineno": 3444,
             "columnno": 4
         },
         "see": [
@@ -22990,7 +23040,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3464,
+            "lineno": 3470,
             "columnno": 4
         },
         "see": [
@@ -23031,7 +23081,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3522,
+            "lineno": 3528,
             "columnno": 4
         },
         "see": [
@@ -23079,7 +23129,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3585,
+            "lineno": 3591,
             "columnno": 1
         },
         "see": [
@@ -23142,7 +23192,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3606,
+            "lineno": 3612,
             "columnno": 1
         },
         "see": [
@@ -23174,7 +23224,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3629,
+            "lineno": 3635,
             "columnno": 1
         },
         "see": [
@@ -23182,7 +23232,7 @@
         ]
     },
     {
-        "comment": "/**\n\t * Selects the current graphic object.\n\t * @memberof ApiDrawing\n\t * @typeofeditors [\"CPE\"]\n\t * @see office-js-api/Examples/{Editor}/ApiDrawing/Methods/Select.js\n\t */",
+        "comment": "/**\n\t * Selects the current graphic object.\n\t * @memberof ApiDrawing\n\t * @typeofeditors [\"CPE\"]\n     * @since 8.2.0\n\t * @see office-js-api/Examples/{Editor}/ApiDrawing/Methods/Select.js\n\t */",
         "description": "Selects the current graphic object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nvar oPresentation = Api.GetPresentation();\nvar oSlide = oPresentation.GetSlideByIndex(0);\nvar aAllDrawings = oSlide.GetAllDrawings();\nif(aAllDrawings.length > 0)\n{\n\tvar oDrawing = aAllDrawings[0];\n\toDrawing.Select();\n}\n```",
         "memberof": "ApiDrawing",
         "params": null,
@@ -23194,7 +23244,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3641,
+            "lineno": 3648,
             "columnno": 1
         },
         "see": [
@@ -23226,7 +23276,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3662,
+            "lineno": 3669,
             "columnno": 4
         },
         "see": [
@@ -23258,7 +23308,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3679,
+            "lineno": 3686,
             "columnno": 4
         },
         "see": [
@@ -23291,7 +23341,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3692,
+            "lineno": 3699,
             "columnno": 4
         },
         "see": [
@@ -23324,7 +23374,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3708,
+            "lineno": 3715,
             "columnno": 4
         },
         "see": [
@@ -23360,7 +23410,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3724,
+            "lineno": 3731,
             "columnno": 4
         },
         "see": [
@@ -23392,7 +23442,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3850,
+            "lineno": 3857,
             "columnno": 4
         },
         "see": [
@@ -23441,7 +23491,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3862,
+            "lineno": 3869,
             "columnno": 4
         },
         "see": [
@@ -23499,7 +23549,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3881,
+            "lineno": 3888,
             "columnno": 4
         },
         "see": [
@@ -23610,7 +23660,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3960,
+            "lineno": 3967,
             "columnno": 4
         },
         "see": [
@@ -23673,7 +23723,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3979,
+            "lineno": 3986,
             "columnno": 4
         },
         "see": [
@@ -23724,7 +23774,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4010,
+            "lineno": 4017,
             "columnno": 4
         },
         "see": [
@@ -23772,7 +23822,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4036,
+            "lineno": 4043,
             "columnno": 4
         },
         "see": [
@@ -23820,7 +23870,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4052,
+            "lineno": 4059,
             "columnno": 4
         },
         "see": [
@@ -23911,7 +23961,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4071,
+            "lineno": 4078,
             "columnno": 4
         },
         "see": [
@@ -23959,7 +24009,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4120,
+            "lineno": 4127,
             "columnno": 1
         },
         "see": [
@@ -23991,7 +24041,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4140,
+            "lineno": 4147,
             "columnno": 4
         },
         "see": [
@@ -24023,7 +24073,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4150,
+            "lineno": 4157,
             "columnno": 4
         },
         "see": [
@@ -24071,7 +24121,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4161,
+            "lineno": 4168,
             "columnno": 4
         },
         "see": [
@@ -24107,7 +24157,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4176,
+            "lineno": 4183,
             "columnno": 4
         },
         "see": [
@@ -24139,7 +24189,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4214,
+            "lineno": 4221,
             "columnno": 4
         },
         "see": [
@@ -24171,7 +24221,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4225,
+            "lineno": 4232,
             "columnno": 4
         },
         "see": [
@@ -24262,7 +24312,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4241,
+            "lineno": 4248,
             "columnno": 4
         },
         "see": [
@@ -24299,7 +24349,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4291,
+            "lineno": 4298,
             "columnno": 4
         },
         "see": [
@@ -24336,7 +24386,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4319,
+            "lineno": 4326,
             "columnno": 4
         },
         "see": [
@@ -24373,7 +24423,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4347,
+            "lineno": 4354,
             "columnno": 4
         },
         "see": [
@@ -24410,7 +24460,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4375,
+            "lineno": 4382,
             "columnno": 4
         },
         "see": [
@@ -24461,7 +24511,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4402,
+            "lineno": 4409,
             "columnno": 4
         },
         "see": [
@@ -24512,7 +24562,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4421,
+            "lineno": 4428,
             "columnno": 4
         },
         "see": [
@@ -24563,7 +24613,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4440,
+            "lineno": 4447,
             "columnno": 4
         },
         "see": [
@@ -24614,7 +24664,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4459,
+            "lineno": 4466,
             "columnno": 4
         },
         "see": [
@@ -24665,7 +24715,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4477,
+            "lineno": 4484,
             "columnno": 4
         },
         "see": [
@@ -24716,7 +24766,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4494,
+            "lineno": 4501,
             "columnno": 4
         },
         "see": [
@@ -24745,7 +24795,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13509,
+            "lineno": 13539,
             "columnno": 1
         },
         "see": [
@@ -24778,7 +24828,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13578,
+            "lineno": 13608,
             "columnno": 1
         },
         "see": [
@@ -24808,7 +24858,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13590,
+            "lineno": 13620,
             "columnno": 1
         },
         "see": [
@@ -24841,7 +24891,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13607,
+            "lineno": 13637,
             "columnno": 1
         },
         "see": [
@@ -24871,7 +24921,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13619,
+            "lineno": 13649,
             "columnno": 1
         },
         "see": [
@@ -24904,7 +24954,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13637,
+            "lineno": 13667,
             "columnno": 1
         },
         "see": [
@@ -24934,7 +24984,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13649,
+            "lineno": 13679,
             "columnno": 1
         },
         "see": [
@@ -24970,7 +25020,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13669,
+            "lineno": 13699,
             "columnno": 1
         },
         "see": [
@@ -25003,7 +25053,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13681,
+            "lineno": 13711,
             "columnno": 1
         },
         "see": [
@@ -25051,7 +25101,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13761,
+            "lineno": 13791,
             "columnno": 1
         },
         "see": [
@@ -25082,7 +25132,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13792,
+            "lineno": 13822,
             "columnno": 1
         },
         "see": [
@@ -25114,7 +25164,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13825,
+            "lineno": 13855,
             "columnno": 1
         },
         "see": [
@@ -25159,7 +25209,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13863,
+            "lineno": 13893,
             "columnno": 1
         },
         "see": [
@@ -25188,7 +25238,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13880,
+            "lineno": 13910,
             "columnno": 1
         },
         "see": [
@@ -25233,7 +25283,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13902,
+            "lineno": 13932,
             "columnno": 1
         },
         "see": [
@@ -25262,7 +25312,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13919,
+            "lineno": 13949,
             "columnno": 1
         },
         "see": [
@@ -25307,7 +25357,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 14092,
+            "lineno": 14122,
             "columnno": 1
         },
         "see": [
@@ -25340,7 +25390,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 14136,
+            "lineno": 14166,
             "columnno": 1
         },
         "see": [
@@ -25348,7 +25398,7 @@
         ]
     },
     {
-        "comment": "/**\n\t * Sets the outline level for the specified properties.\n\t * @memberof ApiParaPr\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {Number?} [nLvl=undefined] - 0 - based outline level. Possible values are: 0-8.\n\t * Note: to set no outline level use this method without parameter.\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiParaPr/Methods/SetOutlineLvl.js\n\t */",
+        "comment": "/**\n\t * Sets the outline level for the specified properties.\n\t * @memberof ApiParaPr\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {Number?} [nLvl=undefined] - The outline level. Possible values: 0-8. The 0 value means the basic outline level.\n\t * To set no outline level, use this method without a parameter.\n\t * @returns {boolean}\n\t * @since 8.2.0\n\t * @see office-js-api/Examples/{Editor}/ApiParaPr/Methods/SetOutlineLvl.js\n\t */",
         "description": "Sets the outline level for the specified properties.",
         "memberof": "ApiParagraph",
         "params": [
@@ -25360,7 +25410,7 @@
                     "parsedType": null
                 },
                 "name": "nLvl",
-                "description": "0 - based outline level. Possible values are: 0-8.\nNote: to set no outline level use this method without parameter.",
+                "description": "The outline level. Possible values: 0-8. The 0 value means the basic outline level.\nTo set no outline level, use this method without a parameter.",
                 "optional": true,
                 "defaultvalue": null
             }
@@ -25382,7 +25432,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 14155,
+            "lineno": 14186,
             "columnno": 1
         },
         "see": [
@@ -25390,8 +25440,8 @@
         ]
     },
     {
-        "comment": "/**\n\t * Gets the outline level of the specified properties.\n\t * @memberof ApiParaPr\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @returns {Number?}\n\t * @see office-js-api/Examples/{Editor}/ApiParaPr/Methods/GetOutlineLvl.js\n\t */",
-        "description": "Gets the outline level of the specified properties.",
+        "comment": "/**\n\t * Returns the outline level of the specified properties.\n\t * @memberof ApiParaPr\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @returns {Number?}\n\t * @since 8.2.0\n\t * @see office-js-api/Examples/{Editor}/ApiParaPr/Methods/GetOutlineLvl.js\n\t */",
+        "description": "Returns the outline level of the specified properties.",
         "memberof": "ApiParagraph",
         "params": null,
         "returns": [
@@ -25411,7 +25461,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 14178,
+            "lineno": 14210,
             "columnno": 1
         },
         "see": [
@@ -25440,7 +25490,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12787,
+            "lineno": 12817,
             "columnno": 1
         },
         "see": [
@@ -25482,7 +25532,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12840,
+            "lineno": 12870,
             "columnno": 1
         },
         "see": [
@@ -25511,7 +25561,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12855,
+            "lineno": 12885,
             "columnno": 1
         },
         "see": [
@@ -25553,7 +25603,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12868,
+            "lineno": 12898,
             "columnno": 1
         },
         "see": [
@@ -25582,7 +25632,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12883,
+            "lineno": 12913,
             "columnno": 1
         },
         "see": [
@@ -25624,7 +25674,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12896,
+            "lineno": 12926,
             "columnno": 1
         },
         "see": [
@@ -25653,7 +25703,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12911,
+            "lineno": 12941,
             "columnno": 1
         },
         "see": [
@@ -25695,7 +25745,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12925,
+            "lineno": 12955,
             "columnno": 1
         },
         "see": [
@@ -25724,7 +25774,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12940,
+            "lineno": 12970,
             "columnno": 1
         },
         "see": [
@@ -25766,7 +25816,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12953,
+            "lineno": 12983,
             "columnno": 1
         },
         "see": [
@@ -25795,7 +25845,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12969,
+            "lineno": 12999,
             "columnno": 1
         },
         "see": [
@@ -25837,7 +25887,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12982,
+            "lineno": 13012,
             "columnno": 1
         },
         "see": [
@@ -25866,7 +25916,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 12997,
+            "lineno": 13027,
             "columnno": 1
         },
         "see": [
@@ -25910,7 +25960,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13053,
+            "lineno": 13083,
             "columnno": 1
         },
         "see": [
@@ -25952,7 +26002,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13097,
+            "lineno": 13127,
             "columnno": 1
         },
         "see": [
@@ -25981,7 +26031,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13130,
+            "lineno": 13160,
             "columnno": 1
         },
         "see": [
@@ -26023,7 +26073,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13149,
+            "lineno": 13179,
             "columnno": 1
         },
         "see": [
@@ -26052,7 +26102,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13164,
+            "lineno": 13194,
             "columnno": 1
         },
         "see": [
@@ -26094,7 +26144,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13182,
+            "lineno": 13212,
             "columnno": 1
         },
         "see": [
@@ -26123,7 +26173,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13197,
+            "lineno": 13227,
             "columnno": 1
         },
         "see": [
@@ -26165,7 +26215,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13210,
+            "lineno": 13240,
             "columnno": 1
         },
         "see": [
@@ -26194,7 +26244,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13225,
+            "lineno": 13255,
             "columnno": 1
         },
         "see": [
@@ -26236,7 +26286,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13239,
+            "lineno": 13269,
             "columnno": 1
         },
         "see": [
@@ -26265,7 +26315,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13254,
+            "lineno": 13284,
             "columnno": 1
         },
         "see": [
@@ -26307,7 +26357,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13380,
+            "lineno": 13410,
             "columnno": 1
         },
         "see": [
@@ -26336,7 +26386,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13395,
+            "lineno": 13425,
             "columnno": 1
         },
         "see": [
@@ -26378,7 +26428,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13413,
+            "lineno": 13443,
             "columnno": 1
         },
         "see": [
@@ -26407,7 +26457,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13428,
+            "lineno": 13458,
             "columnno": 1
         },
         "see": [
@@ -26449,7 +26499,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13446,
+            "lineno": 13476,
             "columnno": 1
         },
         "see": [
@@ -26478,7 +26528,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 13461,
+            "lineno": 13491,
             "columnno": 1
         },
         "see": [

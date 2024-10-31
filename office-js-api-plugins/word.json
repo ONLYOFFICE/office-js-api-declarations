@@ -3172,60 +3172,72 @@
         ]
     },
     {
-        "comment": "/**\n\t * Undo the user's last action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias Undo\n\t * @since 8.2.0\n\t */",
+        "comment": "/**\n\t * Undoes the user's last action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias Undo\n\t * @since 8.2.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/Undo.js\n\t */",
         "meta": {
-            "lineno": 1242,
+            "lineno": 1243,
             "columnno": 1
         },
         "kind": "function",
         "since": "8.2.0",
         "name": "Undo",
-        "description": "Undo the user's last action.",
+        "description": "Undoes the user's last action.",
         "memberof": "Api",
         "longname": "Undo",
-        "alias": "Undo"
+        "alias": "Undo",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/Undo.js"
+        ]
     },
     {
-        "comment": "/**\n\t * Revert the user's last undone action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias Redo\n\t * @since 8.2.0\n\t */",
+        "comment": "/**\n\t * Reverts the user's last undone action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias Redo\n\t * @since 8.2.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/Redo.js\n\t */",
         "meta": {
-            "lineno": 1253,
+            "lineno": 1255,
             "columnno": 1
         },
         "kind": "function",
         "since": "8.2.0",
         "name": "Redo",
-        "description": "Revert the user's last undone action.",
+        "description": "Reverts the user's last undone action.",
         "memberof": "Api",
         "longname": "Redo",
-        "alias": "Redo"
+        "alias": "Redo",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/Redo.js"
+        ]
     },
     {
-        "comment": "/**\n\t * Check if it possible to undo the user's last action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias CanUndo\n\t * @since 8.2.0\n\t */",
+        "comment": "/**\n\t * Checks if it is possible to undo the user's last action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias CanUndo\n\t * @since 8.2.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/CanUndo.js\n\t */",
         "meta": {
-            "lineno": 1264,
+            "lineno": 1267,
             "columnno": 1
         },
         "kind": "function",
         "since": "8.2.0",
         "name": "CanUndo",
-        "description": "Check if it possible to undo the user's last action.",
+        "description": "Checks if it is possible to undo the user's last action.",
         "memberof": "Api",
         "longname": "CanUndo",
-        "alias": "CanUndo"
+        "alias": "CanUndo",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/CanUndo.js"
+        ]
     },
     {
-        "comment": "/**\n\t * Check if it possible to revert the user's last undone action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias CanRedo\n\t * @since 8.2.0\n\t */",
+        "comment": "/**\n\t * Checks if it possible to revert the user's last undone action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias CanRedo\n\t * @since 8.2.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/CanRedo.js\n\t */",
         "meta": {
-            "lineno": 1275,
+            "lineno": 1279,
             "columnno": 1
         },
         "kind": "function",
         "since": "8.2.0",
         "name": "CanRedo",
-        "description": "Check if it possible to revert the user's last undone action.",
+        "description": "Checks if it possible to revert the user's last undone action.",
         "memberof": "Api",
         "longname": "CanRedo",
-        "alias": "CanRedo"
+        "alias": "CanRedo",
+        "see": [
+            "office-js-api/Examples/Plugins/Word/Api/Methods/CanRedo.js"
+        ]
     },
     {
         "comment": "/**\n     * @typedef {Object} ContentControl\n\t * Content control object.\n     * @property {string} Tag - A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code.\n     * @property {string} Id - A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.\n     * @property {ContentControlLock} Lock - A value that defines if it is possible to delete and/or edit the content control or not: 0 - only deleting, 1 - no deleting or editing, 2 - only editing, 3 - full access.\n     * @property {string} InternalId - A unique internal identifier of the content control. It is used for all operations with content controls.\n     * @see office-js-api/Examples/Plugins/Forms/Enumeration/ContentControl.js\n\t */",

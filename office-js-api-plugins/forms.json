@@ -16,7 +16,7 @@
                 "name": "Object"
             }
         },
-        "description": "Content control object.",
+        "description": "Content control object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nvar oContentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};\n```",
         "properties": [
             {
                 "type": {
@@ -75,6 +75,9 @@
         "scope": "global",
         "see": [
             "office-js-api/Examples/Plugins/Forms/Enumeration/ContentControl.js"
+        ],
+        "examples": [
+            "var oContentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};"
         ]
     },
     {
@@ -114,11 +117,14 @@
                 ]
             }
         },
-        "description": "A value that defines if it is possible to delete and/or edit the content control or not:\n**0** - only deleting\n**1** - disable deleting or editing\n**2** - only editing\n**3** - full access",
+        "description": "A value that defines if it is possible to delete and/or edit the content control or not:\n**0** - only deleting\n**1** - disable deleting or editing\n**2** - only editing\n**3** - full access\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nvar arrDocuments = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [arrDocuments]);\n```",
         "longname": "ContentControlLock",
         "scope": "global",
         "see": [
             "office-js-api/Examples/Plugins/Forms/Enumeration/ContentControlLock.js"
+        ],
+        "examples": [
+            "var arrDocuments = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [arrDocuments]);"
         ]
     },
     {
@@ -129,7 +135,7 @@
         },
         "kind": "function",
         "name": "GetAllForms",
-        "description": "Returns information about all the forms that have been added to the document.",
+        "description": "Returns information about all the forms that have been added to the document.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nwindow.Asc.plugin.executeMethod (\"GetAllForms\", null, function (data) {\n    for (var i = 0; i < data.length; i++) {\n        if (data[i].Tag == 11) {\n            this.Asc.plugin.executeMethod (\"SelectContentControl\", [data[i].InternalId]);\n            break;\n        }\n    }\n});\n```",
         "memberof": "Api",
         "longname": "GetAllForms",
         "alias": "GetAllForms",
@@ -157,6 +163,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Forms/Api/Methods/GetAllForms.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"GetAllForms\", null, function (data) {\n    for (var i = 0; i < data.length; i++) {\n        if (data[i].Tag == 11) {\n            this.Asc.plugin.executeMethod (\"SelectContentControl\", [data[i].InternalId]);\n            break;\n        }\n    }\n});"
         ]
     },
     {
@@ -167,7 +176,7 @@
         },
         "kind": "function",
         "name": "GetFormsByTag",
-        "description": "Returns information about all the forms that have been added to the document with specified tag.",
+        "description": "Returns information about all the forms that have been added to the document with specified tag.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nwindow.Asc.plugin.executeMethod (\"GetFormsByTag\", [\"{tag}\"], function (data) {\n    for (var i = 0; i < data.length; i++) {\n        if (data[i].InternalId == \"5_556\") {\n            this.Asc.plugin.executeMethod (\"SelectContentControl\", [data[i].InternalId]);\n            break;\n        }\n    }\n});\n```",
         "memberof": "Api",
         "longname": "GetFormsByTag",
         "alias": "GetFormsByTag",
@@ -210,6 +219,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Forms/Api/Methods/GetFormsByTag.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"GetFormsByTag\", [\"{tag}\"], function (data) {\n    for (var i = 0; i < data.length; i++) {\n        if (data[i].InternalId == \"5_556\") {\n            this.Asc.plugin.executeMethod (\"SelectContentControl\", [data[i].InternalId]);\n            break;\n        }\n    }\n});"
         ]
     },
     {
@@ -220,7 +232,7 @@
         },
         "kind": "function",
         "name": "SetFormValue",
-        "description": "Sets a value to the specified form.",
+        "description": "Sets a value to the specified form.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nwindow.Asc.plugin.executeMethod (\"SetFormValue\", [\"1_713\", true]);\n```",
         "memberof": "Api",
         "longname": "SetFormValue",
         "alias": "SetFormValue",
@@ -264,6 +276,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Forms/Api/Methods/SetFormValue.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"SetFormValue\", [\"1_713\", true]);"
         ]
     },
     {
@@ -274,7 +289,7 @@
         },
         "kind": "function",
         "name": "GetFormValue",
-        "description": "Returns a value of the specified form.",
+        "description": "Returns a value of the specified form.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nwindow.Asc.plugin.executeMethod (\"GetFormValue\", [\"1_713\"], function (res) {\n    console.log (res)\n});\n```",
         "memberof": "Api",
         "longname": "GetFormValue",
         "alias": "GetFormValue",
@@ -322,6 +337,9 @@
         ],
         "see": [
             "office-js-api/Examples/Plugins/Forms/Api/Methods/GetFormValue.js"
+        ],
+        "examples": [
+            "window.Asc.plugin.executeMethod (\"GetFormValue\", [\"1_713\"], function (res) {\n    console.log (res)\n});"
         ]
     }
 ]

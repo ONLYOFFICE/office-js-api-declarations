@@ -6680,5 +6680,47 @@
         "examples": [
             "window.Asc.plugin.executeMethod (\"MouseMoveWindow\", [\"iframe_asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}\", 70, 40]);"
         ]
+    },
+    {
+        "comment": "/**\n\t * Show an error/warning message.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\", \"PDF\"]\n\t * @param {string} error - error text.\n\t * @param {number} level - -1 or 0 for error or warning\n\t * @alias ShowError\n\t * @since 8.3.0\n\t */",
+        "meta": {
+            "lineno": 2084,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "8.3.0",
+        "name": "ShowError",
+        "description": "Show an error/warning message.",
+        "memberof": "Api",
+        "longname": "ShowError",
+        "alias": "ShowError",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "error",
+                "description": "error text."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "level",
+                "description": "-1 or 0 for error or warning"
+            }
+        ]
     }
 ]

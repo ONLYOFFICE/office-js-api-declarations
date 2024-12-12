@@ -38711,7 +38711,7 @@
         ]
     },
     {
-        "comment": "/**\n\t * Returns the serial number of the date before or after a specified number of workdays with custom weekend parameters.\n\t * @memberof ApiWorksheetFunction\n\t * @typeofeditors [\"CSE\"]\n\t * @param {ApiRange | ApiName | number} arg1 - A serial date number that represents the start date.\n\t * @param {ApiRange | ApiName | number} arg2 - The number of nonweekend and non-holiday days before or after the start date. A positive value for days yields a future date; a negative value yields a past date.\n\t * @param {?ApiRange | ?ApiName | ?number | ?string} arg3 - A number or string specifying when weekends occur.\n\t * @param {?ApiRange | ?ApiName | &number[]} arg4 - An optional range or array of one or more serial date numbers to exclude from the working calendar, such as state and federal holidays and floating holidays.\n\t * @returns {number}\n\t * @see office-js-api/Examples/{Editor}/ApiWorksheetFunction/Methods/WORKDAY_INTL.js\n\t */",
+        "comment": "/**\n\t * Returns the serial number of the date before or after a specified number of workdays with custom weekend parameters.\n\t * @memberof ApiWorksheetFunction\n\t * @typeofeditors [\"CSE\"]\n\t * @param {ApiRange | ApiName | number} arg1 - A serial date number that represents the start date.\n\t * @param {ApiRange | ApiName | number} arg2 - The number of nonweekend and non-holiday days before or after the start date. A positive value for days yields a future date; a negative value yields a past date.\n\t * @param {?ApiRange | ?ApiName | ?number | ?string} arg3 - A number or string specifying when weekends occur.\n\t * @param {?ApiRange | ?ApiName | ?number[]} arg4 - An optional range or array of one or more serial date numbers to exclude from the working calendar, such as state and federal holidays and floating holidays.\n\t * @returns {number}\n\t * @see office-js-api/Examples/{Editor}/ApiWorksheetFunction/Methods/WORKDAY_INTL.js\n\t */",
         "description": "Returns the serial number of the date before or after a specified number of workdays with custom weekend parameters.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\n\nconst oWorksheet = Api.GetActiveSheet();\n\nvar oFunction = Api.GetWorksheetFunction();\nvar ans = oFunction.WORKDAY_INTL(\"9/8/2017\", \"-20\", \"0000011\", \"8/15/2017\");\n\noWorksheet.GetRange(\"C1\").SetValue(ans);\n\n```",
         "memberof": "ApiWorksheetFunction",
         "params": [
@@ -38815,9 +38815,44 @@
                 "defaultvalue": null
             },
             {
-                "type": null,
+                "type": {
+                    "names": [
+                        "ApiRange",
+                        "ApiName",
+                        "?Array.<number>"
+                    ],
+                    "parsedType": {
+                        "type": "TypeUnion",
+                        "elements": [
+                            {
+                                "type": "NameExpression",
+                                "name": "ApiRange",
+                                "nullable": true
+                            },
+                            {
+                                "type": "NameExpression",
+                                "name": "ApiName",
+                                "nullable": true
+                            },
+                            {
+                                "type": "TypeApplication",
+                                "expression": {
+                                    "type": "NameExpression",
+                                    "name": "Array"
+                                },
+                                "applications": [
+                                    {
+                                        "name": "number",
+                                        "type": "NameExpression"
+                                    }
+                                ],
+                                "nullable": true
+                            }
+                        ]
+                    }
+                },
                 "name": "arg4",
-                "description": null,
+                "description": "An optional range or array of one or more serial date numbers to exclude from the working calendar, such as state and federal holidays and floating holidays.",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -61186,6 +61221,44 @@
         "see": [
             "office-js-api/Examples/Cell/ApiWorksheetFunction/Methods/LOOKUP.js"
         ]
+    },
+    {
+        "comment": "/**\n\t * The match type.\n\t * * <b>-1</b> - The values must be sorted in descending order. If the exact match is not found, the function will return the smallest value that is greater than the searched value.\n\t * * <b>0</b> - The values can be sorted in any order. If the exact match is not found, the function will return the <em>#N/A</em> error.\n\t * * <b>1</b> (or omitted) - The values must be sorted in ascending order. If the exact match is not found, the function will return the largest value that is less than the searched value.\n\t * @typedef {(\"-1\" | \"0\" | \"1\")} MatchType\n\t * */",
+        "description": "The match type.\n* <b>-1</b> - The values must be sorted in descending order. If the exact match is not found, the function will return the smallest value that is greater than the searched value.\n* <b>0</b> - The values can be sorted in any order. If the exact match is not found, the function will return the <em>#N/A</em> error.\n* <b>1</b> (or omitted) - The values must be sorted in ascending order. If the exact match is not found, the function will return the largest value that is less than the searched value.",
+        "name": "MatchType",
+        "longname": "MatchType",
+        "kind": "typedef",
+        "scope": "global",
+        "meta": {
+            "lineno": 6974,
+            "columnno": 1
+        },
+        "properties": null,
+        "see": null,
+        "type": {
+            "names": [
+                "\"-1\"",
+                "\"0\"",
+                "\"1\""
+            ],
+            "parsedType": {
+                "type": "TypeUnion",
+                "elements": [
+                    {
+                        "type": "NameExpression",
+                        "name": "\"-1\""
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "\"0\""
+                    },
+                    {
+                        "type": "NameExpression",
+                        "name": "\"1\""
+                    }
+                ]
+            }
+        }
     },
     {
         "comment": "/**\n\t * Returns the relative position of an item in a range that matches the specified value in the specified order.\n\t * @memberof ApiWorksheetFunction\n\t * @typeofeditors [\"CSE\"]\n\t * @param {number | string | boolean | ApiRange | ApiName} arg1 - The value to be matched in the range. It can be a number, text, or logical value, or a reference to one of these.\n\t * @param {ApiRange | ApiName | array} arg2 - A contiguous range of cells or an array containing possible lookup values.\n\t * @param {?ApiRange | ?ApiName | ?number} arg3 - A number 1, 0, or -1 indicating which value to return.\n\t * @returns {number}\n\t * @see office-js-api/Examples/{Editor}/ApiWorksheetFunction/Methods/MATCH.js\n\t */",

@@ -11518,7 +11518,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3771,
+            "lineno": 3783,
             "columnno": 1
         },
         "see": [
@@ -11550,7 +11550,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3782,
+            "lineno": 3794,
             "columnno": 1
         },
         "see": [
@@ -11614,7 +11614,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4028,
+            "lineno": 4040,
             "columnno": 1
         },
         "see": [
@@ -11662,7 +11662,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4041,
+            "lineno": 4053,
             "columnno": 1
         },
         "see": [
@@ -11694,7 +11694,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4057,
+            "lineno": 4069,
             "columnno": 1
         },
         "see": [
@@ -11742,7 +11742,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4073,
+            "lineno": 4085,
             "columnno": 1
         },
         "see": [
@@ -11774,7 +11774,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4089,
+            "lineno": 4101,
             "columnno": 1
         },
         "see": [
@@ -19655,6 +19655,54 @@
         ]
     },
     {
+        "comment": "/**\n     * Returns the name of the current layout.\n     * @typeofeditors [\"CPE\"]\n     * @param {string} sName - Layout name to be set.\n     * @returns {boolean}\n     * @see office-js-api/Examples/{Editor}/ApiLayout/Methods/GetName.js\n\t */",
+        "description": "Returns the name of the current layout.",
+        "memberof": "ApiLayout",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "string"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "string"
+                    }
+                },
+                "name": "sName",
+                "description": "Layout name to be set.",
+                "optional": null,
+                "defaultvalue": null
+            }
+        ],
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "boolean"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "boolean"
+                    }
+                }
+            }
+        ],
+        "name": "GetName",
+        "longname": "ApiLayout#GetName",
+        "kind": "function",
+        "scope": "instance",
+        "type": null,
+        "properties": null,
+        "meta": {
+            "lineno": 1969,
+            "columnno": 4
+        },
+        "see": [
+            "office-js-api/Examples/Slide/ApiLayout/Methods/GetName.js"
+        ]
+    },
+    {
         "comment": "/**\n     * Adds an object (image, shape or chart) to the current slide layout.\n     * @typeofeditors [\"CPE\"]\n     * @memberof ApiLayout\n     * @param {ApiDrawing} oDrawing - The object which will be added to the current slide layout.\n     * @returns {boolean} - returns false if slide layout doesn't exist.\n     * @see office-js-api/Examples/{Editor}/ApiLayout/Methods/AddObject.js\n\t */",
         "description": "Adds an object (image, shape or chart) to the current slide layout.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nvar oPresentation = Api.GetPresentation();\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nvar oMaster = oPresentation.GetMaster(0);\nvar oLayout = oMaster.GetLayout(0);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\nvar oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nvar oShape = Api.CreateShape(\"flowChartMagneticTape\", 300 * 36000, 130 * 36000, oFill, oStroke);\noShape.SetPosition(608400, 1267200);\noShape.SetSize(300 * 36000, 130 * 36000);\noLayout.AddObject(oShape);\nvar oDocContent = oShape.GetDocContent();\nvar oParagraph = oDocContent.GetElement(0);\noParagraph.SetJc(\"left\");\noParagraph.AddText(\"This shape was added to the current layout.\");\n```",
         "memberof": "ApiLayout",
@@ -19695,7 +19743,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 1970,
+            "lineno": 1982,
             "columnno": 4
         },
         "see": [
@@ -19758,7 +19806,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 1993,
+            "lineno": 2005,
             "columnno": 4
         },
         "see": [
@@ -19806,7 +19854,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2018,
+            "lineno": 2030,
             "columnno": 4
         },
         "see": [
@@ -19838,7 +19886,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2035,
+            "lineno": 2047,
             "columnno": 4
         },
         "see": [
@@ -19870,7 +19918,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2054,
+            "lineno": 2066,
             "columnno": 4
         },
         "see": [
@@ -19911,7 +19959,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2077,
+            "lineno": 2089,
             "columnno": 4
         },
         "see": [
@@ -19943,7 +19991,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2091,
+            "lineno": 2103,
             "columnno": 4
         },
         "see": [
@@ -20000,7 +20048,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2114,
+            "lineno": 2126,
             "columnno": 4
         },
         "see": [
@@ -20048,7 +20096,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2137,
+            "lineno": 2149,
             "columnno": 4
         },
         "see": [
@@ -20089,7 +20137,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2159,
+            "lineno": 2171,
             "columnno": 4
         },
         "see": [
@@ -20130,7 +20178,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2174,
+            "lineno": 2186,
             "columnno": 4
         },
         "see": [
@@ -20171,7 +20219,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2188,
+            "lineno": 2200,
             "columnno": 4
         },
         "see": [
@@ -20212,7 +20260,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2202,
+            "lineno": 2214,
             "columnno": 4
         },
         "see": [
@@ -20253,7 +20301,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2216,
+            "lineno": 2228,
             "columnno": 4
         },
         "see": [
@@ -20286,7 +20334,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2228,
+            "lineno": 2240,
             "columnno": 4
         },
         "see": [
@@ -20349,7 +20397,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2243,
+            "lineno": 2255,
             "columnno": 4
         },
         "see": [
@@ -20406,7 +20454,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2260,
+            "lineno": 2272,
             "columnno": 4
         },
         "see": [
@@ -20463,7 +20511,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2277,
+            "lineno": 2289,
             "columnno": 4
         },
         "see": [
@@ -20495,7 +20543,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2323,
+            "lineno": 2335,
             "columnno": 4
         },
         "see": [
@@ -20543,7 +20591,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2335,
+            "lineno": 2347,
             "columnno": 4
         },
         "see": [
@@ -20575,7 +20623,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2347,
+            "lineno": 2359,
             "columnno": 4
         },
         "see": [
@@ -20623,7 +20671,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2369,
+            "lineno": 2381,
             "columnno": 4
         },
         "see": [
@@ -20664,7 +20712,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2386,
+            "lineno": 2398,
             "columnno": 4
         },
         "see": [
@@ -20696,7 +20744,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2412,
+            "lineno": 2424,
             "columnno": 4
         },
         "see": [
@@ -20737,7 +20785,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2423,
+            "lineno": 2435,
             "columnno": 4
         },
         "see": [
@@ -20785,7 +20833,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2438,
+            "lineno": 2450,
             "columnno": 4
         },
         "see": [
@@ -20818,7 +20866,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2455,
+            "lineno": 2467,
             "columnno": 4
         },
         "see": [
@@ -20866,7 +20914,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2472,
+            "lineno": 2484,
             "columnno": 4
         },
         "see": [
@@ -20899,7 +20947,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2489,
+            "lineno": 2501,
             "columnno": 4
         },
         "see": [
@@ -20947,7 +20995,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2506,
+            "lineno": 2518,
             "columnno": 4
         },
         "see": [
@@ -20980,7 +21028,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2523,
+            "lineno": 2535,
             "columnno": 4
         },
         "see": [
@@ -21012,7 +21060,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2545,
+            "lineno": 2557,
             "columnno": 4
         },
         "see": [
@@ -21060,7 +21108,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2557,
+            "lineno": 2569,
             "columnno": 4
         },
         "see": [
@@ -21133,7 +21181,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2573,
+            "lineno": 2585,
             "columnno": 4
         },
         "see": [
@@ -21165,7 +21213,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2592,
+            "lineno": 2604,
             "columnno": 4
         },
         "see": [
@@ -21197,7 +21245,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2604,
+            "lineno": 2616,
             "columnno": 4
         },
         "see": [
@@ -21229,7 +21277,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2621,
+            "lineno": 2633,
             "columnno": 4
         },
         "see": [
@@ -21277,7 +21325,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2633,
+            "lineno": 2645,
             "columnno": 4
         },
         "see": [
@@ -21322,7 +21370,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2648,
+            "lineno": 2660,
             "columnno": 4
         },
         "see": [
@@ -21367,7 +21415,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2671,
+            "lineno": 2683,
             "columnno": 4
         },
         "see": [
@@ -21412,7 +21460,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2694,
+            "lineno": 2706,
             "columnno": 4
         },
         "see": [
@@ -21444,7 +21492,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2743,
+            "lineno": 2755,
             "columnno": 4
         },
         "see": [
@@ -21476,7 +21524,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2755,
+            "lineno": 2767,
             "columnno": 4
         },
         "see": [
@@ -21508,7 +21556,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2772,
+            "lineno": 2784,
             "columnno": 4
         },
         "see": [
@@ -21556,7 +21604,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2784,
+            "lineno": 2796,
             "columnno": 4
         },
         "see": [
@@ -21667,7 +21715,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2810,
+            "lineno": 2822,
             "columnno": 4
         },
         "see": [
@@ -21699,7 +21747,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2836,
+            "lineno": 2848,
             "columnno": 4
         },
         "see": [
@@ -21731,7 +21779,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2848,
+            "lineno": 2860,
             "columnno": 4
         },
         "see": [
@@ -21763,7 +21811,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2865,
+            "lineno": 2877,
             "columnno": 4
         },
         "see": [
@@ -21783,7 +21831,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2876,
+            "lineno": 2888,
             "columnno": 4
         },
         "see": [
@@ -21831,7 +21879,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2893,
+            "lineno": 2905,
             "columnno": 4
         },
         "see": [
@@ -21894,7 +21942,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2914,
+            "lineno": 2926,
             "columnno": 4
         },
         "see": [
@@ -21942,7 +21990,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2939,
+            "lineno": 2951,
             "columnno": 4
         },
         "see": [
@@ -21974,7 +22022,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2959,
+            "lineno": 2971,
             "columnno": 4
         },
         "see": [
@@ -22022,7 +22070,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2974,
+            "lineno": 2986,
             "columnno": 4
         },
         "see": [
@@ -22054,7 +22102,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 2988,
+            "lineno": 3000,
             "columnno": 4
         },
         "see": [
@@ -22086,7 +22134,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3001,
+            "lineno": 3013,
             "columnno": 4
         },
         "see": [
@@ -22134,7 +22182,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3016,
+            "lineno": 3028,
             "columnno": 4
         },
         "see": [
@@ -22166,7 +22214,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3030,
+            "lineno": 3042,
             "columnno": 4
         },
         "see": [
@@ -22207,7 +22255,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3053,
+            "lineno": 3065,
             "columnno": 4
         },
         "see": [
@@ -22264,7 +22312,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3069,
+            "lineno": 3081,
             "columnno": 4
         },
         "see": [
@@ -22312,7 +22360,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3091,
+            "lineno": 3103,
             "columnno": 4
         },
         "see": [
@@ -22344,7 +22392,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3115,
+            "lineno": 3127,
             "columnno": 4
         },
         "see": [
@@ -22376,7 +22424,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3138,
+            "lineno": 3150,
             "columnno": 4
         },
         "see": [
@@ -22408,7 +22456,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3158,
+            "lineno": 3170,
             "columnno": 4
         },
         "see": [
@@ -22440,7 +22488,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3180,
+            "lineno": 3192,
             "columnno": 4
         },
         "see": [
@@ -22488,7 +22536,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3202,
+            "lineno": 3214,
             "columnno": 4
         },
         "see": [
@@ -22529,7 +22577,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3311,
+            "lineno": 3323,
             "columnno": 4
         },
         "see": [
@@ -22561,7 +22609,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3324,
+            "lineno": 3336,
             "columnno": 4
         },
         "see": [
@@ -22602,7 +22650,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3344,
+            "lineno": 3356,
             "columnno": 4
         },
         "see": [
@@ -22643,7 +22691,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3359,
+            "lineno": 3371,
             "columnno": 4
         },
         "see": [
@@ -22684,7 +22732,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3374,
+            "lineno": 3386,
             "columnno": 4
         },
         "see": [
@@ -22725,7 +22773,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3388,
+            "lineno": 3400,
             "columnno": 4
         },
         "see": [
@@ -22766,7 +22814,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3402,
+            "lineno": 3414,
             "columnno": 4
         },
         "see": [
@@ -22859,7 +22907,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3419,
+            "lineno": 3431,
             "columnno": 4
         },
         "see": [
@@ -22916,7 +22964,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3436,
+            "lineno": 3448,
             "columnno": 4
         },
         "see": [
@@ -22936,7 +22984,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3450,
+            "lineno": 3462,
             "columnno": 1
         },
         "see": null
@@ -22991,7 +23039,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3468,
+            "lineno": 3480,
             "columnno": 4
         },
         "see": [
@@ -23023,7 +23071,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3515,
+            "lineno": 3527,
             "columnno": 4
         },
         "see": [
@@ -23074,7 +23122,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3526,
+            "lineno": 3538,
             "columnno": 4
         },
         "see": [
@@ -23125,7 +23173,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3544,
+            "lineno": 3556,
             "columnno": 4
         },
         "see": [
@@ -23176,7 +23224,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3561,
+            "lineno": 3573,
             "columnno": 4
         },
         "see": [
@@ -23217,7 +23265,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3585,
+            "lineno": 3597,
             "columnno": 4
         },
         "see": [
@@ -23258,7 +23306,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3601,
+            "lineno": 3613,
             "columnno": 4
         },
         "see": [
@@ -23299,7 +23347,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3617,
+            "lineno": 3629,
             "columnno": 4
         },
         "see": [
@@ -23331,7 +23379,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3633,
+            "lineno": 3645,
             "columnno": 4
         },
         "see": [
@@ -23363,7 +23411,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3647,
+            "lineno": 3659,
             "columnno": 4
         },
         "see": [
@@ -23411,7 +23459,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3673,
+            "lineno": 3685,
             "columnno": 4
         },
         "see": [
@@ -23452,7 +23500,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3731,
+            "lineno": 3743,
             "columnno": 4
         },
         "see": [
@@ -23500,7 +23548,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3794,
+            "lineno": 3806,
             "columnno": 1
         },
         "see": [
@@ -23563,7 +23611,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3815,
+            "lineno": 3827,
             "columnno": 1
         },
         "see": [
@@ -23595,7 +23643,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3838,
+            "lineno": 3850,
             "columnno": 1
         },
         "see": [
@@ -23615,7 +23663,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3851,
+            "lineno": 3863,
             "columnno": 1
         },
         "see": [
@@ -23647,7 +23695,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3873,
+            "lineno": 3885,
             "columnno": 4
         },
         "see": [
@@ -23679,7 +23727,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3920,
+            "lineno": 3932,
             "columnno": 4
         },
         "see": [
@@ -23711,7 +23759,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3937,
+            "lineno": 3949,
             "columnno": 4
         },
         "see": [
@@ -23744,7 +23792,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3950,
+            "lineno": 3962,
             "columnno": 4
         },
         "see": [
@@ -23777,7 +23825,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3966,
+            "lineno": 3978,
             "columnno": 4
         },
         "see": [
@@ -23813,7 +23861,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 3982,
+            "lineno": 3994,
             "columnno": 4
         },
         "see": [
@@ -23845,7 +23893,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4108,
+            "lineno": 4120,
             "columnno": 4
         },
         "see": [
@@ -23894,7 +23942,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4120,
+            "lineno": 4132,
             "columnno": 4
         },
         "see": [
@@ -23952,7 +24000,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4139,
+            "lineno": 4151,
             "columnno": 4
         },
         "see": [
@@ -24063,7 +24111,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4218,
+            "lineno": 4230,
             "columnno": 4
         },
         "see": [
@@ -24126,7 +24174,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4237,
+            "lineno": 4249,
             "columnno": 4
         },
         "see": [
@@ -24177,7 +24225,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4268,
+            "lineno": 4280,
             "columnno": 4
         },
         "see": [
@@ -24225,7 +24273,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4294,
+            "lineno": 4306,
             "columnno": 4
         },
         "see": [
@@ -24273,7 +24321,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4310,
+            "lineno": 4322,
             "columnno": 4
         },
         "see": [
@@ -24364,7 +24412,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4329,
+            "lineno": 4341,
             "columnno": 4
         },
         "see": [
@@ -24412,7 +24460,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4378,
+            "lineno": 4390,
             "columnno": 1
         },
         "see": [
@@ -24444,7 +24492,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4398,
+            "lineno": 4410,
             "columnno": 4
         },
         "see": [
@@ -24476,7 +24524,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4408,
+            "lineno": 4420,
             "columnno": 4
         },
         "see": [
@@ -24524,7 +24572,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4419,
+            "lineno": 4431,
             "columnno": 4
         },
         "see": [
@@ -24560,7 +24608,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4434,
+            "lineno": 4446,
             "columnno": 4
         },
         "see": [
@@ -24592,7 +24640,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4472,
+            "lineno": 4484,
             "columnno": 4
         },
         "see": [
@@ -24624,7 +24672,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4483,
+            "lineno": 4495,
             "columnno": 4
         },
         "see": [
@@ -24715,7 +24763,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4499,
+            "lineno": 4511,
             "columnno": 4
         },
         "see": [
@@ -24752,7 +24800,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4549,
+            "lineno": 4561,
             "columnno": 4
         },
         "see": [
@@ -24789,7 +24837,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4577,
+            "lineno": 4589,
             "columnno": 4
         },
         "see": [
@@ -24826,7 +24874,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4605,
+            "lineno": 4617,
             "columnno": 4
         },
         "see": [
@@ -24863,7 +24911,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4633,
+            "lineno": 4645,
             "columnno": 4
         },
         "see": [
@@ -24914,7 +24962,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4660,
+            "lineno": 4672,
             "columnno": 4
         },
         "see": [
@@ -24965,7 +25013,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4679,
+            "lineno": 4691,
             "columnno": 4
         },
         "see": [
@@ -25016,7 +25064,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4698,
+            "lineno": 4710,
             "columnno": 4
         },
         "see": [
@@ -25067,7 +25115,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4717,
+            "lineno": 4729,
             "columnno": 4
         },
         "see": [
@@ -25118,7 +25166,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4735,
+            "lineno": 4747,
             "columnno": 4
         },
         "see": [
@@ -25169,7 +25217,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 4752,
+            "lineno": 4764,
             "columnno": 4
         },
         "see": [
@@ -25185,7 +25233,7 @@
         "scope": "global",
         "augments": null,
         "meta": {
-            "lineno": 5033,
+            "lineno": 5045,
             "columnno": 1
         },
         "properties": null,
@@ -25216,7 +25264,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 5046,
+            "lineno": 5058,
             "columnno": 1
         },
         "see": null
@@ -25255,7 +25303,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 5072,
+            "lineno": 5084,
             "columnno": 1
         },
         "see": null
@@ -25294,7 +25342,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 5094,
+            "lineno": 5106,
             "columnno": 1
         },
         "see": null
@@ -25324,7 +25372,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 5114,
+            "lineno": 5126,
             "columnno": 1
         },
         "see": null

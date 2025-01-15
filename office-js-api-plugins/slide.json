@@ -7121,15 +7121,15 @@
         ]
     },
     {
-        "comment": "/**\n\t * Show an error/warning message.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\", \"PDF\"]\n\t * @param {string} error - error text.\n\t * @param {number} level - -1 or 0 for error or warning\n\t * @alias ShowError\n\t * @since 8.3.0\n\t */",
+        "comment": "/**\n\t * Shows an error/warning message.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\", \"PDF\"]\n\t * @param {string} error - The error text.\n\t * @param {number} level - -1 or 0 for error or warning.\n\t * @alias ShowError\n\t * @since 8.3.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ShowError.js\n\t */",
         "meta": {
-            "lineno": 2074,
+            "lineno": 2075,
             "columnno": 1
         },
         "kind": "function",
         "since": "8.3.0",
         "name": "ShowError",
-        "description": "Show an error/warning message.",
+        "description": "Shows an error/warning message.",
         "memberof": "Api",
         "longname": "ShowError",
         "alias": "ShowError",
@@ -7145,7 +7145,7 @@
                     }
                 },
                 "name": "error",
-                "description": "error text."
+                "description": "The error text."
             },
             {
                 "type": {
@@ -7158,8 +7158,11 @@
                     }
                 },
                 "name": "level",
-                "description": "-1 or 0 for error or warning"
+                "description": "-1 or 0 for error or warning."
             }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Common/Api/Methods/ShowError.js"
         ]
     }
 ]

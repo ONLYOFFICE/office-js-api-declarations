@@ -12325,6 +12325,39 @@
         ]
     },
     {
+        "comment": "/**\n\t * Returns the shape inner contents where a paragraph or text runs can be inserted if it exists.\n\t * @memberof ApiDrawing\n\t * @typeofeditors [\"CDE\", \"CSE\"]\n\t * @returns {?ApiDocumentContent}\n\t * @see office-js-api/Examples/{Editor}/ApiDrawing/Methods/GetContent.js\n\t */",
+        "description": "Returns the shape inner contents where a paragraph or text runs can be inserted if it exists.",
+        "memberof": "ApiDrawing",
+        "params": null,
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "ApiDocumentContent"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ApiDocumentContent",
+                        "nullable": true
+                    }
+                }
+            }
+        ],
+        "name": "GetContent",
+        "longname": "ApiDrawing#GetContent",
+        "kind": "function",
+        "scope": "instance",
+        "type": null,
+        "properties": null,
+        "meta": {
+            "lineno": 15536,
+            "columnno": 1
+        },
+        "see": [
+            "office-js-api/Examples/Cell/ApiDrawing/Methods/GetContent.js"
+        ]
+    },
+    {
         "comment": "/**\n\t * Returns the width of the current drawing.\n\t * @memberof ApiDrawing\n\t * @typeofeditors [\"CDE\", \"CPE\", \"CSE\"]\n\t * @returns {EMU}\n\t * @see office-js-api/Examples/{Editor}/ApiDrawing/Methods/GetWidth.js\n\t */",
         "description": "Returns the width of the current drawing.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oWorksheet = Api.GetActiveSheet();\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\nvar oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nvar oDrawing = oWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDrawing.SetSize(120 * 36000, 70 * 36000);\noDrawing.SetPosition(0, 2 * 36000, 1, 3 * 36000);\nvar nWidth = oDrawing.GetWidth();\noWorksheet.GetRange(\"A1\").SetValue(\"Drawing width = \" + nWidth);\n```",
         "memberof": "ApiDrawing",
@@ -12646,39 +12679,6 @@
         ]
     },
     {
-        "comment": "/**\n\t * Returns the shape inner contents where a paragraph or text runs can be inserted.\n\t * @memberof ApiShape\n\t * @typeofeditors [\"CSE\"]\n\t * @returns {?ApiDocumentContent}\n\t * @see office-js-api/Examples/{Editor}/ApiShape/Methods/GetContent.js\n\t */",
-        "description": "Returns the shape inner contents where a paragraph or text runs can be inserted.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oWorksheet = Api.GetActiveSheet();\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\nvar oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nvar oShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\nvar oContent = oShape.GetContent();\noContent.RemoveAllElements();\nvar oParagraph = Api.CreateParagraph();\noParagraph.SetJc(\"left\");\noParagraph.AddText(\"We removed all elements from the shape and added a new paragraph inside it.\");\noContent.Push(oParagraph);\n```",
-        "memberof": "ApiShape",
-        "params": null,
-        "returns": [
-            {
-                "type": {
-                    "names": [
-                        "ApiDocumentContent"
-                    ],
-                    "parsedType": {
-                        "type": "NameExpression",
-                        "name": "ApiDocumentContent",
-                        "nullable": true
-                    }
-                }
-            }
-        ],
-        "name": "GetContent",
-        "longname": "ApiShape#GetContent",
-        "kind": "function",
-        "scope": "instance",
-        "type": null,
-        "properties": null,
-        "meta": {
-            "lineno": 12129,
-            "columnno": 1
-        },
-        "see": [
-            "office-js-api/Examples/Cell/ApiShape/Methods/GetContent.js"
-        ]
-    },
-    {
         "comment": "/**\n\t * Sets the vertical alignment to the shape content where a paragraph or text runs can be inserted.\n\t * @memberof ApiShape\n\t * @typeofeditors [\"CSE\"]\n\t * @param {\"top\" | \"center\" | \"bottom\" } sVerticalAlign - The vertical alignment type for the shape inner contents.\n\t * @returns {boolean} - returns false if shape or aligment doesn't exist.\n\t * @see office-js-api/Examples/{Editor}/ApiShape/Methods/SetVerticalTextAlign.js\n\t */",
         "description": "Sets the vertical alignment to the shape content where a paragraph or text runs can be inserted.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oWorksheet = Api.GetActiveSheet();\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\nvar oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nvar oShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 50 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\nvar oDocContent = oShape.GetContent();\noDocContent.RemoveAllElements();\noShape.SetVerticalTextAlign(\"bottom\");\nvar oParagraph = Api.CreateParagraph();\noParagraph.SetJc(\"left\");\noParagraph.AddText(\"We removed all elements from the shape and added a new paragraph inside it \");\noParagraph.AddText(\"aligning it vertically by the bottom.\");\noDocContent.Push(oParagraph);\n```",
         "memberof": "ApiShape",
@@ -12819,7 +12819,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16413,
+            "lineno": 16411,
             "columnno": 1
         },
         "see": [
@@ -12851,7 +12851,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16492,
+            "lineno": 16490,
             "columnno": 1
         },
         "see": [
@@ -12883,7 +12883,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16504,
+            "lineno": 16502,
             "columnno": 1
         },
         "see": [
@@ -12950,7 +12950,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16523,
+            "lineno": 16521,
             "columnno": 1
         },
         "see": [
@@ -13017,7 +13017,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16537,
+            "lineno": 16535,
             "columnno": 1
         },
         "see": [
@@ -13084,7 +13084,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16551,
+            "lineno": 16549,
             "columnno": 1
         },
         "see": [
@@ -13120,7 +13120,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16563,
+            "lineno": 16561,
             "columnno": 1
         },
         "see": [
@@ -13156,7 +13156,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16574,
+            "lineno": 16572,
             "columnno": 1
         },
         "see": [
@@ -13217,7 +13217,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16585,
+            "lineno": 16583,
             "columnno": 1
         },
         "see": [
@@ -13253,7 +13253,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16646,
+            "lineno": 16644,
             "columnno": 1
         },
         "see": [
@@ -13334,7 +13334,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16661,
+            "lineno": 16659,
             "columnno": 1
         },
         "see": [
@@ -13445,7 +13445,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16679,
+            "lineno": 16677,
             "columnno": 1
         },
         "see": [
@@ -13481,7 +13481,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16691,
+            "lineno": 16689,
             "columnno": 1
         },
         "see": [
@@ -13517,7 +13517,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16703,
+            "lineno": 16701,
             "columnno": 1
         },
         "see": [
@@ -13553,7 +13553,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16715,
+            "lineno": 16713,
             "columnno": 1
         },
         "see": [
@@ -13589,7 +13589,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16726,
+            "lineno": 16724,
             "columnno": 1
         },
         "see": [
@@ -13625,7 +13625,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16738,
+            "lineno": 16736,
             "columnno": 1
         },
         "see": [
@@ -13661,7 +13661,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16749,
+            "lineno": 16747,
             "columnno": 1
         },
         "see": [
@@ -13698,7 +13698,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16760,
+            "lineno": 16758,
             "columnno": 1
         },
         "see": [
@@ -13735,7 +13735,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16772,
+            "lineno": 16770,
             "columnno": 1
         },
         "see": [
@@ -13772,7 +13772,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16785,
+            "lineno": 16783,
             "columnno": 1
         },
         "see": [
@@ -13809,7 +13809,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16797,
+            "lineno": 16795,
             "columnno": 1
         },
         "see": [
@@ -13857,7 +13857,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16889,
+            "lineno": 16887,
             "columnno": 1
         },
         "see": [
@@ -13897,7 +13897,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16959,
+            "lineno": 16957,
             "columnno": 1
         },
         "see": [
@@ -13945,7 +13945,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 16984,
+            "lineno": 16982,
             "columnno": 1
         },
         "see": [
@@ -13993,7 +13993,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17001,
+            "lineno": 16999,
             "columnno": 1
         },
         "see": [
@@ -14071,7 +14071,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17020,
+            "lineno": 17018,
             "columnno": 1
         },
         "see": [
@@ -14149,7 +14149,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17038,
+            "lineno": 17036,
             "columnno": 1
         },
         "see": [
@@ -14242,7 +14242,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17057,
+            "lineno": 17055,
             "columnno": 1
         },
         "see": [
@@ -14335,7 +14335,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17076,
+            "lineno": 17074,
             "columnno": 1
         },
         "see": [
@@ -14428,7 +14428,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17095,
+            "lineno": 17093,
             "columnno": 1
         },
         "see": [
@@ -14521,7 +14521,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17114,
+            "lineno": 17112,
             "columnno": 1
         },
         "see": [
@@ -14569,7 +14569,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17130,
+            "lineno": 17128,
             "columnno": 1
         },
         "see": [
@@ -14617,7 +14617,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17146,
+            "lineno": 17144,
             "columnno": 1
         },
         "see": [
@@ -14665,7 +14665,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17162,
+            "lineno": 17160,
             "columnno": 1
         },
         "see": [
@@ -14713,7 +14713,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17178,
+            "lineno": 17176,
             "columnno": 1
         },
         "see": [
@@ -14786,7 +14786,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17195,
+            "lineno": 17193,
             "columnno": 1
         },
         "see": [
@@ -14827,7 +14827,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17256,
+            "lineno": 17254,
             "columnno": 1
         },
         "see": [
@@ -14876,7 +14876,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17278,
+            "lineno": 17276,
             "columnno": 1
         },
         "see": [
@@ -14908,7 +14908,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17305,
+            "lineno": 17303,
             "columnno": 1
         },
         "see": [
@@ -14956,7 +14956,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17318,
+            "lineno": 17316,
             "columnno": 1
         },
         "see": [
@@ -14988,7 +14988,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17337,
+            "lineno": 17335,
             "columnno": 1
         },
         "see": [
@@ -15020,7 +15020,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17405,
+            "lineno": 17403,
             "columnno": 1
         },
         "see": [
@@ -15052,7 +15052,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17435,
+            "lineno": 17433,
             "columnno": 1
         },
         "see": [
@@ -15084,7 +15084,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17465,
+            "lineno": 17463,
             "columnno": 1
         },
         "see": [
@@ -15116,7 +15116,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17495,
+            "lineno": 17493,
             "columnno": 1
         },
         "see": [
@@ -15148,7 +15148,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17544,
+            "lineno": 17542,
             "columnno": 1
         },
         "see": [
@@ -15180,7 +15180,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17574,
+            "lineno": 17572,
             "columnno": 1
         },
         "see": [
@@ -15212,7 +15212,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17604,
+            "lineno": 17602,
             "columnno": 1
         },
         "see": [
@@ -15244,7 +15244,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 17628,
+            "lineno": 17626,
             "columnno": 1
         },
         "see": [
@@ -15310,7 +15310,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20642,
+            "lineno": 20640,
             "columnno": 1
         },
         "see": [
@@ -15342,7 +15342,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 21093,
+            "lineno": 21091,
             "columnno": 1
         },
         "see": [
@@ -15374,7 +15374,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 21136,
+            "lineno": 21134,
             "columnno": 1
         },
         "see": [
@@ -72649,6 +72649,39 @@
         },
         "see": [
             "office-js-api/Examples/Cell/ApiImage/Methods/GetClassType.js"
+        ]
+    },
+    {
+        "comment": "/**\n\t * Returns the shape inner contents where a paragraph or text runs can be inserted.\n\t * @memberof ApiShape\n\t * @typeofeditors [\"CSE\"]\n\t * @returns {?ApiDocumentContent}\n\t * @see office-js-api/Examples/{Editor}/ApiShape/Methods/GetContent.js\n\t */",
+        "description": "Returns the shape inner contents where a paragraph or text runs can be inserted.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oWorksheet = Api.GetActiveSheet();\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\nvar oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nvar oShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\nvar oContent = oShape.GetContent();\noContent.RemoveAllElements();\nvar oParagraph = Api.CreateParagraph();\noParagraph.SetJc(\"left\");\noParagraph.AddText(\"We removed all elements from the shape and added a new paragraph inside it.\");\noContent.Push(oParagraph);\n```",
+        "memberof": "ApiShape",
+        "params": null,
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "ApiDocumentContent"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ApiDocumentContent",
+                        "nullable": true
+                    }
+                }
+            }
+        ],
+        "name": "GetContent",
+        "longname": "ApiShape#GetContent",
+        "kind": "function",
+        "scope": "instance",
+        "type": null,
+        "properties": null,
+        "meta": {
+            "lineno": 12129,
+            "columnno": 1
+        },
+        "see": [
+            "office-js-api/Examples/Cell/ApiShape/Methods/GetContent.js"
         ]
     },
     {

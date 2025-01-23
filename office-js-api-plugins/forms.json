@@ -16,7 +16,7 @@
                 "name": "Object"
             }
         },
-        "description": "Content control object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nvar oContentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};\n```",
+        "description": "Content control object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet contentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};\n```",
         "properties": [
             {
                 "type": {
@@ -77,7 +77,7 @@
             "office-js-api/Examples/Plugins/Forms/Enumeration/ContentControl.js"
         ],
         "examples": [
-            "var oContentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};"
+            "let contentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};"
         ]
     },
     {
@@ -117,14 +117,14 @@
                 ]
             }
         },
-        "description": "A value that defines if it is possible to delete and/or edit the content control or not:\n**0** - only deleting\n**1** - disable deleting or editing\n**2** - only editing\n**3** - full access\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nvar arrDocuments = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [arrDocuments]);\n```",
+        "description": "A value that defines if it is possible to delete and/or edit the content control or not:\n**0** - only deleting\n**1** - disable deleting or editing\n**2** - only editing\n**3** - full access\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet documents = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [documents]);\n```",
         "longname": "ContentControlLock",
         "scope": "global",
         "see": [
             "office-js-api/Examples/Plugins/Forms/Enumeration/ContentControlLock.js"
         ],
         "examples": [
-            "var arrDocuments = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [arrDocuments]);"
+            "let documents = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [documents]);"
         ]
     },
     {
@@ -583,7 +583,7 @@
                 "name": "Object"
             }
         },
-        "description": "Content control object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nvar oContentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};\n```",
+        "description": "Content control object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet contentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};\n```",
         "properties": [
             {
                 "type": {
@@ -644,7 +644,7 @@
             "office-js-api/Examples/Plugins/Word/Enumeration/ContentControl.js"
         ],
         "examples": [
-            "var oContentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};"
+            "let contentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};"
         ]
     },
     {
@@ -684,14 +684,14 @@
                 ]
             }
         },
-        "description": "A value that defines if it is possible to delete and/or edit the content control or not:\n<b>0</b> - only deleting,\n<b>1</b> - disable deleting or editing,\n<b>2</b> - only editing,\n<b>3</b> - full access.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nvar arrDocuments = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [arrDocuments]);\n```",
+        "description": "A value that defines if it is possible to delete and/or edit the content control or not:\n<b>0</b> - only deleting,\n<b>1</b> - disable deleting or editing,\n<b>2</b> - only editing,\n<b>3</b> - full access.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet documents = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [documents]);\n```",
         "longname": "ContentControlLock",
         "scope": "global",
         "see": [
             "office-js-api/Examples/Plugins/Word/Enumeration/ContentControlLock.js"
         ],
         "examples": [
-            "var arrDocuments = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [arrDocuments]);"
+            "let documents = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [documents]);"
         ]
     },
     {
@@ -711,7 +711,7 @@
                 "name": "Object"
             }
         },
-        "description": "Comment object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nvar comment = {\n    \"Id\": \"1_631\",\n    \"Data\": {\n        \"UserName\": \"John Smith\",\n        \"Text\": \"comment\",\n        \"Time\": \"1662737941471\",\n        \"Solved\": true,\n        \"Replies\": [\n            {\n                \"UserName\": \"Mark Potato\",\n                \"Text\": \"reply 1\",\n                \"Time\": \"1662740895892\",\n                \"Solved\": false\n            }\n        ]\n    }\n}\n```",
+        "description": "Comment object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet comment = {\n    \"Id\": \"1_631\",\n    \"Data\": {\n        \"UserName\": \"John Smith\",\n        \"Text\": \"comment\",\n        \"Time\": \"1662737941471\",\n        \"Solved\": true,\n        \"Replies\": [\n            {\n                \"UserName\": \"Mark Potato\",\n                \"Text\": \"reply 1\",\n                \"Time\": \"1662740895892\",\n                \"Solved\": false\n            }\n        ]\n    }\n}\n```",
         "properties": [
             {
                 "type": {
@@ -746,7 +746,7 @@
             "office-js-api/Examples/Plugins/Word/Enumeration/comment.js"
         ],
         "examples": [
-            "var comment = {\n    \"Id\": \"1_631\",\n    \"Data\": {\n        \"UserName\": \"John Smith\",\n        \"Text\": \"comment\",\n        \"Time\": \"1662737941471\",\n        \"Solved\": true,\n        \"Replies\": [\n            {\n                \"UserName\": \"Mark Potato\",\n                \"Text\": \"reply 1\",\n                \"Time\": \"1662740895892\",\n                \"Solved\": false\n            }\n        ]\n    }\n}"
+            "let comment = {\n    \"Id\": \"1_631\",\n    \"Data\": {\n        \"UserName\": \"John Smith\",\n        \"Text\": \"comment\",\n        \"Time\": \"1662737941471\",\n        \"Solved\": true,\n        \"Replies\": [\n            {\n                \"UserName\": \"Mark Potato\",\n                \"Text\": \"reply 1\",\n                \"Time\": \"1662740895892\",\n                \"Solved\": false\n            }\n        ]\n    }\n}"
         ]
     },
     {
@@ -766,7 +766,7 @@
                 "name": "Object"
             }
         },
-        "description": "The comment data.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nvar oCommentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [oCommentData]);\n```",
+        "description": "The comment data.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet commentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [commentData]);\n```",
         "properties": [
             {
                 "type": {
@@ -849,7 +849,7 @@
             "office-js-api/Examples/Plugins/Word/Enumeration/CommentData.js"
         ],
         "examples": [
-            "var oCommentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [oCommentData]);"
+            "let commentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [commentData]);"
         ]
     },
     {

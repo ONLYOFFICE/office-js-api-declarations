@@ -28,7 +28,7 @@
                 "name": "Object"
             }
         },
-        "description": "The comment data.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oCommentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [oCommentData]);\n```",
+        "description": "The comment data.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet commentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [commentData]);\n```",
         "properties": [
             {
                 "type": {
@@ -124,7 +124,7 @@
             "office-js-api/Examples/Plugins/Cell/Enumeration/CommentData.js"
         ],
         "examples": [
-            "var oCommentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [oCommentData]);"
+            "let commentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [commentData]);"
         ]
     },
     {
@@ -649,7 +649,7 @@
                 "name": "Object"
             }
         },
-        "description": "Content control object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oContentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};\n```",
+        "description": "Content control object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet contentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};\n```",
         "properties": [
             {
                 "type": {
@@ -710,7 +710,7 @@
             "office-js-api/Examples/Plugins/Common/Enumeration/ContentControl.js"
         ],
         "examples": [
-            "var oContentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};"
+            "let contentControl = {\n    \"Tag\": \"Document\",\n    \"Id\": 0,\n    \"Lock\": 0,\n    \"InternalId\": \"1_713\"\n};"
         ]
     },
     {
@@ -750,14 +750,14 @@
                 ]
             }
         },
-        "description": "A value that defines if it is possible to delete and/or edit the content control or not:\n<b>0</b> - only deleting,\n<b>1</b> - disable deleting or editing,\n<b>2</b> - only editing,\n<b>3</b> - full access.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar arrDocuments = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [arrDocuments]);\n```",
+        "description": "A value that defines if it is possible to delete and/or edit the content control or not:\n<b>0</b> - only deleting,\n<b>1</b> - disable deleting or editing,\n<b>2</b> - only editing,\n<b>3</b> - full access.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet documents = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [documents]);\n```",
         "longname": "ContentControlLock",
         "scope": "global",
         "see": [
             "office-js-api/Examples/Plugins/Common/Enumeration/ContentControlLock.js"
         ],
         "examples": [
-            "var arrDocuments = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [arrDocuments]);"
+            "let documents = [{\n    \"Props\": {\n        \"Id\": 100,\n        \"Tag\": \"CC_Tag\",\n        \"Lock\": 3\n    },\n    \"Script\": \"var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');Api.GetDocument().InsertContent([oParagraph]);\"\n}];\nwindow.Asc.plugin.executeMethod(\"InsertAndReplaceContentControls\", [documents]);"
         ]
     },
     {
@@ -832,7 +832,7 @@
                 "name": "Object"
             }
         },
-        "description": "The comment data.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oCommentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [oCommentData]);\n```",
+        "description": "The comment data.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet commentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [commentData]);\n```",
         "properties": [
             {
                 "type": {
@@ -915,7 +915,7 @@
             "office-js-api/Examples/Plugins/Common/Enumeration/CommentData.js"
         ],
         "examples": [
-            "var oCommentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [oCommentData]);"
+            "let commentData = {\n    \"UserName\": \"John Smith\",\n    \"Text\": \"comment\",\n    \"Time\": \"1662737941471\",\n    \"Solved\": true,\n    \"Replies\": [\n        {\n            \"UserName\": \"Mark Potato\",\n            \"Text\": \"reply 1\",\n            \"Time\": \"1662740895892\",\n            \"Solved\": false\n        }\n    ]\n};\nwindow.Asc.plugin.executeMethod (\"AddComment\", [commentData]);"
         ]
     },
     {
@@ -2885,7 +2885,7 @@
                 "name": "Object"
             }
         },
-        "description": "The OLE object properties\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oOLEProperties = {\n    \"data\": \"{data}\",\n    \"imgSrc\": \"https://link-to-the-image.jpg\",\n    \"guid\": \"asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}\",\n    \"width\": 70,\n    \"height\": 70,\n    \"widthPix\": 60 * 36000,\n    \"heightPix\": 60 * 36000\n};\n```",
+        "description": "The OLE object properties\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet oleProperties = {\n    \"data\": \"{data}\",\n    \"imgSrc\": \"https://link-to-the-image.jpg\",\n    \"guid\": \"asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}\",\n    \"width\": 70,\n    \"height\": 70,\n    \"widthPix\": 60 * 36000,\n    \"heightPix\": 60 * 36000\n};\n```",
         "properties": [
             {
                 "type": {
@@ -2985,7 +2985,7 @@
             "office-js-api/Examples/Plugins/Common/Enumeration/OLEProperties.js"
         ],
         "examples": [
-            "var oOLEProperties = {\n    \"data\": \"{data}\",\n    \"imgSrc\": \"https://link-to-the-image.jpg\",\n    \"guid\": \"asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}\",\n    \"width\": 70,\n    \"height\": 70,\n    \"widthPix\": 60 * 36000,\n    \"heightPix\": 60 * 36000\n};"
+            "let oleProperties = {\n    \"data\": \"{data}\",\n    \"imgSrc\": \"https://link-to-the-image.jpg\",\n    \"guid\": \"asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}\",\n    \"width\": 70,\n    \"height\": 70,\n    \"widthPix\": 60 * 36000,\n    \"heightPix\": 60 * 36000\n};"
         ]
     },
     {
@@ -3008,7 +3008,7 @@
         },
         "kind": "function",
         "name": "GetVersion",
-        "description": "Returns the editor version.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"GetVersion\", [], function (version) {\n    if (version === undefined) {\n        window.Asc.plugin.executeMethod (\"PasteText\", [ifr.contentDocument.getElementById (\"google_translate_element\").outerText], function (result) {\n            paste_done = true;\n        });\n    }\n    else {\n        window.Asc.plugin.executeMethod (\"GetSelectionType\", [], function (sType) {\n            switch (sType) {\n                case \"none\":\n                case \"drawing\":\n                    window.Asc.plugin.executeMethod(\"PasteText\", [ifr.contentDocument.getElementById (\"google_translate_element\").outerText], function (result) {\n                        paste_done = true;\n                    });\n                    break;\n                case \"text\":\n                    window.Asc.plugin.callCommand (function () {\n                        Api.ReplaceTextSmart (Asc.scope.arr);\n                    }, undefined, undefined, function (result) {\n                        paste_done = true;\n                    });\n                    break;\n            }\n        });\n    }\n});\n```",
+        "description": "Returns the editor version.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"GetVersion\", [], function (version) {\n    if (version === undefined) {\n        window.Asc.plugin.executeMethod (\"PasteText\", [ifr.contentDocument.getElementById (\"google_translate_element\").outerText], function (result) {\n            paste_done = true;\n        });\n    }\n    else {\n        window.Asc.plugin.executeMethod (\"GetSelectionType\", [], function (type) {\n            switch (type) {\n                case \"none\":\n                case \"drawing\":\n                    window.Asc.plugin.executeMethod(\"PasteText\", [ifr.contentDocument.getElementById (\"google_translate_element\").outerText], function (result) {\n                        paste_done = true;\n                    });\n                    break;\n                case \"text\":\n                    window.Asc.plugin.callCommand (function () {\n                        Api.ReplaceTextSmart (Asc.scope.arr);\n                    }, undefined, undefined, function (result) {\n                        paste_done = true;\n                    });\n                    break;\n            }\n        });\n    }\n});\n```",
         "memberof": "Api",
         "longname": "GetVersion",
         "alias": "GetVersion",
@@ -3029,7 +3029,7 @@
             "office-js-api/Examples/Plugins/Common/Api/Methods/GetVersion.js"
         ],
         "examples": [
-            "window.Asc.plugin.executeMethod (\"GetVersion\", [], function (version) {\n    if (version === undefined) {\n        window.Asc.plugin.executeMethod (\"PasteText\", [ifr.contentDocument.getElementById (\"google_translate_element\").outerText], function (result) {\n            paste_done = true;\n        });\n    }\n    else {\n        window.Asc.plugin.executeMethod (\"GetSelectionType\", [], function (sType) {\n            switch (sType) {\n                case \"none\":\n                case \"drawing\":\n                    window.Asc.plugin.executeMethod(\"PasteText\", [ifr.contentDocument.getElementById (\"google_translate_element\").outerText], function (result) {\n                        paste_done = true;\n                    });\n                    break;\n                case \"text\":\n                    window.Asc.plugin.callCommand (function () {\n                        Api.ReplaceTextSmart (Asc.scope.arr);\n                    }, undefined, undefined, function (result) {\n                        paste_done = true;\n                    });\n                    break;\n            }\n        });\n    }\n});"
+            "window.Asc.plugin.executeMethod (\"GetVersion\", [], function (version) {\n    if (version === undefined) {\n        window.Asc.plugin.executeMethod (\"PasteText\", [ifr.contentDocument.getElementById (\"google_translate_element\").outerText], function (result) {\n            paste_done = true;\n        });\n    }\n    else {\n        window.Asc.plugin.executeMethod (\"GetSelectionType\", [], function (type) {\n            switch (type) {\n                case \"none\":\n                case \"drawing\":\n                    window.Asc.plugin.executeMethod(\"PasteText\", [ifr.contentDocument.getElementById (\"google_translate_element\").outerText], function (result) {\n                        paste_done = true;\n                    });\n                    break;\n                case \"text\":\n                    window.Asc.plugin.callCommand (function () {\n                        Api.ReplaceTextSmart (Asc.scope.arr);\n                    }, undefined, undefined, function (result) {\n                        paste_done = true;\n                    });\n                    break;\n            }\n        });\n    }\n});"
         ]
     },
     {
@@ -3158,7 +3158,7 @@
                 "name": "Object"
             }
         },
-        "description": "An object containing the font information.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oFontInfo = {\n    \"m_wsFontName\": \"Open Sans\",\n    \"m_wsFontPath\": \"OpenSans-Bold.ttf\",\n    \"m_lIndex\": 0,\n    \"m_bBold\": true,\n    \"m_bItalic\": false,\n    \"m_bIsFixed\": false,\n    \"m_aPanose\": [2, 11, 8, 6, 3, 5, 4, 2, 2, 4],\n    \"m_ulUnicodeRange1\": 3758097135,\n    \"m_ulUnicodeRange2\": 1073750107,\n    \"m_ulUnicodeRange3\": 40,\n    \"m_ulUnicodeRange4\": 0,\n    \"m_ulCodePageRange1\": 536871327,\n    \"m_ulCodePageRange2\": 0,\n    \"m_usWeigth\": 700,\n    \"m_usWidth\": 5,\n    \"m_sFamilyClass\": 2050,\n    \"m_eFontFormat\": 1,\n    \"m_shAvgCharWidth\": 632,\n    \"m_shAscent\": 765,\n    \"m_shDescent\": -240,\n    \"m_shLineGap\": 64,\n    \"m_shXHeight\": 545,\n    \"m_shCapHeight\": 713\n};\n```",
+        "description": "An object containing the font information.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet fontInfo = {\n    \"m_wsFontName\": \"Open Sans\",\n    \"m_wsFontPath\": \"OpenSans-Bold.ttf\",\n    \"m_lIndex\": 0,\n    \"m_bBold\": true,\n    \"m_bItalic\": false,\n    \"m_bIsFixed\": false,\n    \"m_aPanose\": [2, 11, 8, 6, 3, 5, 4, 2, 2, 4],\n    \"m_ulUnicodeRange1\": 3758097135,\n    \"m_ulUnicodeRange2\": 1073750107,\n    \"m_ulUnicodeRange3\": 40,\n    \"m_ulUnicodeRange4\": 0,\n    \"m_ulCodePageRange1\": 536871327,\n    \"m_ulCodePageRange2\": 0,\n    \"m_usWeigth\": 700,\n    \"m_usWidth\": 5,\n    \"m_sFamilyClass\": 2050,\n    \"m_eFontFormat\": 1,\n    \"m_shAvgCharWidth\": 632,\n    \"m_shAscent\": 765,\n    \"m_shDescent\": -240,\n    \"m_shLineGap\": 64,\n    \"m_shXHeight\": 545,\n    \"m_shCapHeight\": 713\n};\n```",
         "properties": [
             {
                 "type": {
@@ -3475,7 +3475,7 @@
             "office-js-api/Examples/Plugins/Common/Enumeration/FontInfo.js"
         ],
         "examples": [
-            "var oFontInfo = {\n    \"m_wsFontName\": \"Open Sans\",\n    \"m_wsFontPath\": \"OpenSans-Bold.ttf\",\n    \"m_lIndex\": 0,\n    \"m_bBold\": true,\n    \"m_bItalic\": false,\n    \"m_bIsFixed\": false,\n    \"m_aPanose\": [2, 11, 8, 6, 3, 5, 4, 2, 2, 4],\n    \"m_ulUnicodeRange1\": 3758097135,\n    \"m_ulUnicodeRange2\": 1073750107,\n    \"m_ulUnicodeRange3\": 40,\n    \"m_ulUnicodeRange4\": 0,\n    \"m_ulCodePageRange1\": 536871327,\n    \"m_ulCodePageRange2\": 0,\n    \"m_usWeigth\": 700,\n    \"m_usWidth\": 5,\n    \"m_sFamilyClass\": 2050,\n    \"m_eFontFormat\": 1,\n    \"m_shAvgCharWidth\": 632,\n    \"m_shAscent\": 765,\n    \"m_shDescent\": -240,\n    \"m_shLineGap\": 64,\n    \"m_shXHeight\": 545,\n    \"m_shCapHeight\": 713\n};"
+            "let fontInfo = {\n    \"m_wsFontName\": \"Open Sans\",\n    \"m_wsFontPath\": \"OpenSans-Bold.ttf\",\n    \"m_lIndex\": 0,\n    \"m_bBold\": true,\n    \"m_bItalic\": false,\n    \"m_bIsFixed\": false,\n    \"m_aPanose\": [2, 11, 8, 6, 3, 5, 4, 2, 2, 4],\n    \"m_ulUnicodeRange1\": 3758097135,\n    \"m_ulUnicodeRange2\": 1073750107,\n    \"m_ulUnicodeRange3\": 40,\n    \"m_ulUnicodeRange4\": 0,\n    \"m_ulCodePageRange1\": 536871327,\n    \"m_ulCodePageRange2\": 0,\n    \"m_usWeigth\": 700,\n    \"m_usWidth\": 5,\n    \"m_sFamilyClass\": 2050,\n    \"m_eFontFormat\": 1,\n    \"m_shAvgCharWidth\": 632,\n    \"m_shAscent\": 765,\n    \"m_shDescent\": -240,\n    \"m_shLineGap\": 64,\n    \"m_shXHeight\": 545,\n    \"m_shCapHeight\": 713\n};"
         ]
     },
     {
@@ -3651,7 +3651,7 @@
                 "name": "Object"
             }
         },
-        "description": "An object containing the data about all the macros from the document.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oMacros = {\n    \"macrosArray\": [\n        {\n            \"name\": \"Macros 1\",\n            \"value\": \"(function()\\n{oDocument = Api.GetDocument();\\noParagraph = Api.CreateParagraph();\\noParagraph.AddText(\\\"This is a new paragraph\\\");\\noDocument.Push(oParagraph);\\n})();\"\n        },\n        {\n            \"name\": \"Macros 2\",\n            \"value\": \"(function()\\n{oDocument = Api.GetDocument();\\noParagraph = oDocument.GetElement(0);\\noParagraph.AddText(\\\"ONLYOFFICE Document Builder\\\");\\noRange = oDocument.GetRange(0, 24);\\noRange.SetBold(true);\\n})();\"\n        }\n    ],\n    \"current\": 1\n};\nwindow.Asc.plugin.executeMethod(\"SetMacros\", [oMacros]);\n```",
+        "description": "An object containing the data about all the macros from the document.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet macros = {\n    \"macrosArray\": [\n        {\n            \"name\": \"Macros 1\",\n            \"value\": \"(function()\\n{oDocument = Api.GetDocument();\\noParagraph = Api.CreateParagraph();\\noParagraph.AddText(\\\"This is a new paragraph\\\");\\noDocument.Push(oParagraph);\\n})();\"\n        },\n        {\n            \"name\": \"Macros 2\",\n            \"value\": \"(function()\\n{oDocument = Api.GetDocument();\\noParagraph = oDocument.GetElement(0);\\noParagraph.AddText(\\\"ONLYOFFICE Document Builder\\\");\\noRange = oDocument.GetRange(0, 24);\\noRange.SetBold(true);\\n})();\"\n        }\n    ],\n    \"current\": 1\n};\nwindow.Asc.plugin.executeMethod(\"SetMacros\", [macros]);\n```",
         "properties": [
             {
                 "type": {
@@ -3695,7 +3695,7 @@
             "office-js-api/Examples/Plugins/Common/Enumeration/Macros.js"
         ],
         "examples": [
-            "var oMacros = {\n    \"macrosArray\": [\n        {\n            \"name\": \"Macros 1\",\n            \"value\": \"(function()\\n{oDocument = Api.GetDocument();\\noParagraph = Api.CreateParagraph();\\noParagraph.AddText(\\\"This is a new paragraph\\\");\\noDocument.Push(oParagraph);\\n})();\"\n        },\n        {\n            \"name\": \"Macros 2\",\n            \"value\": \"(function()\\n{oDocument = Api.GetDocument();\\noParagraph = oDocument.GetElement(0);\\noParagraph.AddText(\\\"ONLYOFFICE Document Builder\\\");\\noRange = oDocument.GetRange(0, 24);\\noRange.SetBold(true);\\n})();\"\n        }\n    ],\n    \"current\": 1\n};\nwindow.Asc.plugin.executeMethod(\"SetMacros\", [oMacros]);"
+            "let macros = {\n    \"macrosArray\": [\n        {\n            \"name\": \"Macros 1\",\n            \"value\": \"(function()\\n{oDocument = Api.GetDocument();\\noParagraph = Api.CreateParagraph();\\noParagraph.AddText(\\\"This is a new paragraph\\\");\\noDocument.Push(oParagraph);\\n})();\"\n        },\n        {\n            \"name\": \"Macros 2\",\n            \"value\": \"(function()\\n{oDocument = Api.GetDocument();\\noParagraph = oDocument.GetElement(0);\\noParagraph.AddText(\\\"ONLYOFFICE Document Builder\\\");\\noRange = oDocument.GetRange(0, 24);\\noRange.SetBold(true);\\n})();\"\n        }\n    ],\n    \"current\": 1\n};\nwindow.Asc.plugin.executeMethod(\"SetMacros\", [macros]);"
         ]
     },
     {
@@ -4912,14 +4912,14 @@
                 ]
             }
         },
-        "description": "The current selection type (\"none\", \"text\", \"drawing\", or \"slide\").\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"GetSelectionType\", [], function(sType) {\n    switch (sType) {\n        case \"none\":\n        case \"drawing\":\n            window.Asc.plugin.executeMethod (\"PasteText\", [$(\"#txt_shower\")[0].innerText]);\n            break;\n        case \"text\":\n            window.Asc.plugin.callCommand (function() {\n                Api.ReplaceTextSmart (Asc.scope.arr);\n            });\n            break;\n    }\n});\n```",
+        "description": "The current selection type (\"none\", \"text\", \"drawing\", or \"slide\").\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"GetSelectionType\", [], function(type) {\n    switch (type) {\n        case \"none\":\n        case \"drawing\":\n            window.Asc.plugin.executeMethod (\"PasteText\", [$(\"#txt_shower\")[0].innerText]);\n            break;\n        case \"text\":\n            window.Asc.plugin.callCommand (function() {\n                Api.ReplaceTextSmart (Asc.scope.arr);\n            });\n            break;\n    }\n});\n```",
         "longname": "SelectionType",
         "scope": "global",
         "see": [
             "office-js-api/Examples/Plugins/Common/Enumeration/SelectionType.js"
         ],
         "examples": [
-            "window.Asc.plugin.executeMethod (\"GetSelectionType\", [], function(sType) {\n    switch (sType) {\n        case \"none\":\n        case \"drawing\":\n            window.Asc.plugin.executeMethod (\"PasteText\", [$(\"#txt_shower\")[0].innerText]);\n            break;\n        case \"text\":\n            window.Asc.plugin.callCommand (function() {\n                Api.ReplaceTextSmart (Asc.scope.arr);\n            });\n            break;\n    }\n});"
+            "window.Asc.plugin.executeMethod (\"GetSelectionType\", [], function(type) {\n    switch (type) {\n        case \"none\":\n        case \"drawing\":\n            window.Asc.plugin.executeMethod (\"PasteText\", [$(\"#txt_shower\")[0].innerText]);\n            break;\n        case \"text\":\n            window.Asc.plugin.callCommand (function() {\n                Api.ReplaceTextSmart (Asc.scope.arr);\n            });\n            break;\n    }\n});"
         ]
     },
     {
@@ -4930,7 +4930,7 @@
         },
         "kind": "function",
         "name": "GetSelectionType",
-        "description": "Returns the type of the current selection.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"GetSelectionType\", [], function(sType) {\n    switch (sType) {\n        case \"none\":\n        case \"drawing\":\n            window.Asc.plugin.executeMethod (\"PasteText\", [$(\"#txt_shower\")[0].innerText], function (result) {\n                paste_done = true;\n            });\n            break;\n        case \"text\":\n            window.Asc.plugin.callCommand (function() {\n                Api.ReplaceTextSmart (Asc.scope.arr);\n            }, undefined, undefined, function(result) {\n                paste_done = true;\n            });\n            break;\n    }\n});\n```",
+        "description": "Returns the type of the current selection.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"GetSelectionType\", [], function(type) {\n    switch (type) {\n        case \"none\":\n        case \"drawing\":\n            window.Asc.plugin.executeMethod (\"PasteText\", [$(\"#txt_shower\")[0].innerText], function (result) {\n                paste_done = true;\n            });\n            break;\n        case \"text\":\n            window.Asc.plugin.callCommand (function() {\n                Api.ReplaceTextSmart (Asc.scope.arr);\n            }, undefined, undefined, function(result) {\n                paste_done = true;\n            });\n            break;\n    }\n});\n```",
         "memberof": "Api",
         "longname": "GetSelectionType",
         "alias": "GetSelectionType",
@@ -4951,7 +4951,7 @@
             "office-js-api/Examples/Plugins/Common/Api/Methods/GetSelectionType.js"
         ],
         "examples": [
-            "window.Asc.plugin.executeMethod (\"GetSelectionType\", [], function(sType) {\n    switch (sType) {\n        case \"none\":\n        case \"drawing\":\n            window.Asc.plugin.executeMethod (\"PasteText\", [$(\"#txt_shower\")[0].innerText], function (result) {\n                paste_done = true;\n            });\n            break;\n        case \"text\":\n            window.Asc.plugin.callCommand (function() {\n                Api.ReplaceTextSmart (Asc.scope.arr);\n            }, undefined, undefined, function(result) {\n                paste_done = true;\n            });\n            break;\n    }\n});"
+            "window.Asc.plugin.executeMethod (\"GetSelectionType\", [], function(type) {\n    switch (type) {\n        case \"none\":\n        case \"drawing\":\n            window.Asc.plugin.executeMethod (\"PasteText\", [$(\"#txt_shower\")[0].innerText], function (result) {\n                paste_done = true;\n            });\n            break;\n        case \"text\":\n            window.Asc.plugin.callCommand (function() {\n                Api.ReplaceTextSmart (Asc.scope.arr);\n            }, undefined, undefined, function(result) {\n                paste_done = true;\n            });\n            break;\n    }\n});"
         ]
     },
     {
@@ -4962,7 +4962,7 @@
         },
         "kind": "function",
         "name": "ConvertDocument",
-        "description": "Converts a document to Markdown or HTML text.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar sInfo = \"\";\nwindow.Asc.plugin.executeMethod (\"ConvertDocument\", [\"markdown\", false, false, true, false], function (sOutput) {\n    document.getElementById (\"text-area\").value = sInfo + sOutput;\n});\n```",
+        "description": "Converts a document to Markdown or HTML text.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet info = \"\";\nwindow.Asc.plugin.executeMethod (\"ConvertDocument\", [\"markdown\", false, false, true, false], function (output) {\n    document.getElementById (\"text-area\").value = info + output;\n});\n```",
         "memberof": "Api",
         "longname": "ConvertDocument",
         "alias": "ConvertDocument",
@@ -5070,7 +5070,7 @@
             "office-js-api/Examples/Plugins/Common/Api/Methods/ConvertDocument.js"
         ],
         "examples": [
-            "var sInfo = \"\";\nwindow.Asc.plugin.executeMethod (\"ConvertDocument\", [\"markdown\", false, false, true, false], function (sOutput) {\n    document.getElementById (\"text-area\").value = sInfo + sOutput;\n});"
+            "let info = \"\";\nwindow.Asc.plugin.executeMethod (\"ConvertDocument\", [\"markdown\", false, false, true, false], function (output) {\n    document.getElementById (\"text-area\").value = info + output;\n});"
         ]
     },
     {
@@ -5403,14 +5403,14 @@
                 ]
             }
         },
-        "description": "Specifies how to adjust the image object in case of replacing the selected image.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.saveImage = function () {\n    let sImageSrc = imageEditor.toDataURL();\n    let editorDimension = imageEditor.getCanvasSize();\n    let nWidth = editorDimension.width;\n    let nHeight = editorDimension.height;\n    let oImageData = {\n        \"src\": sImageSrc,\n        \"width\": nWidth,\n        \"height\": nHeight,\n        \"replaceMode\": \"original\"\n    };\n    window.Asc.plugin.executeMethod (\"PutImageDataToSelection\", [oImageData]);\n    window.Asc.plugin.executeCommand(\"close\", \"\");\n};\n```",
+        "description": "Specifies how to adjust the image object in case of replacing the selected image.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.saveImage = function () {\n    let imageSrc = imageEditor.toDataURL();\n    let editorDimension = imageEditor.getCanvasSize();\n    let width = editorDimension.width;\n    let height = editorDimension.height;\n    let imageData = {\n        \"src\": imageSrc,\n        \"width\": width,\n        \"height\": height,\n        \"replaceMode\": \"original\"\n    };\n    window.Asc.plugin.executeMethod (\"PutImageDataToSelection\", [imageData]);\n    window.Asc.plugin.executeCommand(\"close\", \"\");\n};\n```",
         "longname": "ReplaceImageMode",
         "scope": "global",
         "see": [
             "office-js-api/Examples/Plugins/Common/Enumeration/ReplaceImageMode.js"
         ],
         "examples": [
-            "window.saveImage = function () {\n    let sImageSrc = imageEditor.toDataURL();\n    let editorDimension = imageEditor.getCanvasSize();\n    let nWidth = editorDimension.width;\n    let nHeight = editorDimension.height;\n    let oImageData = {\n        \"src\": sImageSrc,\n        \"width\": nWidth,\n        \"height\": nHeight,\n        \"replaceMode\": \"original\"\n    };\n    window.Asc.plugin.executeMethod (\"PutImageDataToSelection\", [oImageData]);\n    window.Asc.plugin.executeCommand(\"close\", \"\");\n};"
+            "window.saveImage = function () {\n    let imageSrc = imageEditor.toDataURL();\n    let editorDimension = imageEditor.getCanvasSize();\n    let width = editorDimension.width;\n    let height = editorDimension.height;\n    let imageData = {\n        \"src\": imageSrc,\n        \"width\": width,\n        \"height\": height,\n        \"replaceMode\": \"original\"\n    };\n    window.Asc.plugin.executeMethod (\"PutImageDataToSelection\", [imageData]);\n    window.Asc.plugin.executeCommand(\"close\", \"\");\n};"
         ]
     },
     {
@@ -5430,7 +5430,7 @@
                 "name": "Object"
             }
         },
-        "description": "An object containing the information about the base64 encoded *png* image.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.saveImage = function () {\n    let sImageSrc = imageEditor.toDataURL();\n    let editorDimension = imageEditor.getCanvasSize();\n    let nWidth = editorDimension.width;\n    let nHeight = editorDimension.height;\n    let oImageData = {\n        \"src\": sImageSrc,\n        \"width\": nWidth,\n        \"height\": nHeight,\n        \"replaceMode\": \"original\"\n    };\n    window.Asc.plugin.executeMethod (\"PutImageDataToSelection\", [oImageData]);\n    window.Asc.plugin.callCommand(\"close\", \"\");\n};\n```",
+        "description": "An object containing the information about the base64 encoded *png* image.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.saveImage = function () {\n    let imageSrc = imageEditor.toDataURL();\n    let editorDimension = imageEditor.getCanvasSize();\n    let width = editorDimension.width;\n    let height = editorDimension.height;\n    let imageData = {\n        \"src\": imageSrc,\n        \"width\": width,\n        \"height\": height,\n        \"replaceMode\": \"original\"\n    };\n    window.Asc.plugin.executeMethod (\"PutImageDataToSelection\", [imageData]);\n    window.Asc.plugin.callCommand(\"close\", \"\");\n};\n```",
         "properties": [
             {
                 "type": {
@@ -5492,7 +5492,7 @@
             "office-js-api/Examples/Plugins/Common/Enumeration/ImageData.js"
         ],
         "examples": [
-            "window.saveImage = function () {\n    let sImageSrc = imageEditor.toDataURL();\n    let editorDimension = imageEditor.getCanvasSize();\n    let nWidth = editorDimension.width;\n    let nHeight = editorDimension.height;\n    let oImageData = {\n        \"src\": sImageSrc,\n        \"width\": nWidth,\n        \"height\": nHeight,\n        \"replaceMode\": \"original\"\n    };\n    window.Asc.plugin.executeMethod (\"PutImageDataToSelection\", [oImageData]);\n    window.Asc.plugin.callCommand(\"close\", \"\");\n};"
+            "window.saveImage = function () {\n    let imageSrc = imageEditor.toDataURL();\n    let editorDimension = imageEditor.getCanvasSize();\n    let width = editorDimension.width;\n    let height = editorDimension.height;\n    let imageData = {\n        \"src\": imageSrc,\n        \"width\": width,\n        \"height\": height,\n        \"replaceMode\": \"original\"\n    };\n    window.Asc.plugin.executeMethod (\"PutImageDataToSelection\", [imageData]);\n    window.Asc.plugin.callCommand(\"close\", \"\");\n};"
         ]
     },
     {
@@ -5504,7 +5504,7 @@
         "kind": "function",
         "since": "7.2.0",
         "name": "GetImageDataFromSelection",
-        "description": "Returns the image data from the first of the selected drawings. If there are no drawings selected, the method returns a white rectangle.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"GetImageDataFromSelection\", [], function (oResult) {\n    oImage = document.createElement (\"img\");\n    oImage.src = oResult.src;\n    oImage.width = oResult.width;\n    oImage.height = oResult.height;\n    CreateImageEditor ();\n    initializationDone = true;\n    var imageHeight = null;\n    oImage.height > 500 ? imageHeight = 500 : imageHeight = oImage.height;\n    window.Asc.plugin.resizeWindow (undefined, undefined, 870, imageHeight + 300, 0, 0);\n});\n```",
+        "description": "Returns the image data from the first of the selected drawings. If there are no drawings selected, the method returns a white rectangle.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod (\"GetImageDataFromSelection\", [], function (result) {\n    let image = document.createElement(\"img\");\n    image.src = result.src;\n    image.width = result.width;\n    image.height = result.height;\n    CreateImageEditor ();\n    initializationDone = true;\n    var imageHeight = null;\n    image.height > 500 ? imageHeight = 500 : imageHeight = image.height;\n    window.Asc.plugin.resizeWindow (undefined, undefined, 870, imageHeight + 300, 0, 0);\n});\n```",
         "memberof": "Api",
         "longname": "GetImageDataFromSelection",
         "alias": "GetImageDataFromSelection",
@@ -5526,7 +5526,7 @@
             "office-js-api/Examples/Plugins/Common/Api/Methods/GetImageDataFromSelection.js"
         ],
         "examples": [
-            "window.Asc.plugin.executeMethod (\"GetImageDataFromSelection\", [], function (oResult) {\n    oImage = document.createElement (\"img\");\n    oImage.src = oResult.src;\n    oImage.width = oResult.width;\n    oImage.height = oResult.height;\n    CreateImageEditor ();\n    initializationDone = true;\n    var imageHeight = null;\n    oImage.height > 500 ? imageHeight = 500 : imageHeight = oImage.height;\n    window.Asc.plugin.resizeWindow (undefined, undefined, 870, imageHeight + 300, 0, 0);\n});"
+            "window.Asc.plugin.executeMethod (\"GetImageDataFromSelection\", [], function (result) {\n    let image = document.createElement(\"img\");\n    image.src = result.src;\n    image.width = result.width;\n    image.height = result.height;\n    CreateImageEditor ();\n    initializationDone = true;\n    var imageHeight = null;\n    image.height > 500 ? imageHeight = 500 : imageHeight = image.height;\n    window.Asc.plugin.resizeWindow (undefined, undefined, 870, imageHeight + 300, 0, 0);\n});"
         ]
     },
     {
@@ -5538,7 +5538,7 @@
         "kind": "function",
         "since": "7.2.0",
         "name": "PutImageDataToSelection",
-        "description": "Replaces the first selected drawing with the image specified in the parameters.\nIf there are no drawings selected, the method inserts the image at the current position.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.saveImage = function () {\n    let sImageSrc = imageEditor.toDataURL ();\n    let editorDimension = imageEditor.getCanvasSize ();\n    let nWidth = editorDimension.width;\n    let nHeight = editorDimension.height;\n    let oImageData = {\n        \"src\": sImageSrc,\n        \"width\": nWidth,\n        \"height\": nHeight\n    };\n    window.Asc.plugin.executeMethod (\"PutImageDataToSelection\", [oImageData]);\n    window.Asc.plugin.executeCommand (\"close\", \"\");\n};\n```",
+        "description": "Replaces the first selected drawing with the image specified in the parameters.\nIf there are no drawings selected, the method inserts the image at the current position.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.saveImage = function () {\n    let imageSrc = imageEditor.toDataURL ();\n    let editorDimension = imageEditor.getCanvasSize ();\n    let width = editorDimension.width;\n    let height = editorDimension.height;\n    let imageData = {\n        \"src\": imageSrc,\n        \"width\": width,\n        \"height\": height\n    };\n    window.Asc.plugin.executeMethod (\"PutImageDataToSelection\", [imageData]);\n    window.Asc.plugin.executeCommand (\"close\", \"\");\n};\n```",
         "memberof": "Api",
         "longname": "PutImageDataToSelection",
         "alias": "PutImageDataToSelection",
@@ -5561,7 +5561,7 @@
             "office-js-api/Examples/Plugins/Common/Api/Methods/PutImageDataToSelection.js"
         ],
         "examples": [
-            "window.saveImage = function () {\n    let sImageSrc = imageEditor.toDataURL ();\n    let editorDimension = imageEditor.getCanvasSize ();\n    let nWidth = editorDimension.width;\n    let nHeight = editorDimension.height;\n    let oImageData = {\n        \"src\": sImageSrc,\n        \"width\": nWidth,\n        \"height\": nHeight\n    };\n    window.Asc.plugin.executeMethod (\"PutImageDataToSelection\", [oImageData]);\n    window.Asc.plugin.executeCommand (\"close\", \"\");\n};"
+            "window.saveImage = function () {\n    let imageSrc = imageEditor.toDataURL ();\n    let editorDimension = imageEditor.getCanvasSize ();\n    let width = editorDimension.width;\n    let height = editorDimension.height;\n    let imageData = {\n        \"src\": imageSrc,\n        \"width\": width,\n        \"height\": height\n    };\n    window.Asc.plugin.executeMethod (\"PutImageDataToSelection\", [imageData]);\n    window.Asc.plugin.executeCommand (\"close\", \"\");\n};"
         ]
     },
     {
@@ -5581,7 +5581,7 @@
                 "name": "Object"
             }
         },
-        "description": "The plugin object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oPlugin = {\n    \"url\": \"https://example.com/plugin/config.json\",\n    \"guid\": \"asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}\",\n    \"canRemoved\": true,\n    \"obj\": {\n        \"baseUrl\": \"\",\n        \"guid\": \"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}\",\n        \"version\": \"1.0\",\n        \"minVersion\": \"6.3.0\",\n        ...\n    }\n};\n```",
+        "description": "The plugin object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet plugin = {\n    \"url\": \"https://example.com/plugin/config.json\",\n    \"guid\": \"asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}\",\n    \"canRemoved\": true,\n    \"obj\": {\n        \"baseUrl\": \"\",\n        \"guid\": \"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}\",\n        \"version\": \"1.0\",\n        \"minVersion\": \"6.3.0\",\n        ...\n    }\n};\n```",
         "properties": [
             {
                 "type": {
@@ -5642,7 +5642,7 @@
             "office-js-api/Examples/Plugins/Common/Enumeration/PluginData.js"
         ],
         "examples": [
-            "var oPlugin = {\n    \"url\": \"https://example.com/plugin/config.json\",\n    \"guid\": \"asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}\",\n    \"canRemoved\": true,\n    \"obj\": {\n        \"baseUrl\": \"\",\n        \"guid\": \"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}\",\n        \"version\": \"1.0\",\n        \"minVersion\": \"6.3.0\",\n        ...\n    }\n};"
+            "let plugin = {\n    \"url\": \"https://example.com/plugin/config.json\",\n    \"guid\": \"asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}\",\n    \"canRemoved\": true,\n    \"obj\": {\n        \"baseUrl\": \"\",\n        \"guid\": \"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}\",\n        \"version\": \"1.0\",\n        \"minVersion\": \"6.3.0\",\n        ...\n    }\n};"
         ]
     },
     {
@@ -6016,7 +6016,7 @@
         "kind": "function",
         "since": "7.4.0",
         "name": "GetDocumentLang",
-        "description": "Returns the document language.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod(\"GetDocumentLang\", [], function(lang) {\n\tlet documentLang = lang || defaultLang;\n\n\tlet aOptions = Array.from($('#custom_menu option'));\n\tlet oDefaultOption = aOptions.find(function(item) {\n\t\tif (item.value == defaultLang)\n\t\t\treturn item;\n\t});\n\n\tlet oMatchOption = undefined;\n\toMatchOption = aOptions.find(function(item) {\n\t\tif (item.value == documentLang)\n\t\t\treturn true;\n\t});\n\tif (!oMatchOption) {\n\t\toMatchOption = aOptions.find(function(item) {\n\t\t\tif (item.value.search(documentLang.split('-')[0]) != -1)\n\t\t\t\treturn true;\n\t\t});\n\t}\n\n\tif (!oMatchOption)\n\t\toMatchOption = oDefaultOption;\n\n\tif (oMatchOption) {\n\t\t$('#custom_menu').val(oMatchOption.value);\n\t\t$('#custom_menu').trigger('change');\n\t}\n});\n```",
+        "description": "Returns the document language.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nwindow.Asc.plugin.executeMethod(\"GetDocumentLang\", [], function(lang) {\n\tlet documentLang = lang || defaultLang;\n\n\tlet options = Array.from($('#custom_menu option'));\n\tlet defaultOption = options.find(function(item) {\n\t\tif (item.value == defaultLang)\n\t\t\treturn item;\n\t});\n\n\tlet matchOption = undefined;\n\tmatchOption = options.find(function(item) {\n\t\tif (item.value == documentLang)\n\t\t\treturn true;\n\t});\n\tif (!matchOption) {\n\t\tmatchOption = options.find(function(item) {\n\t\t\tif (item.value.search(documentLang.split('-')[0]) != -1)\n\t\t\t\treturn true;\n\t\t});\n\t}\n\n\tif (!matchOption)\n\t\tmatchOption = defaultOption;\n\n\tif (matchOption) {\n\t\t$('#custom_menu').val(matchOption.value);\n\t\t$('#custom_menu').trigger('change');\n\t}\n});\n```",
         "memberof": "Api",
         "longname": "GetDocumentLang",
         "alias": "GetDocumentLang",
@@ -6037,7 +6037,7 @@
             "office-js-api/Examples/Plugins/Common/Api/Methods/GetDocumentLang.js"
         ],
         "examples": [
-            "window.Asc.plugin.executeMethod(\"GetDocumentLang\", [], function(lang) {\n\tlet documentLang = lang || defaultLang;\n\n\tlet aOptions = Array.from($('#custom_menu option'));\n\tlet oDefaultOption = aOptions.find(function(item) {\n\t\tif (item.value == defaultLang)\n\t\t\treturn item;\n\t});\n\n\tlet oMatchOption = undefined;\n\toMatchOption = aOptions.find(function(item) {\n\t\tif (item.value == documentLang)\n\t\t\treturn true;\n\t});\n\tif (!oMatchOption) {\n\t\toMatchOption = aOptions.find(function(item) {\n\t\t\tif (item.value.search(documentLang.split('-')[0]) != -1)\n\t\t\t\treturn true;\n\t\t});\n\t}\n\n\tif (!oMatchOption)\n\t\toMatchOption = oDefaultOption;\n\n\tif (oMatchOption) {\n\t\t$('#custom_menu').val(oMatchOption.value);\n\t\t$('#custom_menu').trigger('change');\n\t}\n});"
+            "window.Asc.plugin.executeMethod(\"GetDocumentLang\", [], function(lang) {\n\tlet documentLang = lang || defaultLang;\n\n\tlet options = Array.from($('#custom_menu option'));\n\tlet defaultOption = options.find(function(item) {\n\t\tif (item.value == defaultLang)\n\t\t\treturn item;\n\t});\n\n\tlet matchOption = undefined;\n\tmatchOption = options.find(function(item) {\n\t\tif (item.value == documentLang)\n\t\t\treturn true;\n\t});\n\tif (!matchOption) {\n\t\tmatchOption = options.find(function(item) {\n\t\t\tif (item.value.search(documentLang.split('-')[0]) != -1)\n\t\t\t\treturn true;\n\t\t});\n\t}\n\n\tif (!matchOption)\n\t\tmatchOption = defaultOption;\n\n\tif (matchOption) {\n\t\t$('#custom_menu').val(matchOption.value);\n\t\t$('#custom_menu').trigger('change');\n\t}\n});"
         ]
     },
     {
@@ -6057,7 +6057,7 @@
                 "name": "Object"
             }
         },
-        "description": "The context menu item.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar aContextMenuItems = function getContextMenuItems() {\n\tlet settings = {\n\t\tguid: window.Asc.plugin.guid,\n\t\titems: [\n\t\t\t{\n\t\t\t\tid : 'onConvert',\n\t\t\t\ttext : getMessage('Convert to Markdown or HTML')\n\t\t\t}\n\t\t]\n\t};\n\treturn settings;\n};\n\nwindow.Asc.plugin.attachEvent('onContextMenuShow', function(options) {\n\tif (!options) return;\n\n\tif (options.type === 'Selection' || options.type === 'Target')\n\t\tthis.executeMethod('AddContextMenuItem', [aContextMenuItems]);\n});\n```",
+        "description": "The context menu item.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet contextMenuItems = function getContextMenuItems() {\n\tlet settings = {\n\t\tguid: window.Asc.plugin.guid,\n\t\titems: [\n\t\t\t{\n\t\t\t\tid : 'onConvert',\n\t\t\t\ttext : getMessage('Convert to Markdown or HTML')\n\t\t\t}\n\t\t]\n\t};\n\treturn settings;\n};\n\nwindow.Asc.plugin.attachEvent('onContextMenuShow', function(options) {\n\tif (!options) return;\n\n\tif (options.type === 'Selection' || options.type === 'Target')\n\t\tthis.executeMethod('AddContextMenuItem', [contextMenuItems]);\n});\n```",
         "properties": [
             {
                 "type": {
@@ -6156,7 +6156,7 @@
             "office-js-api/Examples/Plugins/Common/Enumeration/ContextMenuItem.js"
         ],
         "examples": [
-            "var aContextMenuItems = function getContextMenuItems() {\n\tlet settings = {\n\t\tguid: window.Asc.plugin.guid,\n\t\titems: [\n\t\t\t{\n\t\t\t\tid : 'onConvert',\n\t\t\t\ttext : getMessage('Convert to Markdown or HTML')\n\t\t\t}\n\t\t]\n\t};\n\treturn settings;\n};\n\nwindow.Asc.plugin.attachEvent('onContextMenuShow', function(options) {\n\tif (!options) return;\n\n\tif (options.type === 'Selection' || options.type === 'Target')\n\t\tthis.executeMethod('AddContextMenuItem', [aContextMenuItems]);\n});"
+            "let contextMenuItems = function getContextMenuItems() {\n\tlet settings = {\n\t\tguid: window.Asc.plugin.guid,\n\t\titems: [\n\t\t\t{\n\t\t\t\tid : 'onConvert',\n\t\t\t\ttext : getMessage('Convert to Markdown or HTML')\n\t\t\t}\n\t\t]\n\t};\n\treturn settings;\n};\n\nwindow.Asc.plugin.attachEvent('onContextMenuShow', function(options) {\n\tif (!options) return;\n\n\tif (options.type === 'Selection' || options.type === 'Target')\n\t\tthis.executeMethod('AddContextMenuItem', [contextMenuItems]);\n});"
         ]
     },
     {
@@ -6274,14 +6274,14 @@
                 ]
             }
         },
-        "description": "The possible values of the base which the relative vertical position of the toolbar menu item will be calculated from.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar sToolbarMenuItemType = \"button\";\nvar oToolbarMenuItem = {\n    \"id\": \"MeaningItem\",\n    \"type\": sToolbarMenuItemType,\n    \"text\": \"Meaning\",\n    \"hint\": \"Meaning\",\n    \"icons\": \"resources/light/icon.png\",\n    \"disabled\": false,\n    \"enableToggle\": false,\n    \"lockInViewMode\": false,\n    \"separator\": true,\n    \"split\": true,\n    \"items\": [\n        {\n            \"id\": \"onMeaningT\",\n            \"text\": \"Explain text in comment\"\n        },\n        {\n            \"id\": \"onFixSpelling\",\n            \"text\": \"Fix spelling & grammar\"\n        },\n        {\n            \"id\": \"onMakeLonger\",\n            \"text\": \"Make longer\"\n        },\n        {\n            \"id\": \"onMakeShorter\",\n            \"text\": \"Make shorter\"\n        }\n    ]\n};\n```",
+        "description": "The possible values of the base which the relative vertical position of the toolbar menu item will be calculated from.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet toolbarMenuItemType = \"button\";\nlet toolbarMenuItem = {\n    \"id\": \"MeaningItem\",\n    \"type\": toolbarMenuItemType,\n    \"text\": \"Meaning\",\n    \"hint\": \"Meaning\",\n    \"icons\": \"resources/light/icon.png\",\n    \"disabled\": false,\n    \"enableToggle\": false,\n    \"lockInViewMode\": false,\n    \"separator\": true,\n    \"split\": true,\n    \"items\": [\n        {\n            \"id\": \"onMeaningT\",\n            \"text\": \"Explain text in comment\"\n        },\n        {\n            \"id\": \"onFixSpelling\",\n            \"text\": \"Fix spelling & grammar\"\n        },\n        {\n            \"id\": \"onMakeLonger\",\n            \"text\": \"Make longer\"\n        },\n        {\n            \"id\": \"onMakeShorter\",\n            \"text\": \"Make shorter\"\n        }\n    ]\n};\n```",
         "longname": "ToolbarMenuItemType",
         "scope": "global",
         "see": [
             "office-js-api/Examples/Plugins/Common/Enumeration/ToolbarMenuItemType.js"
         ],
         "examples": [
-            "var sToolbarMenuItemType = \"button\";\nvar oToolbarMenuItem = {\n    \"id\": \"MeaningItem\",\n    \"type\": sToolbarMenuItemType,\n    \"text\": \"Meaning\",\n    \"hint\": \"Meaning\",\n    \"icons\": \"resources/light/icon.png\",\n    \"disabled\": false,\n    \"enableToggle\": false,\n    \"lockInViewMode\": false,\n    \"separator\": true,\n    \"split\": true,\n    \"items\": [\n        {\n            \"id\": \"onMeaningT\",\n            \"text\": \"Explain text in comment\"\n        },\n        {\n            \"id\": \"onFixSpelling\",\n            \"text\": \"Fix spelling & grammar\"\n        },\n        {\n            \"id\": \"onMakeLonger\",\n            \"text\": \"Make longer\"\n        },\n        {\n            \"id\": \"onMakeShorter\",\n            \"text\": \"Make shorter\"\n        }\n    ]\n};"
+            "let toolbarMenuItemType = \"button\";\nlet toolbarMenuItem = {\n    \"id\": \"MeaningItem\",\n    \"type\": toolbarMenuItemType,\n    \"text\": \"Meaning\",\n    \"hint\": \"Meaning\",\n    \"icons\": \"resources/light/icon.png\",\n    \"disabled\": false,\n    \"enableToggle\": false,\n    \"lockInViewMode\": false,\n    \"separator\": true,\n    \"split\": true,\n    \"items\": [\n        {\n            \"id\": \"onMeaningT\",\n            \"text\": \"Explain text in comment\"\n        },\n        {\n            \"id\": \"onFixSpelling\",\n            \"text\": \"Fix spelling & grammar\"\n        },\n        {\n            \"id\": \"onMakeLonger\",\n            \"text\": \"Make longer\"\n        },\n        {\n            \"id\": \"onMakeShorter\",\n            \"text\": \"Make shorter\"\n        }\n    ]\n};"
         ]
     },
     {
@@ -6301,7 +6301,7 @@
                 "name": "Object"
             }
         },
-        "description": "The toolbar menu item.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oToolbarMenuItem = {\n    \"id\": \"MeaningItem\",\n    \"type\": \"button\",\n    \"text\": \"Meaning\",\n    \"hint\": \"Meaning\",\n    \"icons\": \"resources/light/icon.png\",\n    \"disabled\": false,\n    \"enableToggle\": false,\n    \"lockInViewMode\": false,\n    \"separator\": true,\n    \"split\": true,\n    \"items\": [\n        {\n            \"id\": \"onMeaningT\",\n            \"text\": \"Explain text in comment\"\n        },\n        {\n            \"id\": \"onFixSpelling\",\n            \"text\": \"Fix spelling & grammar\"\n        },\n        {\n            \"id\": \"onMakeLonger\",\n            \"text\": \"Make longer\"\n        },\n        {\n            \"id\": \"onMakeShorter\",\n            \"text\": \"Make shorter\"\n        }\n    ]\n};\n```",
+        "description": "The toolbar menu item.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet toolbarMenuItem = {\n    \"id\": \"MeaningItem\",\n    \"type\": \"button\",\n    \"text\": \"Meaning\",\n    \"hint\": \"Meaning\",\n    \"icons\": \"resources/light/icon.png\",\n    \"disabled\": false,\n    \"enableToggle\": false,\n    \"lockInViewMode\": false,\n    \"separator\": true,\n    \"split\": true,\n    \"items\": [\n        {\n            \"id\": \"onMeaningT\",\n            \"text\": \"Explain text in comment\"\n        },\n        {\n            \"id\": \"onFixSpelling\",\n            \"text\": \"Fix spelling & grammar\"\n        },\n        {\n            \"id\": \"onMakeLonger\",\n            \"text\": \"Make longer\"\n        },\n        {\n            \"id\": \"onMakeShorter\",\n            \"text\": \"Make shorter\"\n        }\n    ]\n};\n```",
         "properties": [
             {
                 "type": {
@@ -6469,7 +6469,7 @@
             "office-js-api/Examples/Plugins/Common/Enumeration/ToolbarMenuItem.js"
         ],
         "examples": [
-            "var oToolbarMenuItem = {\n    \"id\": \"MeaningItem\",\n    \"type\": \"button\",\n    \"text\": \"Meaning\",\n    \"hint\": \"Meaning\",\n    \"icons\": \"resources/light/icon.png\",\n    \"disabled\": false,\n    \"enableToggle\": false,\n    \"lockInViewMode\": false,\n    \"separator\": true,\n    \"split\": true,\n    \"items\": [\n        {\n            \"id\": \"onMeaningT\",\n            \"text\": \"Explain text in comment\"\n        },\n        {\n            \"id\": \"onFixSpelling\",\n            \"text\": \"Fix spelling & grammar\"\n        },\n        {\n            \"id\": \"onMakeLonger\",\n            \"text\": \"Make longer\"\n        },\n        {\n            \"id\": \"onMakeShorter\",\n            \"text\": \"Make shorter\"\n        }\n    ]\n};"
+            "let toolbarMenuItem = {\n    \"id\": \"MeaningItem\",\n    \"type\": \"button\",\n    \"text\": \"Meaning\",\n    \"hint\": \"Meaning\",\n    \"icons\": \"resources/light/icon.png\",\n    \"disabled\": false,\n    \"enableToggle\": false,\n    \"lockInViewMode\": false,\n    \"separator\": true,\n    \"split\": true,\n    \"items\": [\n        {\n            \"id\": \"onMeaningT\",\n            \"text\": \"Explain text in comment\"\n        },\n        {\n            \"id\": \"onFixSpelling\",\n            \"text\": \"Fix spelling & grammar\"\n        },\n        {\n            \"id\": \"onMakeLonger\",\n            \"text\": \"Make longer\"\n        },\n        {\n            \"id\": \"onMakeShorter\",\n            \"text\": \"Make shorter\"\n        }\n    ]\n};"
         ]
     },
     {
@@ -6489,7 +6489,7 @@
                 "name": "Object"
             }
         },
-        "description": "The toolbar menu tab.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oToolbarMenuTab = {\n    \"id\": \"ChatGPT\",\n    \"text\": \"AI Assistant\",\n    \"items\": [oToolbarMenuItem]\n};\n```",
+        "description": "The toolbar menu tab.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet toolbarMenuTab = {\n    \"id\": \"ChatGPT\",\n    \"text\": \"AI Assistant\",\n    \"items\": [toolbarMenuItem]\n};\n```",
         "properties": [
             {
                 "type": {
@@ -6547,7 +6547,7 @@
             "office-js-api/Examples/Plugins/Common/Enumeration/ToolbarMenuTab.js"
         ],
         "examples": [
-            "var oToolbarMenuTab = {\n    \"id\": \"ChatGPT\",\n    \"text\": \"AI Assistant\",\n    \"items\": [oToolbarMenuItem]\n};"
+            "let toolbarMenuTab = {\n    \"id\": \"ChatGPT\",\n    \"text\": \"AI Assistant\",\n    \"items\": [toolbarMenuItem]\n};"
         ]
     },
     {
@@ -6567,7 +6567,7 @@
                 "name": "Object"
             }
         },
-        "description": "The main toolbar menu item.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oToolbarMenuMainItem = {\n    \"guid\": \"asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}\",\n    \"tabs\": [oToolbarMenuTab]\n};\n```",
+        "description": "The main toolbar menu item.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet toolbarMenuMainItem = {\n    \"guid\": \"asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}\",\n    \"tabs\": [oToolbarMenuTab]\n};\n```",
         "properties": [
             {
                 "type": {
@@ -6611,7 +6611,7 @@
             "office-js-api/Examples/Plugins/Common/Enumeration/ToolbarMenuMainItem.js"
         ],
         "examples": [
-            "var oToolbarMenuMainItem = {\n    \"guid\": \"asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}\",\n    \"tabs\": [oToolbarMenuTab]\n};"
+            "let toolbarMenuMainItem = {\n    \"guid\": \"asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}\",\n    \"tabs\": [oToolbarMenuTab]\n};"
         ]
     },
     {
@@ -6623,7 +6623,7 @@
         "kind": "function",
         "since": "8.1.0",
         "name": "AddToolbarMenuItem",
-        "description": "Adds an item to the toolbar menu.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nvar oToolbarMenuItem = {\n    \"id\": \"MeaningItem\",\n    \"type\": \"button\",\n    \"text\": \"Meaning\",\n    \"hint\": \"Meaning\",\n    \"icons\": \"resources/light/icon.png\",\n    \"disabled\": false,\n    \"enableToggle\": false,\n    \"lockInViewMode\": false,\n    \"separator\": true,\n    \"split\": true,\n    \"items\": [\n        {\n            \"id\": \"onMeaningT\",\n            \"text\": \"Explain text in comment\"\n        },\n        {\n            \"id\": \"onFixSpelling\",\n            \"text\": \"Fix spelling & grammar\"\n        },\n        {\n            \"id\": \"onMakeLonger\",\n            \"text\": \"Make longer\"\n        },\n        {\n            \"id\": \"onMakeShorter\",\n            \"text\": \"Make shorter\"\n        }\n    ]\n};\nvar oToolbarMenuTab = {\n    \"id\": \"ChatGPT\",\n    \"text\": \"AI Assistant\",\n    \"items\": [oToolbarMenuItem]\n};\nvar oToolbarMenuMainItem = {\n    \"guid\": \"asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}\",\n    \"tabs\": [oToolbarMenuTab]\n};\nwindow.Asc.plugin.executeMethod (\"AddToolbarMenuItem\", [[oToolbarMenuMainItem]]);\n```",
+        "description": "Adds an item to the toolbar menu.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"cell\"}\nlet toolbarMenuItem = {\n    \"id\": \"MeaningItem\",\n    \"type\": \"button\",\n    \"text\": \"Meaning\",\n    \"hint\": \"Meaning\",\n    \"icons\": \"resources/light/icon.png\",\n    \"disabled\": false,\n    \"enableToggle\": false,\n    \"lockInViewMode\": false,\n    \"separator\": true,\n    \"split\": true,\n    \"items\": [\n        {\n            \"id\": \"onMeaningT\",\n            \"text\": \"Explain text in comment\"\n        },\n        {\n            \"id\": \"onFixSpelling\",\n            \"text\": \"Fix spelling & grammar\"\n        },\n        {\n            \"id\": \"onMakeLonger\",\n            \"text\": \"Make longer\"\n        },\n        {\n            \"id\": \"onMakeShorter\",\n            \"text\": \"Make shorter\"\n        }\n    ]\n};\nlet toolbarMenuTab = {\n    \"id\": \"ChatGPT\",\n    \"text\": \"AI Assistant\",\n    \"items\": [toolbarMenuItem]\n};\nlet toolbarMenuMainItem = {\n    \"guid\": \"asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}\",\n    \"tabs\": [toolbarMenuTab]\n};\nwindow.Asc.plugin.executeMethod (\"AddToolbarMenuItem\", [[toolbarMenuMainItem]]);\n```",
         "memberof": "Api",
         "longname": "AddToolbarMenuItem",
         "alias": "AddToolbarMenuItem",
@@ -6655,7 +6655,7 @@
             "office-js-api/Examples/Plugins/Common/Api/Methods/AddToolbarMenuItem.js"
         ],
         "examples": [
-            "var oToolbarMenuItem = {\n    \"id\": \"MeaningItem\",\n    \"type\": \"button\",\n    \"text\": \"Meaning\",\n    \"hint\": \"Meaning\",\n    \"icons\": \"resources/light/icon.png\",\n    \"disabled\": false,\n    \"enableToggle\": false,\n    \"lockInViewMode\": false,\n    \"separator\": true,\n    \"split\": true,\n    \"items\": [\n        {\n            \"id\": \"onMeaningT\",\n            \"text\": \"Explain text in comment\"\n        },\n        {\n            \"id\": \"onFixSpelling\",\n            \"text\": \"Fix spelling & grammar\"\n        },\n        {\n            \"id\": \"onMakeLonger\",\n            \"text\": \"Make longer\"\n        },\n        {\n            \"id\": \"onMakeShorter\",\n            \"text\": \"Make shorter\"\n        }\n    ]\n};\nvar oToolbarMenuTab = {\n    \"id\": \"ChatGPT\",\n    \"text\": \"AI Assistant\",\n    \"items\": [oToolbarMenuItem]\n};\nvar oToolbarMenuMainItem = {\n    \"guid\": \"asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}\",\n    \"tabs\": [oToolbarMenuTab]\n};\nwindow.Asc.plugin.executeMethod (\"AddToolbarMenuItem\", [[oToolbarMenuMainItem]]);"
+            "let toolbarMenuItem = {\n    \"id\": \"MeaningItem\",\n    \"type\": \"button\",\n    \"text\": \"Meaning\",\n    \"hint\": \"Meaning\",\n    \"icons\": \"resources/light/icon.png\",\n    \"disabled\": false,\n    \"enableToggle\": false,\n    \"lockInViewMode\": false,\n    \"separator\": true,\n    \"split\": true,\n    \"items\": [\n        {\n            \"id\": \"onMeaningT\",\n            \"text\": \"Explain text in comment\"\n        },\n        {\n            \"id\": \"onFixSpelling\",\n            \"text\": \"Fix spelling & grammar\"\n        },\n        {\n            \"id\": \"onMakeLonger\",\n            \"text\": \"Make longer\"\n        },\n        {\n            \"id\": \"onMakeShorter\",\n            \"text\": \"Make shorter\"\n        }\n    ]\n};\nlet toolbarMenuTab = {\n    \"id\": \"ChatGPT\",\n    \"text\": \"AI Assistant\",\n    \"items\": [toolbarMenuItem]\n};\nlet toolbarMenuMainItem = {\n    \"guid\": \"asc.{9DC93CDB-B576-4F0C-B55E-FCC9C48DD007}\",\n    \"tabs\": [toolbarMenuTab]\n};\nwindow.Asc.plugin.executeMethod (\"AddToolbarMenuItem\", [[toolbarMenuMainItem]]);"
         ]
     },
     {

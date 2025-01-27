@@ -14893,7 +14893,7 @@
     },
     {
         "comment": "/**\n\t * Returns a comment from the current document by its ID.\n\t * @memberof ApiDocument\n\t * @typeofeditors [\"CDE\"]\n\t * @param {string} sId - The comment ID.\n\t * @returns {?ApiComment}\n\t * @see office-js-api/Examples/{Editor}/ApiDocument/Methods/GetCommentById.js\n\t */",
-        "description": "Returns a comment from the current document by its ID.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"word\"}\nlet doc = Api.GetDocument();\nlet paragraph = doc.GetElement(0);\nparagraph.AddText(\"This is just a sample text\");\nApi.AddComment(paragraph, \"comment\", \"John Smith\");\nlet comments = doc.GetAllComments();\nlet id = comments[0].GetId();\nlet comment = doc.GetCommentById(id);\nlet author = comment.GetAutorName();\nparagraph = Api.CreateParagraph();\nparagraph.AddText(\"Comment author name: \" + author);\ndoc.Push(paragraph);\n```",
+        "description": "Returns a comment from the current document by its ID.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"word\"}\nlet doc = Api.GetDocument();\nlet paragraph = doc.GetElement(0);\nparagraph.AddText(\"This is just a sample text\");\nApi.AddComment(paragraph, \"comment\", \"John Smith\");\nlet comments = doc.GetAllComments();\nlet comment = doc.GetCommentById(comments[0].GetId());\nlet author = comment.GetAutorName();\nparagraph = Api.CreateParagraph();\nparagraph.AddText(\"Comment author name: \" + author);\ndoc.Push(paragraph);\n```",
         "memberof": "ApiDocument",
         "params": [
             {
@@ -46518,7 +46518,7 @@
     },
     {
         "comment": "/**\n\t * Returns the current comment ID. If the comment doesn't have an ID, null is returned.\n\t * @memberof ApiComment\n\t * @typeofeditors [\"CDE\"]\n\t * @returns {?string}\n\t * @see office-js-api/Examples/{Editor}/ApiComment/Methods/GetId.js\n\t */",
-        "description": "Returns the current comment ID. If the comment doesn't have an ID, null is returned.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"word\"}\nlet doc = Api.GetDocument();\nlet paragraph = doc.GetElement(0);\nparagraph.AddText(\"This is just a sample text\");\nApi.AddComment(paragraph, \"comment\", \"John Smith\");\nlet comments = doc.GetAllComments();\nlet id = comments[0].GetId();\nlet comment = doc.GetCommentById(id);\nlet authorName = comment.GetAutorName();\nparagraph = Api.CreateParagraph();\nparagraph.AddText(\"Comment author name: \" + authorName);\ndoc.Push(paragraph);\n```",
+        "description": "Returns the current comment ID. If the comment doesn't have an ID, null is returned.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"word\"}\nlet doc = Api.GetDocument();\nlet paragraph = doc.GetElement(0);\nparagraph.AddText(\"This is just a sample text\");\nApi.AddComment(paragraph, \"comment\", \"John Smith\");\nlet comments = doc.GetAllComments();\nlet comment = doc.GetCommentById(comments[0].GetId());\nlet authorName = comment.GetAutorName();\nparagraph = Api.CreateParagraph();\nparagraph.AddText(\"Comment author name: \" + authorName);\ndoc.Push(paragraph);\n```",
         "memberof": "ApiComment",
         "params": null,
         "returns": [

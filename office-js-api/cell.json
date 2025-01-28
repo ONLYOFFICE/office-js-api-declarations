@@ -7158,7 +7158,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 389,
+            "lineno": 383,
             "columnno": 4
         },
         "properties": null,
@@ -15989,8 +15989,8 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 403,
-            "columnno": 1
+            "lineno": 389,
+            "columnno": 4
         },
         "properties": null,
         "see": null,

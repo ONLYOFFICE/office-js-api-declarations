@@ -6104,7 +6104,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 389,
+            "lineno": 383,
             "columnno": 4
         },
         "properties": null,
@@ -16285,8 +16285,8 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 403,
-            "columnno": 1
+            "lineno": 389,
+            "columnno": 4
         },
         "properties": null,
         "see": null,
@@ -16319,6 +16319,38 @@
                 ]
             }
         }
+    },
+    {
+        "comment": "/**\n     * Returns the main presentation.\n     * @typeofeditors [\"CPE\"]\n     * @memberof Api\n     * @returns {ApiPresentation}\n     * @see office-js-api/Examples/{Editor}/Api/Methods/GetPresentation.js\n\t */",
+        "description": "Returns the main presentation.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"slide\"}\nvar oPresentation = Api.GetPresentation();\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nvar oChart = Api.CreateChart(\"bar3D\", [\n\t[200, 240, 280],\n\t[250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noChart.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noChart.SetHorAxisTitle(\"Year\", 11);\noChart.SetLegendPos(\"bottom\");\noChart.SetShowDataLabels(false, false, true, false);\noChart.SetTitle(\"Financial Overview\", 13);\noChart.SetSize(300 * 36000, 130 * 36000);\noChart.SetPosition(608400, 1267200);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(51, 51, 51));\noChart.SetSeriesFill(oFill, 0, false);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 111, 61));\noChart.SetSeriesFill(oFill, 1, false);\noSlide.AddObject(oChart);\n```",
+        "memberof": "Api",
+        "params": null,
+        "returns": [
+            {
+                "type": {
+                    "names": [
+                        "ApiPresentation"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "ApiPresentation"
+                    }
+                }
+            }
+        ],
+        "name": "GetPresentation",
+        "longname": "Api#GetPresentation",
+        "kind": "function",
+        "scope": "instance",
+        "type": null,
+        "properties": null,
+        "meta": {
+            "lineno": 409,
+            "columnno": 4
+        },
+        "see": [
+            "office-js-api/Examples/Slide/Api/Methods/GetPresentation.js"
+        ]
     },
     {
         "comment": "/**\n     * Creates a new slide master.\n     * @typeofeditors [\"CPE\"]\n     * @memberof Api\n     * @param {ApiTheme} [oTheme = ApiPresentation.GetMaster(0).GetTheme()] - The presentation theme object.\n     * @returns {?ApiMaster} - returns null if presentation theme doesn't exist.\n     * @see office-js-api/Examples/{Editor}/Api/Methods/CreateMaster.js\n\t */",

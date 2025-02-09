@@ -257,10 +257,84 @@
         ]
     },
     {
-        "comment": "/**\n     * @typedef {Object} ContentControlProperties\n\t * The content control properties.\n     * @property {string} Id - A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.\n     * @property {string} Tag - A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in the code.\n     * @property {ContentControlLock} Lock - A value that defines if it is possible to delete and/or edit the content control or not.\n     * @property {string} InternalId - A unique internal identifier of the content control.\n\t * @property {string} Alias - The alias attribute.\n\t * @property {string} PlaceHolderText - The content control placeholder text.\n     * @property {number} Appearance - Defines if the content control is shown as the bounding box (**1**) or not (**2**).\n     * @property {object} Color - The color for the current content control in the RGB format.\n     * @property {number} Color.R - Red color component value.\n     * @property {number} Color.G - Green color component value.\n     * @property {number} Color.B - Blue color component value.\n     * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControlProperties.js\n\t */",
+        "comment": "/**\n\t * @typedef {Object} Color\n\t * @property {number} Color.R - Red color component value.\n\t * @property {number} Color.G - Green color component value.\n\t * @property {number} Color.B - Blue color component value.\n\t * @property {number} Color.A - Alpha color component value.\n\t */",
         "meta": {
             "lineno": 83,
-            "columnno": 4
+            "columnno": 1
+        },
+        "kind": "typedef",
+        "name": "Color",
+        "type": {
+            "names": [
+                "Object"
+            ],
+            "parsedType": {
+                "type": "NameExpression",
+                "name": "Object"
+            }
+        },
+        "properties": [
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "Color.R",
+                "description": "Red color component value."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "Color.G",
+                "description": "Green color component value."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "Color.B",
+                "description": "Blue color component value."
+            },
+            {
+                "type": {
+                    "names": [
+                        "number"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "number"
+                    }
+                },
+                "name": "Color.A",
+                "description": "Alpha color component value."
+            }
+        ],
+        "longname": "Color",
+        "scope": "global"
+    },
+    {
+        "comment": "/**\n\t * @typedef {Object} ContentControlProperties\n\t * The content control properties.\n\t * @property {string} Id - A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.\n\t * @property {string} Tag - A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in the code.\n\t * @property {ContentControlLock} Lock - A value that defines if it is possible to delete and/or edit the content control or not.\n\t * @property {string} InternalId - A unique internal identifier of the content control.\n\t * @property {string} Alias - The alias attribute.\n\t * @property {string} PlaceHolderText - The content control placeholder text.\n\t * @property {number} Appearance - Defines if the content control is shown as the bounding box (**1**) or not (**2**).\n\t * @property {Color} Color - The color for the current content control in the RGB format.\n\t * @property {Object} Shd - Background shading properties\n\t * @property {Color} Shd.Color - Shading color in RGBA format  \n\t * @property {Object} Border - Border properties\n\t * @property {Color} Border.Color - Border color in RGBA format\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControlProperties.js\n\t */",
+        "meta": {
+            "lineno": 91,
+            "columnno": 1
         },
         "kind": "typedef",
         "name": "ContentControlProperties",
@@ -369,11 +443,11 @@
             {
                 "type": {
                     "names": [
-                        "object"
+                        "Color"
                     ],
                     "parsedType": {
                         "type": "NameExpression",
-                        "name": "object"
+                        "name": "Color"
                     }
                 },
                 "name": "Color",
@@ -382,41 +456,54 @@
             {
                 "type": {
                     "names": [
-                        "number"
+                        "Object"
                     ],
                     "parsedType": {
                         "type": "NameExpression",
-                        "name": "number"
+                        "name": "Object"
                     }
                 },
-                "name": "Color.R",
-                "description": "Red color component value."
+                "name": "Shd",
+                "description": "Background shading properties"
             },
             {
                 "type": {
                     "names": [
-                        "number"
+                        "Color"
                     ],
                     "parsedType": {
                         "type": "NameExpression",
-                        "name": "number"
+                        "name": "Color"
                     }
                 },
-                "name": "Color.G",
-                "description": "Green color component value."
+                "name": "Shd.Color",
+                "description": "Shading color in RGBA format"
             },
             {
                 "type": {
                     "names": [
-                        "number"
+                        "Object"
                     ],
                     "parsedType": {
                         "type": "NameExpression",
-                        "name": "number"
+                        "name": "Object"
                     }
                 },
-                "name": "Color.B",
-                "description": "Blue color component value."
+                "name": "Border",
+                "description": "Border properties"
+            },
+            {
+                "type": {
+                    "names": [
+                        "Color"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "Color"
+                    }
+                },
+                "name": "Border.Color",
+                "description": "Border color in RGBA format"
             }
         ],
         "longname": "ContentControlProperties",
@@ -431,7 +518,7 @@
     {
         "comment": "/**\n\t * @typedef {('none' | 'comments' | 'forms' | 'readOnly')} DocumentEditingRestrictions\n\t * The document editing restrictions:\n\t * <b>none</b> - no editing restrictions,\n\t * <b>comments</b> - allows editing comments,\n\t * <b>forms</b> - allows editing form fields,\n\t * <b>readOnly</b> - does not allow editing.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/DocumentEditingRestrictions.js\n\t */",
         "meta": {
-            "lineno": 100,
+            "lineno": 109,
             "columnno": 1
         },
         "kind": "typedef",
@@ -478,7 +565,7 @@
     {
         "comment": "/**\n\t * @typedef {(\"entirely\" | \"beforeCursor\" | \"afterCursor\")} TextPartType\n\t * Specifies if the whole text or only its part will be returned or replaced:\n\t * <b>entirely</b> - replaces/returns the whole text,\n\t * <b>beforeCursor</b> - replaces/returns only the part of the text before the cursor,\n\t * <b>afterCursor</b> - replaces/returns only the part of the text after the cursor.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/TextPartType.js\n\t */",
         "meta": {
-            "lineno": 110,
+            "lineno": 119,
             "columnno": 1
         },
         "kind": "typedef",
@@ -520,7 +607,7 @@
     {
         "comment": "/**\n     * Opens a file with fields.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias OpenFile\n     * @param {Uint8Array} binaryFile - A file in the format of the 8-bit unsigned integer array.\n     * @param {string[]} fields - A list of field values.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/OpenFile.js\n\t */",
         "meta": {
-            "lineno": 130,
+            "lineno": 139,
             "columnno": 4
         },
         "kind": "function",
@@ -576,7 +663,7 @@
     {
         "comment": "/**\n     * Returns all fields as a text.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias GetFields\n     * @returns {string[]} - A list of field values.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetFields.js\n\t */",
         "meta": {
-            "lineno": 150,
+            "lineno": 159,
             "columnno": 4
         },
         "kind": "function",
@@ -617,7 +704,7 @@
     {
         "comment": "/**\n     * Inserts the content control containing data. The data is specified by the JS code for {@link /docbuilder/basic Document Builder}, or by a link to the shared document.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias InsertAndReplaceContentControls\n     * @param {ContentControlPropertiesAndContent[]} arrDocuments - An array of properties and contents of the content control.\n     * @return {ContentControlProperties[]} - An array of created content control properties.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/InsertAndReplaceContentControls.js\n\t */",
         "meta": {
-            "lineno": 163,
+            "lineno": 172,
             "columnno": 4
         },
         "kind": "function",
@@ -682,7 +769,7 @@
     {
         "comment": "/**\n     * Removes several content controls.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias RemoveContentControls\n     * @param {ContentControl[]} arrDocuments - An array of content control internal IDs. Example: [{\"InternalId\": \"5_556\"}].\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveContentControls.js\n\t */",
         "meta": {
-            "lineno": 176,
+            "lineno": 185,
             "columnno": 4
         },
         "kind": "function",
@@ -725,7 +812,7 @@
     {
         "comment": "/**\n     * Returns information about all the content controls that have been added to the page.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias GetAllContentControls\n     * @returns {ContentControl[]} - An array of content control objects.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetAllContentControls.js\n\t */",
         "meta": {
-            "lineno": 189,
+            "lineno": 198,
             "columnno": 4
         },
         "kind": "function",
@@ -766,7 +853,7 @@
     {
         "comment": "/**\n     * @typedef {Object} ContentControlParentPr\n     * The content control parent properties.\n     * @property  {object} Parent - The content control parent. For example, oParagraph.\n     * @property  {number} Pos - The content control position within the parent object.\n     * @property  {number} Count - A number of elements in the parent object.\n     * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControlParentPr.js\n\t */",
         "meta": {
-            "lineno": 202,
+            "lineno": 211,
             "columnno": 1
         },
         "kind": "typedef",
@@ -834,7 +921,7 @@
     {
         "comment": "/**\n     * Removes the currently selected content control retaining all its contents. The content control where the mouse cursor is currently positioned will be removed.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias RemoveContentControl\n     * @param {string} InternalId - A unique internal identifier of the content control.\n     * @returns {ContentControlParentPr} - An object which contains the following values: Parent - content control parent, Pos - content control position within the parent object, Count - a number of elements in the parent object.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveContentControl.js\n\t */",
         "meta": {
-            "lineno": 220,
+            "lineno": 229,
             "columnno": 4
         },
         "kind": "function",
@@ -881,7 +968,7 @@
     {
         "comment": "/**\n     * Returns an identifier of the selected content control (i.e. the content control where the mouse cursor is currently positioned).\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias GetCurrentContentControl\n     * @returns {string} - The content control internal ID.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetCurrentContentControl.js\n\t */",
         "meta": {
-            "lineno": 232,
+            "lineno": 241,
             "columnno": 4
         },
         "kind": "function",
@@ -913,7 +1000,7 @@
     {
         "comment": "/**\n     * Returns the current content control properties.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias GetCurrentContentControlPr\n\t * @param {string} contentFormat - The content format (\"none\", \"text\", \"html\", \"ole\" or \"desktop\").\n     * @returns {ContentControlProperties} - The content control properties.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetCurrentContentControlPr.js\n\t */",
         "meta": {
-            "lineno": 245,
+            "lineno": 254,
             "columnno": 1
         },
         "kind": "function",
@@ -960,7 +1047,7 @@
     {
         "comment": "/**\n     * Selects the specified content control.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias SelectContentControl\n     * @param {string} id - A unique internal identifier of the content control.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SelectContentControl.js\n\t */",
         "meta": {
-            "lineno": 312,
+            "lineno": 321,
             "columnno": 4
         },
         "kind": "function",
@@ -994,7 +1081,7 @@
     {
         "comment": "/**\n     * Moves a cursor to the specified content control.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias MoveCursorToContentControl\n     * @param {string} id - A unique internal identifier of the content control.\n     * @param {boolean} [isBegin = false] - Defines if the cursor position changes in the content control. By default, a cursor will be placed to the content control begin (**false**).\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/MoveCursorToContentControl.js\n\t */",
         "meta": {
-            "lineno": 329,
+            "lineno": 338,
             "columnno": 4
         },
         "kind": "function",
@@ -1043,7 +1130,7 @@
     {
         "comment": "/**\n     * Removes the selected content from the document.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias RemoveSelectedContent\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveSelectedContent.js\n\t */",
         "meta": {
-            "lineno": 344,
+            "lineno": 353,
             "columnno": 4
         },
         "kind": "function",
@@ -1062,7 +1149,7 @@
     {
         "comment": "/**\n\t * @typedef {Object} comment\n\t * Comment object.\n\t * @property {string} Id - The comment ID.\n\t * @property {CommentData} Data - An object which contains the comment data.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/comment.js\n\t */",
         "meta": {
-            "lineno": 358,
+            "lineno": 367,
             "columnno": 1
         },
         "kind": "typedef",
@@ -1117,7 +1204,7 @@
     {
         "comment": "/**\n\t * @typedef {Object} CommentData\n\t * The comment data.\n\t * @property {string} UserName - The comment author.\n\t * @property {string} QuoteText - The quote comment text.\n\t * @property {string} Text - The comment text.\n\t * @property {string} Time - The time when the comment was posted (in milliseconds).\n\t * @property {boolean} Solved - Specifies if the comment is resolved (**true**) or not (**false**).\n\t * @property {CommentData[]} Replies - An array containing the comment replies represented as the *CommentData* object.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/CommentData.js\n\t */",
         "meta": {
-            "lineno": 366,
+            "lineno": 375,
             "columnno": 1
         },
         "kind": "typedef",
@@ -1233,7 +1320,7 @@
     {
         "comment": "/**\n\t * Adds a comment to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddComment\n\t * @param {CommentData}  oCommentData - An object which contains the comment data.\n\t * @return {string | null} - The comment ID in the string format or null if the comment cannot be added.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddComment.js\n\t */",
         "meta": {
-            "lineno": 387,
+            "lineno": 396,
             "columnno": 1
         },
         "kind": "function",
@@ -1289,7 +1376,7 @@
     {
         "comment": "/**\n     * Moves a cursor to the beginning of the current editing area (document body, footer/header, footnote, or autoshape).\n\t * This method is similar to pressing the <b>Ctrl + Home</b> keyboard shortcut.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias MoveCursorToStart\n     * @param {boolean} isMoveToMainContent - This flag ignores the current position and always moves a cursor to the beginning of the document body.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/MoveCursorToStart.js\n\t */",
         "meta": {
-            "lineno": 407,
+            "lineno": 416,
             "columnno": 4
         },
         "kind": "function",
@@ -1323,7 +1410,7 @@
     {
         "comment": "/**\n     * Moves a cursor to the end of the current editing area (document body, footer/header, footnote, or autoshape).\n\t * This method is similar to pressing the <b>Ctrl + End</b> keyboard shortcut.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias MoveCursorToEnd\n     * @param {boolean} isMoveToMainContent - This flag ignores the current position and always moves a cursor to the end of the document body.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/MoveCursorToEnd.js\n\t */",
         "meta": {
-            "lineno": 427,
+            "lineno": 436,
             "columnno": 4
         },
         "kind": "function",
@@ -1357,7 +1444,7 @@
     {
         "comment": "/**\n     * Finds and replaces the text.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias SearchAndReplace\n     * @param {Object} oProperties - An object which contains the search and replacement strings.\n     * @param {string} oProperties.searchString - The search string.\n     * @param {string} oProperties.replaceString - The replacement string.\n     * @param {boolean} [oProperties.matchCase=true] - Case sensitive or not.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SearchAndReplace.js\n\t */",
         "meta": {
-            "lineno": 449,
+            "lineno": 458,
             "columnno": 4
         },
         "kind": "function",
@@ -1432,7 +1519,7 @@
     {
         "comment": "/**\n\t * Finds and selects the next occurrence of the text starting at the current position.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias SearchNext\n\t * @param {Object} oProperties - An object which contains the search string.\n\t * @param {string} oProperties.searchString - The search string.\n\t * @param {boolean} [oProperties.matchCase=true] - Case sensitive or not.\n\t * @param {boolean} [isForward=true] - Search direction.\n\t * @returns {boolean} returns false if text was not found\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SearchNext.js\n\t */",
         "meta": {
-            "lineno": 475,
+            "lineno": 484,
             "columnno": 1
         },
         "kind": "function",
@@ -1522,7 +1609,7 @@
     {
         "comment": "/**\n     * Returns file content in the HTML format.\n     * @memberof Api\n     * @typeofeditors [\"CDE\"]\n     * @alias GetFileHTML\n     * @return {string} - The HTML file content in the string format.\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetFileHTML.js\n\t */",
         "meta": {
-            "lineno": 501,
+            "lineno": 510,
             "columnno": 4
         },
         "kind": "function",
@@ -1554,7 +1641,7 @@
     {
         "comment": "/**\n\t * Returns all the comments from the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetAllComments\n\t * @returns {comment[]} - An array of comment objects containing the comment data.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetAllComments.js\n\t */",
         "meta": {
-            "lineno": 513,
+            "lineno": 522,
             "columnno": 1
         },
         "kind": "function",
@@ -1595,7 +1682,7 @@
     {
         "comment": "/**\n\t * Removes the specified comments.\n\t * @param {string[]} arrIds - An array which contains the IDs of the specified comments.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias RemoveComments\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveComments.js\n\t */",
         "meta": {
-            "lineno": 538,
+            "lineno": 547,
             "columnno": 1
         },
         "kind": "function",
@@ -1638,7 +1725,7 @@
     {
         "comment": "/**\n\t * Changes the specified comment.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias ChangeComment\n\t * @param {string} sId - The comment ID.\n\t * @param {CommentData} oCommentData - An object which contains the new comment data.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ChangeComment.js\n\t */",
         "meta": {
-            "lineno": 551,
+            "lineno": 560,
             "columnno": 1
         },
         "kind": "function",
@@ -1685,7 +1772,7 @@
     {
         "comment": "/**\n\t * Moves a cursor to the specified comment.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias MoveToComment\n\t * @param {string} sId - The comment ID.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/MoveToComment.js\n\t */",
         "meta": {
-            "lineno": 582,
+            "lineno": 591,
             "columnno": 1
         },
         "kind": "function",
@@ -1719,7 +1806,7 @@
     {
         "comment": "/**\n\t * Sets the display mode for track changes.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias SetDisplayModeInReview\n\t * @param {string} [sMode=\"edit\"] - The display mode:\n\t * <b>edit</b> - all changes are displayed,\n\t * <b>simple</b> - all changes are displayed but the balloons are turned off,\n\t * <b>final</b> - all accepted changes are displayed,\n\t * <b>original</b> - all rejected changes are displayed.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SetDisplayModeInReview.js\n\t */",
         "meta": {
-            "lineno": 599,
+            "lineno": 608,
             "columnno": 1
         },
         "kind": "function",
@@ -1755,7 +1842,7 @@
     {
         "comment": "/**\n\t * Adds an empty content control to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddContentControl\n\t * @param {ContentControlType} type - A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block), <b>2</b> (inline), <b>3</b> (row), or <b>4</b> (cell).\n\t * @param {ContentControlProperties}  [commonPr = {}] - The common content control properties.\n\t * @returns {ContentControl} - A JSON object containing the data about the created content control.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddContentControl.js\n\t */",
         "meta": {
-            "lineno": 624,
+            "lineno": 633,
             "columnno": 1
         },
         "kind": "function",
@@ -1817,7 +1904,7 @@
     {
         "comment": "/**\n\t * @typedef {Object} ContentControlCheckBoxProperties\n\t * The content control checkbox properties.\n\t * @property {boolean} Checked - Defines if the content control checkbox is checked or not.\n\t * @property {number} CheckedSymbol - A symbol in the HTML code format that is used when the checkbox is checked.\n\t * @property {number} UncheckedSymbol - A symbol in the HTML code format that is used when the checkbox is not checked.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControlCheckBoxProperties.js\n\t */",
         "meta": {
-            "lineno": 634,
+            "lineno": 643,
             "columnno": 1
         },
         "kind": "typedef",
@@ -1885,7 +1972,7 @@
     {
         "comment": "/**\n\t * Adds an empty content control checkbox to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddContentControlCheckBox\n\t * @param {ContentControlCheckBoxProperties}  [checkBoxPr = {}] - The content control checkbox properties.\n\t * @param {ContentControlProperties}  [commonPr = {}] - The common content control properties.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddContentControlCheckBox.js\n\t */",
         "meta": {
-            "lineno": 652,
+            "lineno": 661,
             "columnno": 1
         },
         "kind": "function",
@@ -1936,7 +2023,7 @@
     {
         "comment": "/**\n\t * Adds an empty content control picture to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddContentControlPicture\n\t * @param {ContentControlProperties}  [commonPr = {}] - The common content control properties.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddContentControlPicture.js\n\t */",
         "meta": {
-            "lineno": 679,
+            "lineno": 688,
             "columnno": 1
         },
         "kind": "function",
@@ -1972,7 +2059,7 @@
     {
         "comment": "/**\n\t * Adds an empty content control list to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddContentControlList\n\t * @param {ContentControlType} type - A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (combo box), <b>0</b> (dropdown list).\n\t * @param {Array<String, String>}  [List = [{Display, Value}]] - A list of the content control elements that consists of two items: <b>Display</b> - an item that will be displayed to the user in the content control list, <b>Value</b> - a value of each item from the content control list.\n\t * @param {ContentControlProperties}  [commonPr = {}] - The common content control properties.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddContentControlList.js\n\t */",
         "meta": {
-            "lineno": 695,
+            "lineno": 704,
             "columnno": 1
         },
         "kind": "function",
@@ -2049,7 +2136,7 @@
     {
         "comment": "/**\n\t * @typedef {Object} ContentControlDatePickerProperties\n\t * The content control datepicker properties.\n\t * @property {string} DateFormat - A format in which the date will be displayed.\n\t * For example: *\"MM/DD/YYYY\", \"dddd\\,\\ mmmm\\ dd\\,\\ yyyy\", \"DD\\ MMMM\\ YYYY\", \"MMMM\\ DD\\,\\ YYYY\", \"DD-MMM-YY\", \"MMMM\\ YY\", \"MMM-YY\", \"MM/DD/YYYY\\ hh:mm\\ AM/PM\", \"MM/DD/YYYY\\ hh:mm:ss\\ AM/PM\", \"hh:mm\", \"hh:mm:ss\", \"hh:mm\\ AM/PM\", \"hh:mm:ss:\\ AM/PM\"*.\n\t * @property {object} Date - The current date and time.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContentControlDatePickerProperties.js\n\t */",
         "meta": {
-            "lineno": 711,
+            "lineno": 720,
             "columnno": 1
         },
         "kind": "typedef",
@@ -2104,7 +2191,7 @@
     {
         "comment": "/**\n\t * Adds an empty content control datepicker to the document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddContentControlDatePicker\n\t * @param {ContentControlDatePickerProperties}  [datePickerPr = {}] - The content control datepicker properties.\n\t * @param {ContentControlProperties}  [commonPr = {}] - The common content control properties.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddContentControlDatePicker.js\n\t */",
         "meta": {
-            "lineno": 729,
+            "lineno": 738,
             "columnno": 1
         },
         "kind": "function",
@@ -2155,7 +2242,7 @@
     {
         "comment": "/**\n\t * @typedef {Object} OLEObjectData\n\t * The OLE object data.\n\t * @property {string} Data - OLE object data (internal format).\n\t * @property {string} ImageData - An image in the base64 format stored in the OLE object and used by the plugin.\n\t * @property {string} ApplicationId - An identifier of the plugin which can edit the current OLE object and must be of the *asc.{UUID}* type.\n\t * @property {string} InternalId - The OLE object identifier which is used to work with OLE object added to the document.\n\t * @property {string} ParaDrawingId - An identifier of the drawing object containing the current OLE object.\n\t * @property {number} Width - The OLE object width measured in millimeters.\n\t * @property {number} Height - The OLE object height measured in millimeters.\n\t * @property {?number} WidthPix - The OLE object image width in pixels.\n\t * @property {?number} HeightPix - The OLE object image height in pixels.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/OLEObjectData.js\n\t */",
         "meta": {
-            "lineno": 747,
+            "lineno": 756,
             "columnno": 1
         },
         "kind": "typedef",
@@ -2303,7 +2390,7 @@
     {
         "comment": "/**\n\t * @typedef {Object} AddinFieldData\n\t * The addin field data.\n\t * @property {string} FieldId - Field identifier.\n\t * @property {string} Value - Field value.\n\t * @property {string} Content - Field text content.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/AddinFieldData.js\n\t */",
         "meta": {
-            "lineno": 762,
+            "lineno": 771,
             "columnno": 1
         },
         "kind": "typedef",
@@ -2371,7 +2458,7 @@
     {
         "comment": "/**\n\t * Returns all OLE object data for objects which can be opened by the specified plugin.\n\t * If *sPluginId* is not defined, this method returns all OLE objects contained in the currrent document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetAllOleObjects\n\t * @param {?string} sPluginId - Plugin identifier. It must be of the *asc.{UUID}* type.\n\t * @returns {OLEObjectData[]} - An array of the OLEObjectData objects containing the data about the OLE object parameters.\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetAllOleObjects.js\n\t */",
         "meta": {
-            "lineno": 782,
+            "lineno": 791,
             "columnno": 1
         },
         "kind": "function",
@@ -2429,7 +2516,7 @@
     {
         "comment": "/**\n\t * Removes the OLE object from the document by its internal ID.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias RemoveOleObject\n\t * @param {string} sInternalId - The OLE object identifier which is used to work with OLE object added to the document.\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveOleObject.js\n\t */",
         "meta": {
-            "lineno": 805,
+            "lineno": 814,
             "columnno": 1
         },
         "kind": "function",
@@ -2464,7 +2551,7 @@
     {
         "comment": "/**\n\t * Removes several OLE objects from the document by their internal IDs.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias RemoveOleObjects\n\t * @param {OLEObjectData[]} arrObjects An array of the identifiers which are used to work with OLE objects added to the document. Example: [{\"InternalId\": \"5_556\"}].\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveOleObjects.js\n\t */",
         "meta": {
-            "lineno": 824,
+            "lineno": 833,
             "columnno": 1
         },
         "kind": "function",
@@ -2508,7 +2595,7 @@
     {
         "comment": "/**\n\t * Selects the specified OLE object.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias SelectOleObject\n\t * @param {string} id - The OLE object identifier which is used to work with OLE object added to the document.\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SelectOleObject.js\n\t */",
         "meta": {
-            "lineno": 849,
+            "lineno": 858,
             "columnno": 1
         },
         "kind": "function",
@@ -2543,7 +2630,7 @@
     {
         "comment": "/**\n\t * Inserts the OLE object at the current document position.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias InsertOleObject\n\t * @param {OLEObjectData} NewObject - The OLEObjectData object.\n\t * @param {?boolean} bSelect - Defines if the OLE object will be selected after inserting into the document (**true**) or not (**false**).\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/InsertOleObject.js\n\t */",
         "meta": {
-            "lineno": 873,
+            "lineno": 882,
             "columnno": 1
         },
         "kind": "function",
@@ -2592,7 +2679,7 @@
     {
         "comment": "/**\n\t * Changes the OLE object with the *InternalId* specified in OLE object data.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias ChangeOleObject\n\t * @param {OLEObjectData} ObjectData - The OLEObjectData object.\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ChangeOleObject.js\n\t */",
         "meta": {
-            "lineno": 898,
+            "lineno": 907,
             "columnno": 1
         },
         "kind": "function",
@@ -2627,7 +2714,7 @@
     {
         "comment": "/**\n\t * Changes multiple OLE objects with the *InternalIds* specified in OLE object data.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias ChangeOleObjects\n\t * @param {OLEObjectData[]} arrObjectData - An array of OLE object data.\n\t * @since 7.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ChangeOleObjects.js\n\t */",
         "meta": {
-            "lineno": 911,
+            "lineno": 920,
             "columnno": 1
         },
         "kind": "function",
@@ -2671,7 +2758,7 @@
     {
         "comment": "/**\n\t * Accepts review changes.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AcceptReviewChanges\n\t * @param {boolean} [isAll=false] Specifies if all changes will be accepted (**true**) or only changes from the current selection (**false**).\n\t * @since 7.2.1\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AcceptReviewChanges.js\n\t */",
         "meta": {
-            "lineno": 1007,
+            "lineno": 1016,
             "columnno": 1
         },
         "kind": "function",
@@ -2708,7 +2795,7 @@
     {
         "comment": "/**\n\t * Rejects review changes.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias RejectReviewChanges\n\t * @param {boolean} [isAll=false] Specifies if all changes will be rejected (**true**) or only changes from the current selection (**false**).\n\t * @since 7.2.1\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RejectReviewChanges.js\n\t */",
         "meta": {
-            "lineno": 1023,
+            "lineno": 1032,
             "columnno": 1
         },
         "kind": "function",
@@ -2745,7 +2832,7 @@
     {
         "comment": "/**\n\t * Navigates through the review changes.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias MoveToNextReviewChange\n\t * @param {boolean} [isForward=true] Specifies whether to navigate to the next (**true**) or previous (**false**) review change.\n\t * @since 7.2.1\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/MoveToNextReviewChange.js\n\t */",
         "meta": {
-            "lineno": 1039,
+            "lineno": 1048,
             "columnno": 1
         },
         "kind": "function",
@@ -2782,7 +2869,7 @@
     {
         "comment": "/**\n\t * Returns all addin fields from the current document.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetAllAddinFields\n\t * @returns {AddinFieldData[]} - An array of the AddinFieldData objects containing the data about the addin fields.\n\t * @since 7.3.3\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetAllAddinFields.js\n\t */",
         "meta": {
-            "lineno": 1055,
+            "lineno": 1064,
             "columnno": 1
         },
         "kind": "function",
@@ -2824,7 +2911,7 @@
     {
         "comment": "/**\n\t * Updates the addin fields with the specified data.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias UpdateAddinFields\n\t * @param {AddinFieldData[]} arrData - An array of addin field data.\n\t * @since 7.3.3\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/UpdateAddinFields.js\n\t */",
         "meta": {
-            "lineno": 1081,
+            "lineno": 1090,
             "columnno": 1
         },
         "kind": "function",
@@ -2868,7 +2955,7 @@
     {
         "comment": "/**\n\t * Creates a new addin field with the data specified in the request.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias AddAddinField\n\t * @param {AddinFieldData} data - Addin field data.\n\t * @since 7.3.3\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddAddinField.js\n\t */",
         "meta": {
-            "lineno": 1104,
+            "lineno": 1113,
             "columnno": 1
         },
         "kind": "function",
@@ -2903,7 +2990,7 @@
     {
         "comment": "/**\n\t * Removes a field wrapper, leaving only the field content.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias RemoveFieldWrapper\n\t * @param {string} [fieldId=undefined] - Field ID. If it is not specified, then the wrapper of the current field is removed.\n\t * @since 7.3.3\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemoveFieldWrapper.js\n\t */",
         "meta": {
-            "lineno": 1121,
+            "lineno": 1130,
             "columnno": 1
         },
         "kind": "function",
@@ -2939,7 +3026,7 @@
     {
         "comment": "/**\n\t * Sets the document editing restrictions.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias SetEditingRestrictions\n\t * @param {DocumentEditingRestrictions} restrictions - The document editing restrictions.\n\t * @since 7.3.3\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SetEditingRestrictions.js\n\t */",
         "meta": {
-            "lineno": 1138,
+            "lineno": 1147,
             "columnno": 1
         },
         "kind": "function",
@@ -2974,7 +3061,7 @@
     {
         "comment": "/**\n\t * Returns the current word.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetCurrentWord\n\t * @param {TextPartType} [type=\"entirely\"] - Specifies if the whole word or only its part will be returned.\n\t * @returns {string} - A word or its part.\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetCurrentWord.js\n\t */",
         "meta": {
-            "lineno": 1168,
+            "lineno": 1177,
             "columnno": 1
         },
         "kind": "function",
@@ -3024,7 +3111,7 @@
     {
         "comment": "/**\n\t * Replaces the current word with the specified string.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias ReplaceCurrentWord\n\t * @param {string} replaceString - Replacement string.\n\t * @param {TextPartType} [type=\"entirely\"] - Specifies if the whole word or only its part will be replaced.\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ReplaceCurrentWord.js\n\t */",
         "meta": {
-            "lineno": 1186,
+            "lineno": 1195,
             "columnno": 1
         },
         "kind": "function",
@@ -3074,7 +3161,7 @@
     {
         "comment": "/**\n\t * Returns the current sentence.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias GetCurrentSentence\n\t * @param {TextPartType} [type=\"entirely\"] - Specifies if the whole sentence or only its part will be returned.\n\t * @returns {string} - A sentence or its part.\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetCurrentSentence.js\n\t */",
         "meta": {
-            "lineno": 1206,
+            "lineno": 1215,
             "columnno": 1
         },
         "kind": "function",
@@ -3124,7 +3211,7 @@
     {
         "comment": "/**\n\t * Replaces the current sentence with the specified string.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias ReplaceCurrentSentence\n\t * @param {string} replaceString - Replacement string.\n\t * @param {TextPartType} [type=\"entirely\"] - Specifies if the whole sentence or only its part will be replaced.\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ReplaceCurrentSentence.js\n\t */",
         "meta": {
-            "lineno": 1224,
+            "lineno": 1233,
             "columnno": 1
         },
         "kind": "function",
@@ -3174,7 +3261,7 @@
     {
         "comment": "/**\n\t * Undoes the user's last action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias Undo\n\t * @since 8.2.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/Undo.js\n\t */",
         "meta": {
-            "lineno": 1243,
+            "lineno": 1252,
             "columnno": 1
         },
         "kind": "function",
@@ -3191,7 +3278,7 @@
     {
         "comment": "/**\n\t * Reverts the user's last undone action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias Redo\n\t * @since 8.2.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/Redo.js\n\t */",
         "meta": {
-            "lineno": 1255,
+            "lineno": 1264,
             "columnno": 1
         },
         "kind": "function",
@@ -3208,7 +3295,7 @@
     {
         "comment": "/**\n\t * Checks if it is possible to undo the user's last action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias CanUndo\n\t * @since 8.2.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/CanUndo.js\n\t */",
         "meta": {
-            "lineno": 1267,
+            "lineno": 1276,
             "columnno": 1
         },
         "kind": "function",
@@ -3225,7 +3312,7 @@
     {
         "comment": "/**\n\t * Checks if it possible to revert the user's last undone action.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\"]\n\t * @alias CanRedo\n\t * @since 8.2.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/CanRedo.js\n\t */",
         "meta": {
-            "lineno": 1279,
+            "lineno": 1288,
             "columnno": 1
         },
         "kind": "function",

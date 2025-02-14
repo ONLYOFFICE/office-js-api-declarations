@@ -11771,7 +11771,7 @@
     },
     {
         "comment": "/**\n\t * Returns the inner text of the current document content object.\n\t * @memberof ApiDocumentContent\n\t * @typeofeditors [\"CDE\"]\n\t * @param {object} oProps - The resulting string display properties.\n     * @param {boolean} oProps.NewLine - Defines if the resulting string will include line boundaries or not (they will be replaced with '\\r').\n     * @param {boolean} oProps.NewLineParagraph - Defines if the resulting string will include paragraph line boundaries or not.\n     * @param {boolean} oProps.Numbering - Defines if the resulting string will include numbering or not.\n     * @param {boolean} oProps.Math - Defines if the resulting string will include mathematical expressions or not.\n     * @param {string} oProps.TableCellSeparator - Defines how the table cell separator will be specified in the resulting string.\n     * @param {string} oProps.TableRowSeparator - Defines how the table row separator will be specified in the resulting string.\n     * @param {string} oProps.ParaSeparator - Defines how the paragraph separator will be specified in the resulting string.\n     * @param {string} oProps.TabSymbol - Defines how the tab will be specified in the resulting string.\n     * @param {string} oProps.NewLineSeparator - Defines how the line separator will be specified in the resulting string (this property has the priority over *NewLine*).\n\t * @return {string}\n\t * @since 8.3.0\n\t * @see office-js-api/Examples/{Editor}/ApiDocumentContent/Methods/GetText.js\n\t */",
-        "description": "Returns the inner text of the current document content object.",
+        "description": "Returns the inner text of the current document content object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"word\"}\nlet oDocument = Api.GetDocument();\nlet oBlockLvlSdt = Api.CreateBlockLvlSdt();\noDocument.Push(oBlockLvlSdt);\nlet oContent = oBlockLvlSdt.GetContent();\noContent.GetElement(0).AddText(\"This is a block text content control.\");\nlet oPara = Api.CreateParagraph();\noPara.AddText(\"This text from DocContent element: \" + oContent.GetText());\noDocument.Push(oPara);\n```",
         "memberof": "ApiDocumentContent",
         "params": [
             {
@@ -15845,7 +15845,7 @@
     },
     {
         "comment": "/**\n\t * Returns the index of the current page.\n\t * @memberof ApiDocument\n\t * @typeofeditors [\"CDE\"]\n\t * @return {number}\n\t * @since 8.3.0\n\t * @see office-js-api/Examples/{Editor}/ApiDocument/Methods/GetCurrentPage.js\n\t */",
-        "description": "Returns the index of the current page.",
+        "description": "Returns the index of the current page.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"word\"}\nvar oDocument = Api.GetDocument();\nvar oParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The current page index is: \" + oDocument.GetCurrentPage());\noDocument.Push(oParagraph);\n```",
         "memberof": "ApiDocument",
         "params": null,
         "returns": [
@@ -15877,7 +15877,7 @@
     },
     {
         "comment": "/**\n\t * Returns the indexes of the currently visible pages.\n\t * @memberof ApiDocument\n\t * @typeofeditors [\"CDE\"]\n\t * @return {number[]}\n\t * @since 8.3.0\n\t * @see office-js-api/Examples/{Editor}/ApiDocument/Methods/GetCurrentVisiblePages.js\n\t */",
-        "description": "Returns the indexes of the currently visible pages.",
+        "description": "Returns the indexes of the currently visible pages.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"word\"}\nvar oDocument = Api.GetDocument();\nvar oParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The current visibles pages indexes is: \" + oDocument.GetCurrentVisiblePages());\noDocument.Push(oParagraph);\n```",
         "memberof": "ApiDocument",
         "params": null,
         "returns": [
@@ -31674,7 +31674,7 @@
     },
     {
         "comment": "/**\n\t * Links the specified paragraph style with the current numbering level.\n\t * @memberof ApiNumberingLevel\n\t * @typeofeditors [\"CDE\"]\n\t * @param {ApiStyle} oStyle - The paragraph style.\n\t * @since 8.3.0\n\t * @see office-js-api/Examples/{Editor}/ApiNumberingLevel/Methods/LinkWithStyle.js\n\t */",
-        "description": "Links the specified paragraph style with the current numbering level.",
+        "description": "Links the specified paragraph style with the current numbering level.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"word\"}\nvar oDocument = Api.GetDocument();\nlet aHeadings = [];\nfor (var nLvl = 0; nLvl < 3; ++nLvl) {\n    var oHeadingLvlStyle = oDocument.CreateStyle(\"Heading \" + (nLvl + 1));\n    var oTextPr = oHeadingLvlStyle.GetTextPr();\n    oTextPr.SetBold(true);\n    oTextPr.SetColor(nLvl*125, 0, 0, false);\n    aHeadings.push(oHeadingLvlStyle);\n}\nvar oNumbering = oDocument.CreateNumbering(\"numbered\");\nvar oNumLvl, sFormatString;\nfor (var nLvl = 0; nLvl < 3; ++nLvl) {\n    oNumLvl = oNumbering.GetLevel(nLvl);\n    sFormatString = \"\";\n    for (var nFSLvl = 1; nFSLvl <= (nLvl + 1); ++nFSLvl) {\n        sFormatString += \"%\" + nFSLvl + \".\";\n    }\n        \n    oNumLvl.SetCustomType(\"decimal\", sFormatString, \"left\");\n    oNumLvl.LinkWithStyle(aHeadings[nLvl]);\n\n    let oPara = Api.CreateParagraph();\n    oPara.SetStyle(aHeadings[nLvl]);\n    oPara.AddText(\"This paragraph with style: \" + aHeadings[nLvl].GetName());\n    oDocument.Push(oPara);\n}\n```",
         "memberof": "ApiNumberingLevel",
         "params": [
             {
@@ -49316,7 +49316,7 @@
     },
     {
         "comment": "/**\n\t * Returns the inner text of the current document content object.\n\t * @memberof ApiDocumentContent\n\t * @typeofeditors [\"CDE\"]\n\t * @param {object} oProps - The resulting string display properties.\n     * @param {boolean} oProps.NewLine - Defines if the resulting string will include line boundaries or not (they will be replaced with '\\r').\n     * @param {boolean} oProps.NewLineParagraph - Defines if the resulting string will include paragraph line boundaries or not.\n     * @param {boolean} oProps.Numbering - Defines if the resulting string will include numbering or not.\n     * @param {boolean} oProps.Math - Defines if the resulting string will include mathematical expressions or not.\n     * @param {string} oProps.TableCellSeparator - Defines how the table cell separator will be specified in the resulting string.\n     * @param {string} oProps.TableRowSeparator - Defines how the table row separator will be specified in the resulting string.\n     * @param {string} oProps.ParaSeparator - Defines how the paragraph separator will be specified in the resulting string.\n     * @param {string} oProps.TabSymbol - Defines how the tab will be specified in the resulting string.\n     * @param {string} oProps.NewLineSeparator - Defines how the line separator will be specified in the resulting string (this property has the priority over *NewLine*).\n\t * @return {string}\n\t * @since 8.3.0\n\t * @see office-js-api/Examples/{Editor}/ApiDocumentContent/Methods/GetText.js\n\t */",
-        "description": "Returns the inner text of the current document content object.",
+        "description": "Returns the inner text of the current document content object.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"word\"}\nlet oDocument = Api.GetDocument();\nlet oBlockLvlSdt = Api.CreateBlockLvlSdt();\noDocument.Push(oBlockLvlSdt);\nlet oContent = oBlockLvlSdt.GetContent();\noContent.GetElement(0).AddText(\"This is a block text content control.\");\nlet oPara = Api.CreateParagraph();\noPara.AddText(\"This text from DocContent element: \" + oContent.GetText());\noDocument.Push(oPara);\n```",
         "memberof": "ApiDocument",
         "params": [
             {

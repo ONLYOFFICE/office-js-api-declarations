@@ -334,7 +334,7 @@
     {
         "comment": "/**\n\t * Returns a library of local custom functions.\n\t * @memberof Api\n\t * @typeofeditors [\"CSE\"]\n\t * @alias GetCustomFunctions\n\t * @return {string} A library of custom functions in JSON format.\n\t * @since 8.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetCustomFunctions.js\n\t */",
         "meta": {
-            "lineno": 256,
+            "lineno": 250,
             "columnno": 1
         },
         "kind": "function",
@@ -367,7 +367,7 @@
     {
         "comment": "/**\n\t * Updates a library of local custom functions.\n\t * @memberof Api\n\t * @typeofeditors [\"CSE\"]\n\t * @alias SetCustomFunctions\n\t * @param {string} jsonString - A library of custom functions in JSON format.\n\t * @since 8.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SetCustomFunctions.js\n\t */",
         "meta": {
-            "lineno": 279,
+            "lineno": 273,
             "columnno": 1
         },
         "kind": "function",
@@ -5213,9 +5213,65 @@
         ]
     },
     {
+        "comment": "/**\n\t * Returns selected content in specified format.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CPE\", \"CSE\"]\n\t * @alias GetSelectedContent\n\t * @param {object} prop\n\t * @param {\"text\" | \"html\"} [prop.type=\"text\"] - Defines the type of returned format.\n\t * @since 8.3.1\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetSelectedContent.js\n\t */",
+        "meta": {
+            "lineno": 1176,
+            "columnno": 1
+        },
+        "kind": "function",
+        "since": "8.3.1",
+        "name": "GetSelectedContent",
+        "description": "Returns selected content in specified format.",
+        "memberof": "Api",
+        "longname": "GetSelectedContent",
+        "alias": "GetSelectedContent",
+        "params": [
+            {
+                "type": {
+                    "names": [
+                        "object"
+                    ],
+                    "parsedType": {
+                        "type": "NameExpression",
+                        "name": "object"
+                    }
+                },
+                "name": "prop"
+            },
+            {
+                "type": {
+                    "names": [
+                        "\"text\"",
+                        "\"html\""
+                    ],
+                    "parsedType": {
+                        "type": "TypeUnion",
+                        "elements": [
+                            {
+                                "type": "NameExpression",
+                                "name": "\"text\""
+                            },
+                            {
+                                "type": "NameExpression",
+                                "name": "\"html\""
+                            }
+                        ]
+                    }
+                },
+                "name": "prop.type",
+                "description": "Defines the type of returned format.",
+                "optional": true,
+                "defaultvalue": "\"text\""
+            }
+        ],
+        "see": [
+            "office-js-api/Examples/Plugins/Common/Api/Methods/GetSelectedContent.js"
+        ]
+    },
+    {
         "comment": "/**\n     * Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings.\n     * @memberof Api\n     * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n     * @alias ReplaceTextSmart\n     * @param {Array} arrString - An array of replacement strings.\n     * @param {string} [sParaTab=\" \"] - A character which is used to specify the tab in the source text.\n     * @param {string} [sParaNewLine=\" \"] - A character which is used to specify the line break character in the source text.\n     * @returns {boolean} - Always returns true.\n     * @since 7.1.0\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ReplaceTextSmart.js\n\t */",
         "meta": {
-            "lineno": 1178,
+            "lineno": 1196,
             "columnno": 4
         },
         "kind": "function",
@@ -5293,7 +5349,7 @@
     {
         "comment": "/**\n     * Returns the current file to download in the specified format.\n     * @memberof Api\n     * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n     * @alias GetFileToDownload\n     * @param {string} [format=\" \"] - A format in which you need to download a file.\n     * @returns {string} - URL to download the file in the specified format or error.\n     * @since 7.2.0\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetFileToDownload.js\n\t */",
         "meta": {
-            "lineno": 1221,
+            "lineno": 1239,
             "columnno": 1
         },
         "kind": "function",
@@ -5343,7 +5399,7 @@
     {
         "comment": "/**\n\t * Specifies how to adjust the image object in case of replacing the selected image.\n\t * @typedef {(\"fill\" | \"fit\" | \"original\" | \"stretch\")} ReplaceImageMode\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ReplaceImageMode.js\n\t */",
         "meta": {
-            "lineno": 1237,
+            "lineno": 1255,
             "columnno": 1
         },
         "kind": "typedef",
@@ -5390,7 +5446,7 @@
     {
         "comment": "/**\n     * An object containing the information about the base64 encoded *png* image.\n     * @typedef {Object} ImageData\n     * @property {string} src The image source in the base64 format.\n     * @property {number} width The image width in pixels.\n     * @property {number} height The image height in pixels.\n     * @property {?ReplaceImageMode} replaceMode Specifies how to adjust the image object in case of replacing the selected image.\n     * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ImageData.js\n\t */",
         "meta": {
-            "lineno": 1243,
+            "lineno": 1261,
             "columnno": 4
         },
         "kind": "typedef",
@@ -5472,7 +5528,7 @@
     {
         "comment": "/**\n     * Returns the image data from the first of the selected drawings. If there are no drawings selected, the method returns a white rectangle.\n     * @memberof Api\n     * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n     * @alias GetImageDataFromSelection\n     * @returns {?ImageData} - The ImageData object containig the information about the base64 encoded png image.\n     * @since 7.2.0\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetImageDataFromSelection.js\n\t */",
         "meta": {
-            "lineno": 1262,
+            "lineno": 1280,
             "columnno": 1
         },
         "kind": "function",
@@ -5506,7 +5562,7 @@
     {
         "comment": "/**\n     * Replaces the first selected drawing with the image specified in the parameters.\n     * If there are no drawings selected, the method inserts the image at the current position.\n     * @memberof Api\n     * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n     * @alias PutImageDataToSelection\n     * @param {ImageData} oImageData - The information about the base64 encoded *png* image.\n     * @since 7.2.0\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/PutImageDataToSelection.js\n\t */",
         "meta": {
-            "lineno": 1276,
+            "lineno": 1294,
             "columnno": 1
         },
         "kind": "function",
@@ -5541,7 +5597,7 @@
     {
         "comment": "/**\n\t * The plugin object.\n     * @typedef {Object} PluginData\n     * @property {string} url The URL to plugin config.\n     * @property {string} guid The plugin identifier. It must be of the *asc.{UUID}* type.\n\t * @property {boolean} canRemoved Specifies if the plugin can be removed (**true**) or not (**false**).\n     * @property {object} obj The {@link /plugin/config config} of the installed plugin. The version is taken from the config and compared with the current one to check for updates.\n     * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/PluginData.js\n\t */",
         "meta": {
-            "lineno": 1477,
+            "lineno": 1495,
             "columnno": 4
         },
         "kind": "typedef",
@@ -5622,7 +5678,7 @@
     {
         "comment": "/**\n    * Returns all the installed plugins.\n     * @memberof Api\n     * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n     * @alias GetInstalledPlugins\n     * @returns {PluginData[]} - An array of all the installed plugins.\n     * @since 7.2.0\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetInstalledPlugins.js\n\t */",
         "meta": {
-            "lineno": 1496,
+            "lineno": 1514,
             "columnno": 1
         },
         "kind": "function",
@@ -5664,7 +5720,7 @@
     {
         "comment": "/**\n    * Removes a plugin with the specified GUID.\n     * @memberof Api\n     * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n     * @param {string} guid - The plugin identifier. It must be of the *asc.{UUID}* type.\n\t * @param {string} backup - The plugin backup. This parameter is used when working with the desktop editors.\n     * @alias RemovePlugin\n     * @returns {object} - An object with the result information.\n     * @since 7.2.0\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/RemovePlugin.js\n\t */",
         "meta": {
-            "lineno": 1588,
+            "lineno": 1606,
             "columnno": 1
         },
         "kind": "function",
@@ -5725,7 +5781,7 @@
     {
         "comment": "/**\n    * Installs a plugin using the specified plugin config.\n     * @memberof Api\n     * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n     * @param {object} [config] - The plugin {@link https://api.onlyoffice.com/docs/plugin-and-macros/structure/manifest/ config}.\n     * @alias InstallPlugin\n     * @returns {object} - An object with the result information.\n     * @since 7.2.0\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/InstallPlugin.js\n\t */",
         "meta": {
-            "lineno": 1650,
+            "lineno": 1668,
             "columnno": 1
         },
         "kind": "function",
@@ -5774,7 +5830,7 @@
     {
         "comment": "/**\n    * Updates a plugin using the specified plugin config.\n     * @memberof Api\n     * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n     * @param {object} [config] - The plugin {@link https://api.onlyoffice.com/docs/plugin-and-macros/structure/manifest/ config}.\n     * @alias UpdatePlugin\n     * @returns {object} - An object with the result information.\n     * @since 7.3.0\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/UpdatePlugin.js\n\t */",
         "meta": {
-            "lineno": 1664,
+            "lineno": 1682,
             "columnno": 1
         },
         "kind": "function",
@@ -5823,7 +5879,7 @@
     {
         "comment": "/**\n\t* Shows or hides buttons in the header.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {string} id - The button ID.\n\t * @param {boolean} bShow - The flag specifies whether the button is shown (**true**) or hidden (**false**).\n\t * @param {string} align - The parameter indicates whether the button will be displayed on the right side of the window or on the left. The default value is \"left\".\n\t * @alias ShowButton \n\t * @since 7.2.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ShowButton.js\n\t */",
         "meta": {
-            "lineno": 1701,
+            "lineno": 1719,
             "columnno": 1
         },
         "kind": "function",
@@ -5884,7 +5940,7 @@
     {
         "comment": "/**\n\t * Implements the external drag&drop emulation.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {object} obj The drag&drop emulation properties.\n     * @param {string} obj.type - The drag&drop event type:\n     * <b>onbeforedrop</b> - an event that is fired when the selected text or element is dragged;\n     * <b>ondrop</b> - an event that is fired when the selected text or element is dropped on a valid drop target.\n     * @param {number} obj.x - The horizontal coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.\n     * @param {number} obj.y - The vertical coordinate (in pixels) at which the mouse was clicked, relative to the top edge of the entire document.\n     * @param {string} obj.html - The dragged HTML element.\n     * @param {string} obj.text - The dragged text.\n\t * @alias OnDropEvent\n\t * @since 7.3.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/OnDropEvent.js\n\t */",
         "meta": {
-            "lineno": 1750,
+            "lineno": 1768,
             "columnno": 1
         },
         "kind": "function",
@@ -5984,7 +6040,7 @@
     {
         "comment": "/**\n     * Returns the document language.\n     * @memberof Api\n     * @typeofeditors [\"CDE\", \"CPE\"]\n     * @alias GetDocumentLang\n     * @returns {string} - Document language.\n\t * @since 7.4.0\n     * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/GetDocumentLang.js\n\t */",
         "meta": {
-            "lineno": 1792,
+            "lineno": 1810,
             "columnno": 4
         },
         "kind": "function",
@@ -6017,7 +6073,7 @@
     {
         "comment": "/**\n\t * @typedef {Object} ContextMenuItem\n\t * The context menu item.\n\t * @property {string} id - The item ID.\n\t * @property {string} text - The item text.\n\t * @property {string} [data] - The item data (this data will be sent to the click event callback).\n\t * @property {boolean} [disabled] - Specifies if the current item is disabled or not.\n\t * @property {string} [icons] - The item icons (see the plugins {@link /plugin/config config} documentation).\n\t * @property {ContextMenuItem[]} items - An array containing the context menu items for the current item.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ContextMenuItem.js\n\t */",
         "meta": {
-            "lineno": 1842,
+            "lineno": 1860,
             "columnno": 1
         },
         "kind": "typedef",
@@ -6136,7 +6192,7 @@
     {
         "comment": "/**\n\t * Adds an item to the context menu.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @alias AddContextMenuItem\n\t * @param {ContextMenuItem[]} items - An array containing the context menu items.\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddContextMenuItem.js\n\t */",
         "meta": {
-            "lineno": 1863,
+            "lineno": 1881,
             "columnno": 1
         },
         "kind": "function",
@@ -6180,7 +6236,7 @@
     {
         "comment": "/**\n\t * Updates an item in the context menu with the specified items.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @alias UpdateContextMenuItem\n\t * @param {ContextMenuItem[]} items - An array containing the context menu items for the current item.\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/UpdateContextMenuItem.js\n\t */",
         "meta": {
-            "lineno": 1879,
+            "lineno": 1897,
             "columnno": 1
         },
         "kind": "function",
@@ -6224,7 +6280,7 @@
     {
         "comment": "/**\n\t * The possible values of the base which the relative vertical position of the toolbar menu item will be calculated from.\n\t * @typedef {(\"button\" | \"...\")} ToolbarMenuItemType\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ToolbarMenuItemType.js\n\t */",
         "meta": {
-            "lineno": 1886,
+            "lineno": 1904,
             "columnno": 1
         },
         "kind": "typedef",
@@ -6261,7 +6317,7 @@
     {
         "comment": "/**\n\t * @typedef {Object} ToolbarMenuItem\n\t * The toolbar menu item.\n\t * @property {string} id - The item ID.\n\t * @property {ToolbarMenuItemType} type - The item type.\n\t * @property {string} text - The item text.\n\t * @property {string} hint - The item hint.\n\t * @property {string} [icons] - The item icons (see the plugins {@link /plugin/config config} documentation).\n\t * @property {boolean} [disabled] - Specifies if the current item is disabled or not.\n\t * @property {boolean} [enableToggle] - Specifies if an item toggle is enabled or not.\n\t * @property {boolean} [lockInViewMode] - Specifies if the current item is locked in the view mode or not.\n\t * @property {boolean} [separator] - Specifies if a separator is used between the toolbar menu items or not.\n\t * @property {boolean} [split] - Specifies if the toolbar menu items are split or not.\n\t * @property {ContextMenuItem[]} [items] - An array containing the context menu items for the current item.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ToolbarMenuItem.js\n\t */",
         "meta": {
-            "lineno": 1892,
+            "lineno": 1910,
             "columnno": 1
         },
         "kind": "typedef",
@@ -6449,7 +6505,7 @@
     {
         "comment": "/**\n\t * @typedef {Object} ToolbarMenuTab\n\t * The toolbar menu tab.\n\t * @property {string} id - The tab ID.\n\t * @property {string} text - The tab text.\n\t * @property {ToolbarMenuItem[]} [items] - An array containing the toolbar menu items for the current tab.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ToolbarMenuTab.js\n\t */",
         "meta": {
-            "lineno": 1909,
+            "lineno": 1927,
             "columnno": 1
         },
         "kind": "typedef",
@@ -6527,7 +6583,7 @@
     {
         "comment": "/**\n\t * @typedef {Object} ToolbarMenuMainItem\n\t * The main toolbar menu item.\n\t * @property {string} guid - The plugin guid.\n\t * @property {ToolbarMenuTab[]} tabs - An array containing the toolbar menu tabs for the current item.\n\t * @see office-js-api/Examples/Plugins/{Editor}/Enumeration/ToolbarMenuMainItem.js\n\t */",
         "meta": {
-            "lineno": 1918,
+            "lineno": 1936,
             "columnno": 1
         },
         "kind": "typedef",
@@ -6591,7 +6647,7 @@
     {
         "comment": "/**\n\t * Adds an item to the toolbar menu.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @alias AddToolbarMenuItem\n\t * @param {ToolbarMenuMainItem[]} items - An array containing the main toolbar menu items.\n\t * @since 8.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/AddToolbarMenuItem.js\n\t */",
         "meta": {
-            "lineno": 1935,
+            "lineno": 1953,
             "columnno": 1
         },
         "kind": "function",
@@ -6635,7 +6691,7 @@
     {
         "comment": "/**\n\t * Shows the plugin modal window.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {string} frameId - The frame ID.\n\t * @param {variation} variation - The plugin variation.\n\t * @alias ShowWindow \n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ShowWindow.js\n\t */",
         "meta": {
-            "lineno": 1957,
+            "lineno": 1975,
             "columnno": 1
         },
         "kind": "function",
@@ -6683,7 +6739,7 @@
     {
         "comment": "/**\n\t * Activates (moves forward) the plugin window/panel.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {string} frameId - The frame ID.\n\t * @alias ActivateWindow\n\t * @since 8.1.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ActivateWindow.js\n\t */",
         "meta": {
-            "lineno": 1977,
+            "lineno": 1995,
             "columnno": 1
         },
         "kind": "function",
@@ -6718,7 +6774,7 @@
     {
         "comment": "/**\n\t * Closes the plugin modal window.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {string} frameId - The frame ID.\n\t * @alias CloseWindow\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/CloseWindow.js\n\t */",
         "meta": {
-            "lineno": 1991,
+            "lineno": 2009,
             "columnno": 1
         },
         "kind": "function",
@@ -6753,7 +6809,7 @@
     {
         "comment": "/**\n\t * Sends a message to the plugin modal window.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {string} windowID - The frame ID.\n\t * @param {string} name - The event name.\n\t * @param {object} data - The event data.\n\t * @alias SendToWindow\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/SendToWindow.js\n\t */",
         "meta": {
-            "lineno": 2007,
+            "lineno": 2025,
             "columnno": 1
         },
         "kind": "function",
@@ -6814,7 +6870,7 @@
     {
         "comment": "/**\n\t * Resizes the plugin modal window.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {string} frameId - The frame ID.\n\t * @param {number} size - The frame size.\n\t * @param {number} minSize - The frame minimum size.\n\t * @param {number} maxSize - The frame maximum size.\n\t * @alias ResizeWindow\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ResizeWindow.js\n\t */",
         "meta": {
-            "lineno": 2024,
+            "lineno": 2042,
             "columnno": 1
         },
         "kind": "function",
@@ -6888,7 +6944,7 @@
     {
         "comment": "/**\n\t * Sends an event to the plugin when the mouse button is released inside the plugin iframe.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {string} frameId - The frame ID.\n\t * @param {number} x - The X coordinate.\n\t * @param {number} y - The Y coordinate.\n\t * @alias MouseUpWindow\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/MouseUpWindow.js\n\t */",
         "meta": {
-            "lineno": 2043,
+            "lineno": 2061,
             "columnno": 1
         },
         "kind": "function",
@@ -6949,7 +7005,7 @@
     {
         "comment": "/**\n\t * Sends an event to the plugin when the mouse button is moved inside the plugin iframe.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\"]\n\t * @param {string} frameId - The frame ID.\n \t * @param {number} x - The X coordinate.\n\t * @param {number} y - The Y coordinate.\n\t * @alias MouseMoveWindow\n\t * @since 7.4.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/MouseMoveWindow.js\n\t */",
         "meta": {
-            "lineno": 2059,
+            "lineno": 2077,
             "columnno": 1
         },
         "kind": "function",
@@ -7010,7 +7066,7 @@
     {
         "comment": "/**\n\t * Shows an error/warning message.\n\t * @memberof Api\n\t * @typeofeditors [\"CDE\", \"CSE\", \"CPE\", \"PDF\"]\n\t * @param {string} error - The error text.\n\t * @param {number} level - -1 or 0 for error or warning.\n\t * @alias ShowError\n\t * @since 8.3.0\n\t * @see office-js-api/Examples/Plugins/{Editor}/Api/Methods/ShowError.js\n\t */",
         "meta": {
-            "lineno": 2074,
+            "lineno": 2092,
             "columnno": 1
         },
         "kind": "function",

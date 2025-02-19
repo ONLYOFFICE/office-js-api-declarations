@@ -4479,7 +4479,7 @@
         }
     },
     {
-        "comment": "/**\n\t * Standard numeric format.\n\t * @typedef {(\"General\" | \"0\" | \"0.00\" | \"#,##0\" | \"#,##0.00\" | \"0%\" | \"0.00%\" |\n\t * \"0.00E+00\" | \"# ?/?\" | \"# ??/??\" | \"m/d/yyyy\" | \"d-mmm-yy\" | \"d-mmm\" | \"mmm-yy\" | \"h:mm AM/PM\" |\n\t * \"h:mm:ss AM/PM\" | \"h:mm\" | \"h:mm:ss\" | \"m/d/yyyy h:mm\" | \"#,##0_);(#,##0)\" | \"#,##0_);[Red](#,##0)\" | \n\t * \"#,##0.00_);(#,##0.00)\" | \"#,##0.00_);[Red](#,##0.00)\" | \"mm:ss\" | \"[h]:mm:ss\" | \"mm:ss.0\" | \"##0.0E+0\" | \"@\")} NumFormat\n\t * @see office-js-api/Examples/Enumerations/NumFormat.js\n\t */",
+        "comment": "/**\n\t * Standard numeric format.\n\t * @typedef {(\"General\" | \"0\" | \"0.00\" | \"#,##0\" | \"#,##0.00\" | \"0%\" | \"0.00%\" |\n\t * \"0.00E+00\" | \"# ?/?\" | \"# ??/??\" | \"m/d/yyyy\" | \"d-mmm-yy\" | \"d-mmm\" | \"mmm-yy\" | \"h:mm AM/PM\" |\n\t * \"h:mm:ss AM/PM\" | \"h:mm\" | \"h:mm:ss\" | \"m/d/yyyy h:mm\" | \"#,##0_\\);(#,##0)\" | \"#,##0_\\);\\[Red\\]\\(#,##0)\" | \n\t * \"#,##0.00_\\);\\(#,##0.00\\)\" | \"#,##0.00_\\);\\[Red\\]\\(#,##0.00\\)\" | \"mm:ss\" | \"[h]:mm:ss\" | \"mm:ss.0\" | \"##0.0E+0\" | \"@\")} NumFormat\n\t * @see office-js-api/Examples/Enumerations/NumFormat.js\n\t */",
         "description": "Standard numeric format.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nworksheet.GetRange(\"A1\").SetOrientation(\"xlUpward\");\n```",
         "name": "NumFormat",
         "longname": "NumFormat",
@@ -6126,7 +6126,7 @@
         "kind": "typedef",
         "scope": "global",
         "meta": {
-            "lineno": 10714,
+            "lineno": 10711,
             "columnno": 1
         },
         "properties": null,
@@ -6193,7 +6193,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19402,
+            "lineno": 19399,
             "columnno": 1
         },
         "see": [
@@ -6225,7 +6225,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19413,
+            "lineno": 19410,
             "columnno": 1
         },
         "see": [
@@ -6257,7 +6257,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19437,
+            "lineno": 19434,
             "columnno": 1
         },
         "see": [
@@ -6305,7 +6305,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19457,
+            "lineno": 19454,
             "columnno": 1
         },
         "see": [
@@ -6337,7 +6337,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19486,
+            "lineno": 19483,
             "columnno": 1
         },
         "see": [
@@ -6385,7 +6385,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19503,
+            "lineno": 19500,
             "columnno": 1
         },
         "see": [
@@ -6417,7 +6417,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19523,
+            "lineno": 19520,
             "columnno": 1
         },
         "see": [
@@ -6465,7 +6465,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19535,
+            "lineno": 19532,
             "columnno": 1
         },
         "see": [
@@ -6497,7 +6497,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19557,
+            "lineno": 19554,
             "columnno": 1
         },
         "see": [
@@ -6505,7 +6505,7 @@
         ]
     },
     {
-        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation)\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
+        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation).\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
         "description": "Converts the current form to a fixed size form.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet doc = Api.GetDocument();\nlet textForm = Api.CreateTextForm({\"key\": \"Personal information\", \"tip\": \"Enter your first name\", \"required\": true, \"placeholder\": \"First name\", \"comb\": true, \"maxCharacters\": 10, \"cellWidth\": 3, \"multiLine\": false, \"autoFit\": false});\nlet paragraph = doc.GetElement(0);\nparagraph.AddElement(textForm);\ntextForm.ToFixed(10 * 240, 2 * 240);\nlet fixed = textForm.IsFixed();\nparagraph = Api.CreateParagraph();\nparagraph.AddText(\"The first form from this document has a fixed size: \" + fixed);\ndoc.Push(paragraph);\n```",
         "memberof": "ApiFormBase",
         "params": [
@@ -6550,7 +6550,7 @@
                     }
                 },
                 "name": "keepPosition",
-                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation)",
+                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation).",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -6575,7 +6575,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19571,
+            "lineno": 19568,
             "columnno": 1
         },
         "see": [
@@ -6607,7 +6607,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19592,
+            "lineno": 19589,
             "columnno": 1
         },
         "see": [
@@ -6700,7 +6700,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19613,
+            "lineno": 19610,
             "columnno": 1
         },
         "see": [
@@ -6793,7 +6793,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19645,
+            "lineno": 19642,
             "columnno": 1
         },
         "see": [
@@ -6825,7 +6825,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19688,
+            "lineno": 19685,
             "columnno": 1
         },
         "see": [
@@ -6845,7 +6845,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19698,
+            "lineno": 19695,
             "columnno": 1
         },
         "see": [
@@ -6878,7 +6878,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19712,
+            "lineno": 19709,
             "columnno": 1
         },
         "see": [
@@ -6926,7 +6926,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19730,
+            "lineno": 19727,
             "columnno": 1
         },
         "see": [
@@ -6974,7 +6974,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19751,
+            "lineno": 19748,
             "columnno": 1
         },
         "see": [
@@ -7006,7 +7006,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19769,
+            "lineno": 19766,
             "columnno": 1
         },
         "see": [
@@ -7043,7 +7043,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19781,
+            "lineno": 19778,
             "columnno": 1
         },
         "see": [
@@ -7076,7 +7076,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19792,
+            "lineno": 19789,
             "columnno": 1
         },
         "see": [
@@ -7108,7 +7108,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19841,
+            "lineno": 19838,
             "columnno": 1
         },
         "see": [
@@ -7156,7 +7156,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19853,
+            "lineno": 19850,
             "columnno": 1
         },
         "see": [
@@ -7188,7 +7188,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19875,
+            "lineno": 19872,
             "columnno": 1
         },
         "see": [
@@ -7236,7 +7236,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19887,
+            "lineno": 19884,
             "columnno": 1
         },
         "see": [
@@ -7268,7 +7268,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19911,
+            "lineno": 19908,
             "columnno": 1
         },
         "see": [
@@ -7316,7 +7316,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19929,
+            "lineno": 19926,
             "columnno": 1
         },
         "see": [
@@ -7348,7 +7348,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19959,
+            "lineno": 19956,
             "columnno": 1
         },
         "see": [
@@ -7396,7 +7396,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19973,
+            "lineno": 19970,
             "columnno": 1
         },
         "see": [
@@ -7444,7 +7444,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20005,
+            "lineno": 20002,
             "columnno": 1
         },
         "see": [
@@ -7492,7 +7492,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20030,
+            "lineno": 20027,
             "columnno": 1
         },
         "see": [
@@ -7524,7 +7524,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20056,
+            "lineno": 20053,
             "columnno": 1
         },
         "see": [
@@ -7572,7 +7572,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20086,
+            "lineno": 20083,
             "columnno": 1
         },
         "see": [
@@ -7620,7 +7620,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20123,
+            "lineno": 20120,
             "columnno": 1
         },
         "see": [
@@ -7652,7 +7652,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20140,
+            "lineno": 20137,
             "columnno": 1
         },
         "see": [
@@ -7715,7 +7715,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20156,
+            "lineno": 20153,
             "columnno": 1
         },
         "see": [
@@ -7756,7 +7756,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20174,
+            "lineno": 20171,
             "columnno": 1
         },
         "see": [
@@ -7804,7 +7804,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20187,
+            "lineno": 20184,
             "columnno": 1
         },
         "see": [
@@ -7836,7 +7836,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20204,
+            "lineno": 20201,
             "columnno": 1
         },
         "see": [
@@ -7868,7 +7868,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20215,
+            "lineno": 20212,
             "columnno": 1
         },
         "see": [
@@ -7946,7 +7946,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20242,
+            "lineno": 20239,
             "columnno": 1
         },
         "see": [
@@ -7987,7 +7987,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20320,
+            "lineno": 20317,
             "columnno": 1
         },
         "see": [
@@ -8044,7 +8044,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20341,
+            "lineno": 20338,
             "columnno": 1
         },
         "see": [
@@ -8092,7 +8092,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20376,
+            "lineno": 20373,
             "columnno": 1
         },
         "see": [
@@ -8140,7 +8140,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20403,
+            "lineno": 20400,
             "columnno": 1
         },
         "see": [
@@ -8172,7 +8172,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20430,
+            "lineno": 20427,
             "columnno": 1
         },
         "see": [
@@ -8220,7 +8220,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20449,
+            "lineno": 20446,
             "columnno": 1
         },
         "see": [
@@ -8252,7 +8252,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20467,
+            "lineno": 20464,
             "columnno": 1
         },
         "see": [
@@ -8284,7 +8284,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20478,
+            "lineno": 20475,
             "columnno": 1
         },
         "see": [
@@ -8316,7 +8316,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20489,
+            "lineno": 20486,
             "columnno": 1
         },
         "see": [
@@ -8352,7 +8352,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20501,
+            "lineno": 20498,
             "columnno": 1
         },
         "see": [
@@ -8384,7 +8384,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20528,
+            "lineno": 20525,
             "columnno": 1
         },
         "see": [
@@ -8432,7 +8432,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20542,
+            "lineno": 20539,
             "columnno": 1
         },
         "see": [
@@ -8464,7 +8464,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20564,
+            "lineno": 20561,
             "columnno": 1
         },
         "see": [
@@ -8512,7 +8512,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20584,
+            "lineno": 20581,
             "columnno": 1
         },
         "see": [
@@ -8544,7 +8544,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20607,
+            "lineno": 20604,
             "columnno": 1
         },
         "see": [
@@ -8592,7 +8592,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 20624,
+            "lineno": 20621,
             "columnno": 1
         },
         "see": [
@@ -9630,7 +9630,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19402,
+            "lineno": 19399,
             "columnno": 1
         },
         "see": [
@@ -9659,7 +9659,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19413,
+            "lineno": 19410,
             "columnno": 1
         },
         "see": [
@@ -9688,7 +9688,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19437,
+            "lineno": 19434,
             "columnno": 1
         },
         "see": [
@@ -9730,7 +9730,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19457,
+            "lineno": 19454,
             "columnno": 1
         },
         "see": [
@@ -9759,7 +9759,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19486,
+            "lineno": 19483,
             "columnno": 1
         },
         "see": [
@@ -9801,7 +9801,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19503,
+            "lineno": 19500,
             "columnno": 1
         },
         "see": [
@@ -9830,7 +9830,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19523,
+            "lineno": 19520,
             "columnno": 1
         },
         "see": [
@@ -9872,7 +9872,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19535,
+            "lineno": 19532,
             "columnno": 1
         },
         "see": [
@@ -9901,7 +9901,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19557,
+            "lineno": 19554,
             "columnno": 1
         },
         "see": [
@@ -9909,7 +9909,7 @@
         ]
     },
     {
-        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation)\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
+        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation).\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
         "description": "Converts the current form to a fixed size form.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet doc = Api.GetDocument();\nlet textForm = Api.CreateTextForm({\"key\": \"Personal information\", \"tip\": \"Enter your first name\", \"required\": true, \"placeholder\": \"First name\", \"comb\": true, \"maxCharacters\": 10, \"cellWidth\": 3, \"multiLine\": false, \"autoFit\": false});\nlet paragraph = doc.GetElement(0);\nparagraph.AddElement(textForm);\ntextForm.ToFixed(10 * 240, 2 * 240);\nlet fixed = textForm.IsFixed();\nparagraph = Api.CreateParagraph();\nparagraph.AddText(\"The first form from this document has a fixed size: \" + fixed);\ndoc.Push(paragraph);\n```",
         "memberof": "ApiTextForm",
         "params": [
@@ -9945,7 +9945,7 @@
                     "parsedType": null
                 },
                 "name": "keepPosition",
-                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation)",
+                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation).",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -9967,7 +9967,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19571,
+            "lineno": 19568,
             "columnno": 1
         },
         "see": [
@@ -9996,7 +9996,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19592,
+            "lineno": 19589,
             "columnno": 1
         },
         "see": [
@@ -10074,7 +10074,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19613,
+            "lineno": 19610,
             "columnno": 1
         },
         "see": [
@@ -10152,7 +10152,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19645,
+            "lineno": 19642,
             "columnno": 1
         },
         "see": [
@@ -10181,7 +10181,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19688,
+            "lineno": 19685,
             "columnno": 1
         },
         "see": [
@@ -10201,7 +10201,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19698,
+            "lineno": 19695,
             "columnno": 1
         },
         "see": [
@@ -10230,7 +10230,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19712,
+            "lineno": 19709,
             "columnno": 1
         },
         "see": [
@@ -10272,7 +10272,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19730,
+            "lineno": 19727,
             "columnno": 1
         },
         "see": [
@@ -10314,7 +10314,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19751,
+            "lineno": 19748,
             "columnno": 1
         },
         "see": [
@@ -10343,7 +10343,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19769,
+            "lineno": 19766,
             "columnno": 1
         },
         "see": [
@@ -10376,7 +10376,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19781,
+            "lineno": 19778,
             "columnno": 1
         },
         "see": [
@@ -10405,7 +10405,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19792,
+            "lineno": 19789,
             "columnno": 1
         },
         "see": [
@@ -10434,7 +10434,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19402,
+            "lineno": 19399,
             "columnno": 1
         },
         "see": [
@@ -10463,7 +10463,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19413,
+            "lineno": 19410,
             "columnno": 1
         },
         "see": [
@@ -10492,7 +10492,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19437,
+            "lineno": 19434,
             "columnno": 1
         },
         "see": [
@@ -10534,7 +10534,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19457,
+            "lineno": 19454,
             "columnno": 1
         },
         "see": [
@@ -10563,7 +10563,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19486,
+            "lineno": 19483,
             "columnno": 1
         },
         "see": [
@@ -10605,7 +10605,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19503,
+            "lineno": 19500,
             "columnno": 1
         },
         "see": [
@@ -10634,7 +10634,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19523,
+            "lineno": 19520,
             "columnno": 1
         },
         "see": [
@@ -10676,7 +10676,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19535,
+            "lineno": 19532,
             "columnno": 1
         },
         "see": [
@@ -10705,7 +10705,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19557,
+            "lineno": 19554,
             "columnno": 1
         },
         "see": [
@@ -10713,7 +10713,7 @@
         ]
     },
     {
-        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation)\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
+        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation).\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
         "description": "Converts the current form to a fixed size form.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet doc = Api.GetDocument();\nlet textForm = Api.CreateTextForm({\"key\": \"Personal information\", \"tip\": \"Enter your first name\", \"required\": true, \"placeholder\": \"First name\", \"comb\": true, \"maxCharacters\": 10, \"cellWidth\": 3, \"multiLine\": false, \"autoFit\": false});\nlet paragraph = doc.GetElement(0);\nparagraph.AddElement(textForm);\ntextForm.ToFixed(10 * 240, 2 * 240);\nlet fixed = textForm.IsFixed();\nparagraph = Api.CreateParagraph();\nparagraph.AddText(\"The first form from this document has a fixed size: \" + fixed);\ndoc.Push(paragraph);\n```",
         "memberof": "ApiComboBoxForm",
         "params": [
@@ -10749,7 +10749,7 @@
                     "parsedType": null
                 },
                 "name": "keepPosition",
-                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation)",
+                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation).",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -10771,7 +10771,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19571,
+            "lineno": 19568,
             "columnno": 1
         },
         "see": [
@@ -10800,7 +10800,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19592,
+            "lineno": 19589,
             "columnno": 1
         },
         "see": [
@@ -10878,7 +10878,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19613,
+            "lineno": 19610,
             "columnno": 1
         },
         "see": [
@@ -10956,7 +10956,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19645,
+            "lineno": 19642,
             "columnno": 1
         },
         "see": [
@@ -10985,7 +10985,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19688,
+            "lineno": 19685,
             "columnno": 1
         },
         "see": [
@@ -11005,7 +11005,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19698,
+            "lineno": 19695,
             "columnno": 1
         },
         "see": [
@@ -11034,7 +11034,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19712,
+            "lineno": 19709,
             "columnno": 1
         },
         "see": [
@@ -11076,7 +11076,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19730,
+            "lineno": 19727,
             "columnno": 1
         },
         "see": [
@@ -11118,7 +11118,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19751,
+            "lineno": 19748,
             "columnno": 1
         },
         "see": [
@@ -11147,7 +11147,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19769,
+            "lineno": 19766,
             "columnno": 1
         },
         "see": [
@@ -11180,7 +11180,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19781,
+            "lineno": 19778,
             "columnno": 1
         },
         "see": [
@@ -11209,7 +11209,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19792,
+            "lineno": 19789,
             "columnno": 1
         },
         "see": [
@@ -11238,7 +11238,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19402,
+            "lineno": 19399,
             "columnno": 1
         },
         "see": [
@@ -11267,7 +11267,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19413,
+            "lineno": 19410,
             "columnno": 1
         },
         "see": [
@@ -11296,7 +11296,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19437,
+            "lineno": 19434,
             "columnno": 1
         },
         "see": [
@@ -11338,7 +11338,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19457,
+            "lineno": 19454,
             "columnno": 1
         },
         "see": [
@@ -11367,7 +11367,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19486,
+            "lineno": 19483,
             "columnno": 1
         },
         "see": [
@@ -11409,7 +11409,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19503,
+            "lineno": 19500,
             "columnno": 1
         },
         "see": [
@@ -11438,7 +11438,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19523,
+            "lineno": 19520,
             "columnno": 1
         },
         "see": [
@@ -11480,7 +11480,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19535,
+            "lineno": 19532,
             "columnno": 1
         },
         "see": [
@@ -11509,7 +11509,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19557,
+            "lineno": 19554,
             "columnno": 1
         },
         "see": [
@@ -11517,7 +11517,7 @@
         ]
     },
     {
-        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation)\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
+        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation).\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
         "description": "Converts the current form to a fixed size form.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet doc = Api.GetDocument();\nlet textForm = Api.CreateTextForm({\"key\": \"Personal information\", \"tip\": \"Enter your first name\", \"required\": true, \"placeholder\": \"First name\", \"comb\": true, \"maxCharacters\": 10, \"cellWidth\": 3, \"multiLine\": false, \"autoFit\": false});\nlet paragraph = doc.GetElement(0);\nparagraph.AddElement(textForm);\ntextForm.ToFixed(10 * 240, 2 * 240);\nlet fixed = textForm.IsFixed();\nparagraph = Api.CreateParagraph();\nparagraph.AddText(\"The first form from this document has a fixed size: \" + fixed);\ndoc.Push(paragraph);\n```",
         "memberof": "ApiCheckBoxForm",
         "params": [
@@ -11553,7 +11553,7 @@
                     "parsedType": null
                 },
                 "name": "keepPosition",
-                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation)",
+                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation).",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -11575,7 +11575,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19571,
+            "lineno": 19568,
             "columnno": 1
         },
         "see": [
@@ -11604,7 +11604,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19592,
+            "lineno": 19589,
             "columnno": 1
         },
         "see": [
@@ -11682,7 +11682,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19613,
+            "lineno": 19610,
             "columnno": 1
         },
         "see": [
@@ -11760,7 +11760,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19645,
+            "lineno": 19642,
             "columnno": 1
         },
         "see": [
@@ -11789,7 +11789,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19688,
+            "lineno": 19685,
             "columnno": 1
         },
         "see": [
@@ -11809,7 +11809,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19698,
+            "lineno": 19695,
             "columnno": 1
         },
         "see": [
@@ -11838,7 +11838,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19712,
+            "lineno": 19709,
             "columnno": 1
         },
         "see": [
@@ -11880,7 +11880,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19730,
+            "lineno": 19727,
             "columnno": 1
         },
         "see": [
@@ -11922,7 +11922,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19751,
+            "lineno": 19748,
             "columnno": 1
         },
         "see": [
@@ -11951,7 +11951,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19769,
+            "lineno": 19766,
             "columnno": 1
         },
         "see": [
@@ -11984,7 +11984,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19781,
+            "lineno": 19778,
             "columnno": 1
         },
         "see": [
@@ -12013,7 +12013,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19792,
+            "lineno": 19789,
             "columnno": 1
         },
         "see": [
@@ -12042,7 +12042,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19402,
+            "lineno": 19399,
             "columnno": 1
         },
         "see": [
@@ -12071,7 +12071,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19413,
+            "lineno": 19410,
             "columnno": 1
         },
         "see": [
@@ -12100,7 +12100,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19437,
+            "lineno": 19434,
             "columnno": 1
         },
         "see": [
@@ -12142,7 +12142,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19457,
+            "lineno": 19454,
             "columnno": 1
         },
         "see": [
@@ -12171,7 +12171,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19486,
+            "lineno": 19483,
             "columnno": 1
         },
         "see": [
@@ -12213,7 +12213,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19503,
+            "lineno": 19500,
             "columnno": 1
         },
         "see": [
@@ -12242,7 +12242,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19523,
+            "lineno": 19520,
             "columnno": 1
         },
         "see": [
@@ -12284,7 +12284,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19535,
+            "lineno": 19532,
             "columnno": 1
         },
         "see": [
@@ -12313,7 +12313,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19557,
+            "lineno": 19554,
             "columnno": 1
         },
         "see": [
@@ -12321,7 +12321,7 @@
         ]
     },
     {
-        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation)\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
+        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation).\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
         "description": "Converts the current form to a fixed size form.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet doc = Api.GetDocument();\nlet textForm = Api.CreateTextForm({\"key\": \"Personal information\", \"tip\": \"Enter your first name\", \"required\": true, \"placeholder\": \"First name\", \"comb\": true, \"maxCharacters\": 10, \"cellWidth\": 3, \"multiLine\": false, \"autoFit\": false});\nlet paragraph = doc.GetElement(0);\nparagraph.AddElement(textForm);\ntextForm.ToFixed(10 * 240, 2 * 240);\nlet fixed = textForm.IsFixed();\nparagraph = Api.CreateParagraph();\nparagraph.AddText(\"The first form from this document has a fixed size: \" + fixed);\ndoc.Push(paragraph);\n```",
         "memberof": "ApiPictureForm",
         "params": [
@@ -12357,7 +12357,7 @@
                     "parsedType": null
                 },
                 "name": "keepPosition",
-                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation)",
+                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation).",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -12379,7 +12379,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19571,
+            "lineno": 19568,
             "columnno": 1
         },
         "see": [
@@ -12408,7 +12408,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19592,
+            "lineno": 19589,
             "columnno": 1
         },
         "see": [
@@ -12486,7 +12486,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19613,
+            "lineno": 19610,
             "columnno": 1
         },
         "see": [
@@ -12564,7 +12564,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19645,
+            "lineno": 19642,
             "columnno": 1
         },
         "see": [
@@ -12593,7 +12593,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19688,
+            "lineno": 19685,
             "columnno": 1
         },
         "see": [
@@ -12613,7 +12613,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19698,
+            "lineno": 19695,
             "columnno": 1
         },
         "see": [
@@ -12642,7 +12642,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19712,
+            "lineno": 19709,
             "columnno": 1
         },
         "see": [
@@ -12684,7 +12684,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19730,
+            "lineno": 19727,
             "columnno": 1
         },
         "see": [
@@ -12726,7 +12726,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19751,
+            "lineno": 19748,
             "columnno": 1
         },
         "see": [
@@ -12755,7 +12755,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19769,
+            "lineno": 19766,
             "columnno": 1
         },
         "see": [
@@ -12788,7 +12788,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19781,
+            "lineno": 19778,
             "columnno": 1
         },
         "see": [
@@ -12817,7 +12817,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19792,
+            "lineno": 19789,
             "columnno": 1
         },
         "see": [
@@ -12846,7 +12846,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19402,
+            "lineno": 19399,
             "columnno": 1
         },
         "see": [
@@ -12875,7 +12875,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19413,
+            "lineno": 19410,
             "columnno": 1
         },
         "see": [
@@ -12904,7 +12904,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19437,
+            "lineno": 19434,
             "columnno": 1
         },
         "see": [
@@ -12946,7 +12946,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19457,
+            "lineno": 19454,
             "columnno": 1
         },
         "see": [
@@ -12975,7 +12975,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19486,
+            "lineno": 19483,
             "columnno": 1
         },
         "see": [
@@ -13017,7 +13017,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19503,
+            "lineno": 19500,
             "columnno": 1
         },
         "see": [
@@ -13046,7 +13046,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19523,
+            "lineno": 19520,
             "columnno": 1
         },
         "see": [
@@ -13088,7 +13088,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19535,
+            "lineno": 19532,
             "columnno": 1
         },
         "see": [
@@ -13117,7 +13117,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19557,
+            "lineno": 19554,
             "columnno": 1
         },
         "see": [
@@ -13125,7 +13125,7 @@
         ]
     },
     {
-        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation)\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
+        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation).\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
         "description": "Converts the current form to a fixed size form.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet doc = Api.GetDocument();\nlet textForm = Api.CreateTextForm({\"key\": \"Personal information\", \"tip\": \"Enter your first name\", \"required\": true, \"placeholder\": \"First name\", \"comb\": true, \"maxCharacters\": 10, \"cellWidth\": 3, \"multiLine\": false, \"autoFit\": false});\nlet paragraph = doc.GetElement(0);\nparagraph.AddElement(textForm);\ntextForm.ToFixed(10 * 240, 2 * 240);\nlet fixed = textForm.IsFixed();\nparagraph = Api.CreateParagraph();\nparagraph.AddText(\"The first form from this document has a fixed size: \" + fixed);\ndoc.Push(paragraph);\n```",
         "memberof": "ApiDateForm",
         "params": [
@@ -13161,7 +13161,7 @@
                     "parsedType": null
                 },
                 "name": "keepPosition",
-                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation)",
+                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation).",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -13183,7 +13183,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19571,
+            "lineno": 19568,
             "columnno": 1
         },
         "see": [
@@ -13212,7 +13212,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19592,
+            "lineno": 19589,
             "columnno": 1
         },
         "see": [
@@ -13290,7 +13290,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19613,
+            "lineno": 19610,
             "columnno": 1
         },
         "see": [
@@ -13368,7 +13368,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19645,
+            "lineno": 19642,
             "columnno": 1
         },
         "see": [
@@ -13397,7 +13397,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19688,
+            "lineno": 19685,
             "columnno": 1
         },
         "see": [
@@ -13417,7 +13417,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19698,
+            "lineno": 19695,
             "columnno": 1
         },
         "see": [
@@ -13446,7 +13446,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19712,
+            "lineno": 19709,
             "columnno": 1
         },
         "see": [
@@ -13488,7 +13488,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19730,
+            "lineno": 19727,
             "columnno": 1
         },
         "see": [
@@ -13530,7 +13530,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19751,
+            "lineno": 19748,
             "columnno": 1
         },
         "see": [
@@ -13559,7 +13559,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19769,
+            "lineno": 19766,
             "columnno": 1
         },
         "see": [
@@ -13592,7 +13592,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19781,
+            "lineno": 19778,
             "columnno": 1
         },
         "see": [
@@ -13621,7 +13621,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19792,
+            "lineno": 19789,
             "columnno": 1
         },
         "see": [
@@ -13650,7 +13650,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19402,
+            "lineno": 19399,
             "columnno": 1
         },
         "see": [
@@ -13679,7 +13679,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19413,
+            "lineno": 19410,
             "columnno": 1
         },
         "see": [
@@ -13708,7 +13708,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19437,
+            "lineno": 19434,
             "columnno": 1
         },
         "see": [
@@ -13750,7 +13750,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19457,
+            "lineno": 19454,
             "columnno": 1
         },
         "see": [
@@ -13779,7 +13779,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19486,
+            "lineno": 19483,
             "columnno": 1
         },
         "see": [
@@ -13821,7 +13821,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19503,
+            "lineno": 19500,
             "columnno": 1
         },
         "see": [
@@ -13850,7 +13850,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19523,
+            "lineno": 19520,
             "columnno": 1
         },
         "see": [
@@ -13892,7 +13892,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19535,
+            "lineno": 19532,
             "columnno": 1
         },
         "see": [
@@ -13921,7 +13921,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19557,
+            "lineno": 19554,
             "columnno": 1
         },
         "see": [
@@ -13929,7 +13929,7 @@
         ]
     },
     {
-        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation)\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
+        "comment": "/**\n\t * Converts the current form to a fixed size form.\n\t * @memberof ApiFormBase\n\t * @param {twips} width - The wrapper shape width measured in twentieths of a point (1/1440 of an inch).\n\t * @param {twips} height - The wrapper shape height measured in twentieths of a point (1/1440 of an inch).\n\t * @param {boolean} keepPosition - Save position on the page (it can be a little bit slow, because it runs the document calculation).\n\t * @typeofeditors [\"CDE\", \"CFE\"]\n\t * @returns {boolean}\n\t * @see office-js-api/Examples/{Editor}/ApiFormBase/Methods/ToFixed.js\n\t */",
         "description": "Converts the current form to a fixed size form.\n\n## Try it\n\n ```js document-builder={\"documentType\": \"pdf\"}\nlet doc = Api.GetDocument();\nlet textForm = Api.CreateTextForm({\"key\": \"Personal information\", \"tip\": \"Enter your first name\", \"required\": true, \"placeholder\": \"First name\", \"comb\": true, \"maxCharacters\": 10, \"cellWidth\": 3, \"multiLine\": false, \"autoFit\": false});\nlet paragraph = doc.GetElement(0);\nparagraph.AddElement(textForm);\ntextForm.ToFixed(10 * 240, 2 * 240);\nlet fixed = textForm.IsFixed();\nparagraph = Api.CreateParagraph();\nparagraph.AddText(\"The first form from this document has a fixed size: \" + fixed);\ndoc.Push(paragraph);\n```",
         "memberof": "ApiComplexForm",
         "params": [
@@ -13965,7 +13965,7 @@
                     "parsedType": null
                 },
                 "name": "keepPosition",
-                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation)",
+                "description": "Save position on the page (it can be a little bit slow, because it runs the document calculation).",
                 "optional": null,
                 "defaultvalue": null
             }
@@ -13987,7 +13987,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19571,
+            "lineno": 19568,
             "columnno": 1
         },
         "see": [
@@ -14016,7 +14016,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19592,
+            "lineno": 19589,
             "columnno": 1
         },
         "see": [
@@ -14094,7 +14094,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19613,
+            "lineno": 19610,
             "columnno": 1
         },
         "see": [
@@ -14172,7 +14172,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19645,
+            "lineno": 19642,
             "columnno": 1
         },
         "see": [
@@ -14201,7 +14201,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19688,
+            "lineno": 19685,
             "columnno": 1
         },
         "see": [
@@ -14221,7 +14221,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19698,
+            "lineno": 19695,
             "columnno": 1
         },
         "see": [
@@ -14250,7 +14250,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19712,
+            "lineno": 19709,
             "columnno": 1
         },
         "see": [
@@ -14292,7 +14292,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19730,
+            "lineno": 19727,
             "columnno": 1
         },
         "see": [
@@ -14334,7 +14334,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19751,
+            "lineno": 19748,
             "columnno": 1
         },
         "see": [
@@ -14363,7 +14363,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19769,
+            "lineno": 19766,
             "columnno": 1
         },
         "see": [
@@ -14396,7 +14396,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19781,
+            "lineno": 19778,
             "columnno": 1
         },
         "see": [
@@ -14425,7 +14425,7 @@
         "type": null,
         "properties": null,
         "meta": {
-            "lineno": 19792,
+            "lineno": 19789,
             "columnno": 1
         },
         "see": [
